@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on urushiyamaのさまつごと</title>
-    <link>https://urushiyama.github.io/ja/categories/</link>
+    <link>https://urushiyama.github.io/categories/</link>
     <description>Recent content in Categories on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018- urushiyama</copyright>
     
-	<atom:link href="https://urushiyama.github.io/ja/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://urushiyama.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
