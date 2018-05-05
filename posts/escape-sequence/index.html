@@ -1,0 +1,214 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='Hugo, エスケープ処理' name="keywords">
+<meta content="urushiyama" name="author">
+<meta content='&amp;lt;Escape ME!&amp;gt; 山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
+
+...' name="description">
+<meta property="og:site_name" content="urushiyamaのさまつごと" />
+<meta property="og:title" content='Hugoのエスケープ処理 - urushiyamaのさまつごと'>
+<meta property="og:url" content="https://urushiyama.github.io/posts/escape-sequence/">
+<meta property="og:description" content='&amp;lt;Escape ME!&amp;gt; 山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
+
+...'>
+<meta property="og:type" content='article' />
+<title>Hugoのエスケープ処理 - urushiyamaのさまつごと</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+
+</head>
+
+<body>
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://urushiyama.github.io/"><h1 class="title is-4">urushiyamaのさまつごと</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/urushiyama" target="_blank">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Hugoのエスケープ処理</h1>
+    <h2 class="subtitle is-5">
+      
+        April 30, 2018 by urushiyama
+      
+    </h2>
+    
+      <div class="tags">
+    
+        <a class="button is-link" href="/tags/hugo">Hugo</a>
+    
+</div>
+
+    
+    
+
+    <div class="content">
+      <h1 id="escape-me">&lt;Escape ME!&gt;</h1>
+
+<p>山カッコ (&lt;&gt;)，アンパサンド (&amp;)，クォーテーション (&ldquo;)，&hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために<code>safeHTML</code>や<code>safeURL</code>といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．</p>
+
+<p></p>
+
+<div class="toc">
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#escape-me">&lt;Escape ME!&gt;</a>
+<ul>
+<li><a href="#safehtmlは何をしているのか">safeHTMLは何をしているのか</a></li>
+<li><a href="#具体的にどうすべきか">具体的にどうすべきか</a></li>
+<li><a href="#blackfriday-の功罪">Blackfridayの功罪</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+
+<h2 id="safehtmlは何をしているのか">safeHTMLは何をしているのか</h2>
+
+<p>Go言語は全くわからないが，<a href="https://github.com/gohugoio/hugo/blob/914cc85e22af2e6c28f24a5fc70de94e4b9f1b1b/tpl/safe/safe.go#L37-L41">ここら辺</a>がsafeHTMLの本体なんじゃないかと予想する．この関数を見た限りでは，safeHOGEは入力文字列をHOGEの文法としてパース処理しているようにみえる．ということは，<code>{{ .Params.Hoge | safeURL | safeHTML }}</code>という記述は<code>.params.Hoge</code>をURL文法であるという宣言で囲み，それをさらにHTML文法であるという宣言で囲んでいることになる．</p>
+
+<h2 id="具体的にどうすべきか">具体的にどうすべきか</h2>
+
+<pre><code class="language-html">&lt;meta property=&quot;og:title&quot; content=&quot;{{ .Title }}&quot;&gt;
+&lt;!-- or --&gt;
+&lt;meta property=&quot;og:title&quot; content=&quot;{{ .Title | .safeHTML }}&quot;&gt;
+</code></pre>
+
+<p>この場合は前者の方が正しく山カッコ (&lt;&gt;)やアンパサンド (&amp;)を含む文字列を処理できる．</p>
+
+<pre><code class="language-html">&lt;meta property=&quot;og:description&quot; content=&quot;{{ .Summary }}&quot;&gt;
+&lt;!-- or --&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;{{ .Summary | .safeHTML }}&quot;&gt;
+</code></pre>
+
+<p><del>だが，こちらの場合は後者でないと山カッコ (&lt;&gt;)やアンパサンド (&amp;)がエスケープされてしまう．</del></p>
+
+<p>と思っていたが，<a href="https://qiita.com/ituki_b/items/7041804eca8dfe663591">metaタグのcontent内は<code>&amp;amp;</code>実体参照で書くらしい</a>ので，前者の方が正しく処理できることになる．</p>
+
+<p>まとめると，</p>
+
+<ol>
+<li>基本的にはフィルタなしでOK</li>
+<li>URLをパラメータに放り込んで使うなら<code>safeURL</code></li>
+<li>HTMLタグを含む文字列をHTMLとして解釈させるなら<code>safeHTML</code></li>
+<li>ただしMarkdownファイルで山カッコ (&lt;&gt;)やアンパサンド (&amp;)は<code>\</code>でエスケープ</li>
+</ol>
+
+<p>といったところだろうか．</p>
+
+<h2 id="blackfriday-の功罪">Blackfridayの功罪</h2>
+
+<p>HugoのMarkdownパーサであるBlackfridayも，意図しない文字を出力する原因になりうる．
+Blackfridayはデフォルトで引用符や二重引用符を左右対応づけた文字に変換するのだが，このExtensionをdisableにする方法がわからなかった<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>．文章中に<code>'</code>や<code>&quot;</code>を表記する必要があるかと言われると微妙だが，わざわざインラインコードにする手間が発生するのも微妙である．
+また，3連ドット(<code>...</code>)も三点リーダ(&hellip;)に変えてしまう．深く考えなくとも綺麗に整形してくれるという利点と，入力文字が意図せずに変換されてしまうという欠点がBlackfridayには同居しているように思える．</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><a href="https://gohugo.io/getting-started/configuration/#blackfriday-options"><code>smartypants</code>は無効化している</a>のだが&hellip;
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+    </div>
+    
+        <div class="nav-left">
+    <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fposts%2fescape-sequence%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+    <a class="nav-item" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fposts%2fescape-sequence%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+    <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fposts%2fescape-sequence%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+    <a class="nav-item" href="https://twitter.com/home?status=Hugo%e3%81%ae%e3%82%a8%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%97%e5%87%a6%e7%90%86 - https%3a%2f%2furushiyama.github.io%2fposts%2fescape-sequence%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+    <a class="nav-item" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fposts%2fescape-sequence%2f&title=Hugo%e3%81%ae%e3%82%a8%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%97%e5%87%a6%e7%90%86" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+    
+    </div>
+    
+  </div>
+</section>
+
+<section class="section">
+  <nav class="pagination">
+    <a href="https://urushiyama.github.io/posts/my-first-post/" class="pagination-previous">Prev: My First Post</a>
+    <button class="button is-link" disabled>&nbsp;</button>
+    <a href="https://urushiyama.github.io/posts/play-touhou-with-nimbus/" class="pagination-next">Next: 東方風神録をParallels Desktop 13&#43;SteelSeries Nimbusコントローラで操作する</a>
+  </nav>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018- urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+  </div>
+</section>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-118350112-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>

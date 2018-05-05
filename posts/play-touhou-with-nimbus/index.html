@@ -1,0 +1,364 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='東方, ゲーム, MFiコントローラ, SteelSeries Nimbus, Parallels Desktop 13' name="keywords">
+<meta content="urushiyama" name="author">
+<meta content='東方風神録をParallels Desktop 13&#43;SteelSeries Nimbusコントローラで操作する PC用のコントローラといえばPS4コントローラやUSB接続のHIDコントローラを用いることが一般的だが， iOS用に購入したMFiコントローラを使い道が少ない為に放置していたので，Macとペアリングして活用できないだろうか， と思った次第である．
+はじめに要約すると，
+ Parallels Desktop 13で東方風神録は問題なく動作する SteelSeries NimbusコントローラはMacとBluetooth接続可能 ただしプロトコルが特殊なのでキーマッピングアプリケーションが別途必要  以下に動作手順の詳細を述べる．
+
+...' name="description">
+<meta property="og:site_name" content="urushiyamaのさまつごと" />
+<meta property="og:title" content='東方風神録をParallels Desktop 13&#43;SteelSeries Nimbusコントローラで操作する - urushiyamaのさまつごと'>
+<meta property="og:url" content="https://urushiyama.github.io/posts/play-touhou-with-nimbus/">
+<meta property="og:description" content='東方風神録をParallels Desktop 13&#43;SteelSeries Nimbusコントローラで操作する PC用のコントローラといえばPS4コントローラやUSB接続のHIDコントローラを用いることが一般的だが， iOS用に購入したMFiコントローラを使い道が少ない為に放置していたので，Macとペアリングして活用できないだろうか， と思った次第である．
+はじめに要約すると，
+ Parallels Desktop 13で東方風神録は問題なく動作する SteelSeries NimbusコントローラはMacとBluetooth接続可能 ただしプロトコルが特殊なのでキーマッピングアプリケーションが別途必要  以下に動作手順の詳細を述べる．
+
+...'>
+<meta property="og:type" content='article' />
+<title>東方風神録をParallels Desktop 13&#43;SteelSeries Nimbusコントローラで操作する - urushiyamaのさまつごと</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+
+</head>
+
+<body>
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://urushiyama.github.io/"><h1 class="title is-4">urushiyamaのさまつごと</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/urushiyama" target="_blank">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">東方風神録をParallels Desktop 13&#43;SteelSeries Nimbusコントローラで操作する</h1>
+    <h2 class="subtitle is-5">
+      
+        May 5, 2018 by urushiyama
+      
+    </h2>
+    
+      <div class="tags">
+    
+        <a class="button is-link" href="/tags/%E6%9D%B1%E6%96%B9">東方</a>
+    
+        <a class="button is-link" href="/tags/%E3%82%B2%E3%83%BC%E3%83%A0">ゲーム</a>
+    
+        <a class="button is-link" href="/tags/mfi%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9">MFiコントローラ</a>
+    
+        <a class="button is-link" href="/tags/parallels">Parallels</a>
+    
+</div>
+
+    
+    
+
+    <div class="content">
+      <h1 id="東方風神録をparallels-desktop-13-steelseries-nimbusコントローラで操作する">東方風神録をParallels Desktop 13+SteelSeries Nimbusコントローラで操作する</h1>
+
+<p>PC用のコントローラといえばPS4コントローラやUSB接続のHIDコントローラを用いることが一般的だが，
+iOS用に購入したMFiコントローラを使い道が少ない為に放置していたので，Macとペアリングして活用できないだろうか，
+と思った次第である．</p>
+
+<p>はじめに要約すると，</p>
+
+<ul>
+<li>Parallels Desktop 13で東方風神録は問題なく動作する</li>
+<li>SteelSeries NimbusコントローラはMacとBluetooth接続可能</li>
+<li>ただしプロトコルが特殊なのでキーマッピングアプリケーションが別途必要</li>
+</ul>
+
+<p>以下に動作手順の詳細を述べる．</p>
+
+<p></p>
+
+<div class="toc">
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#東方風神録をparallels-desktop-13-steelseries-nimbusコントローラで操作する">東方風神録をParallels Desktop 13+SteelSeries Nimbusコントローラで操作する</a>
+<ul>
+<li><a href="#step-1-必要なものを揃える">Step 1. 必要なものを揃える</a></li>
+<li><a href="#step-2-ソフトウェアのインストール">Step 2. ソフトウェアのインストール</a>
+<ul>
+<li><a href="#mac-ホストos-側">Mac（ホストOS）側</a></li>
+<li><a href="#windows-ゲストos-側">Windows（ゲストOS）側</a></li>
+</ul></li>
+<li><a href="#step-3-各種設定">Step 3. 各種設定</a>
+<ul>
+<li><a href="#parallelsの設定">Parallelsの設定</a></li>
+<li><a href="#macとmfiコントローラのペアリング">MacとMFiコントローラのペアリング</a></li>
+<li><a href="#gamepadmenuの設定">GamepadMenuの設定</a></li>
+</ul></li>
+<li><a href="#step-4-動作確認">Step 4. 動作確認</a></li>
+<li><a href="#step-5-more-configuration">Step 5. More Configuration</a></li>
+<li><a href="#hci研究への応用">HCI研究への応用</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+
+<h2 id="step-1-必要なものを揃える">Step 1. 必要なものを揃える</h2>
+
+<p>ハードウェア・ソフトウェアを持っていないのであれば，まずそれらを用意する．</p>
+
+<ul>
+<li><p>東方風神録 Etc.</p>
+
+<p>あきばお〜等の店舗・通販で入手可能．
+風神録以外でもおそらく動作するが，DirectX 9を用いたものを推奨する．</p></li>
+
+<li><p>Parallels Desktop 13</p>
+
+<p>公式サイトからでも購入できるが，Amazonのパッケージ版を買う方が割引されていることが多い．
+Wineを用いた方法が検索すると多くヒットするが，Wineの配布サイトが悪質なアドネットワークを用いているようなので，利用を見送った．</p></li>
+
+<li><p>Windows 10のライセンス</p>
+
+<p>ProでもHomeでも問題ない．</p></li>
+
+<li><p>SteelSeries Nimbus （MFi コントローラ）</p>
+
+<p>そもそもこの手法を取ろうと思うのはこのコントローラあるいはHORI等のMFiコントローラを持て余している人であろう．</p></li>
+</ul>
+
+<h2 id="step-2-ソフトウェアのインストール">Step 2. ソフトウェアのインストール</h2>
+
+<h3 id="mac-ホストos-側">Mac（ホストOS）側</h3>
+
+<ol>
+<li><p>Parallels Desktopのインストール</p></li>
+
+<li><p>Windowsの仮装端末へのインストール</p>
+
+<p>インストール方法は<a href="https://www.google.co.jp/search?q=parallels+windows+%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">ググる</a>と多数記事が見つかるので省略する．</p></li>
+
+<li><p>GamepadMenuのインストール</p>
+
+<p>Githubで公開されている<a href="https://github.com/robbertkl/GamepadMenu/releases">このページ</a>から
+ZIPファイルをダウンロード・展開し，GamepadMenu.appをアプリケーションフォルダに移動する．</p>
+
+<p>一応はGithubにソースコードが上がっているので，Wineよりはましかな，といったところ．
+Gatekeeperによる警告が表示される場合は右クリック＞開くを選択すると強制的に実行することができる（Mac OSのTips）．</p></li>
+</ol>
+
+<h3 id="windows-ゲストos-側">Windows（ゲストOS）側</h3>
+
+<ol>
+<li><p>DirectXのインストール</p>
+
+<p>DirectXエンドユーザランタイムが同梱されていないものを動かすには必須．
+最新のものをMicrosoftから<a href="https://www.microsoft.com/ja-jp/directx/">ダウンロード</a>・インストールしておくとよい．</p></li>
+
+<li><p>東方風神録のインストール</p></li>
+</ol>
+
+<h2 id="step-3-各種設定">Step 3. 各種設定</h2>
+
+<h3 id="parallelsの設定">Parallelsの設定</h3>
+
+<p>Windows仮想端末をシャットダウンした上で，Windows仮想端末の設定を開き，
+ハードウェア＞グラフィック＞詳細設定＞3Dアクセラレーションのプルダウンメニューから
+&ldquo;DirectX 9&rdquo;を選択する．</p>
+
+<h3 id="macとmfiコントローラのペアリング">MacとMFiコントローラのペアリング</h3>
+
+<p>Mac OSのシステム環境設定を開き，&rdquo;Bluetooth&rdquo;を選択する．
+MFiコントローラのボタン等を操作し（NimbusではBluetoothマークのついたボタンを長押しする）
+ペアリングモードを開始させると，しばらく後にMacのBluetooth環境設定画面内のリストに
+コントローラ名が表示されるので，その横にある「接続」ボタンをクリックして接続する．</p>
+
+<h3 id="gamepadmenuの設定">GamepadMenuの設定</h3>
+
+<p>GamepadMenu.appをFinderで右クリックし、「パッケージの内容を表示」を選択する．
+Contents＞Resources＞Presetsに移動し，Presetsフォルダ内に以下を&rdquo;Touhou.plist&rdquo;としてテキスト形式で保存する．</p>
+
+<a href='assets/Touhou.plist' download>Download: Touhou.plist</a>
+
+
+<pre><code class="language-plist">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+	&lt;key&gt;Directional pad - Up&lt;/key&gt;
+	&lt;integer&gt;126&lt;/integer&gt;
+	&lt;key&gt;Directional pad - Down&lt;/key&gt;
+	&lt;integer&gt;125&lt;/integer&gt;
+	&lt;key&gt;Directional pad - Left&lt;/key&gt;
+	&lt;integer&gt;123&lt;/integer&gt;
+	&lt;key&gt;Directional pad - Right&lt;/key&gt;
+	&lt;integer&gt;124&lt;/integer&gt;
+	&lt;key&gt;Left stick - Up&lt;/key&gt;
+	&lt;integer&gt;126&lt;/integer&gt;
+	&lt;key&gt;Left stick - Down&lt;/key&gt;
+	&lt;integer&gt;125&lt;/integer&gt;
+	&lt;key&gt;Left stick - Left&lt;/key&gt;
+	&lt;integer&gt;123&lt;/integer&gt;
+	&lt;key&gt;Left stick - Right&lt;/key&gt;
+	&lt;integer&gt;124&lt;/integer&gt;
+	&lt;key&gt;Button A&lt;/key&gt;
+	&lt;integer&gt;6&lt;/integer&gt;
+	&lt;key&gt;Button B&lt;/key&gt;
+	&lt;integer&gt;7&lt;/integer&gt;
+	&lt;key&gt;Button X&lt;/key&gt;
+	&lt;integer&gt;56&lt;/integer&gt;
+	&lt;key&gt;Button Y&lt;/key&gt;
+	&lt;integer&gt;8&lt;/integer&gt;
+	&lt;key&gt;Home button&lt;/key&gt;
+	&lt;integer&gt;53&lt;/integer&gt;
+	&lt;key&gt;Left shoulder&lt;/key&gt;
+	&lt;integer&gt;56&lt;/integer&gt;
+	&lt;key&gt;Right shoulder&lt;/key&gt;
+	&lt;integer&gt;6&lt;/integer&gt;
+	&lt;key&gt;Left trigger&lt;/key&gt;
+	&lt;integer&gt;8&lt;/integer&gt;
+	&lt;key&gt;Right trigger&lt;/key&gt;
+	&lt;integer&gt;59&lt;/integer&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+
+<h2 id="step-4-動作確認">Step 4. 動作確認</h2>
+
+<ol>
+<li>MacとMFiコントローラを接続する</li>
+<li>GamepadMenu.appを開く</li>
+<li>メニューバーの 🎮アイコンを選択し，&rdquo;コントローラ名&rdquo;＞&rdquo;Touhou.plist&rdquo;を選択する</li>
+<li>Parallels DesktopからWindows仮想端末を開く</li>
+<li>Windows仮想端末上で東方風神録を起動する</li>
+<li>コントローラを操作して東方風神録が動作するか確認する</li>
+</ol>
+
+<p>うまく動作すればAボタン・R1トリガーでショット・決定，Bボタンでボム，
+Yボタン・L1トリガーで低速移動，Xボタン・L2トリガーでトランス（東方神霊廟），
+R2トリガー（+決定）でスキップができるようになっているはずである．</p>
+
+<h2 id="step-5-more-configuration">Step 5. More Configuration</h2>
+
+<p>ボタン配置が気に入らない方向け．</p>
+
+<p>Touhou.plistは各ボタン・スティック・トリガーを表す<code>key</code>と，
+それが押されたときに入力されるCarbon Frameworkのイベント番号を表す<code>integer</code>
+または入力される文字を表す<code>string</code>の辞書（ハッシュ）になっているので，
+&ldquo;/System/Library/Frameworks/Carbon.framework/Frameworks/HIToolbox.framework/Headers/Events.h&rdquo;を参考にして
+任意の文字あるいはモディファイアキーを設定できる．</p>
+
+<p>「C言語のヘッダファイルの意味がわからない！」という方は，Touhou.plistのkeyとintegerの組み合わせを
+入れ替えることでボタン配置を入れ替えればよい．プログラマでなくとも，
+XcodeをMac App StoreからダウンロードしてXcodeでplistファイルをひらけば
+キーや値をGUIで編集することも可能である．</p>
+
+<h2 id="hci研究への応用">HCI研究への応用</h2>
+
+<p>iOS端末でもMac端末でもMFiコントローラはペアリングできるため，趣味の範囲外にも，
+様々なOSで利用可能なゲームコントローラを用いた操作手法を提案するときにこの手法が適用できそうである．<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Android端末であればUSB接続でもBluetooth接続でもHIDコントローラが使えることには目をつぶっている．
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+    </div>
+    
+        <div class="nav-left">
+    <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+    <a class="nav-item" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+    <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+    <a class="nav-item" href="https://twitter.com/home?status=%e6%9d%b1%e6%96%b9%e9%a2%a8%e7%a5%9e%e9%8c%b2%e3%82%92Parallels%20Desktop%2013%2bSteelSeries%20Nimbus%e3%82%b3%e3%83%b3%e3%83%88%e3%83%ad%e3%83%bc%e3%83%a9%e3%81%a7%e6%93%8d%e4%bd%9c%e3%81%99%e3%82%8b - https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+    <a class="nav-item" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f&title=%e6%9d%b1%e6%96%b9%e9%a2%a8%e7%a5%9e%e9%8c%b2%e3%82%92Parallels%20Desktop%2013%2bSteelSeries%20Nimbus%e3%82%b3%e3%83%b3%e3%83%88%e3%83%ad%e3%83%bc%e3%83%a9%e3%81%a7%e6%93%8d%e4%bd%9c%e3%81%99%e3%82%8b" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+    
+    </div>
+    
+  </div>
+</section>
+
+<section class="section">
+  <nav class="pagination">
+    <a href="https://urushiyama.github.io/posts/escape-sequence/" class="pagination-previous">Prev: Hugoのエスケープ処理</a>
+    <button class="button is-link" disabled>&nbsp;</button>
+    
+  </nav>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018- urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+  </div>
+</section>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-118350112-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>

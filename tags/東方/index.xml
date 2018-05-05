@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>東方 on urushiyamaのさまつごと</title>
+    <link>https://urushiyama.github.io/tags/%E6%9D%B1%E6%96%B9/</link>
+    <description>Recent content in 東方 on urushiyamaのさまつごと</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <lastBuildDate>Sat, 05 May 2018 13:12:28 +0900</lastBuildDate>
+    
+	<atom:link href="https://urushiyama.github.io/tags/%E6%9D%B1%E6%96%B9/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>東方風神録をParallels Desktop 13&#43;SteelSeries Nimbusコントローラで操作する</title>
+      <link>https://urushiyama.github.io/posts/play-touhou-with-nimbus/</link>
+      <pubDate>Sat, 05 May 2018 13:12:28 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/posts/play-touhou-with-nimbus/</guid>
+      <description>&lt;h1 id=&#34;東方風神録をparallels-desktop-13-steelseries-nimbusコントローラで操作する&#34;&gt;東方風神録をParallels Desktop 13+SteelSeries Nimbusコントローラで操作する&lt;/h1&gt;
+
+&lt;p&gt;PC用のコントローラといえばPS4コントローラやUSB接続のHIDコントローラを用いることが一般的だが，
+iOS用に購入したMFiコントローラを使い道が少ない為に放置していたので，Macとペアリングして活用できないだろうか，
+と思った次第である．&lt;/p&gt;
+
+&lt;p&gt;はじめに要約すると，&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Parallels Desktop 13で東方風神録は問題なく動作する&lt;/li&gt;
+&lt;li&gt;SteelSeries NimbusコントローラはMacとBluetooth接続可能&lt;/li&gt;
+&lt;li&gt;ただしプロトコルが特殊なのでキーマッピングアプリケーションが別途必要&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以下に動作手順の詳細を述べる．&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
