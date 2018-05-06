@@ -13,6 +13,23 @@
     
     
     <item>
+      <title>BibTeXの罠</title>
+      <link>https://urushiyama.github.io/posts/bibtex-data-order/</link>
+      <pubDate>Mon, 07 May 2018 01:46:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/posts/bibtex-data-order/</guid>
+      <description>&lt;h1 id=&#34;bibtexの罠&#34;&gt;BibTeXの罠&lt;/h1&gt;
+
+&lt;p&gt;BibTeX形式の引用は多くのデジタルライブラリで提供されており、サクッと引用をつけるのに便利である。しかし、使用するにあたってひとつハマった点がある。&lt;/p&gt;
+
+&lt;h2 id=&#34;データ項目の記載の有無とデータ項目の表記順&#34;&gt;データ項目の記載の有無とデータ項目の表記順&lt;/h2&gt;
+
+&lt;p&gt;そのハマった点というのは、書誌情報にデータ項目を記入するか否かでデータ項目の表記順が変わる点である。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>東方風神録をParallels Desktop 13&#43;SteelSeries Nimbusコントローラで操作する</title>
       <link>https://urushiyama.github.io/posts/play-touhou-with-nimbus/</link>
       <pubDate>Sat, 05 May 2018 13:12:28 +0900</pubDate>

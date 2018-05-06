@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Mon, 30 Apr 2018 02:37:25 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 07 May 2018 01:46:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bibtex</title>
+      <link>https://urushiyama.github.io/tags/bibtex/</link>
+      <pubDate>Mon, 07 May 2018 01:46:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/bibtex/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>First</title>
@@ -45,6 +54,15 @@
       <pubDate>Sat, 05 May 2018 13:12:28 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/tags/parallels/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tex</title>
+      <link>https://urushiyama.github.io/tags/tex/</link>
+      <pubDate>Mon, 07 May 2018 01:46:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/tex/</guid>
       <description></description>
     </item>
     
