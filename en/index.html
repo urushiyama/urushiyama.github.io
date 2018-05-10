@@ -42,28 +42,48 @@
 
 </head>
 
-<section class="section">
+
+<nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
   <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a class="nav-item" href="https://urushiyama.github.io/en"><h1 class="title is-4">urushiyama&#39;s trivia</h1></a>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://urushiyama.github.io/en"><span class="title is-4">urushiyama&#39;s trivia</span></a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/en/posts">
+          Posts
+        </a>
+        
+        
       </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          
-          <a class="level-item" href="https://github.com/urushiyama" target="_blank">
-            <span class="icon">
-              <i class="fa fa-github"></i>
-            </span>
-          </a>
-          
-        </nav>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
       </div>
-    </nav>
+    </div>
   </div>
-</section>
+</nav>
 
-
+<section class="section">
+  
 <div class="translations">
   <span class="subtitle">Translations Available</span>
   <ul>
@@ -80,7 +100,6 @@
 </div>
 
 
-<section class="section">
   <div class="container">
     <div class="content">
 
@@ -135,9 +154,9 @@ School of Informatics, University of Tsukuba.</p>
           
             <div class="tags">
     
-        <a class="button is-link" href="/tags/first">First</a>
+        <a class="button is-text" href="/tags/first">First</a>
     
-        <a class="button is-link" href="/tags/hugo">Hugo</a>
+        <a class="button is-text" href="/tags/hugo">Hugo</a>
     
 </div>
 
@@ -145,7 +164,7 @@ School of Informatics, University of Tsukuba.</p>
           <div class="content">
             My First Post with Hugo I&rsquo;ve thought having a website might be useful to write profile data, portfolio, and blog pages since I became a member of the lab. Github pages is a preferred host which is free &amp; have the same domain as projects&rsquo; page will have. I checked some static site generator and decided to use Hugo because its sales talk says it is &ldquo;The world&rsquo;s fastest framework&rdquo;.
             
-            ...<a class="button is-link" href="https://urushiyama.github.io/en/posts/my-first-post/" style="height:20px">
+            ...<a class="button is-text" href="https://urushiyama.github.io/en/posts/my-first-post/" style="height:20px">
               Read more
               <span class="icon is-small">
                 <i class="fa fa-angle-double-right"></i>
@@ -183,6 +202,52 @@ School of Informatics, University of Tsukuba.</p>
   </div>
 </section>
 
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "@id": "https://urushiyama.github.io/",
+    "url": "https://urushiyama.github.io/",
+    "author": {
+      "@id": "https://urushiyama.github.io/#author"
+    },
+    
+    
+    "image": "https://urushiyama.github.io/img/photo.png",
+    
+    
+    "thumbnailUrl": "https://urushiyama.github.io/img/photo.png",
+    
+    
+    "license": "\u0026copy; 2018- urushiyama | Powered by Hugo with HUCORE theme.",
+    
+    "name": "urushiyama&#39;s trivia"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "@id": "https://urushiyama.github.io/#author",
+    "name": "urushiyama"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://urushiyama.github.io/",
+          "name": "TOP"
+        }
+      }
+    ]
+  }
+]
+</script>
+
+
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
 
@@ -202,6 +267,32 @@ School of Informatics, University of Tsukuba.</p>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
 
 
 <script>

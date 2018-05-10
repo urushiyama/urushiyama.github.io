@@ -41,26 +41,45 @@
 
 </head>
 
-<section class="section">
+
+<nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
   <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a class="nav-item" href="https://urushiyama.github.io/en"><h1 class="title is-4">urushiyama&#39;s trivia</h1></a>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://urushiyama.github.io/en"><span class="title is-4">urushiyama&#39;s trivia</span></a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/en/posts">
+          Posts
+        </a>
+        
+        
       </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          
-          <a class="level-item" href="https://github.com/urushiyama" target="_blank">
-            <span class="icon">
-              <i class="fa fa-github"></i>
-            </span>
-          </a>
-          
-        </nav>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
       </div>
-    </nav>
+    </div>
   </div>
-</section>
+</nav>
 
 
 <section class="section">
@@ -76,9 +95,9 @@
           
             <div class="tags">
     
-        <a class="button is-link" href="/tags/first">First</a>
+        <a class="button is-text" href="/tags/first">First</a>
     
-        <a class="button is-link" href="/tags/hugo">Hugo</a>
+        <a class="button is-text" href="/tags/hugo">Hugo</a>
     
 </div>
 
@@ -86,7 +105,7 @@
           <div class="content">
             My First Post with Hugo I&rsquo;ve thought having a website might be useful to write profile data, portfolio, and blog pages since I became a member of the lab. Github pages is a preferred host which is free &amp; have the same domain as projects&rsquo; page will have. I checked some static site generator and decided to use Hugo because its sales talk says it is &ldquo;The world&rsquo;s fastest framework&rdquo;.
             
-            ...<a class="button is-link" href="https://urushiyama.github.io/en/posts/my-first-post/" style="height:20px">
+            ...<a class="button is-text" href="https://urushiyama.github.io/en/posts/my-first-post/" style="height:20px">
               Read more
               <span class="icon is-small">
                 <i class="fa fa-angle-double-right"></i>
@@ -124,6 +143,88 @@
   </div>
 </section>
 
+  
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://urushiyama.github.io/en/posts/",
+    "headline": "Posts",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://urushiyama.github.io/en/posts/"
+    },
+    
+     "image": {
+      "@type": "ImageObject",
+      "url": "https://urushiyama.github.io/img/photo.png",
+      "width": 1024,
+      "height": 1024
+    },
+    
+    "genre": "posts",
+    
+    "url": "https://urushiyama.github.io/en/posts/",
+    
+    "datePublished": "2018-04-30T07:09:32+09:00",
+    
+    
+    "dateModified": "2018-05-05T23:36:11+09:00",
+    
+    
+    "license": "\u0026copy; 2018- urushiyama | Powered by Hugo with HUCORE theme.",
+    
+    
+    
+    "author": {
+      "@type": "Person",
+      "name": "urushiyama"
+    },
+    
+    "publisher": {
+      "@type": "Organization",
+      "name": "urushiyama",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://urushiyama.github.io/img/photo.png"
+      }
+    },
+    "description": ""
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://urushiyama.github.io/",
+          "name": "TOP"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://urushiyama.github.io/posts",
+          "name": "Posts"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://urushiyama.github.io/en/posts/",
+          "name": "Posts"
+        }
+      }
+    ]
+  }
+]
+</script>
+  
+
+
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
 
@@ -143,6 +244,32 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
 
 
 <script>

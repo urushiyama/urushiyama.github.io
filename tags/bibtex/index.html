@@ -41,26 +41,45 @@
 
 </head>
 
-<section class="section">
+
+<nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
   <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a class="nav-item" href="https://urushiyama.github.io/"><h1 class="title is-4">urushiyamaのさまつごと</h1></a>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://urushiyama.github.io/"><span class="title is-4">urushiyamaのさまつごと</span></a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+        
+        <a class="navbar-item" href="https://urushiyama.github.io//posts">
+          Posts
+        </a>
+        
+        
       </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          
-          <a class="level-item" href="https://github.com/urushiyama" target="_blank">
-            <span class="icon">
-              <i class="fa fa-github"></i>
-            </span>
-          </a>
-          
-        </nav>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
       </div>
-    </nav>
+    </div>
   </div>
-</section>
+</nav>
 
 
 <section class="section">
@@ -76,9 +95,9 @@
           
             <div class="tags">
     
-        <a class="button is-link" href="/tags/bibtex">BibTeX</a>
+        <a class="button is-text" href="/tags/bibtex">BibTeX</a>
     
-        <a class="button is-link" href="/tags/tex">TeX</a>
+        <a class="button is-text" href="/tags/tex">TeX</a>
     
 </div>
 
@@ -89,7 +108,7 @@
 
 
             
-            ...<a class="button is-link" href="https://urushiyama.github.io/posts/bibtex-data-order/" style="height:20px">
+            ...<a class="button is-text" href="https://urushiyama.github.io/posts/bibtex-data-order/" style="height:20px">
               Read more
               <span class="icon is-small">
                 <i class="fa fa-angle-double-right"></i>
@@ -127,6 +146,9 @@
   </div>
 </section>
 
+  
+
+
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
 
@@ -146,6 +168,32 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
 
 
 <script>

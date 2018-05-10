@@ -50,26 +50,45 @@
 </head>
 
 <body>
-<section class="section">
+
+<nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
   <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a class="nav-item" href="https://urushiyama.github.io/"><h1 class="title is-4">urushiyamaのさまつごと</h1></a>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://urushiyama.github.io/"><span class="title is-4">urushiyamaのさまつごと</span></a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+        
+        <a class="navbar-item" href="https://urushiyama.github.io//posts">
+          Posts
+        </a>
+        
+        
       </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          
-          <a class="level-item" href="https://github.com/urushiyama" target="_blank">
-            <span class="icon">
-              <i class="fa fa-github"></i>
-            </span>
-          </a>
-          
-        </nav>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
       </div>
-    </nav>
+    </div>
   </div>
-</section>
+</nav>
 
 <section class="section">
   <div class="container">
@@ -82,13 +101,13 @@
     
       <div class="tags">
     
-        <a class="button is-link" href="/tags/%E6%9D%B1%E6%96%B9">東方</a>
+        <a class="button is-text" href="/tags/%E6%9D%B1%E6%96%B9">東方</a>
     
-        <a class="button is-link" href="/tags/%E3%82%B2%E3%83%BC%E3%83%A0">ゲーム</a>
+        <a class="button is-text" href="/tags/%E3%82%B2%E3%83%BC%E3%83%A0">ゲーム</a>
     
-        <a class="button is-link" href="/tags/mfi%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9">MFiコントローラ</a>
+        <a class="button is-text" href="/tags/mfi%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9">MFiコントローラ</a>
     
-        <a class="button is-link" href="/tags/parallels">Parallels</a>
+        <a class="button is-text" href="/tags/parallels">Parallels</a>
     
 </div>
 
@@ -305,23 +324,26 @@ XcodeをMac App StoreからダウンロードしてXcodeでplistファイルを�
 </div>
     </div>
     
-        <div class="nav-left">
-    <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
-    <a class="nav-item" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
-    <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
-    <a class="nav-item" href="https://twitter.com/home?status=%e6%9d%b1%e6%96%b9%e9%a2%a8%e7%a5%9e%e9%8c%b2%e3%82%92Parallels%20Desktop%2013%2bSteelSeries%20Nimbus%e3%82%b3%e3%83%b3%e3%83%88%e3%83%ad%e3%83%bc%e3%83%a9%e3%81%a7%e6%93%8d%e4%bd%9c%e3%81%99%e3%82%8b - https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
-    <a class="nav-item" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f&title=%e6%9d%b1%e6%96%b9%e9%a2%a8%e7%a5%9e%e9%8c%b2%e3%82%92Parallels%20Desktop%2013%2bSteelSeries%20Nimbus%e3%82%b3%e3%83%b3%e3%83%88%e3%83%ad%e3%83%bc%e3%83%a9%e3%81%a7%e6%93%8d%e4%bd%9c%e3%81%99%e3%82%8b" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
-    
-    </div>
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=%e6%9d%b1%e6%96%b9%e9%a2%a8%e7%a5%9e%e9%8c%b2%e3%82%92Parallels%20Desktop%2013%2bSteelSeries%20Nimbus%e3%82%b3%e3%83%b3%e3%83%88%e3%83%ad%e3%83%bc%e3%83%a9%e3%81%a7%e6%93%8d%e4%bd%9c%e3%81%99%e3%82%8b - https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fposts%2fplay-touhou-with-nimbus%2f&title=%e6%9d%b1%e6%96%b9%e9%a2%a8%e7%a5%9e%e9%8c%b2%e3%82%92Parallels%20Desktop%2013%2bSteelSeries%20Nimbus%e3%82%b3%e3%83%b3%e3%83%88%e3%83%ad%e3%83%bc%e3%83%a9%e3%81%a7%e6%93%8d%e4%bd%9c%e3%81%99%e3%82%8b" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
     
   </div>
 </section>
 
 <section class="section">
-  <nav class="pagination">
-    <a href="https://urushiyama.github.io/posts/escape-sequence/" class="pagination-previous">Prev: Hugoのエスケープ処理</a>
-    <button class="button is-link" disabled>&nbsp;</button>
-    <a href="https://urushiyama.github.io/posts/bibtex-data-order/" class="pagination-next">Next: BibTeXの罠</a>
+  <nav class="level" role="navigation">
+    
+    <a href="https://urushiyama.github.io/posts/escape-sequence/" class="button level-left">Prev: Hugoのエスケープ処理</a>
+    
+    
+    <a href="https://urushiyama.github.io/posts/bibtex-data-order/" class="button level-right">Next: BibTeXの罠</a>
+    
   </nav>
 </section>
 
@@ -333,6 +355,94 @@ XcodeをMac App StoreからダウンロードしてXcodeでplistファイルを�
     <p>&copy; 2018- urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
   </div>
 </section>
+
+  
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://urushiyama.github.io/posts/play-touhou-with-nimbus/",
+    "headline": "東方風神録をParallels Desktop 13&#43;SteelSeries Nimbusコントローラで操作する",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://urushiyama.github.io/posts/play-touhou-with-nimbus/"
+    },
+    
+     "image": {
+      "@type": "ImageObject",
+      "url": "https://urushiyama.github.io/img/photo.png",
+      "width": 1024,
+      "height": 1024
+    },
+    
+    "genre": "posts",
+    
+    "keywords": "東方, ゲーム, MFiコントローラ, Parallels",
+    
+    "url": "https://urushiyama.github.io/posts/play-touhou-with-nimbus/",
+    
+    "datePublished": "2018-05-05T13:12:28+09:00",
+    
+    
+    "dateModified": "2018-05-05T23:36:11+09:00",
+    
+    
+    "license": "\u0026copy; 2018- urushiyama | Powered by Hugo with HUCORE theme.",
+    
+    
+    
+    "author": {
+      "@type": "Person",
+      "name": "urushiyama"
+    },
+    
+    "publisher": {
+      "@type": "Organization",
+      "name": "urushiyama",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://urushiyama.github.io/img/photo.png"
+      }
+    },
+    "description": "東方風神録をParallels Desktop 13&#43;SteelSeries Nimbusコントローラで操作する PC用のコントローラといえばPS4コントローラやUSB接続のHIDコントローラを用いることが一般的だが， iOS用に購入したMFiコントローラを使い道が少ない為に放置していたので，Macとペアリングして活用できないだろうか， と思った次第である．
+はじめに要約すると，
+ Parallels Desktop 13で東方風神録は問題なく動作する SteelSeries NimbusコントローラはMacとBluetooth接続可能 ただしプロトコルが特殊なのでキーマッピングアプリケーションが別途必要  以下に動作手順の詳細を述べる．
+
+"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://urushiyama.github.io/",
+          "name": "TOP"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://urushiyama.github.io/posts",
+          "name": "Posts"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://urushiyama.github.io/posts/play-touhou-with-nimbus/",
+          "name": "東方風神録をParallels Desktop 13&#43;SteelSeries Nimbusコントローラで操作する"
+        }
+      }
+    ]
+  }
+]
+</script>
+  
+
 
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
@@ -353,6 +463,32 @@ XcodeをMac App StoreからダウンロードしてXcodeでplistファイルを�
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
 
 
 <script>
