@@ -151,7 +151,11 @@ iOS用に購入したMFiコントローラを使い道が少ない為に放置�
 <li><a href="#gamepadmenuの設定">GamepadMenuの設定</a></li>
 </ul></li>
 <li><a href="#step-4-動作確認">Step 4. 動作確認</a></li>
-<li><a href="#step-5-more-configuration">Step 5. More Configuration</a></li>
+<li><a href="#step-5-more-configuration">Step 5. More Configuration</a>
+<ul>
+<li><a href="#スキップ押下時にスティックを倒すとmac側でmisson-control等が発生することの対策">スキップ押下時にスティックを倒すとMac側でMisson Control等が発生することの対策</a></li>
+<li><a href="#ボタン配置を変更する">ボタン配置を変更する</a></li>
+</ul></li>
 <li><a href="#hci研究への応用">HCI研究への応用</a></li>
 </ul></li>
 </ul>
@@ -200,7 +204,7 @@ Wineを用いた方法が検索すると多くヒットするが，Wineの配布
 ZIPファイルをダウンロード・展開し，GamepadMenu.appをアプリケーションフォルダに移動する．</p>
 
 <p>一応はGithubにソースコードが上がっているので，Wineよりはましかな，といったところ．
-Gatekeeperによる警告が表示される場合は右クリック＞開くを選択すると強制的に実行することができる（Mac OSのTips）．</p></li>
+Gatekeeperによる警告が表示される場合は右クリック＞開くを選択すると強制的に実行することができる（MacOSのTips）．</p></li>
 </ol>
 
 <h3 id="windows-ゲストos-側">Windows（ゲストOS）側</h3>
@@ -224,14 +228,14 @@ Gatekeeperによる警告が表示される場合は右クリック＞開くを�
 
 <h3 id="macとmfiコントローラのペアリング">MacとMFiコントローラのペアリング</h3>
 
-<p>Mac OSのシステム環境設定を開き，&rdquo;Bluetooth&rdquo;を選択する．
+<p>MacOSのシステム環境設定を開き，&rdquo;Bluetooth&rdquo;を選択する．
 MFiコントローラのボタン等を操作し（NimbusではBluetoothマークのついたボタンを長押しする）
 ペアリングモードを開始させると，しばらく後にMacのBluetooth環境設定画面内のリストに
 コントローラ名が表示されるので，その横にある「接続」ボタンをクリックして接続する．</p>
 
 <h3 id="gamepadmenuの設定">GamepadMenuの設定</h3>
 
-<p>GamepadMenu.appをFinderで右クリックし、「パッケージの内容を表示」を選択する．
+<p>GamepadMenu.appをFinderで右クリックし，「パッケージの内容を表示」を選択する．
 Contents＞Resources＞Presetsに移動し，Presetsフォルダ内に以下を&rdquo;Touhou.plist&rdquo;としてテキスト形式で保存する．</p>
 
 <a href='assets/Touhou.plist' download>Download: Touhou.plist</a>
@@ -296,12 +300,35 @@ R2トリガー（+決定）でスキップができるようになっている�
 
 <h2 id="step-5-more-configuration">Step 5. More Configuration</h2>
 
+<h3 id="スキップ押下時にスティックを倒すとmac側でmisson-control等が発生することの対策">スキップ押下時にスティックを倒すとMac側でMisson Control等が発生することの対策</h3>
+
+<ul>
+<li>2018/5/12 追記</li>
+</ul>
+
+<p>標準では，コントロールキー（Ctrl）を押した状態でカーソルキーを入力すると
+MacOS側でキー入力が処理され，Misson ControlやMacOS上の
+別のフルスクリーンアプリケーションに画面が切り替わる．</p>
+
+<p>ここで，東方風神録などのスキップにはCtrlが割り当てられているため，
+スキップ中にスティックを傾けると画面が切り替わり，ゲームの操作が不能になってしまうため，
+そのままスキップが完了して被弾する，といった不都合が生じる．</p>
+
+<p>この対策として，Parallels Desktopの環境設定を開き，
+ショートカット＞macOS システムショートカット＞macOS システムショートカットを送信する:
+の下にあるプルダウンメニューから「常に」を選択する．
+この設定により，Ctrl入力がシステムショートカットに割り当てられているキーの組み合わせとして
+入力されたとしても，全てのキー入力がWindows仮装端末側に転送されるようになるため，
+前述の不都合が発生しなくなる．</p>
+
+<h3 id="ボタン配置を変更する">ボタン配置を変更する</h3>
+
 <p>ボタン配置が気に入らない方向け．</p>
 
 <p>Touhou.plistは各ボタン・スティック・トリガーを表す<code>key</code>と，
 それが押されたときに入力されるCarbon Frameworkのイベント番号を表す<code>integer</code>
 または入力される文字を表す<code>string</code>の辞書（ハッシュ）になっているので，
-&ldquo;/System/Library/Frameworks/Carbon.framework/Frameworks/HIToolbox.framework/Headers/Events.h&rdquo;を参考にして
+/System/Library/Frameworks/Carbon.framework/Frameworks/HIToolbox.framework/Headers/Events.hを参考にして
 任意の文字あるいはモディファイアキーを設定できる．</p>
 
 <p>「C言語のヘッダファイルの意味がわからない！」という方は，Touhou.plistのkeyとintegerの組み合わせを
