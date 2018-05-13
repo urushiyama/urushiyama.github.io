@@ -6,23 +6,22 @@
 
 
 
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+	<meta name="generator" content="Hugo 0.40.3" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
-<meta content='programming, HCI, tsukuba, blog' name="keywords">
+<meta content='プログラミング, HCI, つくば, ブログ' name="keywords">
 <meta content="urushiyama" name="author">
 <meta content='' name="description">
-<meta property="og:site_name" content="urushiyama&#39;s trivia" />
-<meta property="og:title" content='Hugo - urushiyama&#39;s trivia'>
-<meta property="og:url" content="https://urushiyama.github.io/en/tags/hugo/">
+<meta property="og:site_name" content="urushiyamaのさまつごと" />
+<meta property="og:title" content='urushiyamaのさまつごと'>
+<meta property="og:url" content="https://urushiyama.github.io/">
 <meta property="og:description" content=''>
-<meta property="og:type" content='article' />
-<title>Hugo - urushiyama&#39;s trivia</title>
+<meta property="og:type" content='website' />
+<title>urushiyamaのさまつごと</title>
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -39,13 +38,15 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
 
 
+<meta name="google-site-verification" content="yvbo1Z8dYxbPOZgDtQmk0KIl8gqC36ggyi0jcb3dcOA" />
+
 </head>
 
 
 <nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://urushiyama.github.io/en"><span class="title is-4">urushiyama&#39;s trivia</span></a>
+      <a class="navbar-item" href="https://urushiyama.github.io/"><span class="title is-4">urushiyamaのさまつごと</span></a>
       
       <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
         <span class="icon">
@@ -62,7 +63,7 @@
     <div id="navMenuContents" class="navbar-menu">
       <div class="navbar-start">
         
-        <a class="navbar-item" href="https://urushiyama.github.io/en/posts">
+        <a class="navbar-item" href="https://urushiyama.github.io//posts">
           Posts
         </a>
         
@@ -81,6 +82,57 @@
   </div>
 </nav>
 
+<section class="section">
+  
+<div class="translations">
+  <span class="subtitle">Translations Available</span>
+  <ul>
+      
+      <li>
+          <a href="https://urushiyama.github.io/en/">
+            
+              English
+            
+            </a>
+      </li>
+      
+  </ul>
+</div>
+
+
+  <div class="container">
+    <div class="content">
+
+<h1 id="about-me">About Me</h1>
+
+<div class='two-side reverse'><div class="two-side-left"><h2 id="所属">所属</h2>
+
+<p>筑波大学 情報学群 情報メディア創成学類</p>
+
+<p>IPLAB WAVEチーム</p>
+
+<h2 id="連絡先">連絡先</h2>
+
+<p>研究に関すること: urushiyama[at]iplab.cs.tsukuba.ac.jp</p>
+
+<p>ブログ・Githubプロジェクトに関すること: aswif10flis1ntkb[at]gmail.com</p>
+
+</div>
+
+<div class="two-side-right"><div class="card"><p><img src="/img/photo.jpg" alt="My Photo" /></p>
+
+</div>
+
+<p></div></p>
+
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
 
 <section class="section">
   <div class="container posts-paginator">
@@ -90,7 +142,37 @@
         
         
         <article>
-          <h3 class="title"><a href="https://urushiyama.github.io/en/posts/my-first-post/">My First Post</a></h3>
+          <h3 class="title"><a href="https://urushiyama.github.io/posts/escape-sequence/">Hugoのエスケープ処理</a></h3>
+          <h4 class="subtitle is-5">
+            
+            April 30, 2018
+            
+          </h4>
+          
+            <div class="tags">
+    
+        <a class="button is-text" href="/tags/hugo">Hugo</a>
+    
+</div>
+
+          
+          <div class="content">
+            &lt;Escape ME!&gt; 山カッコ (&lt;&gt;)，アンパサンド (&amp;)，クォーテーション (&ldquo;)，&hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
+
+
+            
+            ...<a class="button is-text" href="https://urushiyama.github.io/posts/escape-sequence/" style="height:20px">
+              Read more
+              <span class="icon is-small">
+                <i class="fa fa-angle-double-right"></i>
+              </span>
+            </a>
+            
+          </div>
+        </article>
+        
+        <article>
+          <h3 class="title"><a href="https://urushiyama.github.io/posts/my-first-post/">My First Post</a></h3>
           <h4 class="subtitle is-5">
             
             April 30, 2018
@@ -107,14 +189,9 @@
 
           
           <div class="content">
-            My First Post with Hugo I&rsquo;ve thought having a website might be useful to write profile data, portfolio, and blog pages since I became a member of the lab. Github pages is a preferred host which is free &amp; have the same domain as projects&rsquo; page will have. I checked some static site generator and decided to use Hugo because its sales talk says it is &ldquo;The world&rsquo;s fastest framework&rdquo;.
-            
-            ...<a class="button is-text" href="https://urushiyama.github.io/en/posts/my-first-post/" style="height:20px">
-              Read more
-              <span class="icon is-small">
-                <i class="fa fa-angle-double-right"></i>
-              </span>
-            </a>
+            My First Post with Hugo 研究室への配属が決まり，ポートフォリオ兼ブログがあると便利かな，と思うようになった．無料でホストでき，Githubのプロジェクトページが同一ドメインになるGithub Pagesでホストすることが好ましいと考え，静的サイト構築フレームワークを吟味した．&rdquo;The world&rsquo;s fastest&rdquo;という言葉に惹かれ，Hugoで静的サイトを構築することにした．
+
+
             
           </div>
         </article>
@@ -129,6 +206,13 @@
     <nav class="level is-mobile">
       <div class="level-left">
         <div class="level-item">
+          
+          <a class="button" href="/">
+            <span class="icon is-small is-marginless">
+              <i class="fa fa-angle-left"></i>
+            </span>
+            Newer
+          </a>
           
         </div>
       </div>
@@ -147,7 +231,50 @@
   </div>
 </section>
 
-  
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "@id": "https://urushiyama.github.io/",
+    "url": "https://urushiyama.github.io/",
+    "author": {
+      "@id": "https://urushiyama.github.io/#author"
+    },
+    
+    
+    "image": "https://urushiyama.github.io/img/photo.png",
+    
+    
+    "thumbnailUrl": "https://urushiyama.github.io/img/photo.png",
+    
+    
+    "license": "\u0026copy; 2018- urushiyama | Powered by Hugo with HUCORE theme.",
+    
+    "name": "urushiyamaのさまつごと"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "@id": "https://urushiyama.github.io/#author",
+    "name": "urushiyama"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://urushiyama.github.io/",
+          "name": "TOP"
+        }
+      }
+    ]
+  }
+]
+</script>
 
 
 

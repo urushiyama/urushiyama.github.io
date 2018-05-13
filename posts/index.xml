@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Mon, 07 May 2018 01:46:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 13 May 2018 20:23:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ゲームコントローラで操作できるiOSカスタムキーボードをつくろうと（して挫折）した話</title>
+      <link>https://urushiyama.github.io/posts/try-ios-game-controller-custom-keyboard/</link>
+      <pubDate>Sun, 13 May 2018 20:23:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/posts/try-ios-game-controller-custom-keyboard/</guid>
+      <description>&lt;h1 id=&#34;ゲームコントローラで操作できるiosカスタムキーボードをつくろうと-して挫折-した話&#34;&gt;ゲームコントローラで操作できるiOSカスタムキーボードをつくろうと（して挫折）した話&lt;/h1&gt;
+
+&lt;p&gt;iOSでMFiコントローラにより操作可能なカスタムキーボードの作成を試みた．&lt;/p&gt;
+
+&lt;p&gt;結果としてはうまくいかず挫折したが，作成時にハマった点を2つ述べる．&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>BibTeXの罠</title>

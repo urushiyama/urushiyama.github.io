@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://urushiyama.github.io/posts/try-ios-game-controller-custom-keyboard/</loc>
+    <lastmod>2018-05-13T20:23:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/posts/bibtex-data-order/</loc>
     <lastmod>2018-05-07T01:46:00+09:00</lastmod>
   </url>
@@ -101,8 +106,14 @@
   </url>
   
   <url>
+    <loc>https://urushiyama.github.io/tags/ios/</loc>
+    <lastmod>2018-05-13T20:23:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/tags/mfi%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9/</loc>
-    <lastmod>2018-05-11T16:16:03+09:00</lastmod>
+    <lastmod>2018-05-13T20:23:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -114,7 +125,7 @@
   
   <url>
     <loc>https://urushiyama.github.io/posts/</loc>
-    <lastmod>2018-05-07T01:46:00+09:00</lastmod>
+    <lastmod>2018-05-13T20:23:00+09:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -147,6 +158,12 @@
   <url>
     <loc>https://urushiyama.github.io/tags/tex/</loc>
     <lastmod>2018-05-07T01:46:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</loc>
+    <lastmod>2018-05-13T20:23:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
