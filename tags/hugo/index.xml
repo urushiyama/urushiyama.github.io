@@ -18,22 +18,18 @@
       <pubDate>Mon, 30 Apr 2018 07:09:32 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/escape-sequence/</guid>
-      <description>&lt;h1 id=&#34;escape-me&#34;&gt;&amp;lt;Escape ME!&amp;gt;&lt;/h1&gt;
-
-&lt;p&gt;山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために&lt;code&gt;safeHTML&lt;/code&gt;や&lt;code&gt;safeURL&lt;/code&gt;といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．&lt;/p&gt;
+      <description>&lt;p&gt;山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために&lt;code&gt;safeHTML&lt;/code&gt;や&lt;code&gt;safeURL&lt;/code&gt;といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>My First Post</title>
+      <title>My First Post with Hugo</title>
       <link>https://urushiyama.github.io/posts/my-first-post/</link>
       <pubDate>Mon, 30 Apr 2018 02:37:25 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/my-first-post/</guid>
-      <description>&lt;h1 id=&#34;my-first-post-with-hugo&#34;&gt;My First Post with Hugo&lt;/h1&gt;
-
-&lt;p&gt;研究室への配属が決まり，ポートフォリオ兼ブログがあると便利かな，と思うようになった．無料でホストでき，Githubのプロジェクトページが同一ドメインになるGithub Pagesでホストすることが好ましいと考え，静的サイト構築フレームワークを吟味した．&amp;rdquo;The world&amp;rsquo;s fastest&amp;rdquo;という言葉に惹かれ，&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;で静的サイトを構築することにした．&lt;/p&gt;
+      <description>&lt;p&gt;研究室への配属が決まり，ポートフォリオ兼ブログがあると便利かな，と思うようになった．無料でホストでき，Githubのプロジェクトページが同一ドメインになるGithub Pagesでホストすることが好ましいと考え，静的サイト構築フレームワークを吟味した．&amp;rdquo;The world&amp;rsquo;s fastest&amp;rdquo;という言葉に惹かれ，&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;で静的サイトを構築することにした．&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

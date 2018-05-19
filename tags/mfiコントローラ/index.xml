@@ -18,9 +18,7 @@
       <pubDate>Sun, 13 May 2018 20:23:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/try-ios-game-controller-custom-keyboard/</guid>
-      <description>&lt;h1 id=&#34;ゲームコントローラで操作できるiosカスタムキーボードをつくろうと-して挫折-した話&#34;&gt;ゲームコントローラで操作できるiOSカスタムキーボードをつくろうと（して挫折）した話&lt;/h1&gt;
-
-&lt;p&gt;iOSでMFiコントローラにより操作可能なカスタムキーボードの作成を試みた．&lt;/p&gt;
+      <description>&lt;p&gt;iOSでMFiコントローラにより操作可能なカスタムキーボードの作成を試みた．&lt;/p&gt;
 
 &lt;p&gt;結果としてはうまくいかず挫折したが，作成時にハマった点を2つ述べる．&lt;/p&gt;
 
@@ -33,9 +31,7 @@
       <pubDate>Sat, 05 May 2018 13:12:28 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/play-touhou-with-nimbus/</guid>
-      <description>&lt;h1 id=&#34;東方風神録をparallels-desktop-13-steelseries-nimbusコントローラで操作する&#34;&gt;東方風神録をParallels Desktop 13+SteelSeries Nimbusコントローラで操作する&lt;/h1&gt;
-
-&lt;p&gt;PC用のコントローラといえばPS4コントローラやUSB接続のHIDコントローラを用いることが一般的だが，
+      <description>&lt;p&gt;PC用のコントローラといえばPS4コントローラやUSB接続のHIDコントローラを用いることが一般的だが，
 iOS用に購入したMFiコントローラを使い道が少ない為に放置していたので，Macとペアリングして活用できないだろうか，
 と思った次第である．&lt;/p&gt;
 

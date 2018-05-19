@@ -18,9 +18,7 @@
       <pubDate>Sun, 13 May 2018 20:23:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/try-ios-game-controller-custom-keyboard/</guid>
-      <description>&lt;h1 id=&#34;ゲームコントローラで操作できるiosカスタムキーボードをつくろうと-して挫折-した話&#34;&gt;ゲームコントローラで操作できるiOSカスタムキーボードをつくろうと（して挫折）した話&lt;/h1&gt;
-
-&lt;p&gt;iOSでMFiコントローラにより操作可能なカスタムキーボードの作成を試みた．&lt;/p&gt;
+      <description>&lt;p&gt;iOSでMFiコントローラにより操作可能なカスタムキーボードの作成を試みた．&lt;/p&gt;
 
 &lt;p&gt;結果としてはうまくいかず挫折したが，作成時にハマった点を2つ述べる．&lt;/p&gt;
 

@@ -16,13 +16,13 @@
 <meta name="robots" content="index,follow">
 <meta content='Hugo, エスケープ処理' name="keywords">
 <meta content="urushiyama" name="author">
-<meta content='&amp;lt;Escape ME!&amp;gt; 山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
+<meta content='山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
 
 ...' name="description">
 <meta property="og:site_name" content="urushiyamaのさまつごと" />
 <meta property="og:title" content='Hugoのエスケープ処理 - urushiyamaのさまつごと'>
 <meta property="og:url" content="https://urushiyama.github.io/posts/escape-sequence/">
-<meta property="og:description" content='&amp;lt;Escape ME!&amp;gt; 山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
+<meta property="og:description" content='山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
 
 ...'>
 <meta property="og:type" content='article' />
@@ -67,10 +67,10 @@
     <div id="navMenuContents" class="navbar-menu">
       <div class="navbar-start">
         
+        
         <a class="navbar-item" href="https://urushiyama.github.io//posts">
           Posts
         </a>
-        
         
       </div>
       <div class="navbar-end">
@@ -87,6 +87,15 @@
 </nav>
 
 <section class="section">
+  <nav class="breadcrumb is-small" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="https://urushiyama.github.io/">urushiyamaのさまつごと</a></li>
+    
+    <li><a href="https://urushiyama.github.io/posts">Posts</a></li>
+    
+    <li class="is-active"><a href="#" aria-current="page">.</a></li>
+  </ul>
+</nav>
   <div class="container">
     <h1 class="title">Hugoのエスケープ処理</h1>
     <h2 class="subtitle is-5">
@@ -97,7 +106,7 @@
     
       <div class="tags">
     
-        <a class="button is-text" href="/tags/hugo">Hugo</a>
+        <a class="tag is-rounded" href="/tags/hugo">Hugo</a>
     
 </div>
 
@@ -105,16 +114,16 @@
     
 
     <div class="content">
-      <h1 id="escape-me">&lt;Escape ME!&gt;</h1>
-
-<p>山カッコ (&lt;&gt;)，アンパサンド (&amp;)，クォーテーション (&ldquo;)，&hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために<code>safeHTML</code>や<code>safeURL</code>といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．</p>
+      <p>山カッコ (&lt;&gt;)，アンパサンド (&amp;)，クォーテーション (&ldquo;)，&hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために<code>safeHTML</code>や<code>safeURL</code>といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．</p>
 
 <p></p>
 
-<div class="toc">
+<section class="message is-info">
+  <div class="message-header">目次</div>
+<div class="message-body toc">
   <nav id="TableOfContents">
 <ul>
-<li><a href="#escape-me">&lt;Escape ME!&gt;</a>
+<li>
 <ul>
 <li><a href="#safehtmlは何をしているのか">safeHTMLは何をしているのか</a></li>
 <li><a href="#具体的にどうすべきか">具体的にどうすべきか</a></li>
@@ -123,7 +132,7 @@
 </ul>
 </nav>
 </div>
-
+</section>
 
 <h2 id="safehtmlは何をしているのか">safeHTMLは何をしているのか</h2>
 
@@ -189,7 +198,7 @@ Blackfridayはデフォルトで引用符や二重引用符を左右対応づ�
 <section class="section">
   <nav class="level" role="navigation">
     
-    <a href="https://urushiyama.github.io/posts/my-first-post/" class="button level-left">Prev: My First Post</a>
+    <a href="https://urushiyama.github.io/posts/my-first-post/" class="button level-left">Prev: My First Post …</a>
     
     
     <a href="https://urushiyama.github.io/posts/play-touhou-with-nimbus/" class="button level-right">Next: 東方風神録をParallels …</a>
@@ -255,7 +264,7 @@ Blackfridayはデフォルトで引用符や二重引用符を左右対応づ�
         "url": "https://urushiyama.github.io/img/photo.png"
       }
     },
-    "description": "&amp;lt;Escape ME!&amp;gt; 山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
+    "description": "山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
 
 "
   },

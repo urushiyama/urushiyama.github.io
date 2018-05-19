@@ -63,10 +63,10 @@
     <div id="navMenuContents" class="navbar-menu">
       <div class="navbar-start">
         
+        
         <a class="navbar-item" href="https://urushiyama.github.io//posts">
           Posts
         </a>
-        
         
       </div>
       <div class="navbar-end">
@@ -103,30 +103,68 @@
   <div class="container">
     <div class="content">
 
-<h1 id="about-me">About Me</h1>
+<h1 id="span-漆山-裕太-span-wbr-span-class-has-text-weight-light-style-display-inline-block-nbsp-yuta-urushiyama-span"><span>漆山 裕太</span><wbr><span class="has-text-weight-light" style="display: inline-block;">&nbsp; - <em>Yuta URUSHIYAMA</em></span></h1>
 
-<div class='two-side reverse'><div class="two-side-left"><h2 id="所属">所属</h2>
+<div class='columns'><div class="column"><div class="card"><p><img src="/img/photo.jpg" alt="My Photo" /></p>
 
-<p>筑波大学 情報学群 情報メディア創成学類</p>
-
-<p>IPLAB WAVEチーム</p>
+</div>
 
 <h2 id="連絡先">連絡先</h2>
 
-<p>研究に関すること: urushiyama[at]iplab.cs.tsukuba.ac.jp</p>
+<p>Research: urushiyama [at] iplab.cs.tsukuba.ac.jp</p>
 
-<p>ブログ・Githubプロジェクトに関すること: aswif10flis1ntkb[at]gmail.com</p>
-
-</div>
-
-<div class="two-side-right"><div class="card"><p><img src="/img/photo.jpg" alt="My Photo" /></p>
-
-</div>
+<p><i class="fa fa-github" aria-hidden="true"></i> / Blog: aswif10flis1ntkb [at] gmail.com</p>
 
 <p></div></p>
 
+<div class="column"><h2 id="所属">所属</h2>
+
+<p>筑波大学 情報学群 情報メディア創成学類</p>
+
+<p><a href="https://www.iplab.cs.tsukuba.ac.jp">インタラクティブプログラミング研究室（IPLAB）</a><br />
+WAVEチーム</p>
+
+<p>〒305-8573 茨城県つくば市天王台1-1-1<br />
+中地区第3エリア<br />
+総合研究棟B1024</p>
+
+<h2 id="興味のある分野">興味のある分野</h2>
+
+<ul>
+<li>Human Computer Interface (HCI)</li>
+<li>User Interface (UI)</li>
+<li>Eyes-free Interaction</li>
+<li>Text Input Methods</li>
+</ul>
+
 </div>
 
+</div>
+
+
+<h2 id="学業">学業</h2>
+
+<dl>
+  <dt>2017年</dt>
+    <dd>enPiT-BizSysD 筑波大ワークショップ, <a href="https://github.com/enpitut2017/Regi-Urico-api">在庫通知機能を備えたレジアプリのスクラム開発</a></dd>
+</dl>
+
+<h2 id="資格">資格</h2>
+
+<dl>
+  <dt>2017年5月17日</dt>
+    <dd>IPA 基本情報技術者試験 合格</dd>
+</dl>
+
+<h2 id="略歴">略歴</h2>
+
+<dl>
+  <dt>2015年</dt>
+    <dd>新潟県立長岡高等学校 理数科 卒業</dd>
+    <dd>筑波大学 情報学群 情報メディア創成学類 入学</dd>
+  <dt>2019年</dt>
+    <dd>筑波大学 情報学群 情報メディア創成学類 <u>卒業見込</u></dd>
+</dl>
 
     </div>
   </div>
@@ -141,60 +179,64 @@
       <div class="container paginate">
         
         
-        <article>
-          <h3 class="title"><a href="https://urushiyama.github.io/posts/escape-sequence/">Hugoのエスケープ処理</a></h3>
-          <h4 class="subtitle is-5">
+        <div class="box">
+          <article>
+            <h3 class="title"><a href="https://urushiyama.github.io/posts/escape-sequence/">Hugoのエスケープ処理</a></h3>
+            <h4 class="subtitle is-5">
+              
+              April 30, 2018
+              
+            </h4>
             
-            April 30, 2018
-            
-          </h4>
-          
-            <div class="tags">
+              <div class="tags">
     
-        <a class="button is-text" href="/tags/hugo">Hugo</a>
+        <a class="tag is-rounded" href="/tags/hugo">Hugo</a>
     
 </div>
 
-          
-          <div class="content">
-            &lt;Escape ME!&gt; 山カッコ (&lt;&gt;)，アンパサンド (&amp;)，クォーテーション (&ldquo;)，&hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
+            
+            <div class="content">
+              山カッコ (&lt;&gt;)，アンパサンド (&amp;)，クォーテーション (&ldquo;)，&hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
 
 
-            
-            ...<a class="button is-text" href="https://urushiyama.github.io/posts/escape-sequence/" style="height:20px">
-              Read more
-              <span class="icon is-small">
-                <i class="fa fa-angle-double-right"></i>
-              </span>
-            </a>
-            
-          </div>
-        </article>
+              
+              ...<a class="button is-text" href="https://urushiyama.github.io/posts/escape-sequence/" style="height:20px">
+                Read more
+                <span class="icon is-small">
+                  <i class="fa fa-angle-double-right"></i>
+                </span>
+              </a>
+              
+            </div>
+          </article>
+        </div>
         
-        <article>
-          <h3 class="title"><a href="https://urushiyama.github.io/posts/my-first-post/">My First Post</a></h3>
-          <h4 class="subtitle is-5">
+        <div class="box">
+          <article>
+            <h3 class="title"><a href="https://urushiyama.github.io/posts/my-first-post/">My First Post with Hugo</a></h3>
+            <h4 class="subtitle is-5">
+              
+              April 30, 2018
+              
+            </h4>
             
-            April 30, 2018
-            
-          </h4>
-          
-            <div class="tags">
+              <div class="tags">
     
-        <a class="button is-text" href="/tags/first">First</a>
+        <a class="tag is-rounded" href="/tags/first">First</a>
     
-        <a class="button is-text" href="/tags/hugo">Hugo</a>
+        <a class="tag is-rounded" href="/tags/hugo">Hugo</a>
     
 </div>
 
-          
-          <div class="content">
-            My First Post with Hugo 研究室への配属が決まり，ポートフォリオ兼ブログがあると便利かな，と思うようになった．無料でホストでき，Githubのプロジェクトページが同一ドメインになるGithub Pagesでホストすることが好ましいと考え，静的サイト構築フレームワークを吟味した．&rdquo;The world&rsquo;s fastest&rdquo;という言葉に惹かれ，Hugoで静的サイトを構築することにした．
-
-
             
-          </div>
-        </article>
+            <div class="content">
+              研究室への配属が決まり，ポートフォリオ兼ブログがあると便利かな，と思うようになった．無料でホストでき，Githubのプロジェクトページが同一ドメインになるGithub Pagesでホストすることが好ましいと考え，静的サイト構築フレームワークを吟味した．&rdquo;The world&rsquo;s fastest&rdquo;という言葉に惹かれ，Hugoで静的サイトを構築することにした．
+
+
+              
+            </div>
+          </article>
+        </div>
         
       </div>
     </div>
