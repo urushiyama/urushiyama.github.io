@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://urushiyama.github.io/privacy-policy/</loc>
+    <lastmod>2018-05-20T21:13:59+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/privacy-policy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/privacy-policy/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/license/</loc>
+    <lastmod>2018-05-20T21:13:59+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/license/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/license/"
+                />
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/posts/try-ios-game-controller-custom-keyboard/</loc>
     <lastmod>2018-05-13T20:23:00+09:00</lastmod>
   </url>

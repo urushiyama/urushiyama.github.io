@@ -13,6 +13,24 @@
     
     
     <item>
+      <title>プライバシーポリシー</title>
+      <link>https://urushiyama.github.io/privacy-policy/</link>
+      <pubDate>Sun, 20 May 2018 21:13:59 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/privacy-policy/</guid>
+      <description>目次 個人情報の利用目的 個人情報の第三者への開示 個人情報の開示，訂正，追加，削除，利用停止 アクセス解析ツールについて 免責事項 著作権 オープンソー</description>
+    </item>
+    
+    <item>
+      <title>ライセンス</title>
+      <link>https://urushiyama.github.io/license/</link>
+      <pubDate>Sun, 20 May 2018 21:13:59 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/license/</guid>
+      <description>ライセンスの適用 当サイト上に存在する，文章・画像・動画等の著作権は，特に記載のない限り，当サイトの管理人（urushiyama）が保持します</description>
+    </item>
+    
+    <item>
       <title>ゲームコントローラで操作できるiOSカスタムキーボードをつくろうと（して挫折）した話</title>
       <link>https://urushiyama.github.io/posts/try-ios-game-controller-custom-keyboard/</link>
       <pubDate>Sun, 13 May 2018 20:23:00 +0900</pubDate>
