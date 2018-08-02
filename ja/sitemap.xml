@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/</loc>
+    <lastmod>2018-08-02T19:31:24+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/privacy-policy/</loc>
     <lastmod>2018-05-20T21:13:59+09:00</lastmod>
     <xhtml:link
@@ -155,7 +160,7 @@
   
   <url>
     <loc>https://urushiyama.github.io/posts/</loc>
-    <lastmod>2018-05-13T20:23:00+09:00</lastmod>
+    <lastmod>2018-08-02T19:31:24+09:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -188,6 +193,18 @@
   <url>
     <loc>https://urushiyama.github.io/tags/tex/</loc>
     <lastmod>2018-05-07T01:46:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/watchos/</loc>
+    <lastmod>2018-08-02T19:31:24+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/</loc>
+    <lastmod>2018-08-02T19:31:24+09:00</lastmod>
     <priority>0</priority>
   </url>
   

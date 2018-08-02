@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Sun, 13 May 2018 20:23:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 Aug 2018 19:31:24 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Apple Watchアプリでプログラムによるページ遷移を行う2つの方法</title>
+      <link>https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/</link>
+      <pubDate>Thu, 02 Aug 2018 19:31:24 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/</guid>
+      <description>&lt;p&gt;Apple Watchアプリを作成するとき，next pageを用いてViewを複数のページに渡って配置することができる．その際に，あるViewから別のViewへプログラムによりページ遷移したい場合がある．本稿では，プログラムによりページ遷移を行う方法を2つ紹介する．&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>ゲームコントローラで操作できるiOSカスタムキーボードをつくろうと（して挫折）した話</title>

@@ -1,0 +1,420 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='ページ遷移, WatchOS, アプリ開発' name="keywords">
+<meta content="urushiyama" name="author">
+<meta content='Apple Watchアプリを作成するとき，next pageを用いてViewを複数のページに渡って配置することができる．その際に，あるViewから別のViewへプログラムによりページ遷移したい場合がある．本稿では，プログラムによりページ遷移を行う方法を2つ紹介する．
+
+...' name="description">
+<meta property="og:site_name" content="urushiyamaのさまつごと" />
+<meta property="og:title" content='Apple Watchアプリでプログラムによるページ遷移を行う2つの方法 - urushiyamaのさまつごと'>
+<meta property="og:url" content="https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/">
+<meta property="og:description" content='Apple Watchアプリを作成するとき，next pageを用いてViewを複数のページに渡って配置することができる．その際に，あるViewから別のViewへプログラムによりページ遷移したい場合がある．本稿では，プログラムによりページ遷移を行う方法を2つ紹介する．
+
+...'>
+<meta property="og:type" content='article' />
+<title>Apple Watchアプリでプログラムによるページ遷移を行う2つの方法 - urushiyamaのさまつごと</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+
+
+</head>
+
+<body>
+
+<nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://urushiyama.github.io/"><span class="title is-4">urushiyamaのさまつごと</span></a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+        
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/posts">
+          Posts
+        </a>
+        
+      </div>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <nav class="breadcrumb is-small" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="https://urushiyama.github.io/">urushiyamaのさまつごと</a></li>
+    
+    <li><a href="https://urushiyama.github.io/posts">Posts</a></li>
+    
+    <li class="is-active">
+      <a href="#" aria-current="page">
+        
+        Apple Watchアプリでプログラムによるページ遷移を行う2つの方法
+        
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="container">
+    <h1 class="title">Apple Watchアプリでプログラムによるページ遷移を行う2つの方法</h1>
+    <h2 class="subtitle is-5">
+      
+        August 2, 2018 by urushiyama
+      
+    </h2>
+    
+      <div class="tags">
+    
+        <a class="tag is-rounded" href="/tags/watchos">WatchOS</a>
+    
+        <a class="tag is-rounded" href="/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA">アプリ開発</a>
+    
+</div>
+
+    
+    
+
+    <div class="content">
+      <p>Apple Watchアプリを作成するとき，next pageを用いてViewを複数のページに渡って配置することができる．その際に，あるViewから別のViewへプログラムによりページ遷移したい場合がある．本稿では，プログラムによりページ遷移を行う方法を2つ紹介する．</p>
+
+<p></p>
+
+<section class="message is-info">
+  <div class="message-header">目次</div>
+<div class="message-body toc">
+  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#前提">前提</a></li>
+<li><a href="#方法1-notificationとwkinterfacecontroller-becomecurrentpageを用いる">方法1. NotificationとWKInterfaceController.becomeCurrentPageを用いる</a>
+<ul>
+<li><a href="#1-遷移先ページのコントローラ自身をnotificationのオブザーバに登録する">1. 遷移先ページのコントローラ自身をNotificationのオブザーバに登録する</a></li>
+<li><a href="#2-遷移先ページのコントローラにbecomecurrentpageを発火するためのメソッドを追加する">2. 遷移先ページのコントローラにbecomeCurrentPageを発火するためのメソッドを追加する</a></li>
+<li><a href="#3-遷移元ページの遷移を発生させたい箇所でnotificationをpostする">3. 遷移元ページの遷移を発生させたい箇所でNotificationをpostする</a></li>
+<li><a href="#複数経路の遷移を実装する際の注意点">複数経路の遷移を実装する際の注意点</a></li>
+</ul></li>
+<li><a href="#方法2-wkinterfacecontroller-reloadrootpagecontrollersを用いる">方法2. WKInterfaceController.reloadRootPageControllersを用いる</a>
+<ul>
+<li><a href="#1-各ページのコントローラに名前をつける">1. 各ページのコントローラに名前をつける</a></li>
+<li><a href="#2-遷移元ページの遷移を発生させたい箇所でページのリロードを行う">2. 遷移元ページの遷移を発生させたい箇所でページのリロードを行う</a></li>
+<li><a href="#最後に">最後に</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+</section>
+
+<h2 id="前提">前提</h2>
+
+<ul>
+<li>Swift 4.x</li>
+<li>WatchOS 4</li>
+</ul>
+
+<h2 id="方法1-notificationとwkinterfacecontroller-becomecurrentpageを用いる">方法1. NotificationとWKInterfaceController.becomeCurrentPageを用いる</h2>
+
+<p>おそらく一般的にはこちらの方法が用いられていると思う．この方法ではページ遷移の際に，ユーザのスワイプによるページ遷移と同様のアニメーションが発生する．そのため，ページ遷移の発生をユーザに意識させる場合に有効であろう．</p>
+
+<h3 id="1-遷移先ページのコントローラ自身をnotificationのオブザーバに登録する">1. 遷移先ページのコントローラ自身をNotificationのオブザーバに登録する</h3>
+
+<pre><code class="language-swift">class DestinationPageController: WKInterfaceController {
+  /* ~~~ */
+  override func awake(withContext context: Any?) {
+    super.awake(withContext: context)
+    
+    /* ~~~ */
+
+    NotificationCenter.default.addObserver(self, selector: #selector(self.receiveMovePageNotification(_:)), name: Notification.Name(rawValue: &quot;moveToDestinationPage&quot;) , object: nil)
+  }
+}
+</code></pre>
+
+<h3 id="2-遷移先ページのコントローラにbecomecurrentpageを発火するためのメソッドを追加する">2. 遷移先ページのコントローラにbecomeCurrentPageを発火するためのメソッドを追加する</h3>
+
+<p>本当はselectorに直接becomeCurrentPageをselectorとして登録したいのだが，selectorに登録するメソッドはただ1つの引数（NSNotification）を持たなければならないため，<code>self.becomeCurrentPage</code>を呼び出すメソッドを追加する．</p>
+
+<pre><code class="language-swift">class DestinationPageController: WKInterfaceController {
+  /* ~~~ */
+  @objc func receiveMovePageNotification(_ notification: Notification?) {
+    self.becomeCurrentPage()
+  }
+}
+</code></pre>
+
+<h3 id="3-遷移元ページの遷移を発生させたい箇所でnotificationをpostする">3. 遷移元ページの遷移を発生させたい箇所でNotificationをpostする</h3>
+
+<p>このときpostするNotification.Nameは，手順1で用いた値にする必要がある．</p>
+
+<pre><code class="language-swift">class OriginPageController: WKInterfaceController {
+  /* ~~~ */
+  func someActionOccurred() {
+    NotificationCenter.default.post(name: Notification.Name(rawValue: &quot;moveToDestinationPage&quot;), object: nil)
+  }
+}
+</code></pre>
+
+<h3 id="複数経路の遷移を実装する際の注意点">複数経路の遷移を実装する際の注意点</h3>
+
+<p>Notificationのオブザーバは，登録時にobjectを指定しない限り，あらゆるobjectからのpostに対して反応するため，遷移先ごとに異なるNotification.Nameを用いる必要がある．</p>
+
+<h2 id="方法2-wkinterfacecontroller-reloadrootpagecontrollersを用いる">方法2. WKInterfaceController.reloadRootPageControllersを用いる</h2>
+
+<p>この方法では，ページ遷移のみならず，表示するページの数や種類を変更できる．一方，すべてのページが再度読み込まれるため，遷移前のページ群と遷移後のページ群がユーザにとって別のものに見える点には注意が必要となる．</p>
+
+<h3 id="1-各ページのコントローラに名前をつける">1. 各ページのコントローラに名前をつける</h3>
+
+<p>例えば，storyboard上の各Controllerを選択し，Identifierに一意な名前をつける．</p>
+
+<h3 id="2-遷移元ページの遷移を発生させたい箇所でページのリロードを行う">2. 遷移元ページの遷移を発生させたい箇所でページのリロードを行う</h3>
+
+<p>withNamesに各ページのコントローラにつけた名前を0ページ目から順に並べた配列を渡し，pageIndexに遷移先のページ番号を渡す．</p>
+
+<pre><code class="language-swift">class OriginPageController: WKInterfaceController {
+  /* ~~~ */
+  func someActionOccurred() {
+    WKInterfaceController.reloadRootPageControllers(withNames: [&quot;OriginPage&quot;,&quot;DestinationPage&quot;], contexts: nil, orientation: .horizontal, pageIndex: 1)
+  }
+}
+</code></pre>
+
+<h3 id="最後に">最後に</h3>
+
+<p>ここで示したコード断片は何ら著作的でないものなので，パブリックドメインである．自己責任の限りご自由にお使いください．</p>
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fposts%2f2-ways-to-programmatically-change-page-on-apple-watch-app%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fposts%2f2-ways-to-programmatically-change-page-on-apple-watch-app%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fposts%2f2-ways-to-programmatically-change-page-on-apple-watch-app%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=Apple%20Watch%e3%82%a2%e3%83%97%e3%83%aa%e3%81%a7%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e3%81%ab%e3%82%88%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e9%81%b7%e7%a7%bb%e3%82%92%e8%a1%8c%e3%81%862%e3%81%a4%e3%81%ae%e6%96%b9%e6%b3%95 - https%3a%2f%2furushiyama.github.io%2fposts%2f2-ways-to-programmatically-change-page-on-apple-watch-app%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fposts%2f2-ways-to-programmatically-change-page-on-apple-watch-app%2f&title=Apple%20Watch%e3%82%a2%e3%83%97%e3%83%aa%e3%81%a7%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e3%81%ab%e3%82%88%e3%82%8b%e3%83%9a%e3%83%bc%e3%82%b8%e9%81%b7%e7%a7%bb%e3%82%92%e8%a1%8c%e3%81%862%e3%81%a4%e3%81%ae%e6%96%b9%e6%b3%95" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
+  </div>
+</section>
+
+<section class="section">
+  <nav class="level" role="navigation">
+    
+    <a href="https://urushiyama.github.io/posts/try-ios-game-controller-custom-keyboard/" class="button level-left">Prev: ゲームコントローラで操作でき …</a>
+    
+    
+    <a href="" class="level-left">&nbsp;</a>
+    
+  </nav>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018- urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/license/">LICENSE</a>
+    </p>
+  </div>
+</section>
+
+  
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/",
+    "headline": "Apple Watchアプリでプログラムによるページ遷移を行う2つの方法",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/"
+    },
+    
+     "image": {
+      "@type": "ImageObject",
+      "url": "https://urushiyama.github.io/img/photo.png",
+      "width": 1024,
+      "height": 1024
+    },
+    
+    "genre": "posts",
+    
+    "keywords": "WatchOS, アプリ開発",
+    
+    "url": "https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/",
+    
+    "datePublished": "2018-08-02T19:31:24+09:00",
+    
+    
+    "dateModified": "2018-08-02T19:31:24+09:00",
+    
+    
+    "license": "\u0026copy; 2018- urushiyama | Powered by Hugo with HUCORE theme.",
+    
+    
+    
+    "author": {
+      "@type": "Person",
+      "name": "urushiyama"
+    },
+    
+    "publisher": {
+      "@type": "Organization",
+      "name": "urushiyama",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://urushiyama.github.io/img/photo.png"
+      }
+    },
+    "description": "Apple Watchアプリを作成するとき，next pageを用いてViewを複数のページに渡って配置することができる．その際に，あるViewから別のViewへプログラムによりページ遷移したい場合がある．本稿では，プログラムによりページ遷移を行う方法を2つ紹介する．
+
+"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://urushiyama.github.io/",
+          "name": "TOP"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://urushiyama.github.io/posts",
+          "name": "Posts"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/",
+          "name": "Apple Watchアプリでプログラムによるページ遷移を行う2つの方法"
+        }
+      }
+    ]
+  }
+]
+</script>
+  
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/swift.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
