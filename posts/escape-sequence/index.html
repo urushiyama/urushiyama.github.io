@@ -16,13 +16,13 @@
 <meta name="robots" content="index,follow">
 <meta content='Hugo, エスケープ処理' name="keywords">
 <meta content="urushiyama" name="author">
-<meta content='山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
+<meta content='山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
 
 ...' name="description">
 <meta property="og:site_name" content="urushiyamaのさまつごと" />
 <meta property="og:title" content='Hugoのエスケープ処理 - urushiyamaのさまつごと'>
 <meta property="og:url" content="https://urushiyama.github.io/posts/escape-sequence/">
-<meta property="og:description" content='山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
+<meta property="og:description" content='山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
 
 ...'>
 <meta property="og:type" content='article' />
@@ -121,7 +121,7 @@
     
 
     <div class="content">
-      <p>山カッコ (&lt;&gt;)，アンパサンド (&amp;)，クォーテーション (&ldquo;)，&hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために<code>safeHTML</code>や<code>safeURL</code>といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．</p>
+      <p>山カッコ (&lt;&gt;)，アンパサンド (&amp;)，クォーテーション (&ldquo;)，&hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために<code>safeHTML</code>や<code>safeURL</code>といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．</p>
 
 <p></p>
 
@@ -134,7 +134,7 @@
 <ul>
 <li><a href="#safehtmlは何をしているのか">safeHTMLは何をしているのか</a></li>
 <li><a href="#具体的にどうすべきか">具体的にどうすべきか</a></li>
-<li><a href="#blackfriday-の功罪">Blackfridayの功罪</a></li>
+<li><a href="#blackfridayの功罪">Blackfridayの功罪</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -174,11 +174,11 @@
 
 <p>といったところだろうか．</p>
 
-<h2 id="blackfriday-の功罪">Blackfridayの功罪</h2>
+<h2 id="blackfridayの功罪">Blackfridayの功罪</h2>
 
-<p>HugoのMarkdownパーサであるBlackfridayも，意図しない文字を出力する原因になりうる．
-Blackfridayはデフォルトで引用符や二重引用符を左右対応づけた文字に変換するのだが，このExtensionをdisableにする方法がわからなかった<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>．文章中に<code>'</code>や<code>&quot;</code>を表記する必要があるかと言われると微妙だが，わざわざインラインコードにする手間が発生するのも微妙である．
-また，3連ドット(<code>...</code>)も三点リーダ(&hellip;)に変えてしまう．深く考えなくとも綺麗に整形してくれるという利点と，入力文字が意図せずに変換されてしまうという欠点がBlackfridayには同居しているように思える．</p>
+<p>HugoのMarkdownパーサであるBlackfridayも，意図しない文字を出力する原因になりうる．
+Blackfridayはデフォルトで引用符や二重引用符を左右対応づけた文字に変換するのだが，このExtensionをdisableにする方法がわからなかった<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>．文章中に<code>'</code>や<code>&quot;</code>を表記する必要があるかと言われると微妙だが，わざわざインラインコードにする手間が発生するのも微妙である．
+また，3連ドット(<code>...</code>)も三点リーダ(&hellip;)に変えてしまう．深く考えなくとも綺麗に整形してくれるという利点と，入力文字が意図せずに変換されてしまうという欠点がBlackfridayには同居しているように思える．</p>
 <div class="footnotes">
 
 <hr />
@@ -276,7 +276,7 @@ Blackfridayはデフォルトで引用符や二重引用符を左右対応づ�
         "url": "https://urushiyama.github.io/img/photo.png"
       }
     },
-    "description": "山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
+    "description": "山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
 
 "
   },
@@ -361,11 +361,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-118350112-1', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

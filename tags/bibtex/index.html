@@ -108,8 +108,8 @@
 
             
             <div class="content">
-              BibTeX形式の引用は多くのデジタルライブラリで提供されており，サクッと引用をつけるのに便利である．しかし，使用するにあたってひとつハマった点がある．
-データ項目の記載の有無とデータ項目の表記順 そのハマった点というのは，書誌情報にデータ項目を記入するか否かでデータ項目の表記順が変わる点である．
+              BibTeX形式の引用は多くのデジタルライブラリで提供されており，サクッと引用をつけるのに便利である．しかし，使用するにあたってひとつハマった点がある．
+データ項目の記載の有無とデータ項目の表記順 そのハマった点というのは，書誌情報にデータ項目を記入するか否かでデータ項目の表記順が変わる点である．
 
 
               
@@ -208,11 +208,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-118350112-1', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 
