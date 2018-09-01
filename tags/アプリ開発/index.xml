@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Thu, 02 Aug 2018 19:31:24 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 02 Sep 2018 01:59:52 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>新規作成したApple IDでApple Developer Programに登録する際に2ファクタ認証を突破する方法</title>
+      <link>https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/</link>
+      <pubDate>Sun, 02 Sep 2018 01:59:52 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/</guid>
+      <description>&lt;p&gt;Apple Developer Programに登録する際に，普段使っているApple IDとは別に，開発用のApple IDを新規作成して登録を行いたい，という需要がある．
+しかし，2018年9月現在，Apple Developer Programに登録するためのApple IDは2ファクタ認証を有効化している必要がある．
+普段使っているAppleデバイスのアカウントに紐付いていない新規作成したApple IDを2ファクタ認証するためには，少々テクニックめいた手順が必要になる．
+本記事では，その手順を紹介する．&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Apple Watchアプリでプログラムによるページ遷移を行う2つの方法</title>

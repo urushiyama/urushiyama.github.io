@@ -1,0 +1,411 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='2ファクタ認証, Apple Developer Program, 新規 Apple ID, アプリ開発' name="keywords">
+<meta content="urushiyama" name="author">
+<meta content='Apple Developer Programに登録する際に，普段使っているApple IDとは別に，開発用のApple IDを新規作成して登録を行いたい，という需要がある． しかし，2018年9月現在，Apple Developer Programに登録するためのApple IDは2ファクタ認証を有効化している必要がある． 普段使っているAppleデバイスのアカウントに紐付いていない新規作成したApple IDを2ファクタ認証するためには，少々テクニックめいた手順が必要になる． 本記事では，その手順を紹介する．
+
+...' name="description">
+<meta property="og:site_name" content="urushiyamaのさまつごと" />
+<meta property="og:title" content='新規作成したApple IDでApple Developer Programに登録する際に2ファクタ認証を突破する方法 - urushiyamaのさまつごと'>
+<meta property="og:url" content="https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/">
+<meta property="og:description" content='Apple Developer Programに登録する際に，普段使っているApple IDとは別に，開発用のApple IDを新規作成して登録を行いたい，という需要がある． しかし，2018年9月現在，Apple Developer Programに登録するためのApple IDは2ファクタ認証を有効化している必要がある． 普段使っているAppleデバイスのアカウントに紐付いていない新規作成したApple IDを2ファクタ認証するためには，少々テクニックめいた手順が必要になる． 本記事では，その手順を紹介する．
+
+...'>
+<meta property="og:type" content='article' />
+<title>新規作成したApple IDでApple Developer Programに登録する際に2ファクタ認証を突破する方法 - urushiyamaのさまつごと</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+
+
+</head>
+
+<body>
+
+<nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://urushiyama.github.io/"><span class="title is-4">urushiyamaのさまつごと</span></a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+        
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/posts">
+          Posts
+        </a>
+        
+      </div>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <nav class="breadcrumb is-small" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="https://urushiyama.github.io/">urushiyamaのさまつごと</a></li>
+    
+    <li><a href="https://urushiyama.github.io/posts">Posts</a></li>
+    
+    <li class="is-active">
+      <a href="#" aria-current="page">
+        
+        新規作成したApple IDでApple Developer Programに登録する際に2ファクタ認証を突破する方法
+        
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="container">
+    <h1 class="title">新規作成したApple IDでApple Developer Programに登録する際に2ファクタ認証を突破する方法</h1>
+    <h2 class="subtitle is-5">
+      
+        September 2, 2018 by urushiyama
+      
+    </h2>
+    
+      <div class="tags">
+    
+        <a class="tag is-rounded" href="/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA">アプリ開発</a>
+    
+</div>
+
+    
+    
+
+    <div class="content">
+      <p>Apple Developer Programに登録する際に，普段使っているApple IDとは別に，開発用のApple IDを新規作成して登録を行いたい，という需要がある．
+しかし，2018年9月現在，Apple Developer Programに登録するためのApple IDは2ファクタ認証を有効化している必要がある．
+普段使っているAppleデバイスのアカウントに紐付いていない新規作成したApple IDを2ファクタ認証するためには，少々テクニックめいた手順が必要になる．
+本記事では，その手順を紹介する．</p>
+
+<p></p>
+
+<section class="message is-info">
+  <div class="message-header">目次</div>
+<div class="message-body toc">
+  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#そもそも開発用にapple-idを新規作成する必要はあるか">そもそも開発用にApple IDを新規作成する必要はあるか？</a></li>
+<li><a href="#前提">前提</a></li>
+<li><a href="#step-1-apple-developer-programの登録を進める">Step 1：Apple Developer Programの登録を進める</a></li>
+<li><a href="#step-2-新規作成したapple-idの-2ステップ認証-を有効化する">Step 2：新規作成したApple IDの「2ステップ認証」を有効化する</a></li>
+<li><a href="#step-3-2ステップ認証-を-2ファクタ認証-に昇格する">Step 3：「2ステップ認証」を「2ファクタ認証」に昇格する</a></li>
+<li><a href="#step-4-apple-developer-programへの登録を再開する">Step 4：Apple Developer Programへの登録を再開する</a></li>
+<li><a href="#最後に">最後に</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+</section>
+
+<h2 id="そもそも開発用にapple-idを新規作成する必要はあるか">そもそも開発用にApple IDを新規作成する必要はあるか？</h2>
+
+<p>普段使っているデバイスでプライマリアカウントとしてサインインしているApple IDをそのまま用いる場合は，この手順は不要である．
+代わりに，普段使っているデバイスから<a href="https://support.apple.com/ja-jp/HT204915">2ファクタ認証をオンにする</a>．</p>
+
+<p>ただし，開発用にApple IDを新規作成する動機がいくつか挙げられる：</p>
+
+<ul>
+<li>普段使っているアカウントは日本語だが，開発用は英語にしたい</li>
+<li><s>やばいアプリを提出して</s>アカウントが凍結される場合のリスクを最小限に抑えたい</li>
+</ul>
+
+<h2 id="前提">前提</h2>
+
+<p>以下では，次の状況を前提とする：</p>
+
+<ul>
+<li>新規作成したApple IDがあること</li>
+<li>MacやiPhoneなど，2ファクタ認証で信頼できるデバイスとして使える端末（以下，2ファクタ認証用端末）があること
+
+<ul>
+<li>Developer登録する時点でMac端末は持っているはずなので，以下ではMac端末の場合のみ説明する</li>
+</ul></li>
+<li>iPhoneなど，SMSメッセージを受信できる端末（以下，SMS受信端末）があること</li>
+</ul>
+
+<h2 id="step-1-apple-developer-programの登録を進める">Step 1：Apple Developer Programの登録を進める</h2>
+
+<p>Apple Developer Programの「登録」/ &ldquo;Enroll&rdquo;を選択し，新規作成したApple IDで登録作業を進める．
+&ldquo;Two-factor authentication is required&rdquo;といった趣旨のエラーメッセージが表示されるところまで進める．</p>
+
+<h2 id="step-2-新規作成したapple-idの-2ステップ認証-を有効化する">Step 2：新規作成したApple IDの「2ステップ認証」を有効化する</h2>
+
+<ul>
+<li>「2ファクタ認証」ではなく，「2 <strong>ステップ</strong> 認証」を有効化する</li>
+</ul>
+
+<ol>
+<li><a href="https://www.icloud.com">iCloud.com</a>に新規作成したApple IDでサインインし，「設定」→Apple IDの「管理」に移動する．</li>
+<li>アカウントページに移動するので，「セキュリティ」の「2ファクタ認証をオンにする」を選択する．</li>
+<li>2ファクタ認証の説明が表示されるので，最後のページまで移動する．</li>
+<li>最後のページに「デバイスがない場合にもセキュリティを強化する方法があるよ」みたいなことが書かれていて，リンクがあるのでそれを選択する（ココらへん記憶がうろ覚え）</li>
+<li>2ステップ認証を説明するページに移動するので，「2ステップ認証を有効化する」リンクを選択する</li>
+<li>指示に従い，SMS受信端末の電話番号を入力する（日本なら+81，番号の頭の0は省略して入力する）</li>
+<li>指示に従い，SMSメッセージを受信できることを確認し，2ステップ認証を有効化する</li>
+</ol>
+
+<p>2ステップ認証を有効化した段階では，まだDeveloper登録を進めることができない．
+したがって，以下のステップで「2ステップ認証」を「2ファクタ認証」に昇格する必要がある．</p>
+
+<h2 id="step-3-2ステップ認証-を-2ファクタ認証-に昇格する">Step 3：「2ステップ認証」を「2ファクタ認証」に昇格する</h2>
+
+<ul>
+<li>2ファクタ認証用端末として，ここではMac端末を用いる場合を説明する</li>
+<li>すでに新規作成したApple IDをサブアカウントとしてMac端末のインターネットアカウントに追加している場合は，一旦サインアウトする</li>
+</ul>
+
+<ol>
+<li>Mac端末の環境設定を開き，「インターネットアカウント」を選択する</li>
+<li>ウィンドウ右側の「iCloud」を選択し，新規作成したApple IDでサブアカウントとしてサインインする</li>
+<li>自動的に2ステップ認証が2ファクタ認証に昇格し，Mac端末が信頼できるデバイスに追加される</li>
+</ol>
+
+<h2 id="step-4-apple-developer-programへの登録を再開する">Step 4：Apple Developer Programへの登録を再開する</h2>
+
+<p>ここまでの作業で，新規作成したApple IDの2ファクタ認証用端末による2ファクタ認証が有効化されるので，以降はDeveloper登録を進められるようになる．
+ブラウザを再読込みする，あるいは<a href="https://developer.apple.com/jp/programs/enroll/">ここ</a>からDeveloper登録を再開することで，（少なくとも）2ファクタ認証についてはエラーメッセージがでなくなるハズ！</p>
+
+<h2 id="最後に">最後に</h2>
+
+<ul>
+<li>2018/9/1にこの方法でDeveloper登録を申請，9/2現在StatusはPendingであり， <strong>実際にこの方法で審査が通るかは未確認</strong></li>
+</ul>
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90%e3%81%97%e3%81%9fApple%20ID%e3%81%a7Apple%20Developer%20Program%e3%81%ab%e7%99%bb%e9%8c%b2%e3%81%99%e3%82%8b%e9%9a%9b%e3%81%ab2%e3%83%95%e3%82%a1%e3%82%af%e3%82%bf%e8%aa%8d%e8%a8%bc%e3%82%92%e7%aa%81%e7%a0%b4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95 - https%3a%2f%2furushiyama.github.io%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f&title=%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90%e3%81%97%e3%81%9fApple%20ID%e3%81%a7Apple%20Developer%20Program%e3%81%ab%e7%99%bb%e9%8c%b2%e3%81%99%e3%82%8b%e9%9a%9b%e3%81%ab2%e3%83%95%e3%82%a1%e3%82%af%e3%82%bf%e8%aa%8d%e8%a8%bc%e3%82%92%e7%aa%81%e7%a0%b4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
+  </div>
+</section>
+
+<section class="section">
+  <nav class="level" role="navigation">
+    
+    <a href="https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/" class="button level-left">Prev: Apple Watchアプリでプ …</a>
+    
+    
+    <a href="" class="level-left">&nbsp;</a>
+    
+  </nav>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018- urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/license/">LICENSE</a>
+    </p>
+  </div>
+</section>
+
+  
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/",
+    "headline": "新規作成したApple IDでApple Developer Programに登録する際に2ファクタ認証を突破する方法",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/"
+    },
+    
+     "image": {
+      "@type": "ImageObject",
+      "url": "https://urushiyama.github.io/img/photo.png",
+      "width": 1024,
+      "height": 1024
+    },
+    
+    "genre": "posts",
+    
+    "keywords": "アプリ開発",
+    
+    "url": "https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/",
+    
+    "datePublished": "2018-09-02T01:59:52+09:00",
+    
+    
+    "dateModified": "2018-09-02T01:59:52+09:00",
+    
+    
+    "license": "\u0026copy; 2018- urushiyama | Powered by Hugo with HUCORE theme.",
+    
+    
+    
+    "author": {
+      "@type": "Person",
+      "name": "urushiyama"
+    },
+    
+    "publisher": {
+      "@type": "Organization",
+      "name": "urushiyama",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://urushiyama.github.io/img/photo.png"
+      }
+    },
+    "description": "Apple Developer Programに登録する際に，普段使っているApple IDとは別に，開発用のApple IDを新規作成して登録を行いたい，という需要がある． しかし，2018年9月現在，Apple Developer Programに登録するためのApple IDは2ファクタ認証を有効化している必要がある． 普段使っているAppleデバイスのアカウントに紐付いていない新規作成したApple IDを2ファクタ認証するためには，少々テクニックめいた手順が必要になる． 本記事では，その手順を紹介する．
+
+"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://urushiyama.github.io/",
+          "name": "TOP"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://urushiyama.github.io/posts",
+          "name": "Posts"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/",
+          "name": "新規作成したApple IDでApple Developer Programに登録する際に2ファクタ認証を突破する方法"
+        }
+      }
+    ]
+  }
+]
+</script>
+  
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/swift.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
