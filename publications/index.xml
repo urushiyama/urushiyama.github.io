@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on urushiyamaのさまつごと</title>
+    <link>https://urushiyama.github.io/publications/</link>
+    <description>Recent content in Publications on urushiyamaのさまつごと</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <lastBuildDate>Thu, 03 May 2018 19:33:58 +0900</lastBuildDate>
+    
+	<atom:link href="https://urushiyama.github.io/publications/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sample Publication</title>
+      <link>https://urushiyama.github.io/publications/wiss2018proceedings/</link>
+      <pubDate>Thu, 03 May 2018 19:33:58 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/wiss2018proceedings/</guid>
+      <description>概要 手元を見ずにスマートフォンによる文字入力が行えれば，ユーザは歩行中あるいは会話中にスマートフォンにてメモを取ることができる．しかし，視覚</description>
+    </item>
+    
+  </channel>
+</rss>

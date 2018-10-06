@@ -58,6 +58,11 @@
   </url>
   
   <url>
+    <loc>https://urushiyama.github.io/publications/wiss2018proceedings/</loc>
+    <lastmod>2018-05-03T19:33:58+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/posts/escape-sequence/</loc>
     <lastmod>2018-04-30T07:09:32+09:00</lastmod>
   </url>
@@ -177,6 +182,12 @@
                 hreflang="ja"
                 href="https://urushiyama.github.io/posts/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/publications/</loc>
+    <lastmod>2018-05-03T19:33:58+09:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

@@ -107,6 +107,15 @@ iOS用に購入したMFiコントローラを使い道が少ない為に放置�
     </item>
     
     <item>
+      <title>Sample Publication</title>
+      <link>https://urushiyama.github.io/publications/wiss2018proceedings/</link>
+      <pubDate>Thu, 03 May 2018 19:33:58 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/wiss2018proceedings/</guid>
+      <description>概要 手元を見ずにスマートフォンによる文字入力が行えれば，ユーザは歩行中あるいは会話中にスマートフォンにてメモを取ることができる．しかし，視覚</description>
+    </item>
+    
+    <item>
       <title>Hugoのエスケープ処理</title>
       <link>https://urushiyama.github.io/posts/escape-sequence/</link>
       <pubDate>Mon, 30 Apr 2018 07:09:32 +0900</pubDate>
