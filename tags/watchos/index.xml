@@ -18,9 +18,7 @@
       <pubDate>Thu, 02 Aug 2018 19:31:24 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/</guid>
-      <description>&lt;p&gt;Apple Watchアプリを作成するとき，next pageを用いてViewを複数のページに渡って配置することができる．その際に，あるViewから別のViewへプログラムによりページ遷移したい場合がある．本稿では，プログラムによりページ遷移を行う方法を2つ紹介する．&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Apple Watchアプリを作成するとき，next pageを用いてViewを複数のページに渡って配置することができる．その際に，あるViewから別のViewへプログラムによりページ遷移したい場合がある．本稿では，プログラムによりページ遷移を行う方法を2つ紹介する．&lt;/p&gt;</description>
     </item>
     
   </channel>

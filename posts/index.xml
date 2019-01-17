@@ -21,9 +21,7 @@
       <description>&lt;p&gt;Apple Developer Programに登録する際に，普段使っているApple IDとは別に，開発用のApple IDを新規作成して登録を行いたい，という需要がある．
 しかし，2018年9月現在，Apple Developer Programに登録するためのApple IDは2ファクタ認証を有効化している必要がある．
 普段使っているAppleデバイスのアカウントに紐付いていない新規作成したApple IDを2ファクタ認証するためには，少々テクニックめいた手順が必要になる．
-本記事では，その手順を紹介する．&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+本記事では，その手順を紹介する．&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,9 +30,7 @@
       <pubDate>Thu, 02 Aug 2018 19:31:24 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/</guid>
-      <description>&lt;p&gt;Apple Watchアプリを作成するとき，next pageを用いてViewを複数のページに渡って配置することができる．その際に，あるViewから別のViewへプログラムによりページ遷移したい場合がある．本稿では，プログラムによりページ遷移を行う方法を2つ紹介する．&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Apple Watchアプリを作成するとき，next pageを用いてViewを複数のページに渡って配置することができる．その際に，あるViewから別のViewへプログラムによりページ遷移したい場合がある．本稿では，プログラムによりページ遷移を行う方法を2つ紹介する．&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -45,9 +41,7 @@
       <guid>https://urushiyama.github.io/posts/try-ios-game-controller-custom-keyboard/</guid>
       <description>&lt;p&gt;iOSでMFiコントローラにより操作可能なカスタムキーボードの作成を試みた．&lt;/p&gt;
 
-&lt;p&gt;結果としてはうまくいかず挫折したが，作成時にハマった点を2つ述べる．&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;結果としてはうまくいかず挫折したが，作成時にハマった点を2つ述べる．&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -60,9 +54,7 @@
 
 &lt;h2 id=&#34;データ項目の記載の有無とデータ項目の表記順&#34;&gt;データ項目の記載の有無とデータ項目の表記順&lt;/h2&gt;
 
-&lt;p&gt;そのハマった点というのは，書誌情報にデータ項目を記入するか否かでデータ項目の表記順が変わる点である．&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;そのハマった点というのは，書誌情報にデータ項目を記入するか否かでデータ項目の表記順が変わる点である．&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -83,9 +75,7 @@ iOS用に購入したMFiコントローラを使い道が少ない為に放置�
 &lt;li&gt;ただしプロトコルが特殊なのでキーマッピングアプリケーションが別途必要&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;以下に動作手順の詳細を述べる．&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;以下に動作手順の詳細を述べる．&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -94,9 +84,7 @@ iOS用に購入したMFiコントローラを使い道が少ない為に放置�
       <pubDate>Mon, 30 Apr 2018 07:09:32 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/escape-sequence/</guid>
-      <description>&lt;p&gt;山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために&lt;code&gt;safeHTML&lt;/code&gt;や&lt;code&gt;safeURL&lt;/code&gt;といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために&lt;code&gt;safeHTML&lt;/code&gt;や&lt;code&gt;safeURL&lt;/code&gt;といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -105,9 +93,7 @@ iOS用に購入したMFiコントローラを使い道が少ない為に放置�
       <pubDate>Mon, 30 Apr 2018 02:37:25 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/my-first-post/</guid>
-      <description>&lt;p&gt;研究室への配属が決まり，ポートフォリオ兼ブログがあると便利かな，と思うようになった．無料でホストでき，Githubのプロジェクトページが同一ドメインになるGithub Pagesでホストすることが好ましいと考え，静的サイト構築フレームワークを吟味した．&amp;rdquo;The world&amp;rsquo;s fastest&amp;rdquo;という言葉に惹かれ，&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;で静的サイトを構築することにした．&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;研究室への配属が決まり，ポートフォリオ兼ブログがあると便利かな，と思うようになった．無料でホストでき，Githubのプロジェクトページが同一ドメインになるGithub Pagesでホストすることが好ましいと考え，静的サイト構築フレームワークを吟味した．&amp;rdquo;The world&amp;rsquo;s fastest&amp;rdquo;という言葉に惹かれ，&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;で静的サイトを構築することにした．&lt;/p&gt;</description>
     </item>
     
   </channel>

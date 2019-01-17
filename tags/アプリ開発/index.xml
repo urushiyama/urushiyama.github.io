@@ -21,9 +21,7 @@
       <description>&lt;p&gt;Apple Developer Programに登録する際に，普段使っているApple IDとは別に，開発用のApple IDを新規作成して登録を行いたい，という需要がある．
 しかし，2018年9月現在，Apple Developer Programに登録するためのApple IDは2ファクタ認証を有効化している必要がある．
 普段使っているAppleデバイスのアカウントに紐付いていない新規作成したApple IDを2ファクタ認証するためには，少々テクニックめいた手順が必要になる．
-本記事では，その手順を紹介する．&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+本記事では，その手順を紹介する．&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,9 +30,7 @@
       <pubDate>Thu, 02 Aug 2018 19:31:24 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/</guid>
-      <description>&lt;p&gt;Apple Watchアプリを作成するとき，next pageを用いてViewを複数のページに渡って配置することができる．その際に，あるViewから別のViewへプログラムによりページ遷移したい場合がある．本稿では，プログラムによりページ遷移を行う方法を2つ紹介する．&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Apple Watchアプリを作成するとき，next pageを用いてViewを複数のページに渡って配置することができる．その際に，あるViewから別のViewへプログラムによりページ遷移したい場合がある．本稿では，プログラムによりページ遷移を行う方法を2つ紹介する．&lt;/p&gt;</description>
     </item>
     
   </channel>
