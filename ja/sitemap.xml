@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://urushiyama.github.io/publications/hci181/</loc>
+    <lastmod>2019-01-14T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/publications/wiss2018proceedings/</loc>
+    <lastmod>2018-09-27T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/</loc>
     <lastmod>2018-09-04T11:19:00+09:00</lastmod>
   </url>
@@ -55,11 +65,6 @@
   <url>
     <loc>https://urushiyama.github.io/posts/play-touhou-with-nimbus/</loc>
     <lastmod>2018-05-11T16:16:03+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/publications/wiss2018proceedings/</loc>
-    <lastmod>2018-05-03T19:33:58+09:00</lastmod>
   </url>
   
   <url>
@@ -135,6 +140,12 @@
   </url>
   
   <url>
+    <loc>https://urushiyama.github.io/tags/hci%E7%A0%94%E7%A9%B6%E4%BC%9A/</loc>
+    <lastmod>2019-01-14T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/tags/hugo/</loc>
     <lastmod>2018-04-30T07:09:32+09:00</lastmod>
     <priority>0</priority>
@@ -186,7 +197,7 @@
   
   <url>
     <loc>https://urushiyama.github.io/publications/</loc>
-    <lastmod>2018-05-03T19:33:58+09:00</lastmod>
+    <lastmod>2019-01-14T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -219,6 +230,12 @@
   </url>
   
   <url>
+    <loc>https://urushiyama.github.io/tags/wiss/</loc>
+    <lastmod>2018-09-27T00:00:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/</loc>
     <lastmod>2018-09-04T11:19:00+09:00</lastmod>
     <priority>0</priority>
@@ -233,6 +250,12 @@
   <url>
     <loc>https://urushiyama.github.io/tags/%E3%82%B2%E3%83%BC%E3%83%A0/</loc>
     <lastmod>2018-05-11T16:16:03+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97/</loc>
+    <lastmod>2018-09-27T00:00:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   

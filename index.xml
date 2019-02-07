@@ -13,6 +13,24 @@
     
     
     <item>
+      <title>指の軌跡に基づくモバイル端末向けアイズフリーかな文字入力の提案（HCI181）</title>
+      <link>https://urushiyama.github.io/publications/hci181/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/hci181/</guid>
+      <description>概要 アイズフリー文字入力は，周囲に視覚的注意が必要とされる状況において，モバイル端末のスクリーンへの視認を不要にするため，有用である．しかし</description>
+    </item>
+    
+    <item>
+      <title>指の軌跡に基づく手元の視認が不要なスマートフォン向けかな文字入力手法（WISS2018）</title>
+      <link>https://urushiyama.github.io/publications/wiss2018proceedings/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/wiss2018proceedings/</guid>
+      <description>概要 手元を見ずにスマートフォンによる文字入力が行えれば，ユーザは歩行中あるいは会話中にスマートフォンにてメモを取ることができる．しかし，視覚</description>
+    </item>
+    
+    <item>
       <title>新規作成したApple IDでApple Developer Programに登録する際に2ファクタ認証を突破する方法</title>
       <link>https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/</link>
       <pubDate>Sun, 02 Sep 2018 01:59:52 +0900</pubDate>
@@ -94,15 +112,6 @@ iOS用に購入したMFiコントローラを使い道が少ない為に放置�
 &lt;/ul&gt;
 
 &lt;p&gt;以下に動作手順の詳細を述べる．&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Sample Publication</title>
-      <link>https://urushiyama.github.io/publications/wiss2018proceedings/</link>
-      <pubDate>Thu, 03 May 2018 19:33:58 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/publications/wiss2018proceedings/</guid>
-      <description>概要 手元を見ずにスマートフォンによる文字入力が行えれば，ユーザは歩行中あるいは会話中にスマートフォンにてメモを取ることができる．しかし，視覚</description>
     </item>
     
     <item>
