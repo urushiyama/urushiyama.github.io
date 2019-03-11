@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on urushiyamaのさまつごと</title>
+    <link>https://urushiyama.github.io/projects/</link>
+    <description>Recent content in Projects on urushiyamaのさまつごと</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <lastBuildDate>Mon, 11 Mar 2019 02:02:08 +0900</lastBuildDate>
+    
+	<atom:link href="https://urushiyama.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MJ65 Keyboard</title>
+      <link>https://urushiyama.github.io/projects/mj65/</link>
+      <pubDate>Mon, 11 Mar 2019 02:02:08 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/projects/mj65/</guid>
+      <description>MJ65: the Keyboard of Mac JIS-layout Lovers, by Mac JIS-layout Lovers, for Mac JIS-layout Lovers. MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです． ざっくり以下の特長を持ちま</description>
+    </item>
+    
+  </channel>
+</rss>
