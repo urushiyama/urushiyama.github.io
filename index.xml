@@ -22,12 +22,25 @@
     </item>
     
     <item>
-      <title>MJ65 Keyboard</title>
+      <title>MJ65: the Keyboard of Mac JIS-layout Lovers, by Mac JIS-layout Lovers, for Mac JIS-layout Lovers.</title>
       <link>https://urushiyama.github.io/projects/mj65/</link>
       <pubDate>Mon, 11 Mar 2019 02:02:08 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/projects/mj65/</guid>
-      <description>MJ65: the Keyboard of Mac JIS-layout Lovers, by Mac JIS-layout Lovers, for Mac JIS-layout Lovers. MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです． ざっくり以下の特長を持ちま</description>
+      <description>&lt;div class=&#34;card&#34;&gt;&lt;p&gt;&lt;img src=&#34;img/mj65.png&#34; alt=&#34;MJ65&#34; /&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです．&lt;/p&gt;
+
+&lt;p&gt;ざっくり以下の特長を持ちます：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cherry MX互換，Alps互換，Kailh Chocスイッチに対応&lt;/li&gt;
+&lt;li&gt;JIS配列を始めとして，分割スペース，USライクな配列をサポート&lt;/li&gt;
+&lt;li&gt;オープンソース&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
