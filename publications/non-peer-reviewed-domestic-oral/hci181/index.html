@@ -1,0 +1,287 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='HCI研究会, 登壇発表' name="keywords">
+<meta content="urushiyama" name="author">
+<meta content='概要 アイズフリー文字入力は，周囲に視覚的注意が必要とされる状況において，モバイル端末のスクリーンへの視認を不要にするため，有用である．しかし...' name="description">
+<meta property="og:site_name" content="urushiyamaのさまつごと" />
+<meta property="og:title" content='指の軌跡に基づくモバイル端末向けアイズフリーかな文字入力の提案（HCI181） - urushiyamaのさまつごと'>
+<meta property="og:url" content="https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci181/">
+<meta property="og:description" content='概要 アイズフリー文字入力は，周囲に視覚的注意が必要とされる状況において，モバイル端末のスクリーンへの視認を不要にするため，有用である．しかし...'>
+<meta property="og:type" content='article' />
+<title>指の軌跡に基づくモバイル端末向けアイズフリーかな文字入力の提案（HCI181） - urushiyamaのさまつごと</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+
+
+</head>
+
+<body>
+
+<nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://urushiyama.github.io/"><span class="title is-4">urushiyamaのさまつごと</span></a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://twitter.com/YUrushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/publications">
+          Publications
+        </a>
+        
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/projects">
+          Projects
+        </a>
+        
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/posts">
+          Posts
+        </a>
+        
+      </div>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+        <a class="navbar-item is-hidden-mobile" href="https://twitter.com/YUrushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-twitter"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">漆山裕太，中村拓人，志築文太郎．指の軌跡に基づくモバイル端末向けアイズフリーかな文字入力の提案．情報処理学会研究報告，Vol. 2019-HCI-181，No. 30，情報処理学会，2019年1月，8 pages．</h1>
+    
+  <div class="icon-links">
+  
+    <a class="button is-small is-light" href="https://ipsj.ixsq.nii.ac.jp/ej/?action=repository_uri&amp;item_id=193939&amp;file_id=1&amp;file_no=1" alt="Read PDF"><span class="is-hidden-mobile">Read PDF&nbsp;</span><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+  
+  
+  
+  
+  
+  </div>
+
+
+    
+    <div class="content">
+      
+
+<h2 id="概要">概要</h2>
+
+<p>アイズフリー文字入力は，周囲に視覚的注意が必要とされる状況において，モバイル端末のスクリーンへの視認を不要にするため，有用である．しかしながら，手元を視認せずに行われるタッチ操作は粗いため，堅牢な文字入力手法が求められる．そこで我々は，タッチ開始位置を中心とする5領域を一筆書きにて通過するのみにより，1文字の子音および母音の双方を入力可能なかな文字入力手法を提案する．今回我々は，スマートフォンおよびスマートウォッチ上で動作する提案手法のプロトタイプシステムを実装した．</p>
+
+<h2 id="注">注</h2>
+
+<p>本論文の著作権は日本情報処理学会に帰属します．</p>
+
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fhci181%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fhci181%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fhci181%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=%e6%8c%87%e3%81%ae%e8%bb%8c%e8%b7%a1%e3%81%ab%e5%9f%ba%e3%81%a5%e3%81%8f%e3%83%a2%e3%83%90%e3%82%a4%e3%83%ab%e7%ab%af%e6%9c%ab%e5%90%91%e3%81%91%e3%82%a2%e3%82%a4%e3%82%ba%e3%83%95%e3%83%aa%e3%83%bc%e3%81%8b%e3%81%aa%e6%96%87%e5%ad%97%e5%85%a5%e5%8a%9b%e3%81%ae%e6%8f%90%e6%a1%88%ef%bc%88HCI181%ef%bc%89 - https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fhci181%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fhci181%2f&title=%e6%8c%87%e3%81%ae%e8%bb%8c%e8%b7%a1%e3%81%ab%e5%9f%ba%e3%81%a5%e3%81%8f%e3%83%a2%e3%83%90%e3%82%a4%e3%83%ab%e7%ab%af%e6%9c%ab%e5%90%91%e3%81%91%e3%82%a2%e3%82%a4%e3%82%ba%e3%83%95%e3%83%aa%e3%83%bc%e3%81%8b%e3%81%aa%e6%96%87%e5%ad%97%e5%85%a5%e5%8a%9b%e3%81%ae%e6%8f%90%e6%a1%88%ef%bc%88HCI181%ef%bc%89" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018- urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/license/">LICENSE</a>
+    </p>
+  </div>
+</section>
+
+  
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "ScholarlyArticle",
+    "@id": "https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci181/",
+    "headline": "指の軌跡に基づくモバイル端末向けアイズフリーかな文字入力の提案（HCI181）",
+    
+     "image": {
+      "@type": "ImageObject",
+      "url": "https://urushiyama.github.io/img/photo.png",
+      "width": 1024,
+      "height": 1024
+    },
+    
+    "genre": "publications",
+    
+    "keywords": "HCI研究会",
+    
+    "url": "https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci181/",
+    
+    "datePublished": "2019-01-14T00:00:00+09:00",
+    
+    
+    "dateModified": "2019-01-14T00:00:00+09:00",
+    
+    
+    "license": "\u0026copy; 2018- urushiyama | Powered by Hugo with HUCORE theme.",
+    
+    
+    "description": "概要 アイズフリー文字入力は，周囲に視覚的注意が必要とされる状況において，モバイル端末のスクリーンへの視認を不要にするため，有用である．しかし"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://urushiyama.github.io/",
+          "name": "TOP"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://urushiyama.github.io/publications",
+          "name": "Publications"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci181/",
+          "name": "指の軌跡に基づくモバイル端末向けアイズフリーかな文字入力の提案（HCI181）"
+        }
+      }
+    ]
+  }
+]
+</script>
+  
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/swift.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>

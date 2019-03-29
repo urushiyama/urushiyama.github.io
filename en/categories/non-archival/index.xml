@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Non Archival on urushiyama&#39;s trivia</title>
+    <link>https://urushiyama.github.io/en/categories/non-archival/</link>
+    <description>Recent content in Non Archival on urushiyama&#39;s trivia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <lastBuildDate>Fri, 29 Mar 2019 09:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://urushiyama.github.io/en/categories/non-archival/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Design of Eyes-Free Kana Entry Method Utilizing Single Stroke for Mobile Devices</title>
+      <link>https://urushiyama.github.io/en/publications/peer-reviewed-international-poster/asianchi2019/</link>
+      <pubDate>Fri, 29 Mar 2019 09:30:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/en/publications/peer-reviewed-international-poster/asianchi2019/</guid>
+      <description>Accepted  ABSTRACT TBD</description>
+    </item>
+    
+  </channel>
+</rss>

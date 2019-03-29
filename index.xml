@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>A Design of Eyes-Free Kana Entry Method Utilizing Single Stroke for Mobile Devices</title>
+      <link>https://urushiyama.github.io/publications/peer-reviewed-international-poster/asianchi2019/</link>
+      <pubDate>Fri, 29 Mar 2019 09:30:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/peer-reviewed-international-poster/asianchi2019/</guid>
+      <description>Accepted  ABSTRACT TBD</description>
+    </item>
+    
+    <item>
       <title>MJ65 Keyboard</title>
       <link>https://urushiyama.github.io/projects/mj65/</link>
       <pubDate>Mon, 11 Mar 2019 02:02:08 +0900</pubDate>
@@ -23,19 +32,19 @@
     
     <item>
       <title>指の軌跡に基づくモバイル端末向けアイズフリーかな文字入力の提案（HCI181）</title>
-      <link>https://urushiyama.github.io/publications/hci181/</link>
+      <link>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci181/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0900</pubDate>
       
-      <guid>https://urushiyama.github.io/publications/hci181/</guid>
+      <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci181/</guid>
       <description>概要 アイズフリー文字入力は，周囲に視覚的注意が必要とされる状況において，モバイル端末のスクリーンへの視認を不要にするため，有用である．しかし</description>
     </item>
     
     <item>
       <title>指の軌跡に基づく手元の視認が不要なスマートフォン向けかな文字入力手法（WISS2018）</title>
-      <link>https://urushiyama.github.io/publications/wiss2018proceedings/</link>
+      <link>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2018proceedings/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0900</pubDate>
       
-      <guid>https://urushiyama.github.io/publications/wiss2018proceedings/</guid>
+      <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2018proceedings/</guid>
       <description>概要 手元を見ずにスマートフォンによる文字入力が行えれば，ユーザは歩行中あるいは会話中にスマートフォンにてメモを取ることができる．しかし，視覚</description>
     </item>
     
@@ -139,15 +148,6 @@ iOS用に購入したMFiコントローラを使い道が少ない為に放置�
       
       <guid>https://urushiyama.github.io/posts/my-first-post/</guid>
       <description>&lt;p&gt;研究室への配属が決まり，ポートフォリオ兼ブログがあると便利かな，と思うようになった．無料でホストでき，Githubのプロジェクトページが同一ドメインになるGithub Pagesでホストすることが好ましいと考え，静的サイト構築フレームワークを吟味した．&amp;rdquo;The world&amp;rsquo;s fastest&amp;rdquo;という言葉に惹かれ，&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;で静的サイトを構築することにした．&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>A Design of Eyes-Free Kana Entry Method Utilizing Single Stroke for Mobile Devices</title>
-      <link>https://urushiyama.github.io/publications/asianchi2019/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://urushiyama.github.io/publications/asianchi2019/</guid>
-      <description>Accepted  ABSTRACT TBD</description>
     </item>
     
   </channel>
