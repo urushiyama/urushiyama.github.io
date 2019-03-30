@@ -1,0 +1,415 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='hugo, リストアップ, パターンマッチ' name="keywords">
+<meta content="urushiyama" name="author">
+<meta content='先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した． その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．
+...' name="description">
+<meta property="og:site_name" content="urushiyamaのさまつごと" />
+<meta property="og:title" content='Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する - urushiyamaのさまつごと'>
+<meta property="og:url" content="https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/">
+<meta property="og:description" content='先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した． その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．
+...'>
+<meta property="og:type" content='article' />
+<title>Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する - urushiyamaのさまつごと</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+
+
+</head>
+
+<body>
+
+<nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://urushiyama.github.io/"><span class="title is-4">urushiyamaのさまつごと</span></a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://twitter.com/YUrushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/publications">
+          Publications
+        </a>
+        
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/projects">
+          Projects
+        </a>
+        
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/posts">
+          Posts
+        </a>
+        
+      </div>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+        <a class="navbar-item is-hidden-mobile" href="https://twitter.com/YUrushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-twitter"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <nav class="breadcrumb is-small" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="https://urushiyama.github.io/">urushiyamaのさまつごと</a></li>
+    
+    <li><a href="https://urushiyama.github.io/posts">Posts</a></li>
+    
+    <li class="is-active">
+      <a href="#" aria-current="page">
+        
+        Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する
+        
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <div class="container">
+    <h1 class="title">Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する</h1>
+    <h2 class="subtitle is-5">
+      
+        March 30, 2019 by urushiyama
+      
+    </h2>
+    
+      <div class="tags">
+    
+        <a class="tag is-rounded" href="/tags/hugo">Hugo</a>
+    
+</div>
+
+    
+    
+
+    <div class="content">
+      <p>先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した．
+その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．</p>
+
+<section class="message is-info">
+  <div class="message-header">目次</div>
+<div class="message-body toc">
+  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#前提">前提</a></li>
+<li><a href="#case-1-ある1つのカテゴリ情報をもつページを抽出">Case 1: ある1つのカテゴリ情報をもつページを抽出</a></li>
+<li><a href="#case-2-複数のカテゴリ情報を-すべて-有するページを抽出">Case 2: 複数のカテゴリ情報を<strong>すべて</strong>有するページを抽出</a></li>
+<li><a href="#case-3-複数のカテゴリ情報を-いずれか1つ以上-有するページを抽出">Case 3: 複数のカテゴリ情報を<strong>いずれか1つ以上</strong>有するページを抽出</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+</section>
+
+<h2 id="前提">前提</h2>
+
+<ul>
+<li>Hugo v0.54.0</li>
+</ul>
+
+<p>また，各ページの<a href="https://gohugo.io/content-management/front-matter/">Front Matter</a>に以下のようなカテゴリ情報を示すArrayを記入していることとする：</p>
+
+<pre><code class="language-yaml">categories:
+- &quot;non-archival&quot;
+- &quot;international&quot;
+- &quot;conference&quot;
+- &quot;poster&quot;
+- &quot;peer-reviewed&quot;
+</code></pre>
+
+<p>上記例はyamlの記述だが，yamlでなくとも，Front MatterとしてArrayをパラメータ指定してあれば問題ない．</p>
+
+<h2 id="case-1-ある1つのカテゴリ情報をもつページを抽出">Case 1: ある1つのカテゴリ情報をもつページを抽出</h2>
+
+<p>例えば，&rdquo;poster&rdquo;というカテゴリ情報をもつページを抽出するには，以下の<code>where</code>文を用いれば良い：</p>
+
+<pre><code class="language-go">{{ where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;) }}
+</code></pre>
+
+<p><code>.Data.Pages</code>でサイト上の全ページ情報を抽出元として，<code>&quot;.Params.categories&quot;</code>でFront Matter上に記載したパラメータ中の<code>categories</code>を検索対象として指定している．</p>
+
+<p>抽象化すると次の通り：</p>
+
+<pre><code class="language-go">{{ where &lt;抽出元&gt; &quot;.Params.&lt;カテゴリ情報を示すArray名&gt;&quot; &quot;intersect&quot; (slice &quot;&lt;抽出するカテゴリ情報&gt;&quot;) }}
+</code></pre>
+
+<h2 id="case-2-複数のカテゴリ情報を-すべて-有するページを抽出">Case 2: 複数のカテゴリ情報を<strong>すべて</strong>有するページを抽出</h2>
+
+<p>例えば，&rdquo;international&rdquo;と&rdquo;poster&rdquo;という2つのカテゴリ情報をすべてもつページを抽出するには，以下の<code>where</code>文を用いれば良い：</p>
+
+<pre><code class="language-go">{{ where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;) | intersect (where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;international&quot;)) }}
+</code></pre>
+
+<p>また，&rdquo;peer-reviewed&rdquo;，&rdquo;international&rdquo;，&rdquo;poster&rdquo;という3つのカテゴリ情報をすべてもつページを抽出する方法は次の通り：</p>
+
+<pre><code class="language-go">{{ where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;) | intersect (where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;international&quot;)) | intersect (where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;peer-reviewed&quot;)) }}
+</code></pre>
+
+<p>以降，複数のカテゴリ情報をすべてもつページを抽出するには，後ろに<code>| intersect ...</code>を順次追加すればよい．</p>
+
+<pre><code class="language-go">{{ where &lt;抽出元&gt; &quot;.Params.&lt;カテゴリ情報を示すArray名&gt;&quot; &quot;intersect&quot; (slice &quot;&lt;カテゴリ情報1&gt;&quot;) | intersect (where &lt;抽出元&gt; &quot;.Params.&lt;カテゴリ情報を示すArray名&gt;&quot; &quot;intersect&quot; (slice &quot;&lt;カテゴリ情報2&gt;&quot;)) | intersect (where &lt;抽出元&gt; &quot;.Params.&lt;カテゴリ情報を示すArray名&gt;&quot; &quot;intersect&quot; (slice &quot;&lt;カテゴリ情報3&gt;&quot;)) | intersect (where &lt;抽出元&gt; &quot;.Params.&lt;カテゴリ情報を示すArray名&gt;&quot; &quot;intersect&quot; (slice &quot;&lt;カテゴリ情報3&gt;&quot;)) [| intersect...] }}
+</code></pre>
+
+<h2 id="case-3-複数のカテゴリ情報を-いずれか1つ以上-有するページを抽出">Case 3: 複数のカテゴリ情報を<strong>いずれか1つ以上</strong>有するページを抽出</h2>
+
+<p>Case 2をもとにナイーブに実装するならば，Case 2の<code>| intersect</code>を<code>| union</code>に変えるだけで良い．
+例えば，&rdquo;international&rdquo;と&rdquo;poster&rdquo;という2つのカテゴリ情報のうちいずれかをもつページを抽出するには，以下の<code>where</code>文を用いれば良い：</p>
+
+<pre><code class="language-go">{{ where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;) | union (where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;international&quot;)) }}
+</code></pre>
+
+<p>ただし，もっと短く実装することができる：</p>
+
+<pre><code class="language-go">{{ where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;, &quot;international&quot;) }}
+</code></pre>
+
+<p>3つ以上のうちいずれか1つ以上をもつページを抽出するには，順次<code>slice</code>の引数として追加すれば良い．</p>
+
+<pre><code class="language-go">{{ where &lt;抽出元&gt; &quot;.Params.&lt;カテゴリ情報を示すArray名&gt;&quot; &quot;intersect&quot; (slice &quot;&lt;カテゴリ情報1&gt;&quot;, &quot;&lt;カテゴリ情報2&gt;&quot;, &quot;&lt;カテゴリ情報3&gt;&quot; [, &quot;&lt;カテゴリ情報4&gt;&quot;...]) }}
+</code></pre>
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fposts%2fhugo-extract-contents-according-to-front-matter%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fposts%2fhugo-extract-contents-according-to-front-matter%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fposts%2fhugo-extract-contents-according-to-front-matter%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=Front%20Matter%e3%81%ab%e5%9f%ba%e3%81%a5%e3%81%84%e3%81%a6Hugo%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%ef%bc%88%e3%83%9a%e3%83%bc%e3%82%b8%ef%bc%89%e3%82%92%e6%8a%bd%e5%87%ba%e3%81%99%e3%82%8b - https%3a%2f%2furushiyama.github.io%2fposts%2fhugo-extract-contents-according-to-front-matter%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fposts%2fhugo-extract-contents-according-to-front-matter%2f&title=Front%20Matter%e3%81%ab%e5%9f%ba%e3%81%a5%e3%81%84%e3%81%a6Hugo%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%ef%bc%88%e3%83%9a%e3%83%bc%e3%82%b8%ef%bc%89%e3%82%92%e6%8a%bd%e5%87%ba%e3%81%99%e3%82%8b" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
+  </div>
+</section>
+
+<section class="section">
+  <nav class="level" role="navigation">
+    
+    <a href="https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/" class="button level-left">Prev: 新規作成したApple ID …</a>
+    
+    
+    <a href="" class="level-left">&nbsp;</a>
+    
+  </nav>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018- urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/license/">LICENSE</a>
+    </p>
+  </div>
+</section>
+
+  
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/",
+    "headline": "Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/"
+    },
+    
+     "image": {
+      "@type": "ImageObject",
+      "url": "https://urushiyama.github.io/img/photo.png",
+      "width": 1024,
+      "height": 1024
+    },
+    
+    "genre": "posts",
+    
+    "keywords": "Hugo",
+    
+    "url": "https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/",
+    
+    "datePublished": "2019-03-30T21:10:01+09:00",
+    
+    
+    "dateModified": "2019-03-30T21:10:01+09:00",
+    
+    
+    "license": "\u0026copy; 2018- urushiyama | Powered by Hugo with HUCORE theme.",
+    
+    
+    
+    "author": {
+      "@type": "Person",
+      "name": "urushiyama"
+    },
+    
+    "publisher": {
+      "@type": "Organization",
+      "name": "urushiyama",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://urushiyama.github.io/img/photo.png"
+      }
+    },
+    "description": "先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した． その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．
+"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://urushiyama.github.io/",
+          "name": "TOP"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://urushiyama.github.io/posts",
+          "name": "Posts"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/",
+          "name": "Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する"
+        }
+      }
+    ]
+  }
+]
+</script>
+  
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/swift.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>

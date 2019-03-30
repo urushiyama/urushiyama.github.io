@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する</title>
+      <link>https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/</link>
+      <pubDate>Sat, 30 Mar 2019 21:10:01 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/</guid>
+      <description>&lt;p&gt;先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した．
+その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>A Design of Eyes-Free Kana Entry Method Utilizing Single Stroke for Mobile Devices</title>
       <link>https://urushiyama.github.io/publications/peer-reviewed-international-poster/asianchi2019/</link>
       <pubDate>Fri, 29 Mar 2019 09:30:00 +0900</pubDate>

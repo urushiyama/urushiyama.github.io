@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/</loc>
+    <lastmod>2019-03-30T21:10:01+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/publications/peer-reviewed-international-poster/asianchi2019/</loc>
     <lastmod>2019-03-29T09:30:00+09:00</lastmod>
     <xhtml:link
@@ -180,7 +185,7 @@
   
   <url>
     <loc>https://urushiyama.github.io/tags/hugo/</loc>
-    <lastmod>2018-04-30T07:09:32+09:00</lastmod>
+    <lastmod>2019-03-30T21:10:01+09:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -296,7 +301,7 @@
   
   <url>
     <loc>https://urushiyama.github.io/posts/</loc>
-    <lastmod>2018-09-04T11:19:00+09:00</lastmod>
+    <lastmod>2019-03-30T21:10:01+09:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
