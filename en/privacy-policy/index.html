@@ -9,7 +9,7 @@
 
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="has-navbar-fixed-top">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,11 +42,12 @@
 </head>
 
 <body>
-
-<nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
+<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
+      
       <a class="navbar-item" href="https://urushiyama.github.io/en"><span class="title is-4">urushiyama&#39;s trivia</span></a>
+      
       
       <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
         <span class="icon">
@@ -68,6 +69,7 @@
     </div>
     <div id="navMenuContents" class="navbar-menu">
       <div class="navbar-start">
+      
         
         <a class="navbar-item" href="https://urushiyama.github.io/en/publications">
           Publications
@@ -79,6 +81,7 @@
           Posts
         </a>
         
+      
       </div>
       <div class="navbar-end">
         
@@ -100,19 +103,21 @@
 </nav>
 
 <section class="section">
+  <div class="container">
   <nav class="breadcrumb is-small" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="https://urushiyama.github.io/en/">urushiyama&#39;s trivia</a></li>
-    
-    <li class="is-active">
-      <a href="#" aria-current="page">
-        
-        Privacy Policy
-        
-      </a>
-    </li>
-  </ul>
-</nav>
+    <ul>
+      <li><a href="https://urushiyama.github.io/en/">urushiyama&#39;s trivia</a></li>
+      
+      <li class="is-active">
+        <a href="#" aria-current="page">
+          
+          Privacy Policy
+          
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 
   <div class="container">
     <h1 class="title">Privacy Policy</h1>
@@ -123,19 +128,35 @@
     </h2>
     
     
-<div class="translations">
-  <span class="subtitle">Translations Available</span>
-  <ul>
-      
-      <li>
-          <a href="https://urushiyama.github.io/privacy-policy/">
-            
-              日本語
-            
-            : プライバシーポリシー</a>
-      </li>
-      
-  </ul>
+<div class="notification is-info">
+  <button class="delete"></button>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      $notification = $delete.parentNode;
+      $delete.addEventListener('click', () => {
+        $notification.classList.add('is-deleted');
+        while($notification.firstChild) {
+          $notification.removeChild($notification.firstChild);
+        }
+      });
+    });
+  });
+  </script>
+  <div class="translations">
+    <span class="subtitle">Translations Available</span>
+    <ul>
+        
+        <li>
+            <a href="https://urushiyama.github.io/privacy-policy/">
+              
+                日本語
+              
+              : プライバシーポリシー</a>
+        </li>
+        
+    </ul>
+  </div>
 </div>
 
 

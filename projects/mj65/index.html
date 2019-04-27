@@ -9,20 +9,20 @@
 
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="has-navbar-fixed-top">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
 <meta content='自作キーボード, PCB, プリント基板, Kailh Low Profile (Choc) 対応, JIS配列' name="keywords">
 <meta content="urushiyama" name="author">
-<meta content=' MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです．
+<meta content='MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです．
 ざっくり以下の特長を持ちます：
  Cherry MX互換，Alps互換，Kailh Chocスイッチに対応 JIS配列を始めとして，分割スペース，USライクな配列をサポート オープンソース ...' name="description">
 <meta property="og:site_name" content="urushiyamaのさまつごと" />
 <meta property="og:title" content='MJ65: the Keyboard of Mac JIS-layout Lovers, by Mac JIS-layout Lovers, for Mac JIS-layout Lovers. - urushiyamaのさまつごと'>
 <meta property="og:url" content="https://urushiyama.github.io/projects/mj65/">
-<meta property="og:description" content=' MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです．
+<meta property="og:description" content='MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです．
 ざっくり以下の特長を持ちます：
  Cherry MX互換，Alps互換，Kailh Chocスイッチに対応 JIS配列を始めとして，分割スペース，USライクな配列をサポート オープンソース ...'>
 <meta property="og:type" content='article' />
@@ -46,11 +46,12 @@
 </head>
 
 <body>
-
-<nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
+<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://urushiyama.github.io/"><span class="title is-4">urushiyamaのさまつごと</span></a>
+      
+      <a class="navbar-item" href="https://urushiyama.github.io/projects/mj65/"><span class="title is-4">MJ65</span></a>
+      
       
       <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
         <span class="icon">
@@ -72,21 +73,21 @@
     </div>
     <div id="navMenuContents" class="navbar-menu">
       <div class="navbar-start">
+      
         
-        <a class="navbar-item" href="https://urushiyama.github.io/publications">
-          Publications
+        <a class="navbar-item" href="https://github.com/urushiyama/MJ65-PCB">
+          PCB
         </a>
         
-        
-        <a class="navbar-item" href="https://urushiyama.github.io/projects">
-          Projects
+        <a class="navbar-item" href="https://github.com/urushiyama/MJ65-Plate">
+          Plate
         </a>
         
-        
-        <a class="navbar-item" href="https://urushiyama.github.io/posts">
-          Posts
+        <a class="navbar-item" href="https://github.com/urushiyama/qmk_firmware/tree/MJ65/keyboards/mj65">
+          Firmware
         </a>
         
+      
       </div>
       <div class="navbar-end">
         
@@ -107,15 +108,42 @@
   </div>
 </nav>
 
-<section class="section">
+<section class="hero is-fullheight-with-navbar is-default is-bold">
+
+<div class="hero-body has-background">
+<img class="background-image is-whiter" src="img/mj65.png"/>
+
   <div class="container">
-    <h1 class="title">MJ65: the Keyboard of Mac JIS-layout Lovers, by Mac JIS-layout Lovers, for Mac JIS-layout Lovers.</h1>
     
-    <div class="content">
-      <div class="card"><img src="img/mj65.png" alt="MJ65" />
+      <div class="column is-10 is-offset-1 has-text-centered">
+        
+        <h1 class="title is-1 is-bold is-spaced">
+          MJ65 Keyboard
+        </h1>
+        
+        <h2 class="subtitle is-5 is-muted">
+          The Keyboard of Mac JIS-layout Lovers, by Mac JIS-layout Lovers, for Mac JIS-layout Lovers.
+        </h2>
+        
+        <p>
+          
+          
+        </p>
+        
+      </div>
+    </div>
+    
+  </div>
 </div>
 
-<p>MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです．</p>
+
+
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="content">
+      <p>MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです．</p>
 
 <p>ざっくり以下の特長を持ちます：</p>
 
@@ -152,6 +180,7 @@ MJ65には，この対称的なレイアウトが存続してほしい，とい�
 
     
   </div>
+  
 </section>
 
 
