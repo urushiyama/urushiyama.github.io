@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Domestic on urushiyamaのさまつごと</title>
+    <title>domestic on urushiyamaのさまつごと</title>
     <link>https://urushiyama.github.io/categories/domestic/</link>
-    <description>Recent content in Domestic on urushiyamaのさまつごと</description>
+    <description>Recent content in domestic on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
     <lastBuildDate>Mon, 14 Jan 2019 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/categories/domestic/index.xml" rel="self" type="application/rss+xml" />

@@ -6,38 +6,11 @@
     <description>Recent content in Tags on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Mon, 07 May 2018 01:46:00 +0900</lastBuildDate>
+    <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <lastBuildDate>Sat, 30 Mar 2019 21:10:01 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Bibtex</title>
-      <link>https://urushiyama.github.io/tags/bibtex/</link>
-      <pubDate>Mon, 07 May 2018 01:46:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/tags/bibtex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>First</title>
-      <link>https://urushiyama.github.io/tags/first/</link>
-      <pubDate>Mon, 30 Apr 2018 02:37:25 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/tags/first/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hci研究会</title>
-      <link>https://urushiyama.github.io/tags/hci%E7%A0%94%E7%A9%B6%E4%BC%9A/</link>
-      <pubDate>Mon, 14 Jan 2019 00:00:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/tags/hci%E7%A0%94%E7%A9%B6%E4%BC%9A/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Hugo</title>
@@ -49,16 +22,7 @@
     </item>
     
     <item>
-      <title>Ios</title>
-      <link>https://urushiyama.github.io/tags/ios/</link>
-      <pubDate>Sun, 13 May 2018 20:23:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/tags/ios/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jis配列</title>
+      <title>JIS配列</title>
       <link>https://urushiyama.github.io/tags/jis%E9%85%8D%E5%88%97/</link>
       <pubDate>Mon, 11 Mar 2019 02:02:08 +0900</pubDate>
       
@@ -67,74 +31,29 @@
     </item>
     
     <item>
-      <title>Mfiコントローラ</title>
-      <link>https://urushiyama.github.io/tags/mfi%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9/</link>
-      <pubDate>Sun, 13 May 2018 20:23:00 +0900</pubDate>
+      <title>自作キーボード</title>
+      <link>https://urushiyama.github.io/tags/%E8%87%AA%E4%BD%9C%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</link>
+      <pubDate>Mon, 11 Mar 2019 02:02:08 +0900</pubDate>
       
-      <guid>https://urushiyama.github.io/tags/mfi%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9/</guid>
+      <guid>https://urushiyama.github.io/tags/%E8%87%AA%E4%BD%9C%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Parallels</title>
-      <link>https://urushiyama.github.io/tags/parallels/</link>
-      <pubDate>Sat, 05 May 2018 13:12:28 +0900</pubDate>
+      <title>HCI研究会</title>
+      <link>https://urushiyama.github.io/tags/hci%E7%A0%94%E7%A9%B6%E4%BC%9A/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0900</pubDate>
       
-      <guid>https://urushiyama.github.io/tags/parallels/</guid>
+      <guid>https://urushiyama.github.io/tags/hci%E7%A0%94%E7%A9%B6%E4%BC%9A/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Tex</title>
-      <link>https://urushiyama.github.io/tags/tex/</link>
-      <pubDate>Mon, 07 May 2018 01:46:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/tags/tex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Watchos</title>
-      <link>https://urushiyama.github.io/tags/watchos/</link>
-      <pubDate>Thu, 02 Aug 2018 19:31:24 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/tags/watchos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Wiss</title>
+      <title>WISS</title>
       <link>https://urushiyama.github.io/tags/wiss/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/tags/wiss/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>アプリ開発</title>
-      <link>https://urushiyama.github.io/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/</link>
-      <pubDate>Sun, 02 Sep 2018 01:59:52 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>カスタムキーボード</title>
-      <link>https://urushiyama.github.io/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</link>
-      <pubDate>Sun, 13 May 2018 20:23:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ゲーム</title>
-      <link>https://urushiyama.github.io/tags/%E3%82%B2%E3%83%BC%E3%83%A0/</link>
-      <pubDate>Sat, 05 May 2018 13:12:28 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/tags/%E3%82%B2%E3%83%BC%E3%83%A0/</guid>
       <description></description>
     </item>
     
@@ -148,6 +67,87 @@
     </item>
     
     <item>
+      <title>アプリ開発</title>
+      <link>https://urushiyama.github.io/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/</link>
+      <pubDate>Sun, 02 Sep 2018 01:59:52 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WatchOS</title>
+      <link>https://urushiyama.github.io/tags/watchos/</link>
+      <pubDate>Thu, 02 Aug 2018 19:31:24 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/watchos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MFiコントローラ</title>
+      <link>https://urushiyama.github.io/tags/mfi%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9/</link>
+      <pubDate>Sun, 13 May 2018 20:23:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/mfi%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iOS</title>
+      <link>https://urushiyama.github.io/tags/ios/</link>
+      <pubDate>Sun, 13 May 2018 20:23:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>カスタムキーボード</title>
+      <link>https://urushiyama.github.io/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</link>
+      <pubDate>Sun, 13 May 2018 20:23:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BibTeX</title>
+      <link>https://urushiyama.github.io/tags/bibtex/</link>
+      <pubDate>Mon, 07 May 2018 01:46:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/bibtex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TeX</title>
+      <link>https://urushiyama.github.io/tags/tex/</link>
+      <pubDate>Mon, 07 May 2018 01:46:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/tex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Parallels</title>
+      <link>https://urushiyama.github.io/tags/parallels/</link>
+      <pubDate>Sat, 05 May 2018 13:12:28 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/parallels/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ゲーム</title>
+      <link>https://urushiyama.github.io/tags/%E3%82%B2%E3%83%BC%E3%83%A0/</link>
+      <pubDate>Sat, 05 May 2018 13:12:28 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/%E3%82%B2%E3%83%BC%E3%83%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>東方</title>
       <link>https://urushiyama.github.io/tags/%E6%9D%B1%E6%96%B9/</link>
       <pubDate>Sat, 05 May 2018 13:12:28 +0900</pubDate>
@@ -157,11 +157,11 @@
     </item>
     
     <item>
-      <title>自作キーボード</title>
-      <link>https://urushiyama.github.io/tags/%E8%87%AA%E4%BD%9C%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</link>
-      <pubDate>Mon, 11 Mar 2019 02:02:08 +0900</pubDate>
+      <title>First</title>
+      <link>https://urushiyama.github.io/tags/first/</link>
+      <pubDate>Mon, 30 Apr 2018 02:37:25 +0900</pubDate>
       
-      <guid>https://urushiyama.github.io/tags/%E8%87%AA%E4%BD%9C%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</guid>
+      <guid>https://urushiyama.github.io/tags/first/</guid>
       <description></description>
     </item>
     

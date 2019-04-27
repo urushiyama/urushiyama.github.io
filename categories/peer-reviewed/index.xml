@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Peer Reviewed on urushiyamaのさまつごと</title>
+    <title>peer-reviewed on urushiyamaのさまつごと</title>
     <link>https://urushiyama.github.io/categories/peer-reviewed/</link>
-    <description>Recent content in Peer Reviewed on urushiyamaのさまつごと</description>
+    <description>Recent content in peer-reviewed on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
     <lastBuildDate>Fri, 29 Mar 2019 09:30:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/categories/peer-reviewed/index.xml" rel="self" type="application/rss+xml" />

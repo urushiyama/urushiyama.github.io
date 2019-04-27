@@ -6,13 +6,14 @@
     <description>Recent content in Categories on urushiyama&#39;s trivia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <lastBuildDate>Fri, 29 Mar 2019 09:30:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/en/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>International</title>
+      <title>international</title>
       <link>https://urushiyama.github.io/en/categories/international/</link>
       <pubDate>Fri, 29 Mar 2019 09:30:00 +0900</pubDate>
       
@@ -21,7 +22,7 @@
     </item>
     
     <item>
-      <title>Non Archival</title>
+      <title>non-archival</title>
       <link>https://urushiyama.github.io/en/categories/non-archival/</link>
       <pubDate>Fri, 29 Mar 2019 09:30:00 +0900</pubDate>
       
@@ -30,7 +31,7 @@
     </item>
     
     <item>
-      <title>Peer Reviewed</title>
+      <title>peer-reviewed</title>
       <link>https://urushiyama.github.io/en/categories/peer-reviewed/</link>
       <pubDate>Fri, 29 Mar 2019 09:30:00 +0900</pubDate>
       
@@ -39,7 +40,7 @@
     </item>
     
     <item>
-      <title>Poster</title>
+      <title>poster</title>
       <link>https://urushiyama.github.io/en/categories/poster/</link>
       <pubDate>Fri, 29 Mar 2019 09:30:00 +0900</pubDate>
       

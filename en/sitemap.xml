@@ -18,67 +18,8 @@
   </url>
   
   <url>
-    <loc>https://urushiyama.github.io/en/license/</loc>
-    <lastmod>2018-05-20T21:13:59+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/license/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/license/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/privacy-policy/</loc>
-    <lastmod>2018-05-20T21:13:59+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/privacy-policy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/privacy-policy/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/posts/my-first-post/</loc>
-    <lastmod>2018-04-30T07:09:32+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/posts/my-first-post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/posts/my-first-post/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/</loc>
-    <lastmod>2018-04-30T02:48:19+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/"
-                />
-  </url>
-  
-  <url>
     <loc>https://urushiyama.github.io/en/categories/</loc>
+    <lastmod>2019-03-29T09:30:00+09:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -93,34 +34,18 @@
   </url>
   
   <url>
-    <loc>https://urushiyama.github.io/en/tags/first/</loc>
-    <lastmod>2018-04-30T07:09:32+09:00</lastmod>
+    <loc>https://urushiyama.github.io/en/publications/</loc>
+    <lastmod>2019-03-29T09:30:00+09:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://urushiyama.github.io/tags/first/"
+                href="https://urushiyama.github.io/publications/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://urushiyama.github.io/en/tags/first/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/tags/hugo/</loc>
-    <lastmod>2018-04-30T07:09:32+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/tags/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/tags/hugo/"
+                href="https://urushiyama.github.io/en/publications/"
                 />
   </url>
   
@@ -189,6 +114,83 @@
   </url>
   
   <url>
+    <loc>https://urushiyama.github.io/en/license/</loc>
+    <lastmod>2018-05-20T21:13:59+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/license/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/license/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/privacy-policy/</loc>
+    <lastmod>2018-05-20T21:13:59+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/privacy-policy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/privacy-policy/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/tags/first/</loc>
+    <lastmod>2018-04-30T07:09:32+09:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/tags/first/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/tags/first/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/tags/hugo/</loc>
+    <lastmod>2018-04-30T07:09:32+09:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/tags/hugo/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/posts/my-first-post/</loc>
+    <lastmod>2018-04-30T07:09:32+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/posts/my-first-post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/posts/my-first-post/"
+                />
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/en/posts/</loc>
     <lastmod>2018-04-30T07:09:32+09:00</lastmod>
     <priority>0</priority>
@@ -205,22 +207,6 @@
   </url>
   
   <url>
-    <loc>https://urushiyama.github.io/en/publications/</loc>
-    <lastmod>2019-03-29T09:30:00+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/publications/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/publications/"
-                />
-  </url>
-  
-  <url>
     <loc>https://urushiyama.github.io/en/tags/</loc>
     <lastmod>2018-04-30T07:09:32+09:00</lastmod>
     <priority>0</priority>
@@ -233,6 +219,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://urushiyama.github.io/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/</loc>
+    <lastmod>2018-04-30T02:48:19+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/"
                 />
   </url>
   

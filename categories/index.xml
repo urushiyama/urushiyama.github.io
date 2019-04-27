@@ -6,32 +6,14 @@
     <description>Recent content in Categories on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Mon, 14 Jan 2019 00:00:00 +0900</lastBuildDate>
+    <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <lastBuildDate>Fri, 29 Mar 2019 09:30:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Archival</title>
-      <link>https://urushiyama.github.io/categories/archival/</link>
-      <pubDate>Mon, 14 Jan 2019 00:00:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/categories/archival/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Domestic</title>
-      <link>https://urushiyama.github.io/categories/domestic/</link>
-      <pubDate>Mon, 14 Jan 2019 00:00:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/categories/domestic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>International</title>
+      <title>international</title>
       <link>https://urushiyama.github.io/categories/international/</link>
       <pubDate>Fri, 29 Mar 2019 09:30:00 +0900</pubDate>
       
@@ -40,7 +22,7 @@
     </item>
     
     <item>
-      <title>Non Archival</title>
+      <title>non-archival</title>
       <link>https://urushiyama.github.io/categories/non-archival/</link>
       <pubDate>Fri, 29 Mar 2019 09:30:00 +0900</pubDate>
       
@@ -49,25 +31,7 @@
     </item>
     
     <item>
-      <title>Non Peer Reviewed</title>
-      <link>https://urushiyama.github.io/categories/non-peer-reviewed/</link>
-      <pubDate>Mon, 14 Jan 2019 00:00:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/categories/non-peer-reviewed/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oral</title>
-      <link>https://urushiyama.github.io/categories/oral/</link>
-      <pubDate>Mon, 14 Jan 2019 00:00:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/categories/oral/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Peer Reviewed</title>
+      <title>peer-reviewed</title>
       <link>https://urushiyama.github.io/categories/peer-reviewed/</link>
       <pubDate>Fri, 29 Mar 2019 09:30:00 +0900</pubDate>
       
@@ -76,11 +40,47 @@
     </item>
     
     <item>
-      <title>Poster</title>
+      <title>poster</title>
       <link>https://urushiyama.github.io/categories/poster/</link>
       <pubDate>Fri, 29 Mar 2019 09:30:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/categories/poster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>archival</title>
+      <link>https://urushiyama.github.io/categories/archival/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/categories/archival/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>domestic</title>
+      <link>https://urushiyama.github.io/categories/domestic/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/categories/domestic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>non-peer-reviewed</title>
+      <link>https://urushiyama.github.io/categories/non-peer-reviewed/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/categories/non-peer-reviewed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oral</title>
+      <link>https://urushiyama.github.io/categories/oral/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/categories/oral/</guid>
       <description></description>
     </item>
     

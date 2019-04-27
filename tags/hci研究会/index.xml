@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hci研究会 on urushiyamaのさまつごと</title>
+    <title>HCI研究会 on urushiyamaのさまつごと</title>
     <link>https://urushiyama.github.io/tags/hci%E7%A0%94%E7%A9%B6%E4%BC%9A/</link>
-    <description>Recent content in Hci研究会 on urushiyamaのさまつごと</description>
+    <description>Recent content in HCI研究会 on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>&amp;copy; 2018- urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
     <lastBuildDate>Mon, 14 Jan 2019 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/tags/hci%E7%A0%94%E7%A9%B6%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
