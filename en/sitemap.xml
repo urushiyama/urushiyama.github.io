@@ -3,6 +3,65 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://urushiyama.github.io/en/tags/macos-app/</loc>
+    <lastmod>2019-04-27T19:44:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/projects/</loc>
+    <lastmod>2019-04-27T19:44:32+09:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/projects/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/projects/serialbuddy/</loc>
+    <lastmod>2019-04-27T19:44:32+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/projects/serialbuddy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/projects/serialbuddy/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/tags/</loc>
+    <lastmod>2019-04-27T19:44:32+09:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/tags/serial-communication/</loc>
+    <lastmod>2019-04-27T19:44:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/en/publications/peer-reviewed-international-poster/asianchi2019/</loc>
     <lastmod>2019-03-29T09:30:00+09:00</lastmod>
     <xhtml:link
@@ -203,22 +262,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://urushiyama.github.io/en/posts/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/tags/</loc>
-    <lastmod>2018-04-30T07:09:32+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/tags/"
                 />
   </url>
   

@@ -1,0 +1,319 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja" class="has-navbar-fixed-top">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='serial communication, visualization, Mac App Store, spectrum, analyze' name="keywords">
+<meta content="urushiyama" name="author">
+<meta content='How do you debug serial communication while developing with micro-controllers? There are some ways such as typing cu or screen or opening development tools for microcontrollers. However, have you seen a tool with a console, a plotter, and an communication analyzer?
+That&amp;rsquo;s why I made this app.
+This app comes with:
+ &amp;ldquo;Ordinal&amp;rdquo; serial console Line and spectrum plotter Serial communication analyzer (currently on data transmission)  Welcome to report bug and advice This app is under growing....' name="description">
+<meta property="og:site_name" content="urushiyama&#39;s trivia" />
+<meta property="og:title" content='SerialBuddy - urushiyama&#39;s trivia'>
+<meta property="og:url" content="https://urushiyama.github.io/en/projects/serialbuddy/">
+<meta property="og:description" content='How do you debug serial communication while developing with micro-controllers? There are some ways such as typing cu or screen or opening development tools for microcontrollers. However, have you seen a tool with a console, a plotter, and an communication analyzer?
+That&amp;rsquo;s why I made this app.
+This app comes with:
+ &amp;ldquo;Ordinal&amp;rdquo; serial console Line and spectrum plotter Serial communication analyzer (currently on data transmission)  Welcome to report bug and advice This app is under growing....'>
+<meta property="og:type" content='article' />
+<title>SerialBuddy - urushiyama&#39;s trivia</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+
+
+</head>
+
+<body>
+<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      
+      
+      <a class="navbar-item" href="#"><img src="img/SerialBuddy.svg" style="height: 100%; width: auto;"/></a>
+      <a class="navbar-item" href="#"><span class="title is-4">SerialBuddy</span></a>
+      
+      
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://twitter.com/YUrushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+      
+        
+        <a class="navbar-item" href="support/">
+          Support
+        </a>
+        
+        <a class="navbar-item" href="privacy-policy/">
+          Privacy Policy
+        </a>
+        
+        <a class="navbar-item" href="acknowledgements/">
+          Acknowledgements
+        </a>
+        
+      
+      </div>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://urushiyama.github.io/en">
+          <span class="icon">
+            <i class="fa fa-home"></i>
+          </span>
+        </a>
+        
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+        <a class="navbar-item is-hidden-mobile" href="https://twitter.com/YUrushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-twitter"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="notification is-info">
+  <button class="delete"></button>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      $notification = $delete.parentNode;
+      $delete.addEventListener('click', () => {
+        $notification.classList.add('is-deleted');
+        while($notification.firstChild) {
+          $notification.removeChild($notification.firstChild);
+        }
+      });
+    });
+  });
+  </script>
+  <div class="translations">
+    <span class="subtitle">Translations Available</span>
+    <ul>
+        
+        <li>
+            <a href="https://urushiyama.github.io/projects/serialbuddy/">
+              
+                日本語
+              
+              : SerialBuddy</a>
+        </li>
+        
+    </ul>
+  </div>
+</div>
+
+
+
+
+<section class="hero is-fullheight-with-navbar is-default is-bold">
+
+<div class="hero-body has-background">
+<img class="background-image is-whiter" src="img/SerialBuddy-bg.png"/>
+
+  <div class="container">
+    <div class="columns is-vcentered">
+      
+      <div class="column is-5 is-offset-1">
+        
+        <h1 class="title is-1 is-bold is-spaced">
+          Buddy for Serial Communication Came.
+        </h1>
+        
+        <h2 class="subtitle is-5 is-muted">
+          The serial communication app with console, plot, and analyzer for Mac.
+        </h2>
+        
+        <div class="columns">
+  
+  
+</div>
+
+        
+      </div>
+      <div class="column is-5 is-offset-1">
+        <figure class="image is-4by3">
+          <img src="img/MacBookPro.png" alt="Project Image" style="width: 100%; height: auto;%"/>
+        </figure>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="content">
+      
+
+<p>How do you debug serial communication while developing with micro-controllers?
+There are some ways such as typing <code>cu</code> or <code>screen</code> or opening development tools for microcontrollers.
+However, have you seen a tool with a console, a plotter, and an communication analyzer?</p>
+
+<p>That&rsquo;s why I made this app.</p>
+
+<p>This app comes with:</p>
+
+<ul>
+<li>&ldquo;Ordinal&rdquo; serial console</li>
+<li>Line and spectrum plotter</li>
+<li>Serial communication analyzer (currently on data transmission)</li>
+</ul>
+
+<h2 id="welcome-to-report-bug-and-advice">Welcome to report bug and advice</h2>
+
+<p>This app is under growing.
+I welcome your bug reports and advice on the app including feature improvements at <a href="support/">Support links</a>.</p>
+
+<blockquote>
+<p>&ldquo;Mac&rdquo; is a registered trademark of Apple Inc．
+All rights of devices&rsquo; images and of the &ldquo;Download from Mac App Store&rdquo; banner is held by Apple Inc．</p>
+</blockquote>
+
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fen%2fprojects%2fserialbuddy%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fen%2fprojects%2fserialbuddy%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fen%2fprojects%2fserialbuddy%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=SerialBuddy - https%3a%2f%2furushiyama.github.io%2fen%2fprojects%2fserialbuddy%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fen%2fprojects%2fserialbuddy%2f&title=SerialBuddy" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>
+      <a href="/en/privacy-policy/">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/en/license/">LICENSE</a>
+    </p>
+  </div>
+</section>
+
+  
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/swift.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>

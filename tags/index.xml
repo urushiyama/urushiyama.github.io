@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Sat, 30 Mar 2019 21:10:01 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 27 Apr 2019 19:44:32 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MacOS アプリ</title>
+      <link>https://urushiyama.github.io/tags/macos-%E3%82%A2%E3%83%97%E3%83%AA/</link>
+      <pubDate>Sat, 27 Apr 2019 19:44:32 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/macos-%E3%82%A2%E3%83%97%E3%83%AA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>シリアル通信</title>
+      <link>https://urushiyama.github.io/tags/%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E9%80%9A%E4%BF%A1/</link>
+      <pubDate>Sat, 27 Apr 2019 19:44:32 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E9%80%9A%E4%BF%A1/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Hugo</title>

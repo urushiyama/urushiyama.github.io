@@ -76,6 +76,10 @@
         </a>
         
         
+        <a class="navbar-item" href="https://urushiyama.github.io/en/projects">
+          Projects
+        </a>
+        
         
         <a class="navbar-item" href="https://urushiyama.github.io/en/posts">
           Posts
@@ -84,6 +88,7 @@
       
       </div>
       <div class="navbar-end">
+        
         
         <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
           <span class="icon">
@@ -102,27 +107,46 @@
   </div>
 </nav>
 
+
+
+<div class="notification is-info">
+  <button class="delete"></button>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      $notification = $delete.parentNode;
+      $delete.addEventListener('click', () => {
+        $notification.classList.add('is-deleted');
+        while($notification.firstChild) {
+          $notification.removeChild($notification.firstChild);
+        }
+      });
+    });
+  });
+  </script>
+  <div class="translations">
+    <span class="subtitle">Translations Available</span>
+    <ul>
+        
+        <li>
+            <a href="https://urushiyama.github.io/publications/peer-reviewed-international-poster/asianchi2019/">
+              
+                日本語
+              
+              : A Design of Eyes-Free Kana Entry Method Utilizing Single Stroke for Mobile Devices</a>
+        </li>
+        
+    </ul>
+  </div>
+</div>
+
+
+
 <section class="section">
   <div class="container">
     <h1 class="title">Yuta Urushiyama, Takuto Nakamura, Buntaro Shizuki. A Design of Eyes-Free Kana Entry Method Utilizing Single Stroke for Mobile Devices. ACM CHI 2019 Symposium on Asian CHI Symposium: Emerging HCI Research Collection, May 2019, 6 pages.</h1>
     
 
-    
-    <div class="translations">
-      <span class="subtitle">Translations Available</span>
-      <ul>
-          
-          <li>
-              <a href="https://urushiyama.github.io/publications/peer-reviewed-international-poster/asianchi2019/">
-                
-                  日本語
-                
-                : A Design of Eyes-Free Kana Entry Method Utilizing Single Stroke for Mobile Devices</a>
-          </li>
-          
-      </ul>
-    </div>
-    
     <div class="content">
       
 
