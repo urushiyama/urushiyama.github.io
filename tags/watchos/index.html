@@ -36,9 +36,11 @@
 <link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow.min.css">
 
 
+<meta name="hugo:section" content="tags"/>
+<meta name="hugo:type" content="tags"/>
 </head>
 
 <nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
@@ -116,16 +118,45 @@
         
         <div class="box">
           <article>
-            <h3 class="title"><a href="https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/">Apple Watchアプリでプログラムによるページ遷移を行う2つの方法</a></h3>
+            <h3 class="title"><a href="https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/">Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する</a></h3>
             <h4 class="subtitle is-5">
               
-              August 2, 2018
+              March 30, 2019
               
             </h4>
             
               <div class="tags">
     
-        <a class="tag is-rounded" href="/tags/watchos">WatchOS</a>
+        <a class="tag is-rounded" href="/tags/hugo">Hugo</a>
+    
+</div>
+
+            
+            <div class="content">
+              先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した． その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．
+
+              
+              ...<a class="button is-text" href="https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/" style="height:20px">
+                Read more
+                <span class="icon is-small">
+                  <i class="fa fa-angle-double-right"></i>
+                </span>
+              </a>
+              
+            </div>
+          </article>
+        </div>
+        
+        <div class="box">
+          <article>
+            <h3 class="title"><a href="https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/">新規作成したApple IDでApple Developer Programに登録する際に2ファクタ認証を突破する方法</a></h3>
+            <h4 class="subtitle is-5">
+              
+              September 2, 2018 - September 4, 2018
+              
+            </h4>
+            
+              <div class="tags">
     
         <a class="tag is-rounded" href="/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA">アプリ開発</a>
     
@@ -133,10 +164,10 @@
 
             
             <div class="content">
-              Apple Watchアプリを作成するとき，next pageを用いてViewを複数のページに渡って配置することができる．その際に，あるViewから別のViewへプログラムによりページ遷移したい場合がある．本稿では，プログラムによりページ遷移を行う方法を2つ紹介する．
+              Apple Developer Programに登録する際に，普段使っているApple IDとは別に，開発用のApple IDを新規作成して登録を行いたい，という需要がある． しかし，2018年9月現在，Apple Developer Programに登録するためのApple IDは2ファクタ認証を有効化している必要がある． 普段使っているAppleデバイスのアカウントに紐付いていない新規作成したApple IDを2ファクタ認証するためには，少々テクニックめいた手順が必要になる． 本記事では，その手順を紹介する．
 
               
-              ...<a class="button is-text" href="https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/" style="height:20px">
+              ...<a class="button is-text" href="https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/" style="height:20px">
                 Read more
                 <span class="icon is-small">
                   <i class="fa fa-angle-double-right"></i>
@@ -163,6 +194,13 @@
       <div class="level-right is-marginless">
         <div class="level-item">
           
+          <a class="button" href="/tags/watchos/page/2/">
+            Older
+            <span class="icon is-small is-marginless">
+              <i class="fa fa-angle-right"></i>
+            </span>
+          </a>
+          
         </div>
       </div>
     </nav>
@@ -184,21 +222,23 @@
 
 
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/arduino.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/erb.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/arduino.min.js"></script>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/erb.min.js"></script>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/r.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/go.min.js"></script>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/swift.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/tex.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/swift.min.js"></script>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/yaml.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/yaml.min.js"></script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">

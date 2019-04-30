@@ -3,25 +3,99 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://urushiyama.github.io/tags/macos-%E3%82%A2%E3%83%97%E3%83%AA/</loc>
-    <lastmod>2019-04-27T19:44:32+09:00</lastmod>
+    <loc>https://urushiyama.github.io/projects/mj65/</loc>
+    <lastmod>2019-04-29T09:02:10+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://urushiyama.github.io/projects/</loc>
-    <lastmod>2019-04-27T19:44:32+09:00</lastmod>
+    <loc>https://urushiyama.github.io/tags/jis%E9%85%8D%E5%88%97/</loc>
+    <lastmod>2019-04-29T09:02:10+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/projects/mj65/buildguide/</loc>
+    <lastmod>2019-04-29T09:02:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/</loc>
+    <lastmod>2019-04-29T09:02:10+09:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://urushiyama.github.io/en/projects/"
+                href="https://urushiyama.github.io/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://urushiyama.github.io/projects/"
+                href="https://urushiyama.github.io/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/%E8%87%AA%E4%BD%9C%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</loc>
+    <lastmod>2019-04-29T09:02:10+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/projects/serialbuddy/</loc>
+    <lastmod>2019-04-27T22:26:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/projects/serialbuddy/privacy-policy/</loc>
+    <lastmod>2019-04-27T22:26:36+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/projects/serialbuddy/privacy-policy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/projects/serialbuddy/privacy-policy/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/projects/serialbuddy/acknowledgements/</loc>
+    <lastmod>2019-04-27T22:26:20+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/projects/serialbuddy/acknowledgements/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/projects/serialbuddy/acknowledgements/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/projects/serialbuddy/support/</loc>
+    <lastmod>2019-04-27T20:15:50+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/projects/serialbuddy/support/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/projects/serialbuddy/support/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/macos-%E3%82%A2%E3%83%97%E3%83%AA/</loc>
+    <lastmod>2019-04-27T19:44:32+09:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -36,22 +110,6 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://urushiyama.github.io/projects/serialbuddy/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/tags/</loc>
-    <lastmod>2019-04-27T19:44:32+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/tags/"
                 />
   </url>
   
@@ -210,20 +268,8 @@
   </url>
   
   <url>
-    <loc>https://urushiyama.github.io/tags/jis%E9%85%8D%E5%88%97/</loc>
-    <lastmod>2019-03-11T02:02:08+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://urushiyama.github.io/projects/mj65/</loc>
     <lastmod>2019-03-11T02:02:08+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/tags/%E8%87%AA%E4%BD%9C%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</loc>
-    <lastmod>2019-03-11T02:02:08+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -441,6 +487,21 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://urushiyama.github.io/posts/my-first-post/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/projects/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/projects/"
                 />
   </url>
   

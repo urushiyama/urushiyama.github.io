@@ -1,0 +1,264 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja" class="has-navbar-fixed-top">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='自作キーボード, PCB, プリント基板, Kailh Low Profile (Choc) 対応, JIS配列' name="keywords">
+<meta content="urushiyama" name="author">
+<meta content='バックプレートの選択 MJ65は，使用するキーキャップのステップの有無を考慮して，角度のついたバックプレートと角度のつかないバックプレートを選...' name="description">
+<meta property="og:site_name" content="urushiyamaのさまつごと" />
+<meta property="og:title" content='MJ65 Buildguide - urushiyamaのさまつごと'>
+<meta property="og:url" content="https://urushiyama.github.io/projects/mj65/buildguide/">
+<meta property="og:description" content='バックプレートの選択 MJ65は，使用するキーキャップのステップの有無を考慮して，角度のついたバックプレートと角度のつかないバックプレートを選...'>
+<meta property="og:type" content='article' />
+<title>MJ65 Buildguide - urushiyamaのさまつごと</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow.min.css">
+
+
+<meta name="hugo:section" content="projects"/>
+<meta name="hugo:type" content="mj65"/>
+</head>
+
+<body>
+<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      
+      
+      <a class="navbar-item" href="../"><span class="title is-4">MJ65</span></a>
+      
+      
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://twitter.com/YUrushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+      
+        
+        <a class="navbar-item" href="https://github.com/urushiyama/MJ65-PCB">
+          PCB
+        </a>
+        
+        <a class="navbar-item" href="https://github.com/urushiyama/MJ65-Plate">
+          Plate
+        </a>
+        
+        <a class="navbar-item" href="https://github.com/urushiyama/qmk_firmware/tree/MJ65/keyboards/mj65">
+          Firmware
+        </a>
+        
+        <a class="navbar-item has-background-light" href="#">
+          Build Guide
+        </a>
+        
+      
+      </div>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://urushiyama.github.io/">
+          <span class="icon">
+            <i class="fa fa-home"></i>
+          </span>
+        </a>
+        
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+        <a class="navbar-item is-hidden-mobile" href="https://twitter.com/YUrushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-twitter"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="section">
+  <div class="container">
+    <h1 class="title"></h1>
+    
+
+    <div class="content">
+      
+
+<h2 id="バックプレートの選択">バックプレートの選択</h2>
+
+<p>MJ65は，使用するキーキャップのステップの有無を考慮して，角度のついたバックプレートと角度のつかないバックプレートを選択できます．
+角度のついたバックプレートは<code>compact-board</code>というファイル名で，3Dモデルのみ提供しています．
+角度のつかないバックプレートは<code>compact-plate</code>というファイル名で，2Dカットラインと3Dモデルの双方を提供しています．</p>
+
+<h2 id="部品リスト">部品リスト</h2>
+
+<p>MJ65を1台作成するために必要な部品のリストです．</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">名前</th>
+<th align="right">個数</th>
+<th align="left">リンク・備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">PCB</td>
+<td align="right">1</td>
+<td align="left"><a href="https://github.com/urushiyama/MJ65-PCB">https://github.com/urushiyama/MJ65-PCB</a></td>
+</tr>
+
+<tr>
+<td align="left">Adafruit Itsy Bitsy 32u4</td>
+<td align="right">1</td>
+<td align="left"><a href="https://learn.adafruit.com/introducting-itsy-bitsy-32u4?view=all">https://learn.adafruit.com/introducting-itsy-bitsy-32u4?view=all</a> 3V版を想定，5V版はファームウェアの調整が必要です．</td>
+</tr>
+
+<tr>
+<td align="left">Top Plate</td>
+<td align="right">1</td>
+<td align="left"><a href="https://github.com/urushiyama/MJ65-Plate">https://github.com/urushiyama/MJ65-Plate</a> キースイッチ固定用</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fprojects%2fmj65%2fbuildguide%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fprojects%2fmj65%2fbuildguide%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fprojects%2fmj65%2fbuildguide%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=MJ65%20Buildguide - https%3a%2f%2furushiyama.github.io%2fprojects%2fmj65%2fbuildguide%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fprojects%2fmj65%2fbuildguide%2f&title=MJ65%20Buildguide" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/license/">LICENSE</a>
+    </p>
+  </div>
+</section>
+
+  
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/swift.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>

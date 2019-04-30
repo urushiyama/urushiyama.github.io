@@ -7,36 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Sat, 27 Apr 2019 19:44:32 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>SerialBuddy</title>
-      <link>https://urushiyama.github.io/projects/serialbuddy/</link>
-      <pubDate>Sat, 27 Apr 2019 19:44:32 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/projects/serialbuddy/</guid>
-      <description>Macでマイコンボードの開発につかうシリアル通信．どんな方法でデバッグしていますか？ cuやscreenコマンドを叩いたり，マイコンボードの開</description>
-    </item>
-    
-    <item>
-      <title>MJ65: the Keyboard of Mac JIS-layout Lovers, by Mac JIS-layout Lovers, for Mac JIS-layout Lovers.</title>
-      <link>https://urushiyama.github.io/projects/mj65/</link>
-      <pubDate>Mon, 11 Mar 2019 02:02:08 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/projects/mj65/</guid>
-      <description>&lt;p&gt;MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです．&lt;/p&gt;
-
-&lt;p&gt;ざっくり以下の特長を持ちます：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Cherry MX互換，Alps互換，Kailh Chocスイッチに対応&lt;/li&gt;
-&lt;li&gt;JIS配列を始めとして，分割スペース，USライクな配列をサポート&lt;/li&gt;
-&lt;li&gt;オープンソース&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
     
   </channel>
 </rss>
