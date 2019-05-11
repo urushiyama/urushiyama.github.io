@@ -16,14 +16,14 @@
 <meta name="robots" content="index,follow">
 <meta content='自作キーボード, PCB, プリント基板, Kailh Low Profile (Choc) 対応, JIS配列' name="keywords">
 <meta content="urushiyama" name="author">
-<meta content='バックプレートの選択 MJ65は，使用するキーキャップのステップの有無を考慮して，角度のついたバックプレートと角度のつかないバックプレートを選...' name="description">
+<meta content='目次 選択肢 バックプレートの選択 キースイッチの選択 キーレイアウトの選択 部品リスト 共通 ネジ類 角度のついたバックプレート&#43;Kailh Chocスイッ...' name="description">
 
 <meta name="twitter:card" content="summary">
 
 <meta property="og:site_name" content="urushiyamaのさまつごと">
 <meta property="og:title" content='MJ65 Buildguide - urushiyamaのさまつごと'>
 <meta property="og:url" content="https://urushiyama.github.io/projects/mj65/buildguide/">
-<meta property="og:description" content='バックプレートの選択 MJ65は，使用するキーキャップのステップの有無を考慮して，角度のついたバックプレートと角度のつかないバックプレートを選...'>
+<meta property="og:description" content='目次 選択肢 バックプレートの選択 キースイッチの選択 キーレイアウトの選択 部品リスト 共通 ネジ類 角度のついたバックプレート&#43;Kailh Chocスイッ...'>
 <meta property="og:type" content='article'>
 
 
@@ -96,6 +96,10 @@
           Build Guide
         </a>
         
+        <a class="navbar-item" href="../layout/">
+          Layout
+        </a>
+        
       
       </div>
       <div class="navbar-end">
@@ -133,15 +137,90 @@
     <div class="content">
       
 
-<h2 id="バックプレートの選択">バックプレートの選択</h2>
+<section class="message is-info">
+  <div class="message-header">目次</div>
+<div class="message-body toc">
+  <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#選択肢">選択肢</a>
+<ul>
+<li><a href="#バックプレートの選択">バックプレートの選択</a></li>
+<li><a href="#キースイッチの選択">キースイッチの選択</a></li>
+<li><a href="#キーレイアウトの選択">キーレイアウトの選択</a></li>
+</ul></li>
+<li><a href="#部品リスト">部品リスト</a>
+<ul>
+<li><a href="#共通">共通</a></li>
+<li><a href="#ネジ類">ネジ類</a>
+<ul>
+<li><a href="#角度のついたバックプレート-kailh-chocスイッチ使用時">角度のついたバックプレート+Kailh Chocスイッチ使用時</a></li>
+<li><a href="#角度のついたバックプレート-kailh-choc以外のキースイッチ使用時">角度のついたバックプレート+Kailh Choc以外のキースイッチ使用時</a></li>
+<li><a href="#角度のつかないバックプレート-kailh-chocスイッチ使用時">角度のつかないバックプレート+Kailh Chocスイッチ使用時</a></li>
+<li><a href="#角度のつかないバックプレート-kailh-choc以外のキースイッチ使用時">角度のつかないバックプレート+Kailh Choc以外のキースイッチ使用時</a></li>
+</ul></li>
+<li><a href="#cherry-mx互換およびalps互換キースイッチ使用時">Cherry MX互換およびAlps互換キースイッチ使用時</a></li>
+<li><a href="#オプショナル">オプショナル</a></li>
+</ul></li>
+<li><a href="#組み立て手順">組み立て手順</a>
+<ul>
+<li><a href="#1-ダイオードのはんだ付け">1. ダイオードのはんだ付け</a></li>
+<li><a href="#2-キースイッチのトッププレート-追加トッププレートへのはめ込み">2. キースイッチのトッププレート，追加トッププレートへのはめ込み</a></li>
+<li><a href="#3-スタビライザーの取り付け-cherry-mx互換およびalps互換キースイッチ使用時のみ">3. スタビライザーの取り付け（Cherry MX互換およびAlps互換キースイッチ使用時のみ）</a>
+<ul>
+<li><a href="#us-like-配列または-1app-us-配列の場合"><code>us_like</code>配列または<code>1app_us</code>配列の場合</a></li>
+<li><a href="#それ以外の場合">それ以外の場合</a></li>
+</ul></li>
+<li><a href="#4-ネジ類の固定とキースイッチのはんだ付け">4. ネジ類の固定とキースイッチのはんだ付け</a>
+<ul>
+<li><a href="#角度のついたバックプレート-kailh-chocスイッチ使用時-1">角度のついたバックプレート+Kailh Chocスイッチ使用時</a></li>
+<li><a href="#角度のついたバックプレート-kailh-choc以外のキースイッチ使用時-1">角度のついたバックプレート+Kailh Choc以外のキースイッチ使用時</a></li>
+<li><a href="#角度のつかないバックプレート-kailh-chocスイッチ使用時-1">角度のつかないバックプレート+Kailh Chocスイッチ使用時</a></li>
+<li><a href="#角度のつかないバックプレート-kailh-choc以外のキースイッチ使用時-1">角度のつかないバックプレート+Kailh Choc以外のキースイッチ使用時</a></li>
+</ul></li>
+<li><a href="#5-コンスルーのマイコンボードへのはんだ付け-マイコンボードのpcbへの装着">5. コンスルーのマイコンボードへのはんだ付け，マイコンボードのPCBへの装着</a></li>
+<li><a href="#6-マイコンボードのpcbへのはめ込み">6. マイコンボードのPCBへのはめ込み</a></li>
+</ul></li>
+<li><a href="#ファームウェアの書き込み">ファームウェアの書き込み</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+</section>
+
+<h2 id="選択肢">選択肢</h2>
+
+<h3 id="バックプレートの選択">バックプレートの選択</h3>
 
 <p>MJ65は，使用するキーキャップのステップの有無を考慮して，角度のついたバックプレートと角度のつかないバックプレートを選択できます．
-角度のついたバックプレートは<code>compact-board</code>というファイル名で，3Dモデルのみ提供しています．
-角度のつかないバックプレートは<code>compact-plate</code>というファイル名で，2Dカットラインと3Dモデルの双方を提供しています．</p>
+角度のついたほうは<code>compact-board</code>というファイル名で，3Dモデルのみ提供しています．
+角度のつかないほうは<code>compact-plate</code>というファイル名で，2Dカットラインと3Dモデルの双方を提供しています．
+また，角度のつかないほうの3Dモデルには，<code>compact-cbore-light-plate</code>というファイル名で，軽量化と皿ネジへの対応を施した版も提供しています．</p>
+
+<p>基本的にすべてのバックプレートで作成手順は同様ですが，バックプレートの種類によって使用するネジとネジ止めの方法が若干変わります．</p>
+
+<h3 id="キースイッチの選択">キースイッチの選択</h3>
+
+<p>MJ65は，キースイッチの好みを考慮して，Cherry MX互換，Alps互換，およびKailh Chocキースイッチを選択できます．</p>
+
+<p>使用するキースイッチの種類によって，使用するトッププレートの種類とネジの長さが変わります．</p>
+
+<h3 id="キーレイアウトの選択">キーレイアウトの選択</h3>
+
+<p>MJ65は，USライク配列，Default（JIS）配列，およびSplit-Space（JIS）配列を基本レイアウトとして選択できます．また，各基本レイアウトに対して，右下のキー数を1つ増やしたレイアウト，最上部の独立ファンクションキーを実装したレイアウトが選択できます．なお，独立ファンクションキーはファームウェアの調整が必要です（マクロあり）．詳細は<a href="../layout/#extra-keys">こちらのページ</a>を参照ください．</p>
+
+<p>選択したレイアウトによって，必要なキースイッチの個数とキーキャップの種類・個数が変わります．</p>
 
 <h2 id="部品リスト">部品リスト</h2>
 
-<p>MJ65を1台作成するために必要な部品のリストです．</p>
+<p>MJ65を1台作成するために必要な部品のリストです．
+備考欄にパーツのデータまたは商品ページ（一例）へのリンクを貼っておきます．</p>
+
+<p>1台あたり，すべてコミコミでおよそ20,000円前後になるはずです．
+（もっと安く実装できるなら，ぜひ教えてください．）</p>
+
+<h3 id="共通">共通</h3>
 
 <table>
 <thead>
@@ -156,22 +235,433 @@
 <tr>
 <td align="left">PCB</td>
 <td align="right">1</td>
-<td align="left"><a href="https://github.com/urushiyama/MJ65-PCB">https://github.com/urushiyama/MJ65-PCB</a></td>
+<td align="left"><a href="https://github.com/urushiyama/MJ65-PCB">https://github.com/urushiyama/MJ65-PCB</a> 1.6mm厚を想定．</td>
 </tr>
 
 <tr>
 <td align="left">Adafruit Itsy Bitsy 32u4</td>
 <td align="right">1</td>
-<td align="left"><a href="https://learn.adafruit.com/introducting-itsy-bitsy-32u4?view=all">https://learn.adafruit.com/introducting-itsy-bitsy-32u4?view=all</a> 3V版を想定，5V版はファームウェアの調整が必要です．</td>
+<td align="left"><a href="http://ssci.to/3625">http://ssci.to/3625</a> 3V版を想定，5V版はファームウェアの調整が必要です．</td>
 </tr>
 
 <tr>
-<td align="left">Top Plate</td>
+<td align="left">2.0mm高 スプリングピンヘッダ 1列12ピン</td>
+<td align="right">3</td>
+<td align="left"><a href="http://ssci.to/3763">http://ssci.to/3763</a> 内一本はカットして使用．</td>
+</tr>
+
+<tr>
+<td align="left">キースイッチ Cherry MX互換/アルプス互換/Kailh Choc (Low Profile)</td>
+<td align="right">62-66 (+1)(+11)</td>
+<td align="left">キーレイアウトにより個数が変動<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>．PCB/Plate Mount両対応．</td>
+</tr>
+
+<tr>
+<td align="left">キーキャップ（キースイッチに対応するもの）</td>
+<td align="right">キースイッチと同数</td>
+<td align="left">キーレイアウトにより必要な形状・個数が異なる．</td>
+</tr>
+
+<tr>
+<td align="left">ダイオード 1N4148</td>
+<td align="right">キースイッチと同数</td>
+<td align="left"><a href="http://akizukidenshi.com/catalog/g/gI-00941/">http://akizukidenshi.com/catalog/g/gI-00941/</a> キーレイアウトにより個数が変動<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>．</td>
+</tr>
+
+<tr>
+<td align="left">トッププレート</td>
 <td align="right">1</td>
-<td align="left"><a href="https://github.com/urushiyama/MJ65-Plate">https://github.com/urushiyama/MJ65-Plate</a> キースイッチ固定用</td>
+<td align="left"><a href="https://github.com/urushiyama/MJ65-Plate/tree/master/top-plate">https://github.com/urushiyama/MJ65-Plate/tree/master/top-plate</a> キースイッチ固定用．キースイッチの種類によって異なる<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>．</td>
+</tr>
+
+<tr>
+<td align="left">はんだ</td>
+<td align="right">1-</td>
+<td align="left">精密プリント基板用はんだを推奨，500円程度のもので十分余る．</td>
 </tr>
 </tbody>
 </table>
+
+<h3 id="ネジ類">ネジ類</h3>
+
+<p>使用するバックプレート（2パターン）xキースイッチ（2パターン）の計4パターンあります．</p>
+
+<h4 id="角度のついたバックプレート-kailh-chocスイッチ使用時">角度のついたバックプレート+Kailh Chocスイッチ使用時</h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">名前</th>
+<th align="right">個数</th>
+<th align="left">リンク・備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">M2低頭ネジ 6mm</td>
+<td align="right">14-</td>
+<td align="left">プレートとPCB固定用．</td>
+</tr>
+
+<tr>
+<td align="left">M2ナット 1.6mm厚</td>
+<td align="right">14-</td>
+<td align="left">ボトムプレートとPCBスペーシング用．</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="角度のついたバックプレート-kailh-choc以外のキースイッチ使用時">角度のついたバックプレート+Kailh Choc以外のキースイッチ使用時</h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">名前</th>
+<th align="right">個数</th>
+<th align="left">リンク・備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">M2低頭ネジ 7mm</td>
+<td align="right">14-</td>
+<td align="left">プレートとPCB固定用．</td>
+</tr>
+
+<tr>
+<td align="left">M2スペーサー 両メネジ3mm</td>
+<td align="right">14-</td>
+<td align="left">トッププレートとPCB固定用．</td>
+</tr>
+
+<tr>
+<td align="left">M2スペーサー メネジオネジ3mm+3mm</td>
+<td align="right">14-</td>
+<td align="left">ボトムプレートとPCB固定用．</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="角度のつかないバックプレート-kailh-chocスイッチ使用時">角度のつかないバックプレート+Kailh Chocスイッチ使用時</h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">名前</th>
+<th align="right">個数</th>
+<th align="left">リンク・備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">M2小皿ネジ 5mm</td>
+<td align="right">14-</td>
+<td align="left">プレートとPCB固定用．</td>
+</tr>
+
+<tr>
+<td align="left">M2スペーサー メネジオネジ3mm+5mm</td>
+<td align="right">14-</td>
+<td align="left">バックプレートとPCB固定用<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">3</a></sup>．</td>
+</tr>
+
+<tr>
+<td align="left">M2スペーサー 両メネジ1mm</td>
+<td align="right">14-</td>
+<td align="left">トッププレートとPCB固定用<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">3</a></sup>．</td>
+</tr>
+
+<tr>
+<td align="left">M2ナット 1.2mm厚</td>
+<td align="right">14-</td>
+<td align="left">トッププレートとPCB固定用．</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="角度のつかないバックプレート-kailh-choc以外のキースイッチ使用時">角度のつかないバックプレート+Kailh Choc以外のキースイッチ使用時</h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">名前</th>
+<th align="right">個数</th>
+<th align="left">リンク・備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">M2小皿ネジ 8mm</td>
+<td align="right">14-</td>
+<td align="left">プレートとPCB固定用．</td>
+</tr>
+
+<tr>
+<td align="left">M2スペーサー メネジオネジ3mm+3mm</td>
+<td align="right">14-</td>
+<td align="left">バックプレートとPCB固定用．</td>
+</tr>
+
+<tr>
+<td align="left">M2スペーサー 両メネジ3mm</td>
+<td align="right">14-</td>
+<td align="left">トッププレートとPCB固定用．</td>
+</tr>
+
+<tr>
+<td align="left">M2超低頭ネジ 3mm</td>
+<td align="right">14-</td>
+<td align="left">トッププレートとPCB固定用．</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="cherry-mx互換およびalps互換キースイッチ使用時">Cherry MX互換およびAlps互換キースイッチ使用時</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left">名前</th>
+<th align="right">個数</th>
+<th align="left">リンク・備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">スタビライザー PCBマウント 1.75u</td>
+<td align="right">2-3</td>
+<td align="left">レイアウトにより異なる<sup class="footnote-ref" id="fnref:4"><a href="#fn:4">4</a></sup>．</td>
+</tr>
+
+<tr>
+<td align="left">スタビライザー PCBマウント 6u</td>
+<td align="right">0-1</td>
+<td align="left">レイアウトにより異なる<sup class="footnote-ref" id="fnref:5"><a href="#fn:5">5</a></sup>．</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="オプショナル">オプショナル</h3>
+
+<table>
+<thead>
+<tr>
+<th align="left">名前</th>
+<th align="right">個数</th>
+<th align="left">リンク・備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">追加トッププレート</td>
+<td align="right">0-1</td>
+<td align="left"><a href="https://github.com/urushiyama/MJ65-Plate/tree/master/extra-top-plate">https://github.com/urushiyama/MJ65-Plate/tree/master/extra-top-plate</a> 独立ファンクションキー行を実装する場合必要．キースイッチの種類によって異なる<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>．</td>
+</tr>
+
+<tr>
+<td align="left">マイコンカバー</td>
+<td align="right">0-1</td>
+<td align="left"><a href="https://github.com/urushiyama/MJ65-Plate/tree/master/cover">https://github.com/urushiyama/MJ65-Plate/tree/master/cover</a> マイコンボードを隠したい場合必要．</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="組み立て手順">組み立て手順</h2>
+
+<ul>
+<li>最上段の独立ファンクションキーの組み立て手順はいずれ追記します．</li>
+</ul>
+
+<h3 id="1-ダイオードのはんだ付け">1. ダイオードのはんだ付け</h3>
+
+<p>ダイオードを<code>Dx_y</code>とシルクが印字された箇所に<strong>シルク印字の反対側にダイオードがつくように</strong>はんだ付けします．
+ダイオードのカソードを四角いパッド（写真中の白い四角で囲った側）にはんだ付けしてください．</p>
+
+<p>シルクの印字で<code>Dx_y</code>と記入された箇所のダイオードが，シルクの印字で<code>SWx_y</code>と書かれたキースイッチに対応します．
+選択したレイアウトによってはんだ付けが不要な箇所が生じるので，レイアウトとシルクの印字を確認してください．
+なお，実装が必要な箇所がよくわからない場合は，すべての箇所にダイオードをはんだ付けすると良いでしょう．</p>
+
+<div class='columns'>
+
+<div class="column"><div class="card"><img src="../img/diode_footprints.png" alt="diode_footprints" />
+</div>
+
+<p></div></p>
+
+<div class="column"><div class="card"><img src="../img/soldering_diodes.png" alt="soldering_diodes" />
+</div>
+
+<p></div></p>
+
+<p></div></p>
+
+<h3 id="2-キースイッチのトッププレート-追加トッププレートへのはめ込み">2. キースイッチのトッププレート，追加トッププレートへのはめ込み</h3>
+
+<p>キースイッチをレイアウトと照らし合わせながら，トッププレートにはめ込みます．
+この際，PCBとトッププレートを重ね合わせて，キースイッチの足が基板のスルーホールに入るか確認しながら作業すると良いでしょう．</p>
+
+<h3 id="3-スタビライザーの取り付け-cherry-mx互換およびalps互換キースイッチ使用時のみ">3. スタビライザーの取り付け（Cherry MX互換およびAlps互換キースイッチ使用時のみ）</h3>
+
+<p>配列によって取り付けの位置，個数，種類が変わります．
+写真のように取り付けてください．</p>
+
+<h4 id="us-like-配列または-1app-us-配列の場合"><code>us_like</code>配列または<code>1app_us</code>配列の場合</h4>
+
+<ul>
+<li>1.75u</li>
+</ul>
+
+<div class='columns'>
+
+<div class="column"><div class="card"><img src="../img/left_stabilizer.png" alt="left_stabilizer" />
+</div>
+
+<p></div></p>
+
+<div class="column"><div class="card"><img src="../img/us_right_stabilizers.png" alt="us_right_stabilizers" />
+</div>
+
+<p></div></p>
+
+<p></div></p>
+
+<ul>
+<li>6u</li>
+</ul>
+
+<div class="card"><img src="../img/us_space_stabilizer.png" alt="us_space_stabilizer" />
+</div>
+
+<h4 id="それ以外の場合">それ以外の場合</h4>
+
+<p>-1.75u</p>
+
+<div class='columns'>
+
+<div class="column"><div class="card"><img src="../img/left_stabilizer.png" alt="left_stabilizer" />
+</div>
+
+<p></div></p>
+
+<div class="column"><div class="card"><img src="../img/jis_right_stabilizer.png" alt="jis_right_stabilizer" />
+</div>
+
+<p></div></p>
+
+<p></div></p>
+
+<h3 id="4-ネジ類の固定とキースイッチのはんだ付け">4. ネジ類の固定とキースイッチのはんだ付け</h3>
+
+<p>使用するバックプレート（2パターン）xキースイッチ（2パターン）の計4パターンあります．</p>
+
+<h4 id="角度のついたバックプレート-kailh-chocスイッチ使用時-1">角度のついたバックプレート+Kailh Chocスイッチ使用時</h4>
+
+<p>まず，キースイッチをつけたトッププレートをPCBの上に重ね合わせます．</p>
+
+<p>次に，キースイッチの位置が正しいことを確認しながら，キースイッチをはんだ付けします．</p>
+
+<p>その後，キースイッチのキーキャップをつける側（表）からトッププレートとPCBの穴を同時に通すようにネジを入れます．
+ネジを入れる位置と個数は任意ですが，一例としては以下の写真の赤く囲んだ箇所です．</p>
+
+<div class="card"><img src="../img/screw_positions.png" alt="screw_positions" />
+</div>
+
+<p>その後，PCB側からネジにナットを取り付けます．
+この際，強くナットを回してトッププレートとPCB間の隙間が狭まらないように注意してください．
+1mm程度の厚紙をトッププレートとPCB間に挟んで作業すると良いでしょう．</p>
+
+<p>最後に，バックプレートの上にPCBを重ね合わせ，各ネジを表側から垂直に少し力を入れて締めます（タッピング）．</p>
+
+<h4 id="角度のついたバックプレート-kailh-choc以外のキースイッチ使用時-1">角度のついたバックプレート+Kailh Choc以外のキースイッチ使用時</h4>
+
+<ul>
+<li>いずれ追記します．</li>
+</ul>
+
+<h4 id="角度のつかないバックプレート-kailh-chocスイッチ使用時-1">角度のつかないバックプレート+Kailh Chocスイッチ使用時</h4>
+
+<p>まず，2種類のスペーサーを，PCBの穴を挟み込むように取り付けます．
+取り付ける位置と個数は任意ですが，一例としては<a href="#%E8%A7%92%E5%BA%A6%E3%81%AE%E3%81%A4%E3%81%84%E3%81%9F%E3%83%90%E3%83%83%E3%82%AF%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88-kailh-choc%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81%E4%BD%BF%E7%94%A8%E6%99%82-1">角度のついたバックプレート+Kailh Chocスイッチ使用時</a>の写真の赤く囲んだ箇所です．</p>
+
+<div class="card"><img src="../img/attach_spacers.png" alt="attach_spacers" />
+</div>
+
+<p>その後，キースイッチをはめ込んだトッププレートをPCBの上に重ね合わせ，先ほど取り付けたスペーサーの上に置きます．
+さらに，トッププレートとスペーサーを超低頭ネジで固定します．</p>
+
+<div class="card"><img src="../img/screw_thin_heads.png" alt="screw_thin_heads" />
+</div>
+
+<p>その後，キースイッチをPCBにはんだ付けします．</p>
+
+<p>小皿ネジ用のバックプレートを用いる場合は，ついでバックプレートを穴径が小さい方がPCBの裏側を向くように重ね合わせ，バックプレートとスペーサーを小皿ネジで固定します．</p>
+
+<p>普通の穴のバックプレートを用いる場合は，ついでバックプレートをPCBの裏側と重ね合わせ，バックプレートとスペーサーを超低頭ネジやゴム脚付きのネジで固定します．</p>
+
+<h4 id="角度のつかないバックプレート-kailh-choc以外のキースイッチ使用時-1">角度のつかないバックプレート+Kailh Choc以外のキースイッチ使用時</h4>
+
+<ul>
+<li>いずれ追記します．</li>
+</ul>
+
+<h3 id="5-コンスルーのマイコンボードへのはんだ付け-マイコンボードのpcbへの装着">5. コンスルーのマイコンボードへのはんだ付け，マイコンボードのPCBへの装着</h3>
+
+<p>コンスルーのうち1つを切り離し，7ピンのコンスルーをつくります．</p>
+
+<div class="card"><img src="../img/cut_pin_header.png" alt="cut_pin_header" />
+</div>
+
+<p>その後，7ピンのコンスルーが短辺になるように，コの字にコンスルーをはんだ付けします．
+この際，PCBのコントローラ取り付け部分に先にコンスルーを装着した後にコントローラを装着し，その上ではんだ付けすると失敗しにくいです．</p>
+
+<div class="card"><img src="../img/soldering_pin_header_to_controller.png" alt="soldering_pin_header_to_controller" />
+</div>
+
+<h3 id="6-マイコンボードのpcbへのはめ込み">6. マイコンボードのPCBへのはめ込み</h3>
+
+<p>マイコンボードは，PCBの左上に装着します．</p>
+
+<div class="card"><img src="../img/attach_controller.png" alt="attach_controller" />
+</div>
+
+<h2 id="ファームウェアの書き込み">ファームウェアの書き込み</h2>
+
+<p>QMKファームウェアの実行環境があることを想定しています．
+実行環境のセットアップは公式の<a href="https://docs.qmk.fm/#/newbs_getting_started?id=set-up-your-environment">こちら</a>を参照ください．</p>
+
+<ol>
+<li>USBケーブルでマイコンボードとPCをつなぐ．</li>
+<li>ターミナルで<code>git clone -b MJ65 https://github.com/urushiyama/qmk_firmware.git</code></li>
+<li>ターミナルで<code>make mj65:&lt;layout&gt;:avrdude</code></li>
+<li>ターミナル上の指示に従い，必要ならばマイコンボードのリセットボタンを押す</li>
+</ol>
+
+<p><code>&lt;layout&gt;</code> には，選択したキーレイアウトに応じた文字列を指定します．
+USライク配列なら<code>us_like</code>，Default（JIS）配列なら<code>default</code>，分割スペース配列なら<code>split_space</code>を指定します．
+また，右下のキー数を1つ増やしたレイアウトの場合，USライク配列なら<code>1app_us</code>，Default（JIS）配列なら<code>1app</code>，分割スペース配列なら<code>1app_split</code>を指定します．</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">US_like:62，default:65，split-space:66を基本として，それぞれ，右下のキー数を増やす場合+1，独立ファンクションキー行を実装する場合+11
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">Cherry MX互換またはアルプス互換の場合<code>Univ-top-plate-mx-alps</code>，Cherry MX互換またはKailh Chocの場合<code>Univ-top-plate-mx-choc</code>．Cherry MX互換キーを後者のほうが穴が小さいため，正確な大きさで出力できる場合は後者を選択してください．
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:3">（入手性が悪すぎるため）実際制作できるか不明．作者は試していません😈
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+<li id="fn:4"><code>us_like</code>または<code>1app_us</code>ならば3個，それ以外は2個|
+ <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
+<li id="fn:5"><code>us_like</code>または<code>1app_us</code>ならば1個，それ以外は0個|
+ <a class="footnote-return" href="#fnref:5"><sup>[return]</sup></a></li>
+</ol>
+</div>
 
     </div>
     
@@ -208,6 +698,8 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cpp.min.js"></script>
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/erb.min.js"></script>
 
