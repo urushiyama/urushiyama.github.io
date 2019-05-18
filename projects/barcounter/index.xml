@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>urushiyamaのさまつごと</title>
+    <link>https://urushiyama.github.io/projects/barcounter/</link>
+    <description>Recent content on urushiyamaのさまつごと</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <lastBuildDate>Sun, 19 May 2019 04:53:06 +0900</lastBuildDate>
+    
+	<atom:link href="https://urushiyama.github.io/projects/barcounter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>BarCounter</title>
+      <link>https://urushiyama.github.io/projects/barcounter/</link>
+      <pubDate>Sun, 19 May 2019 04:53:06 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/projects/barcounter/</guid>
+      <description>「〇〇文字以内で回答しなさい」，「〇〇文字以上記述しなさい」，「概要は〇〇文字以内で」．．． 私たちの書く文章は，しばしば文字数で縛られる対象</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://urushiyama.github.io/projects/barcounter/privacy-policy/</link>
+      <pubDate>Sat, 27 Apr 2019 22:26:36 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/projects/barcounter/privacy-policy/</guid>
+      <description>BarCounter プライバシーポリシー 漆山裕太（以下，開発者）は，BarCounterアプリ（以下，本アプリ）を商用アプリとして開発しました． このアプリは改</description>
+    </item>
+    
+    <item>
+      <title>Support</title>
+      <link>https://urushiyama.github.io/projects/barcounter/support/</link>
+      <pubDate>Sat, 27 Apr 2019 20:15:50 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/projects/barcounter/support/</guid>
+      <description>コメントにはアプリ名を合わせてご記入ください． アプリに関する匿名での質問，意見，要望などはこちらで受け付けています： https://marshmallow-qa.com/yurushiyama?utm_medium=url_text&amp;amp;utm_source=promotion あるいは，Twitte</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,6 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://urushiyama.github.io/projects/barcounter/</loc>
+    <lastmod>2019-05-19T04:53:06+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/projects/barcounter/</loc>
+    <lastmod>2019-05-19T04:53:06+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/projects/barcounter/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/projects/barcounter/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/macos-%E3%82%A2%E3%83%97%E3%83%AA/</loc>
+    <lastmod>2019-05-19T04:53:06+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/</loc>
+    <lastmod>2019-05-19T04:53:06+09:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3/</loc>
+    <lastmod>2019-05-19T04:53:06+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/%E4%BB%95%E4%BA%8B%E5%8A%B9%E7%8E%87%E5%8C%96/</loc>
+    <lastmod>2019-05-19T04:53:06+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/projects/mj65/</loc>
     <lastmod>2019-04-29T09:02:10+09:00</lastmod>
     <priority>0</priority>
@@ -25,22 +80,6 @@
   </url>
   
   <url>
-    <loc>https://urushiyama.github.io/tags/</loc>
-    <lastmod>2019-04-29T09:02:10+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://urushiyama.github.io/tags/%E8%87%AA%E4%BD%9C%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</loc>
     <lastmod>2019-04-29T09:02:10+09:00</lastmod>
     <priority>0</priority>
@@ -50,6 +89,21 @@
     <loc>https://urushiyama.github.io/projects/serialbuddy/</loc>
     <lastmod>2019-04-27T22:26:36+09:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/projects/barcounter/privacy-policy/</loc>
+    <lastmod>2019-04-27T22:26:36+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/projects/barcounter/privacy-policy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/projects/barcounter/privacy-policy/"
+                />
   </url>
   
   <url>
@@ -83,6 +137,21 @@
   </url>
   
   <url>
+    <loc>https://urushiyama.github.io/projects/barcounter/support/</loc>
+    <lastmod>2019-04-27T20:15:50+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/projects/barcounter/support/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/projects/barcounter/support/"
+                />
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/projects/serialbuddy/support/</loc>
     <lastmod>2019-04-27T20:15:50+09:00</lastmod>
     <xhtml:link
@@ -95,12 +164,6 @@
                 hreflang="ja"
                 href="https://urushiyama.github.io/projects/serialbuddy/support/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/tags/macos-%E3%82%A2%E3%83%97%E3%83%AA/</loc>
-    <lastmod>2019-04-27T19:44:32+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
