@@ -14,20 +14,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
-<meta content='プログラミング, HCI, つくば, ブログ' name="keywords">
+<meta content='文字数カウント, メニューバー, クリップボード, 日本語, 英語' name="keywords">
 <meta content="urushiyama" name="author">
-<meta content='' name="description">
+<meta content='「〇〇文字以内で回答しなさい」，「〇〇文字以上記述しなさい」，「概要は〇〇文字以内で」．．． 私たちの書く文章は，しばしば文字数で縛られる対象...' name="description">
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 
 <meta property="og:site_name" content="urushiyamaのさまつごと">
-<meta property="og:title" content=' - urushiyamaのさまつごと'>
+<meta property="og:title" content='BarCounter - urushiyamaのさまつごと'>
 <meta property="og:url" content="https://urushiyama.github.io/projects/barcounter/">
-<meta property="og:description" content=''>
+<meta property="og:description" content='「〇〇文字以内で回答しなさい」，「〇〇文字以上記述しなさい」，「概要は〇〇文字以内で」．．． 私たちの書く文章は，しばしば文字数で縛られる対象...'>
 <meta property="og:type" content='article'>
 
+<meta property="og:image" content="https://urushiyama.github.io/projects/barcounter/img/BarCounter.png">
 
-<title> - urushiyamaのさまつごと</title>
+
+<title>BarCounter - urushiyamaのさまつごと</title>
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -48,11 +50,15 @@
 <meta name="hugo:type" content="projects"/>
 </head>
 
+<body>
 <nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       
-      <a class="navbar-item" href="https://urushiyama.github.io/"><span class="title is-4">urushiyamaのさまつごと</span></a>
+      
+      <a class="navbar-item" href="#"><img src="https://urushiyama.github.io/projects/barcounter/img/BarCounter.svg" style="height: 100%; width: auto;"/></a>
+      <a class="navbar-item" href="#"><span class="title is-4">BarCounter</span></a>
+      
       
       
       <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
@@ -77,23 +83,23 @@
       <div class="navbar-start">
       
         
-        <a class="navbar-item" href="https://urushiyama.github.io/publications">
-          Publications
+        <a class="navbar-item" href="support/">
+          Support
         </a>
         
-        
-        <a class="navbar-item" href="https://urushiyama.github.io/projects">
-          Projects
-        </a>
-        
-        
-        <a class="navbar-item" href="https://urushiyama.github.io/posts">
-          Posts
+        <a class="navbar-item" href="privacy-policy/">
+          Privacy Policy
         </a>
         
       
       </div>
       <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://urushiyama.github.io/">
+          <span class="icon">
+            <i class="fa fa-home"></i>
+          </span>
+        </a>
         
         
         <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
@@ -114,75 +120,134 @@
 </nav>
 
 
-<section class="section">
-  <div class="container posts-paginator">
-    <h2 class="title center"><a href="https://urushiyama.github.io/projects">Projects</a></h2>
-    <div class="content">
-      <div class="container paginate">
+
+<div class="notification is-info">
+  <button class="delete"></button>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      $notification = $delete.parentNode;
+      $delete.addEventListener('click', () => {
+        $notification.classList.add('is-deleted');
+        while($notification.firstChild) {
+          $notification.removeChild($notification.firstChild);
+        }
+      });
+    });
+  });
+  </script>
+  <div class="translations">
+    <span class="subtitle">Translations Available</span>
+    <ul>
         
+        <li>
+            <a href="https://urushiyama.github.io/en/projects/barcounter/">
+              
+                English
+              
+              : BarCounter</a>
+        </li>
         
-        <div class="box">
-          <article>
-            <h3 class="title"><a href="https://urushiyama.github.io/projects/barcounter/">BarCounter</a></h3>
-            <h4 class="subtitle is-5">
-              
-              May 19, 2019
-              
-            </h4>
-            
-              <div class="tags">
-    
-        <a class="tag is-rounded" href="/tags/%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3">ユーティリティ</a>
-    
-        <a class="tag is-rounded" href="/tags/%E4%BB%95%E4%BA%8B%E5%8A%B9%E7%8E%87%E5%8C%96">仕事効率化</a>
-    
-        <a class="tag is-rounded" href="/tags/macos-%E3%82%A2%E3%83%97%E3%83%AA">MacOS アプリ</a>
-    
+    </ul>
+  </div>
 </div>
 
-            
-            <div class="content">
-              「〇〇文字以内で回答しなさい」，「〇〇文字以上記述しなさい」，「概要は〇〇文字以内で」．．． 私たちの書く文章は，しばしば文字数で縛られる対象
-              
-              ...<a class="button is-text" href="https://urushiyama.github.io/projects/barcounter/" style="height:20px">
-                Read more
-                <span class="icon is-small">
-                  <i class="fa fa-angle-double-right"></i>
-                </span>
-              </a>
-              
-            </div>
-          </article>
-        </div>
+
+
+
+<section class="hero is-fullheight-with-navbar is-default is-bold">
+
+<div class="hero-body has-background">
+<img class="background-image is-whiter" src="https://urushiyama.github.io/projects/barcounter/img/BarCounter-bg.png"/>
+
+  <div class="container">
+    <div class="columns is-vcentered">
+      
+      <div class="column is-5 is-offset-1">
+        
+        <h1 class="title is-1 is-bold is-spaced">
+          メニューバーで，文字数を数えよう．
+        </h1>
+        
+        <h2 class="subtitle is-5 is-muted">
+          必要なのは，コピーするだけ．文章執筆のお供にどうぞ．
+        </h2>
+        
+        <div class="columns">
+  
+  <div class="column">
+    <a href="https://itunes.apple.com/jp/app/barcounter/id1464372559">
+      
+      <img src="https://urushiyama.github.io/img/Download_on_the_Mac_App_Store_Badge_JP_RGB_blk_100317.svg"/>
+      
+    </a>
+  </div>
+  
+  
+</div>
+
         
       </div>
+      <div class="column is-5 is-offset-1">
+        <figure class="image is-4by3">
+          <img src="https://urushiyama.github.io/projects/barcounter/img/BarCounter.png" alt="Project Image" style="width: 100%; height: auto;%"/>
+        </figure>
+      </div>
+      
     </div>
+  </div>
+</div>
+
+
+
 </section>
 
 
 <section class="section">
   <div class="container">
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <div class="level-item">
-          
-        </div>
-      </div>
-      <div class="level-right is-marginless">
-        <div class="level-item">
-          
-          <a class="button" href="/projects/barcounter/page/2/">
-            Older
-            <span class="icon is-small is-marginless">
-              <i class="fa fa-angle-right"></i>
-            </span>
-          </a>
-          
-        </div>
-      </div>
-    </nav>
+    <div class="content">
+      
+
+<p>「〇〇文字以内で回答しなさい」，「〇〇文字以上記述しなさい」，「概要は〇〇文字以内で」．．．
+私たちの書く文章は，しばしば文字数で縛られる対象です．
+Wordやテキストエディタを使っているなら簡単に文字数を数えられますが，Excel，メール，不親切なWEBフォームなどでは，文字数を数えるのに一手間必要です．
+でも，文章を書く手の勢いを失う前に，文字数を瞬時に確認できたら便利ですよね．
+だから，BarCounterを開発しました．</p>
+
+<p>このアプリは以下の機能を含みます：</p>
+
+<ul>
+<li>文字列をコピーするだけで文字数をカウント</li>
+<li>英単語数と文字数の表示を2クリックで切り替え</li>
+<li>カウント結果は2クリックでクリップボードにコピー</li>
+</ul>
+
+<p>クリップボードを利用しているため，Handoffを有効にすればiOS上で選択した文字列のカウントもできます 📱</p>
+
+<h2 id="バグの報告-ご意見ご要望を歓迎します">バグの報告，ご意見ご要望を歓迎します</h2>
+
+<p>バグ報告，機能改善を含むアプリに関するアドバイスを以下のリンク先にて受け付けています：
+<a href="https://urushiyama.github.io/en/projects/barcounter/support/">https://urushiyama.github.io/en/projects/barcounter/support/</a></p>
+
+<blockquote>
+<p>MacはApple社の登録商標です．
+使用している機器および&rdquo;Download from Mac App Store&rdquo;の画像の権利はApple社に帰属します．</p>
+</blockquote>
+
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fprojects%2fbarcounter%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fprojects%2fbarcounter%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fprojects%2fbarcounter%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=BarCounter - https%3a%2f%2furushiyama.github.io%2fprojects%2fbarcounter%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fprojects%2fbarcounter%2f&title=BarCounter" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
   </div>
 </section>
+
 
 <section class="section">
   <div class="container has-text-centered">
@@ -264,3 +329,4 @@ if (!doNotTrack) {
 
 
 
+</body>
