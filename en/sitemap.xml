@@ -68,21 +68,6 @@
   </url>
   
   <url>
-    <loc>https://urushiyama.github.io/en/projects/barcounter/privacy-policy/</loc>
-    <lastmod>2019-04-27T22:26:36+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/projects/barcounter/privacy-policy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/projects/barcounter/privacy-policy/"
-                />
-  </url>
-  
-  <url>
     <loc>https://urushiyama.github.io/en/projects/serialbuddy/privacy-policy/</loc>
     <lastmod>2019-04-27T22:26:36+09:00</lastmod>
     <xhtml:link
@@ -109,21 +94,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://urushiyama.github.io/en/projects/serialbuddy/acknowledgements/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/projects/barcounter/support/</loc>
-    <lastmod>2019-04-27T20:15:50+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/projects/barcounter/support/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/projects/barcounter/support/"
                 />
   </url>
   
