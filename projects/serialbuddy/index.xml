@@ -1,42 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SerialBuddy on urushiyamaのさまつごと</title>
-    <link>https://urushiyama.github.io/projects/serialbuddy/</link>
-    <description>Recent content in SerialBuddy on urushiyamaのさまつごと</description>
+    <title>urushiyamaのさまつごと</title>
+    <link>http://localhost:1313/projects/serialbuddy/</link>
+    <description>Recent content on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Sat, 27 Apr 2019 19:44:32 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 17 Jun 2019 00:38:30 +0900</lastBuildDate>
     
-	<atom:link href="https://urushiyama.github.io/projects/serialbuddy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/projects/serialbuddy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Release Note</title>
+      <link>http://localhost:1313/projects/serialbuddy/release-note/</link>
+      <pubDate>Mon, 17 Jun 2019 00:38:30 +0900</pubDate>
+      
+      <guid>http://localhost:1313/projects/serialbuddy/release-note/</guid>
+      <description>Release Note v1.1.0 コンフィグは大抵の場合，万能であるよりもばかげたものです． 新機能: ボーレートの自動検出 修正点: Serial Analyzer上のテキストとグラフ表</description>
+    </item>
+    
+    <item>
       <title>Privacy Policy</title>
-      <link>https://urushiyama.github.io/projects/serialbuddy/privacy-policy/</link>
+      <link>http://localhost:1313/projects/serialbuddy/privacy-policy/</link>
       <pubDate>Sat, 27 Apr 2019 22:26:36 +0900</pubDate>
       
-      <guid>https://urushiyama.github.io/projects/serialbuddy/privacy-policy/</guid>
+      <guid>http://localhost:1313/projects/serialbuddy/privacy-policy/</guid>
       <description>SerialBuddy プライバシーポリシー 漆山裕太（以下，開発者）は，SerialBuddyアプリ（以下，本アプリ）を商用アプリとして開発しました． このアプリは</description>
     </item>
     
     <item>
       <title>Acknowledgements</title>
-      <link>https://urushiyama.github.io/projects/serialbuddy/acknowledgements/</link>
+      <link>http://localhost:1313/projects/serialbuddy/acknowledgements/</link>
       <pubDate>Sat, 27 Apr 2019 22:26:20 +0900</pubDate>
       
-      <guid>https://urushiyama.github.io/projects/serialbuddy/acknowledgements/</guid>
+      <guid>http://localhost:1313/projects/serialbuddy/acknowledgements/</guid>
       <description>SerialBuddyは以下のサードパーティ製ライブラリによって支えられています． オープンソースコミュニティのあらゆる貢献に対して感謝の意を</description>
     </item>
     
     <item>
       <title>Support</title>
-      <link>https://urushiyama.github.io/projects/serialbuddy/support/</link>
+      <link>http://localhost:1313/projects/serialbuddy/support/</link>
       <pubDate>Sat, 27 Apr 2019 20:15:50 +0900</pubDate>
       
-      <guid>https://urushiyama.github.io/projects/serialbuddy/support/</guid>
+      <guid>http://localhost:1313/projects/serialbuddy/support/</guid>
       <description>コメントにはアプリ名を合わせてご記入ください． アプリに関する匿名での質問，意見，要望などはこちらで受け付けています： https://marshmallow-qa.com/yurushiyama?utm_medium=url_text&amp;amp;utm_source=promotion あるいは，Twitte</description>
+    </item>
+    
+    <item>
+      <title>SerialBuddy</title>
+      <link>http://localhost:1313/projects/serialbuddy/</link>
+      <pubDate>Sat, 27 Apr 2019 19:44:32 +0900</pubDate>
+      
+      <guid>http://localhost:1313/projects/serialbuddy/</guid>
+      <description>Macでマイコンボードの開発につかうシリアル通信．どんな方法でデバッグしていますか？ cuやscreenコマンドを叩いたり，マイコンボードの開</description>
     </item>
     
   </channel>

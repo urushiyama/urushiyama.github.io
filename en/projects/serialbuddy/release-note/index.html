@@ -1,0 +1,306 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja" class="has-navbar-fixed-top">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='programming, HCI, tsukuba, blog' name="keywords">
+<meta content="urushiyama" name="author">
+<meta content=' Release Note v1.1.0 Self-Configuration is often more ridiculous than omnipotent.
+NEW FEATURE:
+ Automatically Detect the Baud Rate  FIXED:
+ Displayed text &amp;amp; graph&amp;rsquo;s filling color on the Analyzer
+ An Issue that the Session Manager did not unlock controls after the peripheral was removed  v1.0  Initial Release  ' name="description">
+
+<meta name="twitter:card" content="summary">
+
+<meta property="og:site_name" content="urushiyama&#39;s trivia">
+<meta property="og:title" content='Release Note - urushiyama&#39;s trivia'>
+<meta property="og:url" content="http://localhost:1313/en/projects/serialbuddy/release-note/">
+<meta property="og:description" content=' Release Note v1.1.0 Self-Configuration is often more ridiculous than omnipotent.
+NEW FEATURE:
+ Automatically Detect the Baud Rate  FIXED:
+ Displayed text &amp;amp; graph&amp;rsquo;s filling color on the Analyzer
+ An Issue that the Session Manager did not unlock controls after the peripheral was removed  v1.0  Initial Release  '>
+<meta property="og:type" content='article'>
+
+
+<title>Release Note - urushiyama&#39;s trivia</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="http://localhost:1313/css/style.css">
+<link rel="shortcut icon" href="http://localhost:1313/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow.min.css">
+
+
+<meta name="hugo:section" content="projects"/>
+<meta name="hugo:type" content="serialbuddy"/>
+</head>
+
+<body>
+<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      
+      
+      <a class="navbar-item" href="../"><img src="http://localhost:1313/projects/serialbuddy/release-note/../img/SerialBuddy.svg" style="height: 100%; width: auto;"/></a>
+      <a class="navbar-item" href="../"><span class="title is-4">SerialBuddy</span></a>
+      
+      
+      
+      <a class="navbar-item is-hidden-desktop" href="http://localhost:1313/en">
+        <span class="icon">
+          <i class="fa fa-home"></i>
+        </span>
+      </a>
+      
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://twitter.com/YUrushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+      
+        
+        <a class="navbar-item" href="../support/">
+          Support
+        </a>
+        
+        <a class="navbar-item" href="../privacy-policy/">
+          Privacy Policy
+        </a>
+        
+        <a class="navbar-item" href="../acknowledgements/">
+          Acknowledgements
+        </a>
+        
+        <a class="navbar-item has-background-light" href="#">
+          Release Note
+        </a>
+        
+      
+      </div>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="http://localhost:1313/en">
+          <span class="icon">
+            <i class="fa fa-home"></i>
+          </span>
+        </a>
+        
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+        <a class="navbar-item is-hidden-mobile" href="https://twitter.com/YUrushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-twitter"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="notification is-info">
+  <button class="delete"></button>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      $notification = $delete.parentNode;
+      $delete.addEventListener('click', () => {
+        $notification.classList.add('is-deleted');
+        while($notification.firstChild) {
+          $notification.removeChild($notification.firstChild);
+        }
+      });
+    });
+  });
+  </script>
+  <div class="translations">
+    <span class="subtitle">Translations Available</span>
+    <ul>
+        
+        <li>
+            <a href="http://localhost:1313/projects/serialbuddy/release-note/">
+              
+                日本語
+              
+              : Release Note</a>
+        </li>
+        
+    </ul>
+  </div>
+</div>
+
+
+
+<section class="section">
+  <div class="container">
+    <h1 class="title"></h1>
+    
+
+    <div class="content">
+      
+
+<h1 id="release-note">Release Note</h1>
+
+<h2 id="v1-1-0">v1.1.0</h2>
+
+<p>Self-Configuration is often more ridiculous than omnipotent.</p>
+
+<p>NEW FEATURE:</p>
+
+<ul>
+<li>Automatically Detect the Baud Rate</li>
+</ul>
+
+<p>FIXED:</p>
+
+<ul>
+<li>Displayed text &amp; graph&rsquo;s filling color on the Analyzer<br /></li>
+<li>An Issue that the Session Manager did not unlock controls after the peripheral was removed</li>
+</ul>
+
+<h2 id="v1-0">v1.0</h2>
+
+<ul>
+<li>Initial Release</li>
+</ul>
+
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fen%2fprojects%2fserialbuddy%2frelease-note%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%3a1313%2fen%2fprojects%2fserialbuddy%2frelease-note%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fen%2fprojects%2fserialbuddy%2frelease-note%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=Release%20Note - http%3a%2f%2flocalhost%3a1313%2fen%2fprojects%2fserialbuddy%2frelease-note%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fen%2fprojects%2fserialbuddy%2frelease-note%2f&title=Release%20Note" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>
+      <a href="/en/privacy-policy/">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/en/license/">LICENSE</a>
+    </p>
+  </div>
+</section>
+
+  
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/swift.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
