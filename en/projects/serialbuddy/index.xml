@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>urushiyama&#39;s trivia</title>
-    <link>http://localhost:1313/en/projects/serialbuddy/</link>
+    <link>https://urushiyama.github.io/en/projects/serialbuddy/</link>
     <description>Recent content on urushiyama&#39;s trivia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
     <lastBuildDate>Mon, 17 Jun 2019 00:38:30 +0900</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/en/projects/serialbuddy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://urushiyama.github.io/en/projects/serialbuddy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Release Note</title>
-      <link>http://localhost:1313/en/projects/serialbuddy/release-note/</link>
+      <link>https://urushiyama.github.io/en/projects/serialbuddy/release-note/</link>
       <pubDate>Mon, 17 Jun 2019 00:38:30 +0900</pubDate>
       
-      <guid>http://localhost:1313/en/projects/serialbuddy/release-note/</guid>
+      <guid>https://urushiyama.github.io/en/projects/serialbuddy/release-note/</guid>
       <description>Release Note v1.2.0 For who this app did not work.
 NEW FEATURE：
  Enable to change serial communication library for more connectivity (available via Preferences window) Enable to limit/clear console  v1.1.0 Self-Configuration is often more ridiculous than omnipotent.
@@ -29,10 +29,10 @@ NEW FEATURE:
     
     <item>
       <title>Privacy Policy</title>
-      <link>http://localhost:1313/en/projects/serialbuddy/privacy-policy/</link>
+      <link>https://urushiyama.github.io/en/projects/serialbuddy/privacy-policy/</link>
       <pubDate>Sat, 27 Apr 2019 22:26:36 +0900</pubDate>
       
-      <guid>http://localhost:1313/en/projects/serialbuddy/privacy-policy/</guid>
+      <guid>https://urushiyama.github.io/en/projects/serialbuddy/privacy-policy/</guid>
       <description>SerialBuddy Privacy Policy Yuta Urushiyama (the developer) built the SerrialBuddy app (the app) as a Commercial app. The app is intended for use as is.
 This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use the app.
 If you choose to use the app, then you agree to the collection and use of information in relation to this policy.</description>
@@ -40,10 +40,10 @@ If you choose to use the app, then you agree to the collection and use of inform
     
     <item>
       <title>Acknowledgements</title>
-      <link>http://localhost:1313/en/projects/serialbuddy/acknowledgements/</link>
+      <link>https://urushiyama.github.io/en/projects/serialbuddy/acknowledgements/</link>
       <pubDate>Sat, 27 Apr 2019 22:26:20 +0900</pubDate>
       
-      <guid>http://localhost:1313/en/projects/serialbuddy/acknowledgements/</guid>
+      <guid>https://urushiyama.github.io/en/projects/serialbuddy/acknowledgements/</guid>
       <description>SerialBuddy is made by the following third-party libraries. I express my gratitude to all the contributions of the open source communities.
  ORSSerialPort   Copyright &amp;copy; 2011-2012 Andrew R. Madsen (andrew@openreelsoftware.com)
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;ldquo;Software&amp;rdquo;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</description>
@@ -51,10 +51,10 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
     
     <item>
       <title>Support</title>
-      <link>http://localhost:1313/en/projects/serialbuddy/support/</link>
+      <link>https://urushiyama.github.io/en/projects/serialbuddy/support/</link>
       <pubDate>Sat, 27 Apr 2019 20:15:50 +0900</pubDate>
       
-      <guid>http://localhost:1313/en/projects/serialbuddy/support/</guid>
+      <guid>https://urushiyama.github.io/en/projects/serialbuddy/support/</guid>
       <description> Please add the application name in your comment.  Anonymous questions, comments and requests about the app are welcome here:
 https://marshmallow-qa.com/yurushiyama?utm_medium=url_text&amp;amp;utm_source=promotion
 Alternatively, we accept Twitter&amp;rsquo;s direct message (DM):
@@ -66,10 +66,10 @@ aswif10flis1ntkb [at] gmail.com
     
     <item>
       <title>SerialBuddy</title>
-      <link>http://localhost:1313/en/projects/serialbuddy/</link>
+      <link>https://urushiyama.github.io/en/projects/serialbuddy/</link>
       <pubDate>Sat, 27 Apr 2019 19:44:32 +0900</pubDate>
       
-      <guid>http://localhost:1313/en/projects/serialbuddy/</guid>
+      <guid>https://urushiyama.github.io/en/projects/serialbuddy/</guid>
       <description>How do you debug serial communication while developing with micro-controllers? There are some ways such as typing cu or screen or opening development tools for microcontrollers. However, have you seen a tool with a console, a plotter, and an communication analyzer?
 That&amp;rsquo;s why I made this app.
 This app comes with:
