@@ -18,7 +18,7 @@
       <pubDate>Mon, 17 Jun 2019 00:38:30 +0900</pubDate>
       
       <guid>http://localhost:1313/projects/serialbuddy/release-note/</guid>
-      <description>Release Note v1.1.0 コンフィグは大抵の場合，万能であるよりもばかげたものです． 新機能: ボーレートの自動検出 修正点: Serial Analyzer上のテキストとグラフ表</description>
+      <description>Release Note v1.2.0 「使えなかった」と思っていた人たちのためのアップデートです． 新機能： 代替のシリアル通信ライブラリへの切り替え機能（環境設定から切替） コ</description>
     </item>
     
     <item>
