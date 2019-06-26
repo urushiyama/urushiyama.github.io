@@ -3,37 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://urushiyama.github.io/en/projects/serialbuddy/</loc>
-    <lastmod>2019-06-17T00:38:30+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/projects/serialbuddy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/projects/serialbuddy/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/projects/serialbuddy/release-note/</loc>
-    <lastmod>2019-06-17T00:38:30+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/projects/serialbuddy/release-note/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/projects/serialbuddy/release-note/"
-                />
-  </url>
-  
-  <url>
     <loc>https://urushiyama.github.io/en/projects/barcounter/</loc>
     <lastmod>2019-05-19T04:53:06+09:00</lastmod>
     <xhtml:link
@@ -96,51 +65,6 @@
     <loc>https://urushiyama.github.io/en/tags/utilities/</loc>
     <lastmod>2019-05-19T04:53:06+09:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/projects/serialbuddy/privacy-policy/</loc>
-    <lastmod>2019-04-27T22:26:36+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/projects/serialbuddy/privacy-policy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/projects/serialbuddy/privacy-policy/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/projects/serialbuddy/acknowledgements/</loc>
-    <lastmod>2019-04-27T22:26:20+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/projects/serialbuddy/acknowledgements/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/projects/serialbuddy/acknowledgements/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/projects/serialbuddy/support/</loc>
-    <lastmod>2019-04-27T20:15:50+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/projects/serialbuddy/support/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/projects/serialbuddy/support/"
-                />
   </url>
   
   <url>

@@ -13,15 +13,6 @@
     
     
     <item>
-      <title>Release Note</title>
-      <link>https://urushiyama.github.io/projects/serialbuddy/release-note/</link>
-      <pubDate>Mon, 17 Jun 2019 00:38:30 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/projects/serialbuddy/release-note/</guid>
-      <description>Release Note v1.2.0 「使えなかった」と思っていた人たちのためのアップデートです． 新機能： 代替のシリアル通信ライブラリへの切り替え機能（環境設定から切替） コ</description>
-    </item>
-    
-    <item>
       <title>BarCounter</title>
       <link>https://urushiyama.github.io/projects/barcounter/</link>
       <pubDate>Sun, 19 May 2019 04:53:06 +0900</pubDate>
@@ -46,33 +37,6 @@
       
       <guid>https://urushiyama.github.io/projects/mj65/layout/</guid>
       <description>目次 HAHAHUGOSHORTCODE-TOC0-HBHB MJ65のレイアウトおよびキーマップ MJ65は異なるフットプリントを用いることにより6つのレイアウトをサポートしています． *理想的な*</description>
-    </item>
-    
-    <item>
-      <title>Privacy Policy</title>
-      <link>https://urushiyama.github.io/projects/serialbuddy/privacy-policy/</link>
-      <pubDate>Sat, 27 Apr 2019 22:26:36 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/projects/serialbuddy/privacy-policy/</guid>
-      <description>SerialBuddy プライバシーポリシー 漆山裕太（以下，開発者）は，SerialBuddyアプリ（以下，本アプリ）を商用アプリとして開発しました． このアプリは</description>
-    </item>
-    
-    <item>
-      <title>Acknowledgements</title>
-      <link>https://urushiyama.github.io/projects/serialbuddy/acknowledgements/</link>
-      <pubDate>Sat, 27 Apr 2019 22:26:20 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/projects/serialbuddy/acknowledgements/</guid>
-      <description>SerialBuddyは以下のサードパーティ製ライブラリによって支えられています． オープンソースコミュニティのあらゆる貢献に対して感謝の意を</description>
-    </item>
-    
-    <item>
-      <title>Support</title>
-      <link>https://urushiyama.github.io/projects/serialbuddy/support/</link>
-      <pubDate>Sat, 27 Apr 2019 20:15:50 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/projects/serialbuddy/support/</guid>
-      <description>コメントにはアプリ名を合わせてご記入ください． アプリに関する匿名での質問，意見，要望などはこちらで受け付けています： https://marshmallow-qa.com/yurushiyama?utm_medium=url_text&amp;amp;utm_source=promotion あるいは，Twitte</description>
     </item>
     
     <item>
