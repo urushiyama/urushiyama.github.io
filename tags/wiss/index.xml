@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Thu, 27 Sep 2018 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/tags/wiss/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>外部ディスプレイを用いたスマートフォンの画面拡張手法の予備調査（WISS2019）</title>
+      <link>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2019proceedings/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2019proceedings/</guid>
+      <description>概要 （To appear）</description>
+    </item>
     
     <item>
       <title>指の軌跡に基づく手元の視認が不要なスマートフォン向けかな文字入力手法（WISS2018）</title>

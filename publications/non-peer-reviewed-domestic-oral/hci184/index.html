@@ -1,0 +1,303 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja" class="has-navbar-fixed-top">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='HCI研究会, 登壇発表' name="keywords">
+<meta content="urushiyama" name="author">
+<meta content='概要 実世界の状態識別を行うための手法の一つに，物体に与えた音響信号の周波数応答を解析するアクティブ音響センシングがある．この手法はハンドジェ...' name="description">
+
+<meta name="twitter:card" content="summary">
+
+<meta property="og:site_name" content="urushiyamaのさまつごと">
+<meta property="og:title" content='異なる手形状に対する周波数応答の予備調査（HCI184） - urushiyamaのさまつごと'>
+<meta property="og:url" content="https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci184/">
+<meta property="og:description" content='概要 実世界の状態識別を行うための手法の一つに，物体に与えた音響信号の周波数応答を解析するアクティブ音響センシングがある．この手法はハンドジェ...'>
+<meta property="og:type" content='article'>
+
+
+<title>異なる手形状に対する周波数応答の予備調査（HCI184） - urushiyamaのさまつごと</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow.min.css">
+
+
+<meta name="hugo:section" content="publications"/>
+<meta name="hugo:type" content="publications"/>
+</head>
+
+<body>
+<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      
+      <a class="navbar-item" href="https://urushiyama.github.io/"><span class="title is-4">urushiyamaのさまつごと</span></a>
+      
+      
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://twitter.com/YUrushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+      
+        
+        <a class="navbar-item has-background-light" href="https://urushiyama.github.io/publications">
+          Publications
+        </a>
+        
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/projects">
+          Projects
+        </a>
+        
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/posts">
+          Posts
+        </a>
+        
+      
+      </div>
+      <div class="navbar-end">
+        
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+        <a class="navbar-item is-hidden-mobile" href="https://twitter.com/YUrushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-twitter"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="section">
+  <div class="container">
+    <h1 class="title"><u>漆山裕太</u>，志築文太郎，高橋伸．異なる手形状に対する周波数応答の予備調査．情報処理学会研究報告，Vol. 2019-HCI-184，No. 2，情報処理学会，2019年7月，8 pages．</h1>
+    
+  <div class="icon-links">
+  
+    <a class="button is-small is-light" href="https://ipsj.ixsq.nii.ac.jp/ej/?action=repository_uri&amp;item_id=198358&amp;file_id=1&amp;file_no=1" alt="Read PDF"><span class="is-hidden-mobile">Read PDF&nbsp;</span><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+  
+  
+  
+  
+  
+  </div>
+
+
+    <div class="content">
+      
+
+<h2 id="概要">概要</h2>
+
+<p>実世界の状態識別を行うための手法の一つに，物体に与えた音響信号の周波数応答を解析するアクティブ音響センシングがある．この手法はハンドジェスチャ認識のための手形状の識別にも適用することが可能である．本研究では，異なる手形状に対して顕著な応答が得られる周波数を明らかにするため，範囲の異なる複数のスイープ信号に対する周波数応答を調べた．実験により得られた周波数応答のスペクトルに関して，送波したスイープ信号毎のピークに対する観察および機械学習による手形状のクラス識別精度に対する分析を行った結果，24kHz-48kHz にて手形状，実験参加者，およびタスク間における際立った差異が観察され，16kHz-32kHz，24kHz-40kHz，および 32kHz-48kHz のスイープ信号を送波した際のクラス識別率が高いことが明らかになった．したがって，16kHz-48kHz の中に，手形状に対して顕著な応答が得られる周波数が存在する可能性が高い．</p>
+
+<h2 id="注">注</h2>
+
+<p>本論文の著作権は日本情報処理学会に帰属します．</p>
+
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fhci184%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fhci184%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fhci184%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=%e7%95%b0%e3%81%aa%e3%82%8b%e6%89%8b%e5%bd%a2%e7%8a%b6%e3%81%ab%e5%af%be%e3%81%99%e3%82%8b%e5%91%a8%e6%b3%a2%e6%95%b0%e5%bf%9c%e7%ad%94%e3%81%ae%e4%ba%88%e5%82%99%e8%aa%bf%e6%9f%bb%ef%bc%88HCI184%ef%bc%89 - https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fhci184%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fhci184%2f&title=%e7%95%b0%e3%81%aa%e3%82%8b%e6%89%8b%e5%bd%a2%e7%8a%b6%e3%81%ab%e5%af%be%e3%81%99%e3%82%8b%e5%91%a8%e6%b3%a2%e6%95%b0%e5%bf%9c%e7%ad%94%e3%81%ae%e4%ba%88%e5%82%99%e8%aa%bf%e6%9f%bb%ef%bc%88HCI184%ef%bc%89" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/license/">LICENSE</a>
+    </p>
+  </div>
+</section>
+
+  
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "ScholarlyArticle",
+    "@id": "https:\/\/urushiyama.github.io\/publications\/non-peer-reviewed-domestic-oral\/hci184\/",
+    "headline": "異なる手形状に対する周波数応答の予備調査（HCI184）",
+    
+     "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/urushiyama.github.io\/img\/photo.png",
+      "width":  1024 ,
+      "height":  1024 
+    },
+    
+    "genre": "publications",
+    
+    "keywords": "HCI研究会",
+    
+    "url": "https:\/\/urushiyama.github.io\/publications\/non-peer-reviewed-domestic-oral\/hci184\/",
+    
+    "datePublished": "2019-07-22T00:00:00\x2b09:00",
+    
+    
+    "dateModified": "2019-07-22T00:00:00\x2b09:00",
+    
+    
+    "license": "\"\\u0026copy; 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.\"",
+    
+    
+    "description": "\"概要 実世界の状態識別を行うための手法の一つに，物体に与えた音響信号の周波数応答を解析するアクティブ音響センシングがある．この手法はハンドジェ\""
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/urushiyama.github.io\/",
+          "name": "TOP"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https:\/\/urushiyama.github.io\/publications",
+          "name": "Publications"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/urushiyama.github.io\/publications\/non-peer-reviewed-domestic-oral\/hci184\/",
+          "name": "異なる手形状に対する周波数応答の予備調査（HCI184）"
+        }
+      }
+    ]
+  }
+]
+</script>
+  
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/swift.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>

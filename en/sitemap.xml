@@ -3,6 +3,111 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://urushiyama.github.io/en/categories/archival/</loc>
+    <lastmod>2019-08-24T22:45:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/categories/archival/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/categories/archival/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/categories/</loc>
+    <lastmod>2019-08-24T22:45:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/categories/international/</loc>
+    <lastmod>2019-08-24T22:45:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/categories/international/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/categories/international/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/categories/peer-reviewed/</loc>
+    <lastmod>2019-08-24T22:45:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/categories/peer-reviewed/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/categories/peer-reviewed/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/categories/poster/</loc>
+    <lastmod>2019-08-24T22:45:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/categories/poster/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/categories/poster/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/publications/peer-reviewed-international-poster/sui2019/</loc>
+    <lastmod>2019-08-24T22:45:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/publications/peer-reviewed-international-poster/sui2019/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/publications/peer-reviewed-international-poster/sui2019/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/publications/</loc>
+    <lastmod>2019-08-24T22:45:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/publications/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/publications/"
+                />
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/en/projects/barcounter/</loc>
     <lastmod>2019-05-19T04:53:06+09:00</lastmod>
     <xhtml:link
@@ -20,19 +125,16 @@
   <url>
     <loc>https://urushiyama.github.io/en/tags/macos-app/</loc>
     <lastmod>2019-05-19T04:53:06+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://urushiyama.github.io/en/tags/productivity/</loc>
     <lastmod>2019-05-19T04:53:06+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://urushiyama.github.io/en/projects/</loc>
     <lastmod>2019-05-19T04:53:06+09:00</lastmod>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -48,7 +150,6 @@
   <url>
     <loc>https://urushiyama.github.io/en/tags/</loc>
     <lastmod>2019-05-19T04:53:06+09:00</lastmod>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -64,7 +165,11 @@
   <url>
     <loc>https://urushiyama.github.io/en/tags/utilities/</loc>
     <lastmod>2019-05-19T04:53:06+09:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/tags/serial-communication/</loc>
+    <lastmod>2019-04-27T19:44:32+09:00</lastmod>
   </url>
   
   <url>
@@ -83,12 +188,6 @@
   </url>
   
   <url>
-    <loc>https://urushiyama.github.io/en/tags/serial-communication/</loc>
-    <lastmod>2019-04-27T19:44:32+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://urushiyama.github.io/en/publications/peer-reviewed-international-poster/asianchi2019/</loc>
     <lastmod>2019-03-29T09:30:00+09:00</lastmod>
     <xhtml:link
@@ -104,57 +203,8 @@
   </url>
   
   <url>
-    <loc>https://urushiyama.github.io/en/categories/</loc>
-    <lastmod>2019-03-29T09:30:00+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/publications/</loc>
-    <lastmod>2019-03-29T09:30:00+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/publications/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/publications/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/categories/international/</loc>
-    <lastmod>2019-03-29T09:30:00+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/categories/international/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/categories/international/"
-                />
-  </url>
-  
-  <url>
     <loc>https://urushiyama.github.io/en/categories/non-archival/</loc>
     <lastmod>2019-03-29T09:30:00+09:00</lastmod>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -164,38 +214,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://urushiyama.github.io/en/categories/non-archival/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/categories/peer-reviewed/</loc>
-    <lastmod>2019-03-29T09:30:00+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/categories/peer-reviewed/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/categories/peer-reviewed/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/categories/poster/</loc>
-    <lastmod>2019-03-29T09:30:00+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/categories/poster/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/categories/poster/"
                 />
   </url>
   
@@ -232,7 +250,6 @@
   <url>
     <loc>https://urushiyama.github.io/en/tags/first/</loc>
     <lastmod>2018-04-30T07:09:32+09:00</lastmod>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -248,7 +265,6 @@
   <url>
     <loc>https://urushiyama.github.io/en/tags/hugo/</loc>
     <lastmod>2018-04-30T07:09:32+09:00</lastmod>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -279,7 +295,6 @@
   <url>
     <loc>https://urushiyama.github.io/en/posts/</loc>
     <lastmod>2018-04-30T07:09:32+09:00</lastmod>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"

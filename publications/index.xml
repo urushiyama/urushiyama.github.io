@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Fri, 29 Mar 2019 09:30:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/publications/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>外部ディスプレイを用いたスマートフォンの画面拡張手法の予備調査（WISS2019）</title>
+      <link>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2019proceedings/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2019proceedings/</guid>
+      <description>概要 （To appear）</description>
+    </item>
+    
+    <item>
+      <title>Preliminary Study of Screen Extension for Smartphone Using External Display</title>
+      <link>https://urushiyama.github.io/publications/peer-reviewed-international-poster/sui2019/</link>
+      <pubDate>Sat, 24 Aug 2019 22:45:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/peer-reviewed-international-poster/sui2019/</guid>
+      <description>Accepted  ABSTRACT TBD</description>
+    </item>
+    
+    <item>
+      <title>異なる手形状に対する周波数応答の予備調査（HCI184）</title>
+      <link>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci184/</link>
+      <pubDate>Mon, 22 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci184/</guid>
+      <description>概要 実世界の状態識別を行うための手法の一つに，物体に与えた音響信号の周波数応答を解析するアクティブ音響センシングがある．この手法はハンドジェ</description>
+    </item>
     
     <item>
       <title>A Design of Eyes-Free Kana Entry Method Utilizing Single Stroke for Mobile Devices</title>

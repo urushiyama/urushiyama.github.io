@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Mon, 14 Jan 2019 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2019 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/categories/oral/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>異なる手形状に対する周波数応答の予備調査（HCI184）</title>
+      <link>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci184/</link>
+      <pubDate>Mon, 22 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci184/</guid>
+      <description>概要 実世界の状態識別を行うための手法の一つに，物体に与えた音響信号の周波数応答を解析するアクティブ音響センシングがある．この手法はハンドジェ</description>
+    </item>
     
     <item>
       <title>指の軌跡に基づくモバイル端末向けアイズフリーかな文字入力の提案（HCI181）</title>
