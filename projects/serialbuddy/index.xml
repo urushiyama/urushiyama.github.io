@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>urushiyamaのさまつごと</title>
+    <title>SerialBuddy on urushiyamaのさまつごと</title>
     <link>https://urushiyama.github.io/projects/serialbuddy/</link>
-    <description>Recent content on urushiyamaのさまつごと</description>
+    <description>Recent content in SerialBuddy on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Mon, 17 Jun 2019 00:38:30 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 27 Apr 2019 19:44:32 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/projects/serialbuddy/index.xml" rel="self" type="application/rss+xml" />
     
@@ -46,15 +46,6 @@
       
       <guid>https://urushiyama.github.io/projects/serialbuddy/support/</guid>
       <description>コメントにはアプリ名を合わせてご記入ください． アプリに関する匿名での質問，意見，要望などはこちらで受け付けています： https://marshmallow-qa.com/yurushiyama?utm_medium=url_text&amp;amp;utm_source=promotion あるいは，Twitte</description>
-    </item>
-    
-    <item>
-      <title>SerialBuddy</title>
-      <link>https://urushiyama.github.io/projects/serialbuddy/</link>
-      <pubDate>Sat, 27 Apr 2019 19:44:32 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/projects/serialbuddy/</guid>
-      <description>Macでマイコンボードの開発につかうシリアル通信．どんな方法でデバッグしていますか？ cuやscreenコマンドを叩いたり，マイコンボードの開</description>
     </item>
     
   </channel>

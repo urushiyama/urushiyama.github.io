@@ -18,7 +18,7 @@
       <pubDate>Sat, 27 Apr 2019 19:44:32 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/projects/serialbuddy/</guid>
-      <description>Macでマイコンボードの開発につかうシリアル通信．どんな方法でデバッグしていますか？ cuやscreenコマンドを叩いたり，マイコンボードの開</description>
+      <description>&lt;p&gt;SerialBuddyは，コンソール，グラフプロット，通信分析をすべて揃えたMacのためのシリアル通信アプリです．&lt;/p&gt;</description>
     </item>
     
   </channel>

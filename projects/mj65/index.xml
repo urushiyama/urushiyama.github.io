@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>urushiyamaのさまつごと</title>
+    <title>MJ65: the Keyboard of Mac JIS-layout Lovers, by Mac JIS-layout Lovers, for Mac JIS-layout Lovers. on urushiyamaのさまつごと</title>
     <link>https://urushiyama.github.io/projects/mj65/</link>
-    <description>Recent content on urushiyamaのさまつごと</description>
+    <description>Recent content in MJ65: the Keyboard of Mac JIS-layout Lovers, by Mac JIS-layout Lovers, for Mac JIS-layout Lovers. on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Mon, 29 Apr 2019 09:02:10 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 11 Mar 2019 02:02:08 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/projects/mj65/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,23 +28,6 @@
       
       <guid>https://urushiyama.github.io/projects/mj65/layout/</guid>
       <description>目次 HAHAHUGOSHORTCODE-TOC0-HBHB MJ65のレイアウトおよびキーマップ MJ65は異なるフットプリントを用いることにより6つのレイアウトをサポートしています． *理想的な*</description>
-    </item>
-    
-    <item>
-      <title>MJ65: the Keyboard of Mac JIS-layout Lovers, by Mac JIS-layout Lovers, for Mac JIS-layout Lovers.</title>
-      <link>https://urushiyama.github.io/projects/mj65/</link>
-      <pubDate>Mon, 11 Mar 2019 02:02:08 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/projects/mj65/</guid>
-      <description>&lt;p&gt;MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです．&lt;/p&gt;
-
-&lt;p&gt;ざっくり以下の特長を持ちます：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Cherry MX互換，Alps互換，Kailh Chocスイッチに対応&lt;/li&gt;
-&lt;li&gt;JIS配列を始めとして，分割スペース，USライクな配列をサポート&lt;/li&gt;
-&lt;li&gt;オープンソース&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
   </channel>

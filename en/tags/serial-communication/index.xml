@@ -18,10 +18,7 @@
       <pubDate>Sat, 27 Apr 2019 19:44:32 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/en/projects/serialbuddy/</guid>
-      <description>How do you debug serial communication while developing with micro-controllers? There are some ways such as typing cu or screen or opening development tools for microcontrollers. However, have you seen a tool with a console, a plotter, and an communication analyzer?
-That&amp;rsquo;s why I made this app.
-This app comes with:
- &amp;ldquo;Ordinal&amp;rdquo; serial console Line and spectrum plotter Serial communication analyzer (currently on data transmission)  Welcome to report bug and advice This app is under growing.</description>
+      <description>&lt;p&gt;SerialBuddy is the serial communication app with console, plot, and analyzer for Mac.&lt;/p&gt;</description>
     </item>
     
   </channel>

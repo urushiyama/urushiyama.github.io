@@ -18,7 +18,7 @@
       <pubDate>Sun, 19 May 2019 04:53:06 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/projects/barcounter/</guid>
-      <description>「〇〇文字以内で回答しなさい」，「〇〇文字以上記述しなさい」，「概要は〇〇文字以内で」．．． 私たちの書く文章は，しばしば文字数で縛られる対象</description>
+      <description>&lt;p&gt;BarCounterは，Macのメニューバーにコピーした文字数・単語数を表示するアプリです．&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Sat, 27 Apr 2019 19:44:32 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/projects/serialbuddy/</guid>
-      <description>Macでマイコンボードの開発につかうシリアル通信．どんな方法でデバッグしていますか？ cuやscreenコマンドを叩いたり，マイコンボードの開</description>
+      <description>&lt;p&gt;SerialBuddyは，コンソール，グラフプロット，通信分析をすべて揃えたMacのためのシリアル通信アプリです．&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,15 +36,7 @@
       <pubDate>Mon, 11 Mar 2019 02:02:08 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/projects/mj65/</guid>
-      <description>&lt;p&gt;MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです．&lt;/p&gt;
-
-&lt;p&gt;ざっくり以下の特長を持ちます：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Cherry MX互換，Alps互換，Kailh Chocスイッチに対応&lt;/li&gt;
-&lt;li&gt;JIS配列を始めとして，分割スペース，USライクな配列をサポート&lt;/li&gt;
-&lt;li&gt;オープンソース&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです．&lt;/p&gt;</description>
     </item>
     
   </channel>
