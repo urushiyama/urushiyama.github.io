@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>WISS on urushiyamaのさまつごと</title>
-    <link>https://urushiyama.github.io/tags/wiss/</link>
-    <description>Recent content in WISS on urushiyamaのさまつごと</description>
+    <title>Screen Extension on urushiyamaのさまつごと</title>
+    <link>https://urushiyama.github.io/tags/screen-extension/</link>
+    <description>Recent content in Screen Extension on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
     <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="https://urushiyama.github.io/tags/wiss/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://urushiyama.github.io/tags/screen-extension/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       
       <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2019proceedings/</guid>
       <description>概要 スマートフォンと接続されたディスプレイにコンテンツを表示させる手法として，ミラーリングとキャスティングがある． ミラーリングでは，ディスプ</description>
-    </item>
-    
-    <item>
-      <title>指の軌跡に基づく手元の視認が不要なスマートフォン向けかな文字入力手法（WISS2018）</title>
-      <link>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2018proceedings/</link>
-      <pubDate>Thu, 27 Sep 2018 00:00:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2018proceedings/</guid>
-      <description>概要 手元を見ずにスマートフォンによる文字入力が行えれば，ユーザは歩行中あるいは会話中にスマートフォンにてメモを取ることができる．しかし，視覚</description>
     </item>
     
   </channel>
