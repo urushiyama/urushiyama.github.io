@@ -16,7 +16,8 @@
 <meta name="robots" content="index,follow">
 <meta content='hugo, リストアップ, パターンマッチ' name="keywords">
 <meta content="urushiyama" name="author">
-<meta content='先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した． その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．
+<meta content='（2019-09-24 Hugo v0.58リリースに伴いコードを修正．）
+先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した． その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．
 ...' name="description">
 
 <meta name="twitter:card" content="summary">
@@ -24,7 +25,8 @@
 <meta property="og:site_name" content="urushiyamaのさまつごと">
 <meta property="og:title" content='Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する - urushiyamaのさまつごと'>
 <meta property="og:url" content="https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/">
-<meta property="og:description" content='先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した． その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．
+<meta property="og:description" content='（2019-09-24 Hugo v0.58リリースに伴いコードを修正．）
+先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した． その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．
 ...'>
 <meta property="og:type" content='article'>
 
@@ -140,7 +142,7 @@
     <h1 class="title">Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する</h1>
     <h2 class="subtitle is-6">
       
-        March 30, 2019 by urushiyama
+        March 30, 2019 - September 24, 2019 by urushiyama
       
     </h2>
     
@@ -155,7 +157,9 @@
     
 
     <div class="content">
-      <p>先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した．
+      <p>（2019-09-24 Hugo v0.58リリースに伴いコードを修正．）</p>
+
+<p>先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した．
 その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．</p>
 
 <section class="message is-info">
@@ -197,10 +201,10 @@
 
 <p>例えば，&rdquo;poster&rdquo;というカテゴリ情報をもつページを抽出するには，以下の<code>where</code>文を用いれば良い：</p>
 
-<pre><code class="language-go">{{ where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;) }}
+<pre><code class="language-go">{{ where .Site.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;) }}
 </code></pre>
 
-<p><code>.Data.Pages</code>でサイト上の全ページ情報を抽出元として，<code>&quot;.Params.categories&quot;</code>でFront Matter上に記載したパラメータ中の<code>categories</code>を検索対象として指定している．</p>
+<p><code>.Site.Pages</code>でサイト上の全ページ情報を抽出元として，<code>&quot;.Params.categories&quot;</code>でFront Matter上に記載したパラメータ中の<code>categories</code>を検索対象として指定している．</p>
 
 <p>抽象化すると次の通り：</p>
 
@@ -211,12 +215,12 @@
 
 <p>例えば，&rdquo;international&rdquo;と&rdquo;poster&rdquo;という2つのカテゴリ情報をすべてもつページを抽出するには，以下の<code>where</code>文を用いれば良い：</p>
 
-<pre><code class="language-go">{{ where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;) | intersect (where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;international&quot;)) }}
+<pre><code class="language-go">{{ where .Site.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;) | intersect (where .Site.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;international&quot;)) }}
 </code></pre>
 
 <p>また，&rdquo;peer-reviewed&rdquo;，&rdquo;international&rdquo;，&rdquo;poster&rdquo;という3つのカテゴリ情報をすべてもつページを抽出する方法は次の通り：</p>
 
-<pre><code class="language-go">{{ where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;) | intersect (where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;international&quot;)) | intersect (where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;peer-reviewed&quot;)) }}
+<pre><code class="language-go">{{ where .Site.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;) | intersect (where .Site.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;international&quot;)) | intersect (where .Site.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;peer-reviewed&quot;)) }}
 </code></pre>
 
 <p>以降，複数のカテゴリ情報をすべてもつページを抽出するには，後ろに<code>| intersect ...</code>を順次追加すればよい．</p>
@@ -229,12 +233,12 @@
 <p>Case 2をもとにナイーブに実装するならば，Case 2の<code>| intersect</code>を<code>| union</code>に変えるだけで良い．
 例えば，&rdquo;international&rdquo;と&rdquo;poster&rdquo;という2つのカテゴリ情報のうちいずれかをもつページを抽出するには，以下の<code>where</code>文を用いれば良い：</p>
 
-<pre><code class="language-go">{{ where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;) | union (where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;international&quot;)) }}
+<pre><code class="language-go">{{ where .Site.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;) | union (where .Site.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;international&quot;)) }}
 </code></pre>
 
 <p>ただし，もっと短く実装することができる：</p>
 
-<pre><code class="language-go">{{ where .Data.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;, &quot;international&quot;) }}
+<pre><code class="language-go">{{ where .Site.Pages &quot;.Params.categories&quot; &quot;intersect&quot; (slice &quot;poster&quot;, &quot;international&quot;) }}
 </code></pre>
 
 <p>3つ以上のうちいずれか1つ以上をもつページを抽出するには，順次<code>slice</code>の引数として追加すれば良い．</p>
@@ -313,7 +317,7 @@
     "datePublished": "2019-03-30T21:10:01\x2b09:00",
     
     
-    "dateModified": "2019-03-30T21:10:01\x2b09:00",
+    "dateModified": "2019-09-24T17:31:00\x2b09:00",
     
     
     "license": "\"\\u0026copy; 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.\"",
@@ -333,7 +337,7 @@
         "url": "https:\/\/urushiyama.github.io\/img\/photo.png"
       }
     },
-    "description": "先日Webページの論文リストを更新し，「査読付き\/査読なし」，「国際\/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した． その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．\n"
+    "description": "（2019-09-24 Hugo v0.58リリースに伴いコードを修正．）\n先日Webページの論文リストを更新し，「査読付き\/査読なし」，「国際\/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した． その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．\n"
   },
   {
     "@context": "http://schema.org",

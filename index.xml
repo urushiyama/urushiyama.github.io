@@ -63,7 +63,9 @@
       <pubDate>Sat, 30 Mar 2019 21:10:01 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/</guid>
-      <description>&lt;p&gt;先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した．
+      <description>&lt;p&gt;（2019-09-24 Hugo v0.58リリースに伴いコードを修正．）&lt;/p&gt;
+
+&lt;p&gt;先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した．
 その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．&lt;/p&gt;</description>
     </item>
     
