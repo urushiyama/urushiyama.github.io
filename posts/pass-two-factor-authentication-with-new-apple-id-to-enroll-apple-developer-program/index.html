@@ -23,7 +23,7 @@
 
 <meta property="og:site_name" content="urushiyamaのさまつごと">
 <meta property="og:title" content='新規作成したApple IDでApple Developer Programに登録する際に2ファクタ認証を突破する方法 - urushiyamaのさまつごと'>
-<meta property="og:url" content="https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/">
+<meta property="og:url" content="/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/">
 <meta property="og:description" content='Apple Developer Programに登録する際に，普段使っているApple IDとは別に，開発用のApple IDを新規作成して登録を行いたい，という需要がある． しかし，2018年9月現在，Apple Developer Programに登録するためのApple IDは2ファクタ認証を有効化している必要がある． 普段使っているAppleデバイスのアカウントに紐付いていない新規作成したApple IDを2ファクタ認証するためには，少々テクニックめいた手順が必要になる． 本記事では，その手順を紹介する．
 ...'>
 <meta property="og:type" content='article'>
@@ -256,11 +256,11 @@
 </ul>
     </div>
     
-    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
-<a class="button is-white" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
-<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
-<a class="button is-white" href="https://twitter.com/home?status=%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90%e3%81%97%e3%81%9fApple%20ID%e3%81%a7Apple%20Developer%20Program%e3%81%ab%e7%99%bb%e9%8c%b2%e3%81%99%e3%82%8b%e9%9a%9b%e3%81%ab2%e3%83%95%e3%82%a1%e3%82%af%e3%82%bf%e8%aa%8d%e8%a8%bc%e3%82%92%e7%aa%81%e7%a0%b4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95 - https%3a%2f%2furushiyama.github.io%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
-<a class="button is-white" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f&title=%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90%e3%81%97%e3%81%9fApple%20ID%e3%81%a7Apple%20Developer%20Program%e3%81%ab%e7%99%bb%e9%8c%b2%e3%81%99%e3%82%8b%e9%9a%9b%e3%81%ab2%e3%83%95%e3%82%a1%e3%82%af%e3%82%bf%e8%aa%8d%e8%a8%bc%e3%82%92%e7%aa%81%e7%a0%b4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90%e3%81%97%e3%81%9fApple%20ID%e3%81%a7Apple%20Developer%20Program%e3%81%ab%e7%99%bb%e9%8c%b2%e3%81%99%e3%82%8b%e9%9a%9b%e3%81%ab2%e3%83%95%e3%82%a1%e3%82%af%e3%82%bf%e8%aa%8d%e8%a8%bc%e3%82%92%e7%aa%81%e7%a0%b4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95 - %2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=%2fposts%2fpass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program%2f&title=%e6%96%b0%e8%a6%8f%e4%bd%9c%e6%88%90%e3%81%97%e3%81%9fApple%20ID%e3%81%a7Apple%20Developer%20Program%e3%81%ab%e7%99%bb%e9%8c%b2%e3%81%99%e3%82%8b%e9%9a%9b%e3%81%ab2%e3%83%95%e3%82%a1%e3%82%af%e3%82%bf%e8%aa%8d%e8%a8%bc%e3%82%92%e7%aa%81%e7%a0%b4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
 
 </div>
 
@@ -273,10 +273,10 @@
     <div class="content">
       <nav class="pagination is-centered" role="navigation">
         
-        <a href="https://urushiyama.github.io/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/" class="pagination-previous">Prev: Apple Watchアプリでプ …</a>
+        <a href="/posts/2-ways-to-programmatically-change-page-on-apple-watch-app/" class="pagination-previous">Prev: Apple Watchアプリでプ …</a>
         
         
-        <a href="https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/" class="pagination-next">Next: Front Matterに基づい …</a>
+        <a href="/posts/hugo-extract-contents-according-to-front-matter/" class="pagination-next">Next: Front Matterに基づい …</a>
         
       </nav>
     </div>
@@ -303,11 +303,11 @@
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "@id": "https:\/\/urushiyama.github.io\/posts\/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program\/",
+    "@id": "\/posts\/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program\/",
     "headline": "新規作成したApple IDでApple Developer Programに登録する際に2ファクタ認証を突破する方法",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https:\/\/urushiyama.github.io\/posts\/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program\/"
+      "@id": "\/posts\/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program\/"
     },
     
      "image": {
@@ -321,7 +321,7 @@
     
     "keywords": "アプリ開発",
     
-    "url": "https:\/\/urushiyama.github.io\/posts\/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program\/",
+    "url": "\/posts\/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program\/",
     
     "datePublished": "2018-09-02T01:59:52\x2b09:00",
     
@@ -370,7 +370,7 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/urushiyama.github.io\/posts\/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program\/",
+          "@id": "\/posts\/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program\/",
           "name": "新規作成したApple IDでApple Developer Programに登録する際に2ファクタ認証を突破する方法"
         }
       }

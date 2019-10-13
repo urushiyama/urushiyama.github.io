@@ -24,7 +24,7 @@
 
 <meta property="og:site_name" content="urushiyamaのさまつごと">
 <meta property="og:title" content='Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する - urushiyamaのさまつごと'>
-<meta property="og:url" content="https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/">
+<meta property="og:url" content="/posts/hugo-extract-contents-according-to-front-matter/">
 <meta property="og:description" content='（2019-09-24 Hugo v0.58リリースに伴いコードを修正．）
 先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した． その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．
 ...'>
@@ -247,11 +247,11 @@
 </code></pre>
     </div>
     
-    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fposts%2fhugo-extract-contents-according-to-front-matter%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
-<a class="button is-white" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fposts%2fhugo-extract-contents-according-to-front-matter%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
-<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fposts%2fhugo-extract-contents-according-to-front-matter%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
-<a class="button is-white" href="https://twitter.com/home?status=Front%20Matter%e3%81%ab%e5%9f%ba%e3%81%a5%e3%81%84%e3%81%a6Hugo%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%ef%bc%88%e3%83%9a%e3%83%bc%e3%82%b8%ef%bc%89%e3%82%92%e6%8a%bd%e5%87%ba%e3%81%99%e3%82%8b - https%3a%2f%2furushiyama.github.io%2fposts%2fhugo-extract-contents-according-to-front-matter%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
-<a class="button is-white" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fposts%2fhugo-extract-contents-according-to-front-matter%2f&title=Front%20Matter%e3%81%ab%e5%9f%ba%e3%81%a5%e3%81%84%e3%81%a6Hugo%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%ef%bc%88%e3%83%9a%e3%83%bc%e3%82%b8%ef%bc%89%e3%82%92%e6%8a%bd%e5%87%ba%e3%81%99%e3%82%8b" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fhugo-extract-contents-according-to-front-matter%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=%2fposts%2fhugo-extract-contents-according-to-front-matter%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fposts%2fhugo-extract-contents-according-to-front-matter%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=Front%20Matter%e3%81%ab%e5%9f%ba%e3%81%a5%e3%81%84%e3%81%a6Hugo%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%ef%bc%88%e3%83%9a%e3%83%bc%e3%82%b8%ef%bc%89%e3%82%92%e6%8a%bd%e5%87%ba%e3%81%99%e3%82%8b - %2fposts%2fhugo-extract-contents-according-to-front-matter%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=%2fposts%2fhugo-extract-contents-according-to-front-matter%2f&title=Front%20Matter%e3%81%ab%e5%9f%ba%e3%81%a5%e3%81%84%e3%81%a6Hugo%e3%81%ae%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%ef%bc%88%e3%83%9a%e3%83%bc%e3%82%b8%ef%bc%89%e3%82%92%e6%8a%bd%e5%87%ba%e3%81%99%e3%82%8b" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
 
 </div>
 
@@ -264,7 +264,7 @@
     <div class="content">
       <nav class="pagination is-centered" role="navigation">
         
-        <a href="https://urushiyama.github.io/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/" class="pagination-previous">Prev: 新規作成したApple ID …</a>
+        <a href="/posts/pass-two-factor-authentication-with-new-apple-id-to-enroll-apple-developer-program/" class="pagination-previous">Prev: 新規作成したApple ID …</a>
         
         
         <a href="" class="pagination-next" disabled>No Next Page</a>
@@ -294,11 +294,11 @@
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "@id": "https:\/\/urushiyama.github.io\/posts\/hugo-extract-contents-according-to-front-matter\/",
+    "@id": "\/posts\/hugo-extract-contents-according-to-front-matter\/",
     "headline": "Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https:\/\/urushiyama.github.io\/posts\/hugo-extract-contents-according-to-front-matter\/"
+      "@id": "\/posts\/hugo-extract-contents-according-to-front-matter\/"
     },
     
      "image": {
@@ -312,7 +312,7 @@
     
     "keywords": "Hugo",
     
-    "url": "https:\/\/urushiyama.github.io\/posts\/hugo-extract-contents-according-to-front-matter\/",
+    "url": "\/posts\/hugo-extract-contents-according-to-front-matter\/",
     
     "datePublished": "2019-03-30T21:10:01\x2b09:00",
     
@@ -361,7 +361,7 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/urushiyama.github.io\/posts\/hugo-extract-contents-according-to-front-matter\/",
+          "@id": "\/posts\/hugo-extract-contents-according-to-front-matter\/",
           "name": "Front Matterに基づいてHugoのコンテンツ（ページ）を抽出する"
         }
       }
