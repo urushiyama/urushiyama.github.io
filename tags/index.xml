@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on urushiyamaのさまつごと</title>
@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 10 Dec 2019 16:25:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HCI研究会</title>
+      <link>https://urushiyama.github.io/tags/hci%E7%A0%94%E7%A9%B6%E4%BC%9A/</link>
+      <pubDate>Tue, 10 Dec 2019 16:25:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/hci%E7%A0%94%E7%A9%B6%E4%BC%9A/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Screen Extension</title>
@@ -36,15 +45,6 @@
       <pubDate>Mon, 26 Aug 2019 00:00:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/tags/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HCI研究会</title>
-      <link>https://urushiyama.github.io/tags/hci%E7%A0%94%E7%A9%B6%E4%BC%9A/</link>
-      <pubDate>Mon, 22 Jul 2019 00:00:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/tags/hci%E7%A0%94%E7%A9%B6%E4%BC%9A/</guid>
       <description></description>
     </item>
     

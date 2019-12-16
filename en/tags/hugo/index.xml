@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on urushiyama&#39;s trivia</title>
@@ -18,7 +18,7 @@
       <pubDate>Mon, 30 Apr 2018 07:09:32 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/en/posts/my-first-post/</guid>
-      <description>I&amp;rsquo;ve thought having a website might be useful to write profile data, portfolio, and blog pages since I became a member of the lab. Github pages is a preferred host which is free &amp;amp; have the same domain as projects&amp;rsquo; page will have. I checked some static site generator and decided to use Hugo because its sales talk says it is &amp;ldquo;The world&amp;rsquo;s fastest framework&amp;rdquo;.</description>
+      <description>I&#39;ve thought having a website might be useful to write profile data, portfolio, and blog pages since I became a member of the lab. Github pages is a preferred host which is free &amp;amp; have the same domain as projects&amp;rsquo; page will have. I checked some static site generator and decided to use Hugo because its sales talk says it is &amp;ldquo;The world&#39;s fastest framework&amp;rdquo;.</description>
     </item>
     
   </channel>

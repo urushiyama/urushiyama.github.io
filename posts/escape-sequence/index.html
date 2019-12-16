@@ -16,7 +16,7 @@
 <meta name="robots" content="index,follow">
 <meta content='Hugo, エスケープ処理' name="keywords">
 <meta content="Yuta Urushiyama" name="author">
-<meta content='山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
+<meta content='山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;quot;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
 ...' name="description">
 
 <meta name="twitter:card" content="summary">
@@ -24,7 +24,7 @@
 <meta property="og:site_name" content="urushiyamaのさまつごと">
 <meta property="og:title" content='Hugoのエスケープ処理 - urushiyamaのさまつごと'>
 <meta property="og:url" content="/posts/escape-sequence/">
-<meta property="og:description" content='山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
+<meta property="og:description" content='山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;quot;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．
 ...'>
 <meta property="og:type" content='article'>
 
@@ -155,71 +155,45 @@
     
 
     <div class="content">
-      <p>山カッコ (&lt;&gt;)，アンパサンド (&amp;)，クォーテーション (&ldquo;)，&hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために<code>safeHTML</code>や<code>safeURL</code>といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．</p>
-
+      <p>山カッコ (&lt;&gt;)，アンパサンド (&amp;)，クォーテーション (&quot;)，&hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために<code>safeHTML</code>や<code>safeURL</code>といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．</p>
 <section class="message is-info">
   <div class="message-header">目次</div>
 <div class="message-body toc">
-  <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#safehtmlは何をしているのか">safeHTMLは何をしているのか</a></li>
-<li><a href="#具体的にどうすべきか">具体的にどうすべきか</a></li>
-<li><a href="#blackfridayの功罪">Blackfridayの功罪</a></li>
-</ul></li>
-</ul>
-</nav>
+  
 </div>
 </section>
-
-<h2 id="safehtmlは何をしているのか">safeHTMLは何をしているのか</h2>
-
+<h2 id="safehtml">safeHTMLは何をしているのか</h2>
 <p>Go言語は全くわからないが，<a href="https://github.com/gohugoio/hugo/blob/914cc85e22af2e6c28f24a5fc70de94e4b9f1b1b/tpl/safe/safe.go#L37-L41">ここら辺</a>がsafeHTMLの本体なんじゃないかと予想する．この関数を見た限りでは，safeHOGEは入力文字列をHOGEの文法としてパース処理しているようにみえる．ということは，<code>{{ .Params.Hoge | safeURL | safeHTML }}</code>という記述は<code>.params.Hoge</code>をURL文法であるという宣言で囲み，それをさらにHTML文法であるという宣言で囲んでいることになる．</p>
-
-<h2 id="具体的にどうすべきか">具体的にどうすべきか</h2>
-
-<pre><code class="language-html">&lt;meta property=&quot;og:title&quot; content=&quot;{{ .Title }}&quot;&gt;
-&lt;!-- or --&gt;
-&lt;meta property=&quot;og:title&quot; content=&quot;{{ .Title | .safeHTML }}&quot;&gt;
-</code></pre>
-
-<p>この場合は前者の方が正しく山カッコ (&lt;&gt;)やアンパサンド (&amp;)を含む文字列を処理できる．</p>
-
-<pre><code class="language-html">&lt;meta property=&quot;og:description&quot; content=&quot;{{ .Summary }}&quot;&gt;
-&lt;!-- or --&gt;
-&lt;meta property=&quot;og:description&quot; content=&quot;{{ .Summary | .safeHTML }}&quot;&gt;
-</code></pre>
-
-<p><del>だが，こちらの場合は後者でないと山カッコ (&lt;&gt;)やアンパサンド (&amp;)がエスケープされてしまう．</del></p>
-
+<h2 id="heading">具体的にどうすべきか</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:title&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Title }}&#34;</span>&gt;
+<span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> or </span><span style="color:#75715e">--&gt;</span>
+&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:title&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Title | .safeHTML }}&#34;</span>&gt;
+</code></pre></div><p>この場合は前者の方が正しく山カッコ (&lt;&gt;)やアンパサンド (&amp;)を含む文字列を処理できる．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:description&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Summary }}&#34;</span>&gt;
+<span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> or </span><span style="color:#75715e">--&gt;</span>
+&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:description&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Summary | .safeHTML }}&#34;</span>&gt;
+</code></pre></div><p><del>だが，こちらの場合は後者でないと山カッコ (&lt;&gt;)やアンパサンド (&amp;)がエスケープされてしまう．</del></p>
 <p>と思っていたが，<a href="https://qiita.com/ituki_b/items/7041804eca8dfe663591">metaタグのcontent内は<code>&amp;amp;</code>実体参照で書くらしい</a>ので，前者の方が正しく処理できることになる．</p>
-
 <p>まとめると，</p>
-
 <ol>
 <li>基本的にはフィルタなしでOK</li>
 <li>URLをパラメータに放り込んで使うなら<code>safeURL</code></li>
 <li>HTMLタグを含む文字列をHTMLとして解釈させるなら<code>safeHTML</code></li>
 <li>ただしMarkdownファイルで山カッコ (&lt;&gt;)やアンパサンド (&amp;)は<code>\</code>でエスケープ</li>
 </ol>
-
 <p>といったところだろうか．</p>
-
-<h2 id="blackfridayの功罪">Blackfridayの功罪</h2>
-
+<h2 id="blackfriday">Blackfridayの功罪</h2>
 <p>HugoのMarkdownパーサであるBlackfridayも，意図しない文字を出力する原因になりうる．
-Blackfridayはデフォルトで引用符や二重引用符を左右対応づけた文字に変換するのだが，このExtensionをdisableにする方法がわからなかった<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>．文章中に<code>'</code>や<code>&quot;</code>を表記する必要があるかと言われると微妙だが，わざわざインラインコードにする手間が発生するのも微妙である．
+Blackfridayはデフォルトで引用符や二重引用符を左右対応づけた文字に変換するのだが，このExtensionをdisableにする方法がわからなかった<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>．文章中に<code>'</code>や<code>&quot;</code>を表記する必要があるかと言われると微妙だが，わざわざインラインコードにする手間が発生するのも微妙である．
 また，3連ドット(<code>...</code>)も三点リーダ(&hellip;)に変えてしまう．深く考えなくとも綺麗に整形してくれるという利点と，入力文字が意図せずに変換されてしまうという欠点がBlackfridayには同居しているように思える．</p>
-<div class="footnotes">
-
-<hr />
-
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1"><a href="https://gohugo.io/getting-started/configuration/#blackfriday-options"><code>smartypants</code>は無効化している</a>のだが&hellip;
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://gohugo.io/getting-started/configuration/#blackfriday-options"><code>smartypants</code>は無効化している</a>のだが&hellip;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+</li>
 </ol>
-</div>
+</section>
     </div>
     
     <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fescape-sequence%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
@@ -254,7 +228,7 @@ Blackfridayはデフォルトで引用符や二重引用符を左右対応づけ
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>&copy; 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
     <p>
       <a href="/privacy-policy/">Privacy Policy</a>
       &nbsp;|&nbsp;
@@ -288,7 +262,7 @@ Blackfridayはデフォルトで引用符や二重引用符を左右対応づけ
     "dateModified": "2018-04-30T07:09:32+09:00",
     
     
-    "license": "\u0026copy; 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
     
     
     "author": {
@@ -306,7 +280,7 @@ Blackfridayはデフォルトで引用符や二重引用符を左右対応づけ
       }
     },
     
-    "description": "山カッコ (\x26lt;\x26gt;)，アンパサンド (\x26amp;)，クォーテーション (\x26ldquo;)，\x26hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．"
+    "description": "山カッコ (\x26lt;\x26gt;)，アンパサンド (\x26amp;)，クォーテーション (\x26quot;)，\x26hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するためにsafeHTMLやsafeURLといったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．"
   },
   {
     "@context": "http://schema.org",

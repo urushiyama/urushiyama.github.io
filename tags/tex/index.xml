@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TeX on urushiyamaのさまつごと</title>
@@ -19,9 +19,7 @@
       
       <guid>https://urushiyama.github.io/posts/bibtex-data-order/</guid>
       <description>&lt;p&gt;BibTeX形式の引用は多くのデジタルライブラリで提供されており，サクッと引用をつけるのに便利である．しかし，使用するにあたってひとつハマった点がある．&lt;/p&gt;
-
-&lt;h2 id=&#34;データ項目の記載の有無とデータ項目の表記順&#34;&gt;データ項目の記載の有無とデータ項目の表記順&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;データ項目の記載の有無とデータ項目の表記順&lt;/h2&gt;
 &lt;p&gt;そのハマった点というのは，書誌情報にデータ項目を記入するか否かでデータ項目の表記順が変わる点である．&lt;/p&gt;</description>
     </item>
     

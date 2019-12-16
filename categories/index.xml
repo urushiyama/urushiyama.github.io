@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on urushiyamaのさまつごと</title>
@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 10 Dec 2019 16:25:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>archival</title>
       <link>https://urushiyama.github.io/categories/archival/</link>
-      <pubDate>Mon, 26 Aug 2019 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 10 Dec 2019 16:25:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/categories/archival/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>domestic</title>
       <link>https://urushiyama.github.io/categories/domestic/</link>
-      <pubDate>Mon, 26 Aug 2019 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 10 Dec 2019 16:25:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/categories/domestic/</guid>
       <description></description>
@@ -33,9 +33,18 @@
     <item>
       <title>non-peer-reviewed</title>
       <link>https://urushiyama.github.io/categories/non-peer-reviewed/</link>
-      <pubDate>Mon, 26 Aug 2019 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 10 Dec 2019 16:25:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/categories/non-peer-reviewed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oral</title>
+      <link>https://urushiyama.github.io/categories/oral/</link>
+      <pubDate>Tue, 10 Dec 2019 16:25:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/categories/oral/</guid>
       <description></description>
     </item>
     
@@ -72,15 +81,6 @@
       <pubDate>Sat, 24 Aug 2019 22:45:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/categories/peer-reviewed/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>oral</title>
-      <link>https://urushiyama.github.io/categories/oral/</link>
-      <pubDate>Mon, 22 Jul 2019 00:00:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/categories/oral/</guid>
       <description></description>
     </item>
     

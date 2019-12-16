@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MFiコントローラ on urushiyamaのさまつごと</title>
@@ -19,7 +19,6 @@
       
       <guid>https://urushiyama.github.io/posts/try-ios-game-controller-custom-keyboard/</guid>
       <description>&lt;p&gt;iOSでMFiコントローラにより操作可能なカスタムキーボードの作成を試みた．&lt;/p&gt;
-
 &lt;p&gt;結果としてはうまくいかず挫折したが，作成時にハマった点を2つ述べる．&lt;/p&gt;</description>
     </item>
     
@@ -32,15 +31,12 @@
       <description>&lt;p&gt;PC用のコントローラといえばPS4コントローラやUSB接続のHIDコントローラを用いることが一般的だが，
 iOS用に購入したMFiコントローラを使い道が少ない為に放置していたので，Macとペアリングして活用できないだろうか，
 と思った次第である．&lt;/p&gt;
-
 &lt;p&gt;はじめに要約すると，&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Parallels Desktop 13で東方風神録は問題なく動作する&lt;/li&gt;
 &lt;li&gt;SteelSeries NimbusコントローラはMacとBluetooth接続可能&lt;/li&gt;
 &lt;li&gt;ただしプロトコルが特殊なのでキーマッピングアプリケーションが別途必要&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;以下に動作手順の詳細を述べる．&lt;/p&gt;</description>
     </item>
     

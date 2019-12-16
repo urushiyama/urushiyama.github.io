@@ -164,71 +164,52 @@
 
     <div class="content">
       <p>iOSでMFiコントローラにより操作可能なカスタムキーボードの作成を試みた．</p>
-
 <p>結果としてはうまくいかず挫折したが，作成時にハマった点を2つ述べる．</p>
-
-<h2 id="動機">動機</h2>
-
+<h2 id="heading">動機</h2>
 <p>iOSはMFiコントローラを接続して対応するゲームの操作に用いることができる．
 例えばMineCraft PEでも，MFiコントローラを接続してあたかもコンシューマ機のごとく
 プレイヤーの操作が可能である．</p>
-
 <p>しかし，SteelSeries Nimbusのような独立型コントローラを用いる際，
 ゲーム内で文字入力が求められる場面では，一度コントローラから手を離し，
-画面上に表示されるソフトウェアキーボードに手を伸ばさなければならない<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>．</p>
-
+画面上に表示されるソフトウェアキーボードに手を伸ばさなければならない<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>．</p>
 <p>これでは好ましいインタラクションとはいえないので，
 ゲームコントローラで文字入力を可能とするアプリを探してみたが，調べた限りでは見つからなかった．</p>
-
 <p>そこで，「無いならつくればいい」精神にのっとり，
 iOSでゲームコントローラにより操作可能なカスタムキーボードの作成を試みた．</p>
-
-<h2 id="ハマった点">ハマった点</h2>
-
-<h3 id="デバッガをつないだときのみ時折発生するsigquit">デバッガをつないだときのみ時折発生するSIGQUIT</h3>
-
+<h2 id="heading1">ハマった点</h2>
+<h3 id="sigquit">デバッガをつないだときのみ時折発生するSIGQUIT</h3>
 <p>第一にハマった点は，デバッガを繋いだ状態で作成したカスタムキーボードを起動したときのみ，
 viewDidLoad関数内あるいはその前にSIGQUITが発生してカスタムキーボードが選択できなくなる
 ことが，条件不明で時折発生する点である．</p>
-
 <pre><code>dyld`_dyld_debugger_notification:
 -&gt;  0x1008354ac &lt;+0&gt;: ret
-</code></pre>
-
-<p>上記2行目で&rdquo;signal SIGQUIT&rdquo;が発生している．</p>
-
+</code></pre><p>上記2行目で&quot;signal SIGQUIT&quot;が発生している．</p>
 <p>自分の書いた箇所で発生しているならまだしも，Single View Appを作成後に
 TargetにCustom Keyboard Extensionを追加した直後のものをビルドしてもこの現象が発生する．</p>
-
 <p>一方で，デバッガをつながずに実機上で作成したカスタムキーボードを選択した場合には
 この現象が全く発生しない．</p>
-
-<h3 id="custom-keyboard-extension側のみgamepadのプロパティが読み取れない">Custom Keyboard Extension側のみGamepadのプロパティが読み取れない</h3>
-
+<h3 id="custom-keyboard-extensiongamepad">Custom Keyboard Extension側のみGamepadのプロパティが読み取れない</h3>
 <p>今回カスタムキーボードの作成を諦めた原因は，
 Custom Keyboard Extension側のみGCGamepadのプロパティが読み取れない点である．</p>
-
 <p>正確には，プロパティには普通のアプリ同様のアクセスが可能である．
 しかし，プロパティの値が全く更新されないのである．
 handlerを登録しても実行されず，
 Timer.scheduledTimerを用いてポーリングしても値は全て初期値のままである．</p>
-
 <p>コードが間違っているかな，と不安になり，アプリ側に同じコードをコピペすると
 何も問題なくすんなりと動作し，プロパティの値が更新されている．</p>
-
 <p>おそらく，iOSのカスタムキーボードに対する制約のひとつとして
-GameControllerの入力を取得不可にしているのではないだろうか．<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup></p>
-<div class="footnotes">
-
-<hr />
-
+GameControllerの入力を取得不可にしているのではないだろうか．<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1">Bluetoothキーボードを接続しておくと手の移動量は幾分改善される．
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-<li id="fn:2">ならば標準のキーボードでMFiコントローラ対応してくれよ，と．
- <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p>Bluetoothキーボードを接続しておくと手の移動量は幾分改善される．<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>ならば標準のキーボードでMFiコントローラ対応してくれよ，と．<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+</li>
 </ol>
-</div>
+</section>
     </div>
     
     <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2ftry-ios-game-controller-custom-keyboard%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
@@ -263,7 +244,7 @@ GameControllerの入力を取得不可にしているのではないだろうか
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>&copy; 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
     <p>
       <a href="/privacy-policy/">Privacy Policy</a>
       &nbsp;|&nbsp;
@@ -297,7 +278,7 @@ GameControllerの入力を取得不可にしているのではないだろうか
     "dateModified": "2018-05-13T20:23:00+09:00",
     
     
-    "license": "\u0026copy; 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
     
     
     "author": {

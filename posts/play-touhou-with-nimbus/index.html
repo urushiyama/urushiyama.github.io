@@ -171,131 +171,89 @@
       <p>PC用のコントローラといえばPS4コントローラやUSB接続のHIDコントローラを用いることが一般的だが，
 iOS用に購入したMFiコントローラを使い道が少ない為に放置していたので，Macとペアリングして活用できないだろうか，
 と思った次第である．</p>
-
 <p>はじめに要約すると，</p>
-
 <ul>
 <li>Parallels Desktop 13で東方風神録は問題なく動作する</li>
 <li>SteelSeries NimbusコントローラはMacとBluetooth接続可能</li>
 <li>ただしプロトコルが特殊なのでキーマッピングアプリケーションが別途必要</li>
 </ul>
-
 <p>以下に動作手順の詳細を述べる．</p>
-
 <section class="message is-info">
   <div class="message-header">目次</div>
 <div class="message-body toc">
-  <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#step-1-必要なものを揃える">Step 1. 必要なものを揃える</a></li>
-<li><a href="#step-2-ソフトウェアのインストール">Step 2. ソフトウェアのインストール</a>
-<ul>
-<li><a href="#mac-ホストos-側">Mac（ホストOS）側</a></li>
-<li><a href="#windows-ゲストos-側">Windows（ゲストOS）側</a></li>
-</ul></li>
-<li><a href="#step-3-各種設定">Step 3. 各種設定</a>
-<ul>
-<li><a href="#parallelsの設定">Parallelsの設定</a></li>
-<li><a href="#macとmfiコントローラのペアリング">MacとMFiコントローラのペアリング</a></li>
-<li><a href="#gamepadmenuの設定">GamepadMenuの設定</a></li>
-</ul></li>
-<li><a href="#step-4-動作確認">Step 4. 動作確認</a></li>
-<li><a href="#step-5-more-configuration">Step 5. More Configuration</a>
-<ul>
-<li><a href="#スキップ押下時にスティックを倒すとmac側でmisson-control等が発生することの対策">スキップ押下時にスティックを倒すとMac側でMisson Control等が発生することの対策</a></li>
-<li><a href="#ボタン配置を変更する">ボタン配置を変更する</a></li>
-</ul></li>
-<li><a href="#hci研究への応用">HCI研究への応用</a></li>
-</ul></li>
-</ul>
-</nav>
+  
 </div>
 </section>
-
-<h2 id="step-1-必要なものを揃える">Step 1. 必要なものを揃える</h2>
-
+<h2 id="step-1-">Step 1. 必要なものを揃える</h2>
 <p>ハードウェア・ソフトウェアを持っていないのであれば，まずそれらを用意する．</p>
-
 <ul>
-<li><p>東方風神録 Etc.</p>
-
+<li>
+<p>東方風神録 Etc.</p>
 <p>あきばお〜等の店舗・通販で入手可能．
-風神録以外でもおそらく動作するが，DirectX 9を用いたものを推奨する．</p></li>
-
-<li><p>Parallels Desktop 13</p>
-
+風神録以外でもおそらく動作するが，DirectX 9を用いたものを推奨する．</p>
+</li>
+<li>
+<p>Parallels Desktop 13</p>
 <p>公式サイトからでも購入できるが，Amazonのパッケージ版を買う方が割引されていることが多い．
-Wineを用いた方法が検索すると多くヒットするが，Wineの配布サイトが悪質なアドネットワークを用いているようなので，利用を見送った．</p></li>
-
-<li><p>Windows 10のライセンス</p>
-
-<p>ProでもHomeでも問題ない．</p></li>
-
-<li><p>SteelSeries Nimbus （MFi コントローラ）</p>
-
-<p>そもそもこの手法を取ろうと思うのはこのコントローラあるいはHORI等のMFiコントローラを持て余している人であろう．</p></li>
+Wineを用いた方法が検索すると多くヒットするが，Wineの配布サイトが悪質なアドネットワークを用いているようなので，利用を見送った．</p>
+</li>
+<li>
+<p>Windows 10のライセンス</p>
+<p>ProでもHomeでも問題ない．</p>
+</li>
+<li>
+<p>SteelSeries Nimbus （MFi コントローラ）</p>
+<p>そもそもこの手法を取ろうと思うのはこのコントローラあるいはHORI等のMFiコントローラを持て余している人であろう．</p>
+</li>
 </ul>
-
-<h2 id="step-2-ソフトウェアのインストール">Step 2. ソフトウェアのインストール</h2>
-
-<h3 id="mac-ホストos-側">Mac（ホストOS）側</h3>
-
+<h2 id="step-2-">Step 2. ソフトウェアのインストール</h2>
+<h3 id="macos">Mac（ホストOS）側</h3>
 <ol>
-<li><p>Parallels Desktopのインストール</p></li>
-
-<li><p>Windowsの仮装端末へのインストール</p>
-
-<p>インストール方法は<a href="https://www.google.co.jp/search?q=parallels+windows+%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">ググる</a>と多数記事が見つかるので省略する．</p></li>
-
-<li><p>GamepadMenuのインストール</p>
-
+<li>
+<p>Parallels Desktopのインストール</p>
+</li>
+<li>
+<p>Windowsの仮装端末へのインストール</p>
+<p>インストール方法は<a href="https://www.google.co.jp/search?q=parallels+windows+%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">ググる</a>と多数記事が見つかるので省略する．</p>
+</li>
+<li>
+<p>GamepadMenuのインストール</p>
 <p>Githubで公開されている<a href="https://github.com/robbertkl/GamepadMenu/releases">このページ</a>から
 ZIPファイルをダウンロード・展開し，GamepadMenu.appをアプリケーションフォルダに移動する．</p>
-
 <p>一応はGithubにソースコードが上がっているので，Wineよりはましかな，といったところ．
-Gatekeeperによる警告が表示される場合は右クリック＞開くを選択すると強制的に実行することができる（MacOSのTips）．</p></li>
+Gatekeeperによる警告が表示される場合は右クリック＞開くを選択すると強制的に実行することができる（MacOSのTips）．</p>
+</li>
 </ol>
-
-<h3 id="windows-ゲストos-側">Windows（ゲストOS）側</h3>
-
+<h3 id="windowsos">Windows（ゲストOS）側</h3>
 <ol>
-<li><p>DirectXのインストール</p>
-
+<li>
+<p>DirectXのインストール</p>
 <p>DirectXエンドユーザランタイムが同梱されていないものを動かすには必須．
-最新のものをMicrosoftから<a href="https://www.microsoft.com/ja-jp/directx/">ダウンロード</a>・インストールしておくとよい．</p></li>
-
-<li><p>東方風神録のインストール</p></li>
+最新のものをMicrosoftから<a href="https://www.microsoft.com/ja-jp/directx/">ダウンロード</a>・インストールしておくとよい．</p>
+</li>
+<li>
+<p>東方風神録のインストール</p>
+</li>
 </ol>
-
-<h2 id="step-3-各種設定">Step 3. 各種設定</h2>
-
-<h3 id="parallelsの設定">Parallelsの設定</h3>
-
+<h2 id="step-3-">Step 3. 各種設定</h2>
+<h3 id="parallels">Parallelsの設定</h3>
 <p>Windows仮想端末をシャットダウンした上で，Windows仮想端末の設定を開き，
 ハードウェア＞グラフィック＞詳細設定＞3Dアクセラレーションのプルダウンメニューから
-&ldquo;DirectX 9&rdquo;を選択する．</p>
-
-<h3 id="macとmfiコントローラのペアリング">MacとMFiコントローラのペアリング</h3>
-
-<p>MacOSのシステム環境設定を開き，&rdquo;Bluetooth&rdquo;を選択する．
+&ldquo;DirectX 9&quot;を選択する．</p>
+<h3 id="macmfi">MacとMFiコントローラのペアリング</h3>
+<p>MacOSのシステム環境設定を開き，&ldquo;Bluetooth&quot;を選択する．
 MFiコントローラのボタン等を操作し（NimbusではBluetoothマークのついたボタンを長押しする）
 ペアリングモードを開始させると，しばらく後にMacのBluetooth環境設定画面内のリストに
 コントローラ名が表示されるので，その横にある「接続」ボタンをクリックして接続する．</p>
-
-<h3 id="gamepadmenuの設定">GamepadMenuの設定</h3>
-
+<h3 id="gamepadmenu">GamepadMenuの設定</h3>
 <p>GamepadMenu.appをFinderで右クリックし，「パッケージの内容を表示」を選択する．
-Contents＞Resources＞Presetsに移動し，Presetsフォルダ内に以下を&rdquo;Touhou.plist&rdquo;としてテキスト形式で保存する．</p>
-
+Contents＞Resources＞Presetsに移動し，Presetsフォルダ内に以下を&quot;Touhou.plist&quot;としてテキスト形式で保存する．</p>
 <div class="field">
   <a href='assets/Touhou.plist'class="button is-link is-outlined" download>
     <i class="fa fa-download" aria-hidden="true"></i>&nbsp;Touhou.plist
   </a>
 </div>
-
-<pre><code class="language-plist">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<pre><code class="language-plist" data-lang="plist">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
 &lt;plist version=&quot;1.0&quot;&gt;
 &lt;dict&gt;
@@ -335,74 +293,57 @@ Contents＞Resources＞Presetsに移動し，Presetsフォルダ内に以下を&
 	&lt;integer&gt;59&lt;/integer&gt;
 &lt;/dict&gt;
 &lt;/plist&gt;
-</code></pre>
-
-<h2 id="step-4-動作確認">Step 4. 動作確認</h2>
-
+</code></pre><h2 id="step-4-">Step 4. 動作確認</h2>
 <ol>
 <li>MacとMFiコントローラを接続する</li>
 <li>GamepadMenu.appを開く</li>
-<li>メニューバーの 🎮アイコンを選択し，&rdquo;コントローラ名&rdquo;＞&rdquo;Touhou.plist&rdquo;を選択する</li>
+<li>メニューバーの 🎮アイコンを選択し，&ldquo;コントローラ名&quot;＞&quot;Touhou.plist&quot;を選択する</li>
 <li>Parallels DesktopからWindows仮想端末を開く</li>
 <li>Windows仮想端末上で東方風神録を起動する</li>
 <li>コントローラを操作して東方風神録が動作するか確認する</li>
 </ol>
-
 <p>うまく動作すればAボタン・R1トリガーでショット・決定，Bボタンでボム，
 Yボタン・L1トリガーで低速移動，Xボタン・L2トリガーでトランス（東方神霊廟），
 R2トリガー（+決定）でスキップができるようになっているはずである．</p>
-
 <h2 id="step-5-more-configuration">Step 5. More Configuration</h2>
-
-<h3 id="スキップ押下時にスティックを倒すとmac側でmisson-control等が発生することの対策">スキップ押下時にスティックを倒すとMac側でMisson Control等が発生することの対策</h3>
-
+<h3 id="macmisson-control">スキップ押下時にスティックを倒すとMac側でMisson Control等が発生することの対策</h3>
 <ul>
 <li>2018/5/12 追記</li>
 </ul>
-
 <p>標準では，コントロールキー（Ctrl）を押した状態でカーソルキーを入力すると
 MacOS側でキー入力が処理され，Misson ControlやMacOS上の
 別のフルスクリーンアプリケーションに画面が切り替わる．</p>
-
 <p>ここで，東方風神録などのスキップにはCtrlが割り当てられているため，
 スキップ中にスティックを傾けると画面が切り替わり，ゲームの操作が不能になってしまうため，
 そのままスキップが完了して被弾する，といった不都合が生じる．</p>
-
 <p>この対策として，Parallels Desktopの環境設定を開き，
 ショートカット＞macOS システムショートカット＞macOS システムショートカットを送信する:
 の下にあるプルダウンメニューから「常に」を選択する．
 この設定により，Ctrl入力がシステムショートカットに割り当てられているキーの組み合わせとして
 入力されたとしても，全てのキー入力がWindows仮装端末側に転送されるようになるため，
 前述の不都合が発生しなくなる．</p>
-
-<h3 id="ボタン配置を変更する">ボタン配置を変更する</h3>
-
+<h3 id="heading">ボタン配置を変更する</h3>
 <p>ボタン配置が気に入らない方向け．</p>
-
 <p>Touhou.plistは各ボタン・スティック・トリガーを表す<code>key</code>と，
 それが押されたときに入力されるCarbon Frameworkのイベント番号を表す<code>integer</code>
 または入力される文字を表す<code>string</code>の辞書（ハッシュ）になっているので，
 /System＞Library＞Frameworks＞Carbon.framework＞Frameworks＞HIToolbox.framework＞Headers＞Events.hを参考にして
 任意の文字あるいはモディファイアキーを設定できる．</p>
-
 <p>「C言語のヘッダファイルの意味がわからない！」という方は，Touhou.plistのkeyとintegerの組み合わせを
 入れ替えることでボタン配置を入れ替えればよい．プログラマでなくとも，
 XcodeをMac App StoreからダウンロードしてXcodeでplistファイルをひらけば
 キーや値をGUIで編集することも可能である．</p>
-
-<h2 id="hci研究への応用">HCI研究への応用</h2>
-
+<h2 id="hci">HCI研究への応用</h2>
 <p>iOS端末でもMac端末でもMFiコントローラはペアリングできるため，趣味の範囲外にも，
-様々なOSで利用可能なゲームコントローラを用いた操作手法を提案するときにこの手法が適用できそうである．<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
-<div class="footnotes">
-
-<hr />
-
+様々なOSで利用可能なゲームコントローラを用いた操作手法を提案するときにこの手法が適用できそうである．<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1">Android端末であればUSB接続でもBluetooth接続でもHIDコントローラが使えることには目をつぶっている．
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:1" role="doc-endnote">
+<p>Android端末であればUSB接続でもBluetooth接続でもHIDコントローラが使えることには目をつぶっている．<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+</li>
 </ol>
-</div>
+</section>
     </div>
     
     <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fplay-touhou-with-nimbus%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
@@ -437,7 +378,7 @@ XcodeをMac App StoreからダウンロードしてXcodeでplistファイルを�
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>&copy; 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
     <p>
       <a href="/privacy-policy/">Privacy Policy</a>
       &nbsp;|&nbsp;
@@ -471,7 +412,7 @@ XcodeをMac App StoreからダウンロードしてXcodeでplistファイルを�
     "dateModified": "2018-05-11T16:16:03+09:00",
     
     
-    "license": "\u0026copy; 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
     
     
     "author": {

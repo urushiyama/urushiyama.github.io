@@ -159,64 +159,38 @@
 しかし，2018年9月現在，Apple Developer Programに登録するためのApple IDは2ファクタ認証を有効化している必要がある．
 普段使っているAppleデバイスのアカウントに紐付いていない新規作成したApple IDを2ファクタ認証するためには，少々テクニックめいた手順が必要になる．
 本記事では，その手順を紹介する．</p>
-
 <section class="message is-info">
   <div class="message-header">目次</div>
 <div class="message-body toc">
-  <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#そもそも開発用にapple-idを新規作成する必要はあるか">そもそも開発用にApple IDを新規作成する必要はあるか？</a></li>
-<li><a href="#前提">前提</a></li>
-<li><a href="#step-1-apple-developer-programの登録を進める">Step 1：Apple Developer Programの登録を進める</a></li>
-<li><a href="#step-2-新規作成したapple-idの-2ステップ認証-を有効化する">Step 2：新規作成したApple IDの「2ステップ認証」を有効化する</a></li>
-<li><a href="#step-3-2ステップ認証-を-2ファクタ認証-に昇格する">Step 3：「2ステップ認証」を「2ファクタ認証」に昇格する</a></li>
-<li><a href="#step-4-apple-developer-programへの登録を再開する">Step 4：Apple Developer Programへの登録を再開する</a></li>
-<li><a href="#最後に">最後に</a></li>
-</ul></li>
-</ul>
-</nav>
+  
 </div>
 </section>
-
-<h2 id="そもそも開発用にapple-idを新規作成する必要はあるか">そもそも開発用にApple IDを新規作成する必要はあるか？</h2>
-
+<h2 id="apple-id">そもそも開発用にApple IDを新規作成する必要はあるか？</h2>
 <p>普段使っているデバイスでプライマリアカウントとしてサインインしているApple IDをそのまま用いる場合は，この手順は不要である．
 代わりに，普段使っているデバイスから<a href="https://support.apple.com/ja-jp/HT204915">2ファクタ認証をオンにする</a>．</p>
-
 <p>ただし，開発用にApple IDを新規作成する動機がいくつか挙げられる：</p>
-
 <ul>
 <li>普段使っているアカウントは日本語だが，開発用は英語にしたい</li>
 <li><s>やばいアプリを提出して</s>アカウントが凍結される場合のリスクを最小限に抑えたい</li>
 </ul>
-
-<h2 id="前提">前提</h2>
-
+<h2 id="heading">前提</h2>
 <p>以下では，次の状況を前提とする：</p>
-
 <ul>
 <li>新規作成したApple IDがあること</li>
 <li>MacやiPhoneなど，2ファクタ認証で信頼できるデバイスとして使える端末（以下，2ファクタ認証用端末）があること
-
 <ul>
 <li>Developer登録する時点でMac端末は持っているはずなので，以下ではMac端末の場合のみ説明する</li>
-</ul></li>
+</ul>
+</li>
 <li>iPhoneなど，SMSメッセージを受信できる端末（以下，SMS受信端末）があること</li>
 </ul>
-
-<h2 id="step-1-apple-developer-programの登録を進める">Step 1：Apple Developer Programの登録を進める</h2>
-
-<p>Apple Developer Programの「登録」/ &ldquo;Enroll&rdquo;を選択し，新規作成したApple IDで登録作業を進める．
-&ldquo;Two-factor authentication is required&rdquo;といった趣旨のエラーメッセージが表示されるところまで進める．</p>
-
-<h2 id="step-2-新規作成したapple-idの-2ステップ認証-を有効化する">Step 2：新規作成したApple IDの「2ステップ認証」を有効化する</h2>
-
+<h2 id="step-1apple-developer-program">Step 1：Apple Developer Programの登録を進める</h2>
+<p>Apple Developer Programの「登録」/ &ldquo;Enroll&quot;を選択し，新規作成したApple IDで登録作業を進める．
+&ldquo;Two-factor authentication is required&quot;といった趣旨のエラーメッセージが表示されるところまで進める．</p>
+<h2 id="step-2apple-id2">Step 2：新規作成したApple IDの「2ステップ認証」を有効化する</h2>
 <ul>
 <li>「2ファクタ認証」ではなく，「2 <strong>ステップ</strong> 認証」を有効化する</li>
 </ul>
-
 <ol>
 <li><a href="https://www.icloud.com">iCloud.com</a>に新規作成したApple IDでサインインし，「設定」→Apple IDの「管理」に移動する．</li>
 <li>アカウントページに移動するので，「セキュリティ」の「2ファクタ認証をオンにする」を選択する．</li>
@@ -226,30 +200,22 @@
 <li>指示に従い，SMS受信端末の電話番号を入力する（日本なら+81，番号の頭の0は省略して入力する）</li>
 <li>指示に従い，SMSメッセージを受信できることを確認し，2ステップ認証を有効化する</li>
 </ol>
-
 <p>2ステップ認証を有効化した段階では，まだDeveloper登録を進めることができない．
 したがって，以下のステップで「2ステップ認証」を「2ファクタ認証」に昇格する必要がある．</p>
-
-<h2 id="step-3-2ステップ認証-を-2ファクタ認証-に昇格する">Step 3：「2ステップ認証」を「2ファクタ認証」に昇格する</h2>
-
+<h2 id="step-322">Step 3：「2ステップ認証」を「2ファクタ認証」に昇格する</h2>
 <ul>
 <li>2ファクタ認証用端末として，ここではMac端末を用いる場合を説明する</li>
 <li>すでに新規作成したApple IDをサブアカウントとしてMac端末のインターネットアカウントに追加している場合は，一旦サインアウトする</li>
 </ul>
-
 <ol>
 <li>Mac端末の環境設定を開き，「インターネットアカウント」を選択する</li>
 <li>ウィンドウ右側の「iCloud」を選択し，新規作成したApple IDでサブアカウントとしてサインインする</li>
 <li>自動的に2ステップ認証が2ファクタ認証に昇格し，Mac端末が信頼できるデバイスに追加される</li>
 </ol>
-
-<h2 id="step-4-apple-developer-programへの登録を再開する">Step 4：Apple Developer Programへの登録を再開する</h2>
-
+<h2 id="step-4apple-developer-program">Step 4：Apple Developer Programへの登録を再開する</h2>
 <p>ここまでの作業で，新規作成したApple IDの2ファクタ認証用端末による2ファクタ認証が有効化されるので，以降はDeveloper登録を進められるようになる．
 ブラウザを再読込みする，あるいは<a href="https://developer.apple.com/jp/programs/enroll/">ここ</a>からDeveloper登録を再開することで，（少なくとも）2ファクタ認証についてはエラーメッセージがでなくなるハズ！</p>
-
-<h2 id="最後に">最後に</h2>
-
+<h2 id="heading1">最後に</h2>
 <ul>
 <li>2018/9/1にこの方法でDeveloper登録を申請， <s>9/2現在StatusはPendingであり， <strong>実際にこの方法で審査が通るかは未確認</strong></s> 9/3に申請が受理された．</li>
 <li>この方法がいつまで有効かは不明であり，やってみた結果として被るいかなる被害・不利益に関して一切の保証はできない．</li>
@@ -288,7 +254,7 @@
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>&copy; 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
     <p>
       <a href="/privacy-policy/">Privacy Policy</a>
       &nbsp;|&nbsp;
@@ -322,7 +288,7 @@
     "dateModified": "2018-09-04T11:19:00+09:00",
     
     
-    "license": "\u0026copy; 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
     
     
     "author": {

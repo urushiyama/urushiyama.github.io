@@ -161,18 +161,14 @@
 
     <div class="content">
       <p>BibTeX形式の引用は多くのデジタルライブラリで提供されており，サクッと引用をつけるのに便利である．しかし，使用するにあたってひとつハマった点がある．</p>
-
-<h2 id="データ項目の記載の有無とデータ項目の表記順">データ項目の記載の有無とデータ項目の表記順</h2>
-
+<h2 id="heading">データ項目の記載の有無とデータ項目の表記順</h2>
 <p>そのハマった点というのは，書誌情報にデータ項目を記入するか否かでデータ項目の表記順が変わる点である．</p>
-
 <p>例えば，次のようなbibファイルを用意したとする．</p>
-
-<pre><code class="language-tex">@inproceeding {S18,
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex">@inproceeding {S18,
     author = {Smith, Jane},
     title = {A Title},
     booktitle = {Proceedings of the ~},
-    series = {PROC '18},
+    series = {PROC &#39;18},
     pages = {19--25},
     year = {2018},
     publisher = {PUB},
@@ -183,35 +179,27 @@
     author = {Baker, Tom and Watson, Dick and Yun, Harry},
     title = {Another Title},
     booktitle = {Proceedings of the ~},
-    series = {PROC '17},
+    series = {PROC &#39;17},
     pages = {203--211},
     year = {2017},
     publisher = {PUB},
 }
-</code></pre>
-
-<p>この2本を引用すると，次のような引用リストが出力される．</p>
-
+</code></pre></div><p>この2本を引用すると，次のような引用リストが出力される．</p>
 <p>[S18] Jane Smith. A Title. In Proceedings of the ~, PROC &lsquo;18, pp. 19&ndash;25, Tokyo, Japan, <strong>2018. PUB.</strong></p>
-
 <p>[BWY17] Tom Baker, Dick Watson, and Harry Yun. Another Title. In Proceedings of the ~, PROC &lsquo;17, pp. 203&ndash;211. <strong>PUB, 2017.</strong></p>
-
 <p>ここで各Referenceの最後を見ると，publisherとyearの表示される順番が入れ替わっている！</p>
-
-<h2 id="原因">原因</h2>
-
+<h2 id="heading1">原因</h2>
 <p>[S18]には<code>location</code>のデータ項目が定義されている一方で，[BWY17]には<code>location</code>が定義されていないため．</p>
-
-<h2 id="対策">対策</h2>
-
+<h2 id="heading2">対策</h2>
 <ol>
-<li><p>bstファイルをいい感じにつくる</p>
-
-<p>記述量もエラーの量も多くなりそうなので，私は2つ目の対策を取った．</p></li>
-
-<li><p>書誌情報のもつデータ項目の種類を揃える</p>
-
-<p>単純にデータ項目の種類を揃えることで，文献ごとにデータ項目の表記順が揺れることは回避できる．</p></li>
+<li>
+<p>bstファイルをいい感じにつくる</p>
+<p>記述量もエラーの量も多くなりそうなので，私は2つ目の対策を取った．</p>
+</li>
+<li>
+<p>書誌情報のもつデータ項目の種類を揃える</p>
+<p>単純にデータ項目の種類を揃えることで，文献ごとにデータ項目の表記順が揺れることは回避できる．</p>
+</li>
 </ol>
     </div>
     
@@ -247,7 +235,7 @@
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>&copy; 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
     <p>
       <a href="/privacy-policy/">Privacy Policy</a>
       &nbsp;|&nbsp;
@@ -281,7 +269,7 @@
     "dateModified": "2018-05-07T01:46:00+09:00",
     
     
-    "license": "\u0026copy; 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
     
     
     "author": {

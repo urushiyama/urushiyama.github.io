@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on urushiyamaのさまつごと</title>
@@ -19,7 +19,6 @@
       
       <guid>https://urushiyama.github.io/posts/hugo-extract-contents-according-to-front-matter/</guid>
       <description>&lt;p&gt;（2019-09-24 Hugo v0.58リリースに伴いコードを修正．）&lt;/p&gt;
-
 &lt;p&gt;先日Webページの論文リストを更新し，「査読付き/査読なし」，「国際/国内」，といったカテゴリ別に分けてリスト表示する機能を追加した．
 その際に，各ページのFront Matterに記載したカテゴリ情報をもとにページを抽出する方法を見つけたので，備忘録を残しておく．&lt;/p&gt;</description>
     </item>
@@ -30,7 +29,7 @@
       <pubDate>Mon, 30 Apr 2018 07:09:32 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/escape-sequence/</guid>
-      <description>&lt;p&gt;山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;ldquo;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために&lt;code&gt;safeHTML&lt;/code&gt;や&lt;code&gt;safeURL&lt;/code&gt;といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．&lt;/p&gt;</description>
+      <description>&lt;p&gt;山カッコ (&amp;lt;&amp;gt;)，アンパサンド (&amp;amp;)，クォーテーション (&amp;quot;)，&amp;hellip;HTMLの世界にはエスケープすべき文字があり，Hugoは何も指定がなければ自動的にこれらの文字をエスケープして出力する．エスケープしないことを明示するために&lt;code&gt;safeHTML&lt;/code&gt;や&lt;code&gt;safeURL&lt;/code&gt;といったフィルタが用意されているものの，実際にジェネレータがエスケープするかどうかは文脈から判断する仕様であり，Template埋め込み位置によって記述を変える必要があるので，わかりづらい．そこで，Hugoのエスケープ処理について調べてみた．&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39,7 +38,7 @@
       <pubDate>Mon, 30 Apr 2018 02:37:25 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/my-first-post/</guid>
-      <description>&lt;p&gt;研究室への配属が決まり，ポートフォリオ兼ブログがあると便利かな，と思うようになった．無料でホストでき，Githubのプロジェクトページが同一ドメインになるGithub Pagesでホストすることが好ましいと考え，静的サイト構築フレームワークを吟味した．&amp;rdquo;The world&amp;rsquo;s fastest&amp;rdquo;という言葉に惹かれ，&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;で静的サイトを構築することにした．&lt;/p&gt;</description>
+      <description>&lt;p&gt;研究室への配属が決まり，ポートフォリオ兼ブログがあると便利かな，と思うようになった．無料でホストでき，Githubのプロジェクトページが同一ドメインになるGithub Pagesでホストすることが好ましいと考え，静的サイト構築フレームワークを吟味した．&amp;ldquo;The world&#39;s fastest&amp;quot;という言葉に惹かれ，&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;で静的サイトを構築することにした．&lt;/p&gt;</description>
     </item>
     
   </channel>
