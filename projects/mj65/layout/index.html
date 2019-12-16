@@ -1,0 +1,840 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja" class="has-navbar-fixed-top">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='自作キーボード, PCB, プリント基板, Kailh Low Profile (Choc) 対応, JIS配列' name="keywords">
+<meta content="Yuta Urushiyama" name="author">
+<meta content='目次 MJ65のレイアウトおよびキーマップ MJ65は異なるフットプリントを用いることにより6つのレイアウトをサポートしています． 理想的なレイア...' name="description">
+
+<meta name="twitter:card" content="summary">
+
+<meta property="og:site_name" content="urushiyamaのさまつごと">
+<meta property="og:title" content='MJ65 Layout - urushiyamaのさまつごと'>
+<meta property="og:url" content="/projects/mj65/layout/">
+<meta property="og:description" content='目次 MJ65のレイアウトおよびキーマップ MJ65は異なるフットプリントを用いることにより6つのレイアウトをサポートしています． 理想的なレイア...'>
+<meta property="og:type" content='article'>
+
+
+<title>MJ65 Layout - urushiyamaのさまつごと</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow.min.css">
+
+
+<meta name="hugo:section" content="projects"/>
+<meta name="hugo:type" content="mj65"/>
+</head>
+
+<body>
+<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      
+      
+      <a class="navbar-item" href="../"><span class="title is-4">MJ65</span></a>
+      
+      
+      
+      <a class="navbar-item is-hidden-desktop" href="https://urushiyama.github.io/">
+        <span class="icon">
+          <i class="fa fa-home"></i>
+        </span>
+      </a>
+      
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://twitter.com/YUrushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+      
+        
+        <a class="navbar-item" href="https://github.com/urushiyama/MJ65-PCB">
+          PCB
+        </a>
+        
+        <a class="navbar-item" href="https://github.com/urushiyama/MJ65-Plate">
+          Plate
+        </a>
+        
+        <a class="navbar-item" href="https://github.com/urushiyama/qmk_firmware/tree/MJ65/keyboards/mj65">
+          Firmware
+        </a>
+        
+        <a class="navbar-item" href="../buildguide/">
+          Build Guide
+        </a>
+        
+        <a class="navbar-item has-background-light" href="#">
+          Layout
+        </a>
+        
+      
+      </div>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://urushiyama.github.io/">
+          <span class="icon">
+            <i class="fa fa-home"></i>
+          </span>
+        </a>
+        
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+        <a class="navbar-item is-hidden-mobile" href="https://twitter.com/YUrushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-twitter"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="section">
+  <div class="container">
+    <h1 class="title"></h1>
+    
+
+    <div class="content">
+      <section class="message is-info">
+  <div class="message-header">目次</div>
+<div class="message-body toc">
+  
+</div>
+</section>
+<h2 id="mj65">MJ65のレイアウトおよびキーマップ</h2>
+<p>MJ65は異なるフットプリントを用いることにより6つのレイアウトをサポートしています．
+<em>理想的な</em>レイアウトはモチロン65個のキーを配置するJISレイアウトですが，入手性の低い3.5uのキーキャップを用意する必要があります．
+そのため，1.75uのキーキャップ2つを用いる分割スペース型JISレイアウトをサポートしています．</p>
+<p>US配列（ANSI配列）信者ですか？
+残念ながらMJ65はUS配列をサポートしていませんが，62個のキーからなるUSライク配列をサポートしています．
+右側のいくつかのキーマップはHHKBに似ています．</p>
+<p>例えばメニュ−キーなど，もうひとつキーが必要ですか？
+MJ65は右下のキー数を1つ増やしたレイアウトをサポートしています．</p>
+<p>利用可能なレイアウトは以下の通りです:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#default">default</a></td>
+<td>JISレイアウト, 65個のキー</td>
+</tr>
+<tr>
+<td><a href="#split_space">split_space</a></td>
+<td>分割スペース型JISレイアウト, 66個のキー</td>
+</tr>
+<tr>
+<td><a href="#us_like">us_like</a></td>
+<td>USライク配列, 62個のキー</td>
+</tr>
+<tr>
+<td><a href="#1app">1app</a></td>
+<td>JISレイアウト, 66個のキー</td>
+</tr>
+<tr>
+<td><a href="#1app_split">1app_split</a></td>
+<td>分割スペース型JISレイアウト, 67個のキー</td>
+</tr>
+<tr>
+<td><a href="#1app_us">1app_us</a></td>
+<td>USライク配列, 63個のキー</td>
+</tr>
+</tbody>
+</table>
+<h2 id="heading">各レイアウトのはんだ付け</h2>
+<h3 id="heading1">スペースキー</h3>
+<ul>
+<li>
+<p><a href="#split_space">split_space</a> と <a href="#1app_split">1app_split</a></p>
+<p>下図に示す2箇所のフットプリントにキースイッチをはんだ付けします:</p>
+</li>
+</ul>
+<div class="card"><img src="https://urushiyama.github.io/projects/mj65/layout/../img/layout/split_space_footprints.png" alt="split_space_footprints">
+</div>
+<ul>
+<li>
+<p><a href="#default">default</a> と <a href="#1app">1app</a></p>
+<p>下図に示す1箇所にはんだ付けします:</p>
+</li>
+</ul>
+<div class="card"><img src="../img/layout/jis_space_footprint.png" alt="jis_space_footprints">
+</div>
+<ul>
+<li>
+<p><a href="#us_like">us_like</a> と <a href="#1app_us">1app_us</a></p>
+<p>下図に示す1箇所にはんだ付けします:</p>
+</li>
+</ul>
+<div class="card"><img src="../img/layout/us_space_footprint.png" alt="us_space_footprints">
+</div>
+<h3 id="heading2">エンターキー周辺</h3>
+<ul>
+<li>
+<p><a href="#default">default</a>，<a href="#split_space">split_space</a>，<a href="#1app">1app</a>，および <a href="#1app_split">1app_split</a></p>
+<p>下図に示す4箇所のフットプリントにキースイッチをはんだ付けします:</p>
+</li>
+</ul>
+<div class="card"><img src="../img/layout/jis_enter_footprints.png" alt="jis_enter_footprints">
+</div>
+<ul>
+<li>
+<p><a href="#us_like">us_like</a> と <a href="#1app_us">1app_us</a></p>
+<p>下図に示す3箇所のフットプリントにキースイッチをはんだ付けします:</p>
+</li>
+</ul>
+<div class="card"><img src="../img/layout/us_enter_footprints.png" alt="us_like_enter_footprints">
+</div>
+<h3 id="heading3">右下のキー周辺</h3>
+<ul>
+<li>
+<p><a href="#default">default</a>，<a href="#split_space">split_space</a>，および <a href="#us_like">us_like</a></p>
+<p>下図に示す2箇所のフットプリントにキースイッチをはんだ付けします:</p>
+</li>
+</ul>
+<div class="card"><img src="../img/layout/no_app_footprints.png" alt="1app_footprints">
+</div>
+<ul>
+<li>
+<p><a href="#1app">1app</a>，<a href="#1app_split">1app_split</a>，および <a href="#1app_us">1app_us</a></p>
+<p>下図に示す3箇所のフットプリントにキースイッチをはんだ付けします:</p>
+</li>
+</ul>
+<div class="card"><img src="../img/layout/1app_footprints.png" alt="1app_footprints">
+</div>
+<h2 id="heading4">各レイアウトの詳細</h2>
+<p>各レイアウトとも，そのままキーをタイプした場合にはBase Layer，Shiftと同時押し時にはShift Layerのキーマップに基づいた入力が生じます．
+Fnキーを押下している間に別のキーをタイプした場合にはFunction Layerのキーマップに基づいた入力が生じます．</p>
+<table>
+<thead>
+<tr>
+<th>表記</th>
+<th>入力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Esc</td>
+<td>Escape</td>
+</tr>
+<tr>
+<td>Del</td>
+<td>Backspace/Delete (手前1文字削除)</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>Tab</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>Enter</td>
+</tr>
+<tr>
+<td>Ctr/Ctrl</td>
+<td>Control</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>Shift</td>
+</tr>
+<tr>
+<td>Caps</td>
+<td>Caps Lock</td>
+</tr>
+<tr>
+<td>Opt</td>
+<td>Option/Alt</td>
+</tr>
+<tr>
+<td>Cmd</td>
+<td>Command/WIN/GUI</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Space</td>
+</tr>
+<tr>
+<td>EN</td>
+<td>英数</td>
+</tr>
+<tr>
+<td>JP</td>
+<td>かな</td>
+</tr>
+<tr>
+<td>Fn</td>
+<td>Fn Layerへの一時切り替え</td>
+</tr>
+<tr>
+<td>Pow</td>
+<td>System Power</td>
+</tr>
+<tr>
+<td>F1~F13</td>
+<td>ファンクションキー</td>
+</tr>
+<tr>
+<td>Ejc</td>
+<td>Eject</td>
+</tr>
+<tr>
+<td>Ddw</td>
+<td>Displayの輝度を下げる</td>
+</tr>
+<tr>
+<td>Dup</td>
+<td>Displayの輝度を上げる</td>
+</tr>
+<tr>
+<td>&laquo;</td>
+<td>前のトラック</td>
+</tr>
+<tr>
+<td>&gt;||</td>
+<td>再生・一時停止</td>
+</tr>
+<tr>
+<td>&raquo;</td>
+<td>次のトラック</td>
+</tr>
+<tr>
+<td>Sx</td>
+<td>音量をミュート</td>
+</tr>
+<tr>
+<td>Sdw</td>
+<td>音量を下げる</td>
+</tr>
+<tr>
+<td>Sup</td>
+<td>音量を上げる</td>
+</tr>
+<tr>
+<td>L_LOCK</td>
+<td>Fn Layerの排他的ロック, 再度押下によりアンロック</td>
+</tr>
+<tr>
+<td>-^</td>
+<td>上矢印キー</td>
+</tr>
+<tr>
+<td>&lt;-</td>
+<td>左矢印キー</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>下矢印キー</td>
+</tr>
+<tr>
+<td>-&gt;</td>
+<td>右矢印キー</td>
+</tr>
+<tr>
+<td>KP_Ent</td>
+<td>キーパッドのEnter</td>
+</tr>
+<tr>
+<td>App</td>
+<td>メニューキー</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default">default</h3>
+<p><img src="../img/layout/default.png" alt="default_layout"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">
+- Base Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Esc| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | - | ^ | \ |Del|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|Tab  | q | w | e | r | t | y | u | i | o | p | @ | [ |Enter|
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.    |
+|Ctrl  | a | s | d | f | g | h | j | k | l | ; | : | ] |    |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;----|
+|Shift   | z | x | c | v | b | n | m | , | . | / | _ | Shift|
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;---&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;---&#39;.-----|
+|Caps |Opt| Cmd|  EN|    Space    |JP  |Cmd |Opt| Ctrl|   Fn|
+`-----&#39;---&#39;----&#39;----&#39;-------------&#39;----&#39;----&#39;---&#39;-----&#39;-----&#39;
+
+- Shift Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Esc| ! | &#34; | # | $ | % | &amp; | &#39; | ( | ) |   | = | ~ | | |Del|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|Tab  | Q | W | E | R | T | Y | U | I | O | P | ` | { |Enter|
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.    |
+|Ctrl  | A | S | D | F | G | H | J | K | L | + | * | } |    |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;----|
+|Shift   | Z | X | C | V | B | N | M | &lt; | &gt; | ? | _ | Shift|
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;---&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;---&#39;.-----|
+|Caps |Opt| Cmd|  EN|    Space    |JP  |Cmd |Opt| Ctrl|   Fn|
+`-----&#39;---&#39;----&#39;----&#39;-------------&#39;----&#39;----&#39;---&#39;-----&#39;-----&#39;
+
+- Function (Fn) Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Pow|F1 |F2 |F3 |F4 |F5 |F6 |F7 |F8 |F9 |F10|F11|F12|F13|Ejc|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|     |Ddw|Dup|   |   |   |   |&lt;&lt; |&gt;||| &gt;&gt;|Sx |Sdw|Sup|     |
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.    |
+|      |   |   |   |   |   |   |   |   |   |-^ |   |   |    |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;----|
+|L_Lock  |   |   |   |   |   |   |   |   |&lt;- |-v |-&gt; |      |
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;---&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;---&#39;.-----|
+|     |   |    |    |             |    |    |   |     |     |
+`-----&#39;---&#39;----&#39;----&#39;-------------&#39;----&#39;----&#39;---&#39;-----&#39;-----&#39;
+</code></pre></div><h3 id="splitspace">split_space</h3>
+<p><img src="../img/layout/split_space.png" alt="split_space_layout"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">
+- Base Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Esc| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | - | ^ | \ |Del|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|Tab  | q | w | e | r | t | y | u | i | o | p | @ | [ |Enter|
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.    |
+|Ctrl  | a | s | d | f | g | h | j | k | l | ; | : | ] |    |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;----|
+|Shift   | z | x | c | v | b | n | m | , | . | / | _ | Shift|
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;-.-&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;---&#39;.-----|
+|Caps |Opt| Cmd|  EN| Space|KP_Ent|JP  |Cmd |Opt| Ctrl|   Fn|
+`-----&#39;---&#39;----&#39;----&#39;------&#39;------&#39;----&#39;----&#39;---&#39;-----&#39;-----&#39;
+
+- Shift Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Esc| ! | &#34; | # | $ | % | &amp; | &#39; | ( | ) |   | = | ~ | | |Del|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|Tab  | Q | W | E | R | T | Y | U | I | O | P | ` | { |Enter|
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.    |
+|Ctrl  | A | S | D | F | G | H | J | K | L | + | * | } |    |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;----|
+|Shift   | Z | X | C | V | B | N | M | &lt; | &gt; | ? | _ | Shift|
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;-.-&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;---&#39;.-----|
+|Caps |Opt| Cmd|  EN| Space|KP_Ent|JP  |Cmd |Opt| Ctrl|   Fn|
+`-----&#39;---&#39;----&#39;----&#39;------&#39;------&#39;----&#39;----&#39;---&#39;-----&#39;-----&#39;
+
+- Function (Fn) Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Pow|F1 |F2 |F3 |F4 |F5 |F6 |F7 |F8 |F9 |F10|F11|F12|F13|Ejc|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|     |Ddw|Dup|   |   |   |   |&lt;&lt; |&gt;||| &gt;&gt;|Sx |Sdw|Sup|     |
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.    |
+|      |   |   |   |   |   |   |   |   |   |-^ |   |   |    |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;----|
+|L_Lock  |   |   |   |   |   |   |   |   |&lt;- |-v |-&gt; |      |
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;-.-&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;---&#39;.-----|
+|     |   |    |    |      |      |    |    |   |     |     |
+`-----&#39;---&#39;----&#39;----&#39;------&#39;------&#39;----&#39;----&#39;---&#39;-----&#39;-----&#39;
+</code></pre></div><h3 id="uslike">us_like</h3>
+<p><img src="../img/layout/us_like.png" alt="us_like_layout"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">
+- Base Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Esc| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | - | = | \ | ` |
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|Tab  | q | w | e | r | t | y | u | i | o | p | [ | ] |  Del|
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;-----|
+|Ctrl  | a | s | d | f | g | h | j | k | l | ; | &#39; |   Enter|
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;--------|
+|Shift   | z | x | c | v | b | n | m | , | . | / |     Shift|
+|-----.--&#39;.--&#39;-.-&#39;---&#39;---&#39;---&#39;---&#39;---&#39;--.&#39;--.&#39;--.&#39;----.-----|
+|Caps |Opt| Cmd|          Space         |Cmd|Opt| Ctrl|   Fn|
+`-----&#39;---&#39;----&#39;------------------------&#39;---&#39;---&#39;-----&#39;-----&#39;
+
+- Shift Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Esc| ! | @ | # | $ | % | ^ | &amp; | * | ( | ) | _ | + | | | ~ |
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|Tab  | Q | W | E | R | T | Y | U | I | O | P | { | } |  Del|
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;-----|
+|Ctrl  | A | S | D | F | G | H | J | K | L | : | &#34; |   Enter|
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;--------|
+|Shift   | Z | X | C | V | B | N | M | &lt; | &gt; | ? |     Shift|
+|-----.--&#39;.--&#39;-.-&#39;---&#39;---&#39;---&#39;---&#39;---&#39;--.&#39;--.&#39;--.&#39;----.-----|
+|Caps |Opt| Cmd|          Space         |Cmd|Opt| Ctrl|   Fn|
+`-----&#39;---&#39;----&#39;------------------------&#39;---&#39;---&#39;-----&#39;-----&#39;
+
+- Function (Fn) Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Pow|F1 |F2 |F3 |F4 |F5 |F6 |F7 |F8 |F9 |F10|F11|F12|F13|Ejc|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|     |Ddw|Dup|   |   |   |   |&lt;&lt; |&gt;||| &gt;&gt;|Sx |Sdw|Sup|     |
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;-----|
+|      |   |   |   |   |   |   |   |   |   |-^ |   |        |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;--------|
+|L_Lock  |   |   |   |   |   |   |   |   |&lt;- |-v |-&gt;        |
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;---&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;----.-----|
+|     |   |    |    |             |    |    |   |     |     |
+`-----&#39;---&#39;----&#39;----&#39;-------------&#39;----&#39;----&#39;---&#39;-----&#39;-----&#39;
+</code></pre></div><h3 id="1app">1app</h3>
+<p><img src="../img/layout/1app.png" alt="1app_layout"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">
+- Base Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Esc| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | - | ^ | \ |Del|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|Tab  | q | w | e | r | t | y | u | i | o | p | @ | [ |Enter|
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.    |
+|Ctrl  | a | s | d | f | g | h | j | k | l | ; | : | ] |    |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;----|
+|Shift   | z | x | c | v | b | n | m | , | . | / | _ | Shift|
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;---&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;--.&#39;--.---|
+|Caps |Opt| Cmd|  EN|    Space    |JP  |Cmd |Opt|Ctr|App| Fn|
+`-----&#39;---&#39;----&#39;----&#39;-------------&#39;----&#39;----&#39;---&#39;---&#39;---&#39;---&#39;
+
+- Shift Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Esc| ! | &#34; | # | $ | % | &amp; | &#39; | ( | ) |   | = | ~ | | |Del|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|Tab  | Q | W | E | R | T | Y | U | I | O | P | ` | { |Enter|
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.    |
+|Ctrl  | A | S | D | F | G | H | J | K | L | + | * | } |    |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;----|
+|Shift   | Z | X | C | V | B | N | M | &lt; | &gt; | ? | _ | Shift|
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;---&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;--.&#39;--.---|
+|Caps |Opt| Cmd|  EN|    Space    |JP  |Cmd |Opt|Ctr|App| Fn|
+`-----&#39;---&#39;----&#39;----&#39;-------------&#39;----&#39;----&#39;---&#39;---&#39;---&#39;---&#39;
+
+- Function (Fn) Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Pow|F1 |F2 |F3 |F4 |F5 |F6 |F7 |F8 |F9 |F10|F11|F12|F13|Ejc|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|     |Ddw|Dup|   |   |   |   |&lt;&lt; |&gt;||| &gt;&gt;|Sx |Sdw|Sup|     |
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.    |
+|      |   |   |   |   |   |   |   |   |   |-^ |   |   |    |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;----|
+|L_Lock  |   |   |   |   |   |   |   |   |&lt;- |-v |-&gt; |      |
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;---&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;--.&#39;--.---|
+|     |   |    |    |             |    |    |   |   |   |   |
+`-----&#39;---&#39;----&#39;----&#39;-------------&#39;----&#39;----&#39;---&#39;---&#39;---&#39;---&#39;
+</code></pre></div><h3 id="1appsplit">1app_split</h3>
+<p><img src="../img/layout/1app_split.png" alt="1app_split_layout"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">
+- Base Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Esc| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | - | ^ | \ |Del|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|Tab  | q | w | e | r | t | y | u | i | o | p | @ | [ |Enter|
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.    |
+|Ctrl  | a | s | d | f | g | h | j | k | l | ; | : | ] |    |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;----|
+|Shift   | z | x | c | v | b | n | m | , | . | / | _ | Shift|
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;-.-&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;--.&#39;--.---|
+|Caps |Opt| Cmd|  EN| Space|KP_Ent|JP  |Cmd |Opt|Ctr|App| Fn|
+`-----&#39;---&#39;----&#39;----&#39;------&#39;------&#39;----&#39;----&#39;---&#39;---&#39;---&#39;---&#39;
+
+- Shift Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Esc| ! | &#34; | # | $ | % | &amp; | &#39; | ( | ) |   | = | ~ | | |Del|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|Tab  | Q | W | E | R | T | Y | U | I | O | P | ` | { |Enter|
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.    |
+|Ctrl  | A | S | D | F | G | H | J | K | L | + | * | } |    |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;----|
+|Shift   | Z | X | C | V | B | N | M | &lt; | &gt; | ? | _ | Shift|
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;-.-&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;--.&#39;--.---|
+|Caps |Opt| Cmd|  EN| Space|KP_Ent|JP  |Cmd |Opt|Ctr|App| Fn|
+`-----&#39;---&#39;----&#39;----&#39;------&#39;------&#39;----&#39;----&#39;---&#39;---&#39;---&#39;---&#39;
+
+- Function (Fn) Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Pow|F1 |F2 |F3 |F4 |F5 |F6 |F7 |F8 |F9 |F10|F11|F12|F13|Ejc|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|     |Ddw|Dup|   |   |   |   |&lt;&lt; |&gt;||| &gt;&gt;|Sx |Sdw|Sup|     |
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.    |
+|      |   |   |   |   |   |   |   |   |   |-^ |   |   |    |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;----|
+|L_Lock  |   |   |   |   |   |   |   |   |&lt;- |-v |-&gt; |      |
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;-.-&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;--.&#39;--.---|
+|     |   |    |    |      |      |    |    |   |   |   |   |
+`-----&#39;---&#39;----&#39;----&#39;------&#39;------&#39;----&#39;----&#39;---&#39;---&#39;---&#39;---&#39;
+</code></pre></div><h3 id="1appus">1app_us</h3>
+<p><img src="../img/layout/1app_us.png" alt="1app_us_layout"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">
+- Base Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Esc| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | - | = | \ | ` |
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|Tab  | q | w | e | r | t | y | u | i | o | p | [ | ] |  Del|
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;-----|
+|Ctrl  | a | s | d | f | g | h | j | k | l | ; | &#39; |   Enter|
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;--------|
+|Shift   | z | x | c | v | b | n | m | , | . | / |     Shift|
+|-----.--&#39;.--&#39;-.-&#39;---&#39;---&#39;---&#39;---&#39;---&#39;--.&#39;--.&#39;--.&#39;--.---.---|
+|Caps |Opt| Cmd|          Space         |Cmd|Opt|Ctr|App| Fn|
+`-----&#39;---&#39;----&#39;------------------------&#39;---&#39;---&#39;---&#39;---&#39;---&#39;
+
+- Shift Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Esc| ! | @ | # | $ | % | ^ | &amp; | * | ( | ) | _ | + | | | ~ |
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|Tab  | Q | W | E | R | T | Y | U | I | O | P | { | } |  Del|
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;-----|
+|Ctrl  | A | S | D | F | G | H | J | K | L | : | &#34; |   Enter|
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;--------|
+|Shift   | Z | X | C | V | B | N | M | &lt; | &gt; | ? |     Shift|
+|-----.--&#39;.--&#39;-.-&#39;---&#39;---&#39;---&#39;---&#39;---&#39;--.&#39;--.&#39;--.&#39;--.---.---|
+|Caps |Opt| Cmd|          Space         |Cmd|Opt|Ctr|App| Fn|
+`-----&#39;---&#39;----&#39;------------------------&#39;---&#39;---&#39;---&#39;---&#39;---&#39;
+
+- Function (Fn) Layer
+
+,---.---.---.---.---.---.---.---.---.---.---.---.---.---.---.
+|Pow|F1 |F2 |F3 |F4 |F5 |F6 |F7 |F8 |F9 |F10|F11|F12|F13|Ejc|
+|---&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;---|
+|     |Ddw|Dup|   |   |   |   |&lt;&lt; |&gt;||| &gt;&gt;|Sx |Sdw|Sup|     |
+|-----&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;.--&#39;-----|
+|      |   |   |   |   |   |   |   |   |   |-^ |   |        |
+|------&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;-.-&#39;--------|
+|L_Lock  |   |   |   |   |   |   |   |   |&lt;- |-v |-&gt;        |
+|-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;---&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;--.---.---|
+|     |   |    |    |             |    |    |   |   |   |   |
+`-----&#39;---&#39;----&#39;----&#39;-------------&#39;----&#39;----&#39;---&#39;---&#39;---&#39;---&#39;
+</code></pre></div><h2 id="extra-keys">Extra Keys</h2>
+<p>キースイッチ（あるいはお好みのモーメンタリスイッチ）をはんだ付けできる11個の特別なフットプリントがMJ65の基板右上に用意されています．</p>
+<p>デフォルトで用意されているキーマップではこれらのフットプリントに取り付けたキーに対する入力が割り当てられていません．
+従って，これらのキーを利用するためにはQMKファームウェアの設定が必要です．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">
+,---.---.---.---. ,---.---.---. ,---.---.---. ,---.
+|Ex0|Ex1|Ex2|Ex3| |Ex4|Ex5|Ex6| |Ex7|Ex8|Ex9| |ExA|
+`---&#39;---&#39;---&#39;---&#39; `---&#39;---&#39;---&#39; `---&#39;---&#39;---&#39; `---&#39;
+</code></pre></div><p>設定時には以下のマクロ関数が利用可能です：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">LAYOUT_WITH_EXTRA( \
+  LAYOUT_[LAYOUT NAME](...), <span style="color:#960050;background-color:#1e0010">\</span> <span style="color:#75715e">/* Extra Keys を含めないレイアウト */</span>
+  ex0, ex1, ex2, ex3, ex4, ex5, ex6, ex7, ex8, ex9, exA \
+)
+</code></pre></div>
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=%2fprojects%2fmj65%2flayout%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=%2fprojects%2fmj65%2flayout%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fprojects%2fmj65%2flayout%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=MJ65%20Layout - %2fprojects%2fmj65%2flayout%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=%2fprojects%2fmj65%2flayout%2f&title=MJ65%20Layout" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/license/">LICENSE</a>
+    </p>
+  </div>
+</section>
+
+  
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "https://urushiyama.github.io/projects/mj65/layout/",
+    "headline": "MJ65 Layout",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://urushiyama.github.io/projects/mj65/layout/"
+    },
+    
+    "genre": "mj65",
+    
+    "keywords": "自作キーボード, JIS配列",
+    
+    "url": "https://urushiyama.github.io/projects/mj65/layout/",
+    
+    "datePublished": "2019-04-29T09:02:10+09:00",
+    
+    
+    "dateModified": "2019-04-29T09:02:10+09:00",
+    
+    
+    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    
+    
+    "author": {
+      "@type": "Person",
+      "@id": "https://urushiyama.github.io/#author"
+    },
+    
+    
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://urushiyama.github.io/#author",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://urushiyama.github.io/img/photo.png"
+      }
+    },
+    
+    "description": "目次 MJ65のレイアウトおよびキーマップ MJ65は異なるフットプリントを用いることにより6つのレイアウトをサポートしています． 理想的なレイア"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://urushiyama.github.io/",
+          "name": "TOP"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://urushiyama.github.io/projects",
+          "name": "Projects"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://urushiyama.github.io/projects/mj65/layout/",
+          "name": "MJ65 Layout"
+        }
+      }
+    ]
+  }
+]
+</script>
+  
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/swift.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>

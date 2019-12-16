@@ -1,0 +1,388 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja" class="has-navbar-fixed-top">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='プログラミング, HCI, つくば, ブログ' name="keywords">
+<meta content="Yuta Urushiyama" name="author">
+<meta content='リリースノート v1.3.5 ユーザフレンドリーを目指したアップデートです． 新機能： 「ログイン時に起動」オプションを追加 「Auto-Adjust displ...' name="description">
+
+<meta name="twitter:card" content="summary">
+
+<meta property="og:site_name" content="urushiyamaのさまつごと">
+<meta property="og:title" content='Release Note - urushiyamaのさまつごと'>
+<meta property="og:url" content="/projects/barcounter/release-note/">
+<meta property="og:description" content='リリースノート v1.3.5 ユーザフレンドリーを目指したアップデートです． 新機能： 「ログイン時に起動」オプションを追加 「Auto-Adjust displ...'>
+<meta property="og:type" content='article'>
+
+
+<title>Release Note - urushiyamaのさまつごと</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow.min.css">
+
+
+<meta name="hugo:section" content="projects"/>
+<meta name="hugo:type" content="barcounter"/>
+</head>
+
+<body>
+<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      
+      
+      <a class="navbar-item" href="../"><img src="https://urushiyama.github.io/projects/barcounter/release-note/../img/BarCounter.svg" style="height: 100%; width: auto;"/></a>
+      <a class="navbar-item" href="../"><span class="title is-4">BarCounter</span></a>
+      
+      
+      
+      <a class="navbar-item is-hidden-desktop" href="https://urushiyama.github.io/">
+        <span class="icon">
+          <i class="fa fa-home"></i>
+        </span>
+      </a>
+      
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://twitter.com/YUrushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+      
+        
+        <a class="navbar-item" href="../Support/">
+          Support
+        </a>
+        
+        <a class="navbar-item" href="../privacy-policy/">
+          Privacy Policy
+        </a>
+        
+        <a class="navbar-item has-background-light" href="#">
+          Release Note
+        </a>
+        
+      
+      </div>
+      <div class="navbar-end">
+        
+        <a class="navbar-item is-hidden-mobile" href="https://urushiyama.github.io/">
+          <span class="icon">
+            <i class="fa fa-home"></i>
+          </span>
+        </a>
+        
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+        <a class="navbar-item is-hidden-mobile" href="https://twitter.com/YUrushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-twitter"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="notification is-info">
+  <button class="delete"></button>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      $notification = $delete.parentNode;
+      $delete.addEventListener('click', () => {
+        $notification.classList.add('is-deleted');
+        while($notification.firstChild) {
+          $notification.removeChild($notification.firstChild);
+        }
+      });
+    });
+  });
+  </script>
+  <div class="translations">
+    <span class="subtitle">Translations Available</span>
+    <ul>
+        
+        <li>
+            <a href="/en/projects/barcounter/release-note/">
+              
+                English
+              
+              : Release Note</a>
+        </li>
+        
+    </ul>
+  </div>
+</div>
+
+
+
+<section class="section">
+  <div class="container">
+    <h1 class="title"></h1>
+    
+
+    <div class="content">
+      <h1 id="heading">リリースノート</h1>
+<h2 id="v135">v1.3.5</h2>
+<p>ユーザフレンドリーを目指したアップデートです．</p>
+<p>新機能：</p>
+<ul>
+<li>「ログイン時に起動」オプションを追加</li>
+<li>「Auto-Adjust display」オプションを削除（多言語の単語カウントに対応したため）</li>
+<li>日本語のローカライズを追加</li>
+</ul>
+<p>修正点：</p>
+<ul>
+<li>ハイフンを含む文章に対して実際よりも少ない単語数をカウントする問題を修正</li>
+</ul>
+<h2 id="v121">v1.2.1</h2>
+<p>人々は清潔できれいなものを好むものですよね？</p>
+<p>新機能:</p>
+<ul>
+<li>カウント数を短く表示する機能を追加</li>
+<li>テキストの言語を推定して単語数をカウントするように変更
+<ul>
+<li>日本語でも単語数が「単語数として」表示されるようになりました</li>
+</ul>
+</li>
+</ul>
+<p>修正:</p>
+<ul>
+<li>&ldquo;He's&quot;のような省略形のカウント</li>
+<li>&ldquo;self-assembly&quot;のような連語のカウント</li>
+<li>アプリのアイコンと配色</li>
+</ul>
+<h2 id="v110">v1.1.0</h2>
+<p>シンプルに，スマートに．</p>
+<p>新機能：</p>
+<ul>
+<li>アプリを再起動したときに自動的に単語/文字として表示を復元するようにしました．</li>
+<li>英語以外のテキストがコピーされたときに表示を自動調整するかどうかを選択できるようにしました．</li>
+</ul>
+<p>修正点：</p>
+<ul>
+<li>メニュー内の項目の配置とグループわけを修正</li>
+<li>ASCII /非ASCIIのカウントを結合しました．そもそも，ASCIIって何？</li>
+<li>&ldquo;About BarCounter&quot;ウィンドウを開いたときに画面の前面に表示されない問題を修正</li>
+</ul>
+<h2 id="v10">v1.0</h2>
+<ul>
+<li>最初のリリース</li>
+</ul>
+
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=%2fprojects%2fbarcounter%2frelease-note%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=%2fprojects%2fbarcounter%2frelease-note%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fprojects%2fbarcounter%2frelease-note%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=Release%20Note - %2fprojects%2fbarcounter%2frelease-note%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=%2fprojects%2fbarcounter%2frelease-note%2f&title=Release%20Note" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/license/">LICENSE</a>
+    </p>
+  </div>
+</section>
+
+  
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "https://urushiyama.github.io/projects/barcounter/release-note/",
+    "headline": "Release Note",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://urushiyama.github.io/projects/barcounter/release-note/"
+    },
+    
+    "genre": "barcounter",
+    
+    "url": "https://urushiyama.github.io/projects/barcounter/release-note/",
+    
+    "datePublished": "2019-06-17T00:38:30+09:00",
+    
+    
+    "dateModified": "2019-06-17T00:38:30+09:00",
+    
+    
+    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    
+    
+    "author": {
+      "@type": "Person",
+      "@id": "https://urushiyama.github.io/#author"
+    },
+    
+    
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://urushiyama.github.io/#author",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://urushiyama.github.io/img/photo.png"
+      }
+    },
+    
+    "description": "リリースノート v1.3.5 ユーザフレンドリーを目指したアップデートです． 新機能： 「ログイン時に起動」オプションを追加 「Auto-Adjust displ"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://urushiyama.github.io/",
+          "name": "TOP"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://urushiyama.github.io/projects",
+          "name": "Projects"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://urushiyama.github.io/projects/barcounter/release-note/",
+          "name": "Release Note"
+        }
+      }
+    ]
+  }
+]
+</script>
+  
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/swift.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>

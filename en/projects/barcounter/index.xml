@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BarCounter on urushiyama&#39;s trivia</title>
+    <link>https://urushiyama.github.io/en/projects/barcounter/</link>
+    <description>Recent content in BarCounter on urushiyama&#39;s trivia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <lastBuildDate>Sun, 19 May 2019 04:53:06 +0900</lastBuildDate>
+    
+	<atom:link href="https://urushiyama.github.io/en/projects/barcounter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Acknowledgements</title>
+      <link>https://urushiyama.github.io/en/projects/barcounter/acknowledgements/</link>
+      <pubDate>Sun, 13 Oct 2019 17:19:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/en/projects/barcounter/acknowledgements/</guid>
+      <description>BarCounter is made by the following third-party libraries. I express my gratitude to all the contributions of the open source communities.
+ SecureDefaults   Copyright (c) 2019 Victor Peschenkov v.peschenkov@gmail.com
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;ldquo;Software&amp;rdquo;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</description>
+    </item>
+    
+    <item>
+      <title>Release Note</title>
+      <link>https://urushiyama.github.io/en/projects/barcounter/release-note/</link>
+      <pubDate>Mon, 17 Jun 2019 00:38:30 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/en/projects/barcounter/release-note/</guid>
+      <description>Release Note v1.3.5 Be friendly with users!
+NEW FEATURE:
+ Add &amp;ldquo;Launch at login&amp;rdquo; option Remove &amp;ldquo;Auto-Adjust display&amp;rdquo; option (because the app can count words of multi-language) Add Japanese localization  FIXED:
+ The issue that hyphen caused the count to be less than actual  v1.2.1 People prefer sanitized and cleaned ones, right?
+NEW FEATURE:
+ Display the count as shorten-width Estimate the language of the text and count words  FIXED:</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://urushiyama.github.io/en/projects/barcounter/privacy-policy/</link>
+      <pubDate>Sat, 27 Apr 2019 22:26:36 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/en/projects/barcounter/privacy-policy/</guid>
+      <description>BarCounter Privacy Policy Yuta Urushiyama (the developer) built the BarCounter app (the app) as a Commercial app. The app is intended for use as is.
+This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use the app.
+If you choose to use the app, then you agree to the collection and use of information in relation to this policy.</description>
+    </item>
+    
+    <item>
+      <title>Support</title>
+      <link>https://urushiyama.github.io/en/projects/barcounter/support/</link>
+      <pubDate>Sat, 27 Apr 2019 20:15:50 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/en/projects/barcounter/support/</guid>
+      <description> Please add the application name in your comment.  Anonymous questions, comments and requests about the app are welcome here:
+https://marshmallow-qa.com/yurushiyama?utm_medium=url_text&amp;amp;utm_source=promotion
+Alternatively, we accept Twitter&#39;s direct message (DM):
+https://twitter.com/YUrushiyama
+You can text me from the address below, but it may take a longer time to get the reply1：
+aswif10flis1ntkb [at] gmail.com
+  Please replace [at] to @.&amp;#8617;
+   </description>
+    </item>
+    
+  </channel>
+</rss>
