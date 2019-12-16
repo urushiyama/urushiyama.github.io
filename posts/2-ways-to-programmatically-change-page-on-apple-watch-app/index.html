@@ -199,7 +199,7 @@
     NotificationCenter.<span style="color:#66d9ef">default</span>.post(name: Notification.Name(rawValue: <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">moveToDestinationPage</span><span style="color:#e6db74">&#34;</span>), object: <span style="color:#66d9ef">nil</span>)
   }
 }
-</code></pre></div><h3 id="heading1">複数経路の遷移を実装する際の注意点</h3>
+</code></pre></div><h3 id="heading-1">複数経路の遷移を実装する際の注意点</h3>
 <p>Notificationのオブザーバは，登録時にobjectを指定しない限り，あらゆるobjectからのpostに対して反応するため，遷移先ごとに異なるNotification.Nameを用いる必要がある．</p>
 <h2 id="2-wkinterfacecontrollerreloadrootpagecontrollers">方法2. WKInterfaceController.reloadRootPageControllersを用いる</h2>
 <p>この方法では，ページ遷移のみならず，表示するページの数や種類を変更できる．一方，すべてのページが再度読み込まれるため，遷移前のページ群と遷移後のページ群がユーザにとって別のものに見える点には注意が必要となる．</p>
@@ -213,7 +213,7 @@
     WKInterfaceController.reloadRootPageControllers(withNames: [<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">OriginPage</span><span style="color:#e6db74">&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">DestinationPage</span><span style="color:#e6db74">&#34;</span>], contexts: <span style="color:#66d9ef">nil</span>, orientation: .horizontal, pageIndex: <span style="color:#ae81ff">1</span>)
   }
 }
-</code></pre></div><h3 id="heading2">最後に</h3>
+</code></pre></div><h3 id="heading-2">最後に</h3>
 <p>ここで示したコード断片は何ら著作的でないものなので，パブリックドメインである．自己責任の限りご自由にお使いください．</p>
     </div>
     

@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Tue, 10 Dec 2019 16:25:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 11 Dec 2019 15:20:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/publications/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>スマートフォンにおける押下圧によるタップの拡張のための予備調査（HCI185）</title>
+      <link>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci185co/</link>
+      <pubDate>Wed, 11 Dec 2019 15:20:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci185co/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.iplab.cs.tsukuba.ac.jp/~ikeda/&#34;&gt;主著のWebページへ&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;heading&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;スマートフォンにおける限られた入力語彙を拡張するために，我々は押下圧によるタップの複数種類への拡張手法を提案する．提案手法はタップ時にスマートフォン搭載感圧センサから取得される最大の押下圧をタップの強さとし，その強さをもとにタップを 3 種類以上に拡張する．本研究では提案手法の実装に先立ち，スマートフォンにおいてユーザがタップの強さを調節可能な精度を明らかにするための予備実験を行った．システムが取得可能な押下圧の範囲を線形に 2-6 分割したうちのある一領域に対してタップの強さを調節する分割タスクでは，2 分割においては 98.1%，6 分割においては 54.0% のタスク成功率であった．&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>画面拡張時におけるミラーリング領域の表示方法に関する比較調査（HCI185）</title>
