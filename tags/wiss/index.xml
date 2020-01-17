@@ -6,7 +6,7 @@
     <description>Recent content in WISS on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <copyright>&amp;copy; 2018-2020 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
     <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/tags/wiss/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <pubDate>Mon, 26 Aug 2019 00:00:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2019proceedings/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;概要&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
 &lt;p&gt;スマートフォンと接続されたディスプレイにコンテンツを表示させる手法として，ミラーリングとキャスティングがある．
 ミラーリングでは，ディスプレイ上にスマートフォンの画面に表示されるコンテンツのみが表示され，キャスティングでは，スマートフォン上のみに専用のGUIが表示されるためディスプレイを見ながらのスマートフォン上での操作に困難が伴う．
 我々は，ディスプレイを見ながらのスマートフォン上での操作を可能にし，かつディスプレイ全域にてコンテンツを閲覧可能にする，外部ディスプレイを用いたスマートフォンの画面拡張手法を提案する．
@@ -32,7 +32,7 @@
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2018proceedings/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;概要&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
 &lt;p&gt;手元を見ずにスマートフォンによる文字入力が行えれば，ユーザは歩行中あるいは会話中にスマートフォンにてメモを取ることができる．しかし，視覚以外の感覚によりタッチ位置をタッチ前に知覚することは困難であるため，キーを視認する必要がある．
 我々は文字入力時に手元の視認が不要な，指の軌跡に基づくスマートフォン向けのかな文字入力手法を提案する．
 提案手法は，タッチ位置を基点とする円形領域および外側の上下左右4方向の領域を指が一筆書きにて通過する順序に基づいて，文字の子音および母音を決定するため，正確さの粗いタッチ操作に対して堅牢な文字入力が期待される．&lt;/p&gt;</description>

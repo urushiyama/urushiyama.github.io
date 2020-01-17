@@ -162,17 +162,36 @@
 <section class="message is-info">
   <div class="message-header">目次</div>
 <div class="message-body toc">
-  
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前提">前提</a></li>
+    <li><a href="#方法1-notificationとwkinterfacecontrollerbecomecurrentpageを用いる">方法1. NotificationとWKInterfaceController.becomeCurrentPageを用いる</a>
+      <ul>
+        <li><a href="#1-遷移先ページのコントローラ自身をnotificationのオブザーバに登録する">1. 遷移先ページのコントローラ自身をNotificationのオブザーバに登録する</a></li>
+        <li><a href="#2-遷移先ページのコントローラにbecomecurrentpageを発火するためのメソッドを追加する">2. 遷移先ページのコントローラにbecomeCurrentPageを発火するためのメソッドを追加する</a></li>
+        <li><a href="#3-遷移元ページの遷移を発生させたい箇所でnotificationをpostする">3. 遷移元ページの遷移を発生させたい箇所でNotificationをpostする</a></li>
+        <li><a href="#複数経路の遷移を実装する際の注意点">複数経路の遷移を実装する際の注意点</a></li>
+      </ul>
+    </li>
+    <li><a href="#方法2-wkinterfacecontrollerreloadrootpagecontrollersを用いる">方法2. WKInterfaceController.reloadRootPageControllersを用いる</a>
+      <ul>
+        <li><a href="#1-各ページのコントローラに名前をつける">1. 各ページのコントローラに名前をつける</a></li>
+        <li><a href="#2-遷移元ページの遷移を発生させたい箇所でページのリロードを行う">2. 遷移元ページの遷移を発生させたい箇所でページのリロードを行う</a></li>
+        <li><a href="#最後に">最後に</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 </div>
 </section>
-<h2 id="heading">前提</h2>
+<h2 id="前提">前提</h2>
 <ul>
 <li>Swift 4.x</li>
 <li>WatchOS 4</li>
 </ul>
-<h2 id="1-notificationwkinterfacecontrollerbecomecurrentpage">方法1. NotificationとWKInterfaceController.becomeCurrentPageを用いる</h2>
+<h2 id="方法1-notificationとwkinterfacecontrollerbecomecurrentpageを用いる">方法1. NotificationとWKInterfaceController.becomeCurrentPageを用いる</h2>
 <p>おそらく一般的にはこちらの方法が用いられていると思う．この方法ではページ遷移の際に，ユーザのスワイプによるページ遷移と同様のアニメーションが発生する．そのため，ページ遷移の発生をユーザに意識させる場合に有効であろう．</p>
-<h3 id="1-notification">1. 遷移先ページのコントローラ自身をNotificationのオブザーバに登録する</h3>
+<h3 id="1-遷移先ページのコントローラ自身をnotificationのオブザーバに登録する">1. 遷移先ページのコントローラ自身をNotificationのオブザーバに登録する</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DestinationPageController</span>: WKInterfaceController {
   <span style="color:#75715e">/*</span><span style="color:#75715e"> </span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e"> </span><span style="color:#75715e">*/</span>
   <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">awake</span>(withContext context: Any?) {
@@ -183,7 +202,7 @@
     NotificationCenter.<span style="color:#66d9ef">default</span>.addObserver(<span style="color:#66d9ef">self</span>, selector: <span style="color:#66d9ef">#selector</span>(<span style="color:#66d9ef">self</span>.receiveMovePageNotification(<span style="color:#66d9ef">_</span>:)), name: Notification.Name(rawValue: <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">moveToDestinationPage</span><span style="color:#e6db74">&#34;</span>) , object: <span style="color:#66d9ef">nil</span>)
   }
 }
-</code></pre></div><h3 id="2-becomecurrentpage">2. 遷移先ページのコントローラにbecomeCurrentPageを発火するためのメソッドを追加する</h3>
+</code></pre></div><h3 id="2-遷移先ページのコントローラにbecomecurrentpageを発火するためのメソッドを追加する">2. 遷移先ページのコントローラにbecomeCurrentPageを発火するためのメソッドを追加する</h3>
 <p>本当はselectorに直接becomeCurrentPageをselectorとして登録したいのだが，selectorに登録するメソッドはただ1つの引数（NSNotification）を持たなければならないため，<code>self.becomeCurrentPage</code>を呼び出すメソッドを追加する．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DestinationPageController</span>: WKInterfaceController {
   <span style="color:#75715e">/*</span><span style="color:#75715e"> </span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e"> </span><span style="color:#75715e">*/</span>
@@ -191,7 +210,7 @@
     <span style="color:#66d9ef">self</span>.becomeCurrentPage()
   }
 }
-</code></pre></div><h3 id="3-notificationpost">3. 遷移元ページの遷移を発生させたい箇所でNotificationをpostする</h3>
+</code></pre></div><h3 id="3-遷移元ページの遷移を発生させたい箇所でnotificationをpostする">3. 遷移元ページの遷移を発生させたい箇所でNotificationをpostする</h3>
 <p>このときpostするNotification.Nameは，手順1で用いた値にする必要がある．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OriginPageController</span>: WKInterfaceController {
   <span style="color:#75715e">/*</span><span style="color:#75715e"> </span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e"> </span><span style="color:#75715e">*/</span>
@@ -199,13 +218,13 @@
     NotificationCenter.<span style="color:#66d9ef">default</span>.post(name: Notification.Name(rawValue: <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">moveToDestinationPage</span><span style="color:#e6db74">&#34;</span>), object: <span style="color:#66d9ef">nil</span>)
   }
 }
-</code></pre></div><h3 id="heading-1">複数経路の遷移を実装する際の注意点</h3>
+</code></pre></div><h3 id="複数経路の遷移を実装する際の注意点">複数経路の遷移を実装する際の注意点</h3>
 <p>Notificationのオブザーバは，登録時にobjectを指定しない限り，あらゆるobjectからのpostに対して反応するため，遷移先ごとに異なるNotification.Nameを用いる必要がある．</p>
-<h2 id="2-wkinterfacecontrollerreloadrootpagecontrollers">方法2. WKInterfaceController.reloadRootPageControllersを用いる</h2>
+<h2 id="方法2-wkinterfacecontrollerreloadrootpagecontrollersを用いる">方法2. WKInterfaceController.reloadRootPageControllersを用いる</h2>
 <p>この方法では，ページ遷移のみならず，表示するページの数や種類を変更できる．一方，すべてのページが再度読み込まれるため，遷移前のページ群と遷移後のページ群がユーザにとって別のものに見える点には注意が必要となる．</p>
-<h3 id="1-">1. 各ページのコントローラに名前をつける</h3>
+<h3 id="1-各ページのコントローラに名前をつける">1. 各ページのコントローラに名前をつける</h3>
 <p>例えば，storyboard上の各Controllerを選択し，Identifierに一意な名前をつける．</p>
-<h3 id="2-">2. 遷移元ページの遷移を発生させたい箇所でページのリロードを行う</h3>
+<h3 id="2-遷移元ページの遷移を発生させたい箇所でページのリロードを行う">2. 遷移元ページの遷移を発生させたい箇所でページのリロードを行う</h3>
 <p>withNamesに各ページのコントローラにつけた名前を0ページ目から順に並べた配列を渡し，pageIndexに遷移先のページ番号を渡す．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OriginPageController</span>: WKInterfaceController {
   <span style="color:#75715e">/*</span><span style="color:#75715e"> </span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e"> </span><span style="color:#75715e">*/</span>
@@ -213,7 +232,7 @@
     WKInterfaceController.reloadRootPageControllers(withNames: [<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">OriginPage</span><span style="color:#e6db74">&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">DestinationPage</span><span style="color:#e6db74">&#34;</span>], contexts: <span style="color:#66d9ef">nil</span>, orientation: .horizontal, pageIndex: <span style="color:#ae81ff">1</span>)
   }
 }
-</code></pre></div><h3 id="heading-2">最後に</h3>
+</code></pre></div><h3 id="最後に">最後に</h3>
 <p>ここで示したコード断片は何ら著作的でないものなので，パブリックドメインである．自己責任の限りご自由にお使いください．</p>
     </div>
     
@@ -249,7 +268,7 @@
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>© 2018-2020 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
     <p>
       <a href="/privacy-policy/">Privacy Policy</a>
       &nbsp;|&nbsp;
@@ -283,7 +302,7 @@
     "dateModified": "2018-08-02T19:31:24+09:00",
     
     
-    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    "license": "© 2018-2020 urushiyama | Powered by Hugo with HUCORE theme.",
     
     
     "author": {

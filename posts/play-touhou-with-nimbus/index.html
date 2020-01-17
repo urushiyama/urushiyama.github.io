@@ -181,10 +181,35 @@ iOS用に購入したMFiコントローラを使い道が少ない為に放置�
 <section class="message is-info">
   <div class="message-header">目次</div>
 <div class="message-body toc">
-  
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-1-必要なものを揃える">Step 1. 必要なものを揃える</a></li>
+    <li><a href="#step-2-ソフトウェアのインストール">Step 2. ソフトウェアのインストール</a>
+      <ul>
+        <li><a href="#macホストos側">Mac（ホストOS）側</a></li>
+        <li><a href="#windowsゲストos側">Windows（ゲストOS）側</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-3-各種設定">Step 3. 各種設定</a>
+      <ul>
+        <li><a href="#parallelsの設定">Parallelsの設定</a></li>
+        <li><a href="#macとmfiコントローラのペアリング">MacとMFiコントローラのペアリング</a></li>
+        <li><a href="#gamepadmenuの設定">GamepadMenuの設定</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-4-動作確認">Step 4. 動作確認</a></li>
+    <li><a href="#step-5-more-configuration">Step 5. More Configuration</a>
+      <ul>
+        <li><a href="#スキップ押下時にスティックを倒すとmac側でmisson-control等が発生することの対策">スキップ押下時にスティックを倒すとMac側でMisson Control等が発生することの対策</a></li>
+        <li><a href="#ボタン配置を変更する">ボタン配置を変更する</a></li>
+      </ul>
+    </li>
+    <li><a href="#hci研究への応用">HCI研究への応用</a></li>
+  </ul>
+</nav>
 </div>
 </section>
-<h2 id="step-1-">Step 1. 必要なものを揃える</h2>
+<h2 id="step-1-必要なものを揃える">Step 1. 必要なものを揃える</h2>
 <p>ハードウェア・ソフトウェアを持っていないのであれば，まずそれらを用意する．</p>
 <ul>
 <li>
@@ -206,8 +231,8 @@ Wineを用いた方法が検索すると多くヒットするが，Wineの配布
 <p>そもそもこの手法を取ろうと思うのはこのコントローラあるいはHORI等のMFiコントローラを持て余している人であろう．</p>
 </li>
 </ul>
-<h2 id="step-2-">Step 2. ソフトウェアのインストール</h2>
-<h3 id="macos">Mac（ホストOS）側</h3>
+<h2 id="step-2-ソフトウェアのインストール">Step 2. ソフトウェアのインストール</h2>
+<h3 id="macホストos側">Mac（ホストOS）側</h3>
 <ol>
 <li>
 <p>Parallels Desktopのインストール</p>
@@ -224,7 +249,7 @@ ZIPファイルをダウンロード・展開し，GamepadMenu.appをアプリ�
 Gatekeeperによる警告が表示される場合は右クリック＞開くを選択すると強制的に実行することができる（MacOSのTips）．</p>
 </li>
 </ol>
-<h3 id="windowsos">Windows（ゲストOS）側</h3>
+<h3 id="windowsゲストos側">Windows（ゲストOS）側</h3>
 <ol>
 <li>
 <p>DirectXのインストール</p>
@@ -235,17 +260,17 @@ Gatekeeperによる警告が表示される場合は右クリック＞開くを�
 <p>東方風神録のインストール</p>
 </li>
 </ol>
-<h2 id="step-3-">Step 3. 各種設定</h2>
-<h3 id="parallels">Parallelsの設定</h3>
+<h2 id="step-3-各種設定">Step 3. 各種設定</h2>
+<h3 id="parallelsの設定">Parallelsの設定</h3>
 <p>Windows仮想端末をシャットダウンした上で，Windows仮想端末の設定を開き，
 ハードウェア＞グラフィック＞詳細設定＞3Dアクセラレーションのプルダウンメニューから
 &ldquo;DirectX 9&quot;を選択する．</p>
-<h3 id="macmfi">MacとMFiコントローラのペアリング</h3>
+<h3 id="macとmfiコントローラのペアリング">MacとMFiコントローラのペアリング</h3>
 <p>MacOSのシステム環境設定を開き，&ldquo;Bluetooth&quot;を選択する．
 MFiコントローラのボタン等を操作し（NimbusではBluetoothマークのついたボタンを長押しする）
 ペアリングモードを開始させると，しばらく後にMacのBluetooth環境設定画面内のリストに
 コントローラ名が表示されるので，その横にある「接続」ボタンをクリックして接続する．</p>
-<h3 id="gamepadmenu">GamepadMenuの設定</h3>
+<h3 id="gamepadmenuの設定">GamepadMenuの設定</h3>
 <p>GamepadMenu.appをFinderで右クリックし，「パッケージの内容を表示」を選択する．
 Contents＞Resources＞Presetsに移動し，Presetsフォルダ内に以下を&quot;Touhou.plist&quot;としてテキスト形式で保存する．</p>
 <div class="field">
@@ -293,7 +318,7 @@ Contents＞Resources＞Presetsに移動し，Presetsフォルダ内に以下を&
 	&lt;integer&gt;59&lt;/integer&gt;
 &lt;/dict&gt;
 &lt;/plist&gt;
-</code></pre><h2 id="step-4-">Step 4. 動作確認</h2>
+</code></pre><h2 id="step-4-動作確認">Step 4. 動作確認</h2>
 <ol>
 <li>MacとMFiコントローラを接続する</li>
 <li>GamepadMenu.appを開く</li>
@@ -306,7 +331,7 @@ Contents＞Resources＞Presetsに移動し，Presetsフォルダ内に以下を&
 Yボタン・L1トリガーで低速移動，Xボタン・L2トリガーでトランス（東方神霊廟），
 R2トリガー（+決定）でスキップができるようになっているはずである．</p>
 <h2 id="step-5-more-configuration">Step 5. More Configuration</h2>
-<h3 id="macmisson-control">スキップ押下時にスティックを倒すとMac側でMisson Control等が発生することの対策</h3>
+<h3 id="スキップ押下時にスティックを倒すとmac側でmisson-control等が発生することの対策">スキップ押下時にスティックを倒すとMac側でMisson Control等が発生することの対策</h3>
 <ul>
 <li>2018/5/12 追記</li>
 </ul>
@@ -322,7 +347,7 @@ MacOS側でキー入力が処理され，Misson ControlやMacOS上の
 この設定により，Ctrl入力がシステムショートカットに割り当てられているキーの組み合わせとして
 入力されたとしても，全てのキー入力がWindows仮装端末側に転送されるようになるため，
 前述の不都合が発生しなくなる．</p>
-<h3 id="heading">ボタン配置を変更する</h3>
+<h3 id="ボタン配置を変更する">ボタン配置を変更する</h3>
 <p>ボタン配置が気に入らない方向け．</p>
 <p>Touhou.plistは各ボタン・スティック・トリガーを表す<code>key</code>と，
 それが押されたときに入力されるCarbon Frameworkのイベント番号を表す<code>integer</code>
@@ -333,7 +358,7 @@ MacOS側でキー入力が処理され，Misson ControlやMacOS上の
 入れ替えることでボタン配置を入れ替えればよい．プログラマでなくとも，
 XcodeをMac App StoreからダウンロードしてXcodeでplistファイルをひらけば
 キーや値をGUIで編集することも可能である．</p>
-<h2 id="hci">HCI研究への応用</h2>
+<h2 id="hci研究への応用">HCI研究への応用</h2>
 <p>iOS端末でもMac端末でもMFiコントローラはペアリングできるため，趣味の範囲外にも，
 様々なOSで利用可能なゲームコントローラを用いた操作手法を提案するときにこの手法が適用できそうである．<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <section class="footnotes" role="doc-endnotes">
@@ -378,7 +403,7 @@ XcodeをMac App StoreからダウンロードしてXcodeでplistファイルを�
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>© 2018-2020 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
     <p>
       <a href="/privacy-policy/">Privacy Policy</a>
       &nbsp;|&nbsp;
@@ -412,7 +437,7 @@ XcodeをMac App StoreからダウンロードしてXcodeでplistファイルを�
     "dateModified": "2018-05-11T16:16:03+09:00",
     
     
-    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    "license": "© 2018-2020 urushiyama | Powered by Hugo with HUCORE theme.",
     
     
     "author": {

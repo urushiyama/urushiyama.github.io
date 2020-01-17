@@ -159,12 +159,18 @@
 <section class="message is-info">
   <div class="message-header">目次</div>
 <div class="message-body toc">
-  
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#safehtmlは何をしているのか">safeHTMLは何をしているのか</a></li>
+    <li><a href="#具体的にどうすべきか">具体的にどうすべきか</a></li>
+    <li><a href="#blackfridayの功罪">Blackfridayの功罪</a></li>
+  </ul>
+</nav>
 </div>
 </section>
-<h2 id="safehtml">safeHTMLは何をしているのか</h2>
+<h2 id="safehtmlは何をしているのか">safeHTMLは何をしているのか</h2>
 <p>Go言語は全くわからないが，<a href="https://github.com/gohugoio/hugo/blob/914cc85e22af2e6c28f24a5fc70de94e4b9f1b1b/tpl/safe/safe.go#L37-L41">ここら辺</a>がsafeHTMLの本体なんじゃないかと予想する．この関数を見た限りでは，safeHOGEは入力文字列をHOGEの文法としてパース処理しているようにみえる．ということは，<code>{{ .Params.Hoge | safeURL | safeHTML }}</code>という記述は<code>.params.Hoge</code>をURL文法であるという宣言で囲み，それをさらにHTML文法であるという宣言で囲んでいることになる．</p>
-<h2 id="heading">具体的にどうすべきか</h2>
+<h2 id="具体的にどうすべきか">具体的にどうすべきか</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:title&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Title }}&#34;</span>&gt;
 <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> or </span><span style="color:#75715e">--&gt;</span>
 &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">property</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:title&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Title | .safeHTML }}&#34;</span>&gt;
@@ -182,7 +188,7 @@
 <li>ただしMarkdownファイルで山カッコ (&lt;&gt;)やアンパサンド (&amp;)は<code>\</code>でエスケープ</li>
 </ol>
 <p>といったところだろうか．</p>
-<h2 id="blackfriday">Blackfridayの功罪</h2>
+<h2 id="blackfridayの功罪">Blackfridayの功罪</h2>
 <p>HugoのMarkdownパーサであるBlackfridayも，意図しない文字を出力する原因になりうる．
 Blackfridayはデフォルトで引用符や二重引用符を左右対応づけた文字に変換するのだが，このExtensionをdisableにする方法がわからなかった<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>．文章中に<code>'</code>や<code>&quot;</code>を表記する必要があるかと言われると微妙だが，わざわざインラインコードにする手間が発生するのも微妙である．
 また，3連ドット(<code>...</code>)も三点リーダ(&hellip;)に変えてしまう．深く考えなくとも綺麗に整形してくれるという利点と，入力文字が意図せずに変換されてしまうという欠点がBlackfridayには同居しているように思える．</p>
@@ -228,7 +234,7 @@ Blackfridayはデフォルトで引用符や二重引用符を左右対応づけ
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>© 2018-2020 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
     <p>
       <a href="/privacy-policy/">Privacy Policy</a>
       &nbsp;|&nbsp;
@@ -262,7 +268,7 @@ Blackfridayはデフォルトで引用符や二重引用符を左右対応づけ
     "dateModified": "2018-04-30T07:09:32+09:00",
     
     
-    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    "license": "© 2018-2020 urushiyama | Powered by Hugo with HUCORE theme.",
     
     
     "author": {

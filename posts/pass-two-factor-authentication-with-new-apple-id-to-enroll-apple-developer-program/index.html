@@ -162,10 +162,20 @@
 <section class="message is-info">
   <div class="message-header">目次</div>
 <div class="message-body toc">
-  
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#そもそも開発用にapple-idを新規作成する必要はあるか">そもそも開発用にApple IDを新規作成する必要はあるか？</a></li>
+    <li><a href="#前提">前提</a></li>
+    <li><a href="#step-1apple-developer-programの登録を進める">Step 1：Apple Developer Programの登録を進める</a></li>
+    <li><a href="#step-2新規作成したapple-idの2ステップ認証を有効化する">Step 2：新規作成したApple IDの「2ステップ認証」を有効化する</a></li>
+    <li><a href="#step-32ステップ認証を2ファクタ認証に昇格する">Step 3：「2ステップ認証」を「2ファクタ認証」に昇格する</a></li>
+    <li><a href="#step-4apple-developer-programへの登録を再開する">Step 4：Apple Developer Programへの登録を再開する</a></li>
+    <li><a href="#最後に">最後に</a></li>
+  </ul>
+</nav>
 </div>
 </section>
-<h2 id="apple-id">そもそも開発用にApple IDを新規作成する必要はあるか？</h2>
+<h2 id="そもそも開発用にapple-idを新規作成する必要はあるか">そもそも開発用にApple IDを新規作成する必要はあるか？</h2>
 <p>普段使っているデバイスでプライマリアカウントとしてサインインしているApple IDをそのまま用いる場合は，この手順は不要である．
 代わりに，普段使っているデバイスから<a href="https://support.apple.com/ja-jp/HT204915">2ファクタ認証をオンにする</a>．</p>
 <p>ただし，開発用にApple IDを新規作成する動機がいくつか挙げられる：</p>
@@ -173,7 +183,7 @@
 <li>普段使っているアカウントは日本語だが，開発用は英語にしたい</li>
 <li><s>やばいアプリを提出して</s>アカウントが凍結される場合のリスクを最小限に抑えたい</li>
 </ul>
-<h2 id="heading">前提</h2>
+<h2 id="前提">前提</h2>
 <p>以下では，次の状況を前提とする：</p>
 <ul>
 <li>新規作成したApple IDがあること</li>
@@ -184,10 +194,10 @@
 </li>
 <li>iPhoneなど，SMSメッセージを受信できる端末（以下，SMS受信端末）があること</li>
 </ul>
-<h2 id="step-1apple-developer-program">Step 1：Apple Developer Programの登録を進める</h2>
+<h2 id="step-1apple-developer-programの登録を進める">Step 1：Apple Developer Programの登録を進める</h2>
 <p>Apple Developer Programの「登録」/ &ldquo;Enroll&quot;を選択し，新規作成したApple IDで登録作業を進める．
 &ldquo;Two-factor authentication is required&quot;といった趣旨のエラーメッセージが表示されるところまで進める．</p>
-<h2 id="step-2apple-id2">Step 2：新規作成したApple IDの「2ステップ認証」を有効化する</h2>
+<h2 id="step-2新規作成したapple-idの2ステップ認証を有効化する">Step 2：新規作成したApple IDの「2ステップ認証」を有効化する</h2>
 <ul>
 <li>「2ファクタ認証」ではなく，「2 <strong>ステップ</strong> 認証」を有効化する</li>
 </ul>
@@ -202,7 +212,7 @@
 </ol>
 <p>2ステップ認証を有効化した段階では，まだDeveloper登録を進めることができない．
 したがって，以下のステップで「2ステップ認証」を「2ファクタ認証」に昇格する必要がある．</p>
-<h2 id="step-322">Step 3：「2ステップ認証」を「2ファクタ認証」に昇格する</h2>
+<h2 id="step-32ステップ認証を2ファクタ認証に昇格する">Step 3：「2ステップ認証」を「2ファクタ認証」に昇格する</h2>
 <ul>
 <li>2ファクタ認証用端末として，ここではMac端末を用いる場合を説明する</li>
 <li>すでに新規作成したApple IDをサブアカウントとしてMac端末のインターネットアカウントに追加している場合は，一旦サインアウトする</li>
@@ -212,10 +222,10 @@
 <li>ウィンドウ右側の「iCloud」を選択し，新規作成したApple IDでサブアカウントとしてサインインする</li>
 <li>自動的に2ステップ認証が2ファクタ認証に昇格し，Mac端末が信頼できるデバイスに追加される</li>
 </ol>
-<h2 id="step-4apple-developer-program">Step 4：Apple Developer Programへの登録を再開する</h2>
+<h2 id="step-4apple-developer-programへの登録を再開する">Step 4：Apple Developer Programへの登録を再開する</h2>
 <p>ここまでの作業で，新規作成したApple IDの2ファクタ認証用端末による2ファクタ認証が有効化されるので，以降はDeveloper登録を進められるようになる．
 ブラウザを再読込みする，あるいは<a href="https://developer.apple.com/jp/programs/enroll/">ここ</a>からDeveloper登録を再開することで，（少なくとも）2ファクタ認証についてはエラーメッセージがでなくなるハズ！</p>
-<h2 id="heading-1">最後に</h2>
+<h2 id="最後に">最後に</h2>
 <ul>
 <li>2018/9/1にこの方法でDeveloper登録を申請， <s>9/2現在StatusはPendingであり， <strong>実際にこの方法で審査が通るかは未確認</strong></s> 9/3に申請が受理された．</li>
 <li>この方法がいつまで有効かは不明であり，やってみた結果として被るいかなる被害・不利益に関して一切の保証はできない．</li>
@@ -254,7 +264,7 @@
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>© 2018-2020 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
     <p>
       <a href="/privacy-policy/">Privacy Policy</a>
       &nbsp;|&nbsp;
@@ -288,7 +298,7 @@
     "dateModified": "2018-09-04T11:19:00+09:00",
     
     
-    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    "license": "© 2018-2020 urushiyama | Powered by Hugo with HUCORE theme.",
     
     
     "author": {

@@ -165,7 +165,7 @@
     <div class="content">
       <p>iOSでMFiコントローラにより操作可能なカスタムキーボードの作成を試みた．</p>
 <p>結果としてはうまくいかず挫折したが，作成時にハマった点を2つ述べる．</p>
-<h2 id="heading">動機</h2>
+<h2 id="動機">動機</h2>
 <p>iOSはMFiコントローラを接続して対応するゲームの操作に用いることができる．
 例えばMineCraft PEでも，MFiコントローラを接続してあたかもコンシューマ機のごとく
 プレイヤーの操作が可能である．</p>
@@ -176,8 +176,8 @@
 ゲームコントローラで文字入力を可能とするアプリを探してみたが，調べた限りでは見つからなかった．</p>
 <p>そこで，「無いならつくればいい」精神にのっとり，
 iOSでゲームコントローラにより操作可能なカスタムキーボードの作成を試みた．</p>
-<h2 id="heading-1">ハマった点</h2>
-<h3 id="sigquit">デバッガをつないだときのみ時折発生するSIGQUIT</h3>
+<h2 id="ハマった点">ハマった点</h2>
+<h3 id="デバッガをつないだときのみ時折発生するsigquit">デバッガをつないだときのみ時折発生するSIGQUIT</h3>
 <p>第一にハマった点は，デバッガを繋いだ状態で作成したカスタムキーボードを起動したときのみ，
 viewDidLoad関数内あるいはその前にSIGQUITが発生してカスタムキーボードが選択できなくなる
 ことが，条件不明で時折発生する点である．</p>
@@ -188,7 +188,7 @@ viewDidLoad関数内あるいはその前にSIGQUITが発生してカスタム�
 TargetにCustom Keyboard Extensionを追加した直後のものをビルドしてもこの現象が発生する．</p>
 <p>一方で，デバッガをつながずに実機上で作成したカスタムキーボードを選択した場合には
 この現象が全く発生しない．</p>
-<h3 id="custom-keyboard-extensiongamepad">Custom Keyboard Extension側のみGamepadのプロパティが読み取れない</h3>
+<h3 id="custom-keyboard-extension側のみgamepadのプロパティが読み取れない">Custom Keyboard Extension側のみGamepadのプロパティが読み取れない</h3>
 <p>今回カスタムキーボードの作成を諦めた原因は，
 Custom Keyboard Extension側のみGCGamepadのプロパティが読み取れない点である．</p>
 <p>正確には，プロパティには普通のアプリ同様のアクセスが可能である．
@@ -244,7 +244,7 @@ GameControllerの入力を取得不可にしているのではないだろうか
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>© 2018-2020 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
     <p>
       <a href="/privacy-policy/">Privacy Policy</a>
       &nbsp;|&nbsp;
@@ -278,7 +278,7 @@ GameControllerの入力を取得不可にしているのではないだろうか
     "dateModified": "2018-05-13T20:23:00+09:00",
     
     
-    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    "license": "© 2018-2020 urushiyama | Powered by Hugo with HUCORE theme.",
     
     
     "author": {

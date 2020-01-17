@@ -6,7 +6,7 @@
     <description>Recent content in Screen Extension on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <copyright>&amp;copy; 2018-2020 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
     <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/tags/screen-extension/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <pubDate>Mon, 26 Aug 2019 00:00:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2019proceedings/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;概要&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
 &lt;p&gt;スマートフォンと接続されたディスプレイにコンテンツを表示させる手法として，ミラーリングとキャスティングがある．
 ミラーリングでは，ディスプレイ上にスマートフォンの画面に表示されるコンテンツのみが表示され，キャスティングでは，スマートフォン上のみに専用のGUIが表示されるためディスプレイを見ながらのスマートフォン上での操作に困難が伴う．
 我々は，ディスプレイを見ながらのスマートフォン上での操作を可能にし，かつディスプレイ全域にてコンテンツを閲覧可能にする，外部ディスプレイを用いたスマートフォンの画面拡張手法を提案する．
