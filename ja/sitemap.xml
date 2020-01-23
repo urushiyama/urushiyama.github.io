@@ -3,6 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://urushiyama.github.io/tags/annual-self-classification-report/</loc>
+    <lastmod>2020-01-23T10:14:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/posts/annual-self-classification-report-2019/</loc>
+    <lastmod>2020-01-23T10:14:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/posts/</loc>
+    <lastmod>2020-01-23T10:14:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/</loc>
+    <lastmod>2020-01-23T10:14:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/</loc>
+    <lastmod>2020-01-23T10:14:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</loc>
+    <lastmod>2020-01-23T10:14:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/categories/archival/</loc>
     <lastmod>2019-12-11T15:20:00+09:00</lastmod>
     <xhtml:link
@@ -69,21 +119,6 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://urushiyama.github.io/publications/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/tags/</loc>
-    <lastmod>2019-12-11T15:20:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/tags/"
                 />
   </url>
   
@@ -283,21 +318,6 @@
   </url>
   
   <url>
-    <loc>https://urushiyama.github.io/posts/</loc>
-    <lastmod>2019-09-24T17:31:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/posts/"
-                />
-  </url>
-  
-  <url>
     <loc>https://urushiyama.github.io/publications/peer-reviewed-international-poster/asianchi2019/</loc>
     <lastmod>2019-03-29T09:30:00+09:00</lastmod>
     <xhtml:link
@@ -335,11 +355,6 @@
   <url>
     <loc>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2018proceedings/</loc>
     <lastmod>2018-09-27T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/</loc>
-    <lastmod>2018-09-04T11:19:00+09:00</lastmod>
   </url>
   
   <url>
