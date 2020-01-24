@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2020 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Thu, 23 Jan 2020 10:14:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jan 2020 13:50:00 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>booktabs</title>
+      <link>https://urushiyama.github.io/tags/booktabs/</link>
+      <pubDate>Fri, 24 Jan 2020 13:50:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/booktabs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LaTeX</title>
+      <link>https://urushiyama.github.io/tags/latex/</link>
+      <pubDate>Fri, 24 Jan 2020 13:50:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>longtable</title>
+      <link>https://urushiyama.github.io/tags/longtable/</link>
+      <pubDate>Fri, 24 Jan 2020 13:50:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/longtable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>備忘録</title>
+      <link>https://urushiyama.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</link>
+      <pubDate>Fri, 24 Jan 2020 13:50:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Annual Self-Classification Report</title>
@@ -27,15 +63,6 @@
       <pubDate>Thu, 23 Jan 2020 10:14:00 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>備忘録</title>
-      <link>https://urushiyama.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</link>
-      <pubDate>Thu, 23 Jan 2020 10:14:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</guid>
       <description></description>
     </item>
     

@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>LaTeXのlongtable環境内でmidruleを使うときにはrelaxしよう</title>
+      <link>https://urushiyama.github.io/posts/be-relax-when-you-use-midrule-in-longtable-latex/</link>
+      <pubDate>Fri, 24 Jan 2020 13:50:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/posts/be-relax-when-you-use-midrule-in-longtable-latex/</guid>
+      <description>&lt;p&gt;結論から先に述べると，longtable環境内でmidruleを使うときには&lt;code&gt;\midrule\relax&lt;/code&gt;とすべき．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Annual Self-Classification Reportを提出した（2019年度）</title>
       <link>https://urushiyama.github.io/posts/annual-self-classification-report-2019/</link>
       <pubDate>Thu, 23 Jan 2020 10:14:00 +0900</pubDate>

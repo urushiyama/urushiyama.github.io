@@ -14,22 +14,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
-<meta content='アプリ開発, Annual Self-Classification Report' name="keywords">
+<meta content='LaTeX, longtable, booktabs, midrule, relax' name="keywords">
 <meta content="Yuta Urushiyama" name="author">
-<meta content='httpsをアプリで使っていると提出が求められるAnnual Self-Classification Reportを実際に提出したので，そのログを残しておく．
+<meta content='結論から先に述べると，longtable環境内でmidruleを使うときには\midrule\relaxとすべき．
 ...' name="description">
 
 <meta name="twitter:card" content="summary">
 
 <meta property="og:site_name" content="urushiyamaのさまつごと">
-<meta property="og:title" content='Annual Self-Classification Reportを提出した（2019年度） - urushiyamaのさまつごと'>
-<meta property="og:url" content="/posts/annual-self-classification-report-2019/">
-<meta property="og:description" content='httpsをアプリで使っていると提出が求められるAnnual Self-Classification Reportを実際に提出したので，そのログを残しておく．
+<meta property="og:title" content='LaTeXのlongtable環境内でmidruleを使うときにはrelaxしよう - urushiyamaのさまつごと'>
+<meta property="og:url" content="/posts/be-relax-when-you-use-midrule-in-longtable-latex/">
+<meta property="og:description" content='結論から先に述べると，longtable環境内でmidruleを使うときには\midrule\relaxとすべき．
 ...'>
 <meta property="og:type" content='article'>
 
 
-<title>Annual Self-Classification Reportを提出した（2019年度） - urushiyamaのさまつごと</title>
+<title>LaTeXのlongtable環境内でmidruleを使うときにはrelaxしよう - urushiyamaのさまつごと</title>
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -128,7 +128,7 @@
       <li class="is-active">
         <a href="#" aria-current="page">
           
-          Annual Self-Classification Reportを提出した（2019年度）
+          LaTeXのlongtable環境内でmidruleを使うときにはrelaxしよう
           
         </a>
       </li>
@@ -137,22 +137,25 @@
 </div>
 
   <div class="container">
-    <h1 class="title">Annual Self-Classification Reportを提出した（2019年度）</h1>
+    <h1 class="title">LaTeXのlongtable環境内でmidruleを使うときにはrelaxしよう</h1>
     <h2 class="subtitle is-6">
       
-        January 23, 2020 by Yuta Urushiyama
+        January 24, 2020 by Yuta Urushiyama
       
     </h2>
     
       <div class="tags">
     
-        <a class="tag is-rounded" href="/tags/%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA">アプリ開発</a>
+        <a class="tag is-rounded" href="/tags/latex">LaTeX</a>
 
     
         <a class="tag is-rounded" href="/tags/%E5%82%99%E5%BF%98%E9%8C%B2">備忘録</a>
 
     
-        <a class="tag is-rounded" href="/tags/annual-self-classification-report">Annual Self-Classification Report</a>
+        <a class="tag is-rounded" href="/tags/longtable">longtable</a>
+
+    
+        <a class="tag is-rounded" href="/tags/booktabs">booktabs</a>
 
     
 </div>
@@ -161,46 +164,62 @@
     
 
     <div class="content">
-      <p>httpsをアプリで使っていると提出が求められるAnnual Self-Classification Reportを実際に提出したので，そのログを残しておく．</p>
+      <p>結論から先に述べると，longtable環境内でmidruleを使うときには<code>\midrule\relax</code>とすべき．</p>
 <section class="message is-info">
   <div class="message-header">目次</div>
 <div class="message-body toc">
   <nav id="TableOfContents">
   <ul>
     <li><a href="#参考文献">参考文献</a></li>
-    <li><a href="#20200123-提出">2020/01/23 提出</a></li>
+    <li><a href="#きっかけ">きっかけ</a></li>
+    <li><a href="#原因と対策">原因と対策</a></li>
+    <li><a href="#あとがき">あとがき</a></li>
   </ul>
 </nav>
 </div>
 </section>
 <h2 id="参考文献">参考文献</h2>
 <ul>
-<li><a href="https://stackoverflow.com/questions/48462206/annual-self-classification-report">ios - Annual Self-Classification Report - Stack Overflow</a></li>
-<li><a href="https://blog.hakoniwa.net/archives/1537">アプリの公開に伴う年次自己番号分類報告の提出について – しろログ</a></li>
+<li><a href="https://tex.stackexchange.com/questions/228755/undefined-control-sequence-on-left-parenthesis-after-midrule-in-longtable">booktabs - &ldquo;Undefined control sequence&rdquo; on left parenthesis after midrule in longtable - TeX - LaTeX Stack Exchange</a></li>
+<li><a href="https://www.ctan.org/pkg/booktabs">CTAN: Package booktabs</a></li>
 </ul>
-<h2 id="20200123-提出">2020/01/23 提出</h2>
-<p>以下のようなメールを<a href="mailto:crypt-supp8@bis.doc.gov,enc@nsa.gov?subject=Annual%20Self-Classification%20Report%20Submission&amp;body=Dear%20BIS%20%26%20ENC%20Encryption%20Request%20Coordinator%2C%0D%0A%0D%0AI%E2%80%99m%20a%20developer%20of%20apps%20available%20from%20%24%7BAPP_DISTRIBUTOR%7D%2C%20which%20use%20only%20https%20encryption.%0D%0AHence%20I%20want%20to%20submit%20the%20annual%20self-classification%20report.%0D%0APlease%20check%20and%20accept%20the%20attached%20CSV%20file.%0D%0A%0D%0ASincerely%20yours%2C%0D%0A%0D%0A%24%7BFULL_NAME%7D">BISとENC Encryption Request Coordinator</a> 宛に送った．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Dear BIS &amp; ENC Encryption Request Coordinator,
-
-I’m a developer of apps available from Mac App Store, which use only https encryption.
-Hence I want to submit the annual self-classification report.
-Please check and accept the attached CSV file.
-
-Sincerely yours,
-
-<span style="color:#e6db74">${</span>FULL_NAME<span style="color:#e6db74">}</span>
-</code></pre></div><p>また，添付ファイルとして以下のようなCSVファイルを送った．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">PRODUCT NAME,MODEL NUMBER,MANUFACTURER,ECCN,AUTHORIZATION TYPE,ITEM TYPE,SUBMITTER NAME,TELEPHONE NUMBER,E-MAIL ADDRESS,MAILING ADDRESS, NON-U.S. COMPONENTS,NON-U.S. MANUFACTURING LOCATIONS
-<span style="color:#e6db74">${</span>APP_NAME<span style="color:#e6db74">}</span>,<span style="color:#e6db74">${</span>APP_IDENTIFIER<span style="color:#e6db74">}</span>,SELF,5D992,MMKT,Mobility and mobile applications n.e.s.,<span style="color:#e6db74">${</span>FULL_NAME<span style="color:#e6db74">}</span>,<span style="color:#f92672">(</span>+81<span style="color:#f92672">)</span>-<span style="color:#e6db74">${</span>PHONE_NUMBER<span style="color:#e6db74">}</span>,<span style="color:#e6db74">${</span>MAIL_ADDRESS<span style="color:#e6db74">}</span>,<span style="color:#e6db74">${</span>ADDRESS<span style="color:#e6db74">}</span>,NO,<span style="color:#e6db74">${</span>PREFECTURE<span style="color:#e6db74">}</span> Japan
-<span style="color:#e6db74">${</span>ANOTHER_APP_NAME<span style="color:#e6db74">}</span>,<span style="color:#e6db74">${</span>ANOTHER_APP_IDENTIFIER<span style="color:#e6db74">}</span>,SELF,5D992,MMKT,Mobility and mobile applications n.e.s.,<span style="color:#e6db74">${</span>FULL_NAME<span style="color:#e6db74">}</span>,<span style="color:#f92672">(</span>+81<span style="color:#f92672">)</span>-<span style="color:#e6db74">${</span>PHONE_NUMBER<span style="color:#e6db74">}</span>,<span style="color:#e6db74">${</span>MAIL_ADDRESS<span style="color:#e6db74">}</span>,<span style="color:#e6db74">${</span>ADDRESS<span style="color:#e6db74">}</span>,NO,<span style="color:#e6db74">${</span>PREFECTURE<span style="color:#e6db74">}</span> Japan
-</code></pre></div><p><code>${APP_IDENTIFIER}</code>にはApp Storeに登録する際のApp IDを記入した．</p>
+<h2 id="きっかけ">きっかけ</h2>
+<p>TA業務のためにJupyter NotebookファイルのPDF変換スクリプトを<code>nbconvert</code>コマンドを利用する形で書いているのだが，中間出力のLaTeXファイルのタイプセットがエラーになる事例があった．
+&ldquo;Undefined control sequence&quot;エラーが発生しており，エラー箇所は下記の3行目であった．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\begin</span>{longtable}[]{@{}ll@{}}
+<span style="color:#66d9ef">\toprule</span>
+(a) &amp; (b) <span style="color:#66d9ef">\tabularnewline</span>
+<span style="color:#66d9ef">\midrule</span>
+<span style="color:#75715e">% :
+</span><span style="color:#75715e"></span><span style="color:#75715e">% :
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\end</span>
+</code></pre></div><h2 id="原因と対策">原因と対策</h2>
+<p><a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">参考文献</a>のStack Overflowによると，<code>booktabs</code>パッケージが丸括弧をオプションの指定に用いているため，表の中身に丸括弧が含まれると上記エラーを吐く,
+とのことだった．
+CTANにて<code>booktabs</code>パッケージのドキュメントを確認したところ，<code>\cmidrule</code>のオプション指定に丸括弧を用いていることがわかった．
+<code>\toprule</code>や<code>\midrule</code>にはオプション指定のために丸括弧を用いていないが，何かしら実装に問題があるのだろう．</p>
+<p>「表の中には丸括弧を使わない」とすれば全く問題ないものの，Jupyter Notebookファイルを作成するのはTAがやることではなく，教員がテンプレートを作成して受講生が記入するので，記述方法を矯正することは困難である．
+そこで，<a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">参考文献</a>のStack Overflowにならい，<code>nbconvert</code>コマンドが出力するLaTeXファイルを<code>sed</code>のパイプを通して修正することにした．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">nbconvert ... <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    | sed -e <span style="color:#e6db74">&#39;s/\\toprule/\\toprule\relax/g&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    | sed -e <span style="color:#e6db74">&#39;s/\\midrule/\\midrule\relax/g&#39;</span>
+</code></pre></div><p>具体的には，<code>\toprule</code>および<code>\midrule</code>のあとに続けて<code>\relax</code>をつけることにより，<code>booktabs</code>パッケージの丸括弧を定義する環境から続く表の中身を切り離している．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\begin</span>{longtable}[]{@{}ll@{}}
+<span style="color:#66d9ef">\toprule</span><span style="color:#66d9ef">\relax</span>
+(a) &amp; (b) <span style="color:#66d9ef">\tabularnewline</span>
+<span style="color:#66d9ef">\midrule</span><span style="color:#66d9ef">\relax</span>
+<span style="color:#75715e">% :
+</span><span style="color:#75715e"></span><span style="color:#75715e">% :
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\end</span>
+</code></pre></div><h2 id="あとがき">あとがき</h2>
+<p><code>nbconvert</code>コマンドはPandocを介して変換しているので，Pandocでも同様の問題が発生する可能性がある．</p>
     </div>
     
-    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fannual-self-classification-report-2019%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
-<a class="button is-white" href="https://plus.google.com/share?url=%2fposts%2fannual-self-classification-report-2019%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
-<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fposts%2fannual-self-classification-report-2019%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
-<a class="button is-white" href="https://twitter.com/home?status=Annual%20Self-Classification%20Report%e3%82%92%e6%8f%90%e5%87%ba%e3%81%97%e3%81%9f%ef%bc%882019%e5%b9%b4%e5%ba%a6%ef%bc%89 - %2fposts%2fannual-self-classification-report-2019%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
-<a class="button is-white" href="http://www.reddit.com/submit?url=%2fposts%2fannual-self-classification-report-2019%2f&title=Annual%20Self-Classification%20Report%e3%82%92%e6%8f%90%e5%87%ba%e3%81%97%e3%81%9f%ef%bc%882019%e5%b9%b4%e5%ba%a6%ef%bc%89" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fbe-relax-when-you-use-midrule-in-longtable-latex%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=%2fposts%2fbe-relax-when-you-use-midrule-in-longtable-latex%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fposts%2fbe-relax-when-you-use-midrule-in-longtable-latex%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=LaTeX%e3%81%aelongtable%e7%92%b0%e5%a2%83%e5%86%85%e3%81%a7midrule%e3%82%92%e4%bd%bf%e3%81%86%e3%81%a8%e3%81%8d%e3%81%ab%e3%81%afrelax%e3%81%97%e3%82%88%e3%81%86 - %2fposts%2fbe-relax-when-you-use-midrule-in-longtable-latex%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=%2fposts%2fbe-relax-when-you-use-midrule-in-longtable-latex%2f&title=LaTeX%e3%81%aelongtable%e7%92%b0%e5%a2%83%e5%86%85%e3%81%a7midrule%e3%82%92%e4%bd%bf%e3%81%86%e3%81%a8%e3%81%8d%e3%81%ab%e3%81%afrelax%e3%81%97%e3%82%88%e3%81%86" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
 
 </div>
 
@@ -213,10 +232,10 @@ Sincerely yours,
     <div class="content">
       <nav class="pagination is-centered" role="navigation">
         
-        <a href="/posts/hugo-extract-contents-according-to-front-matter/" class="pagination-previous">Prev: Front Matterに基づい …</a>
+        <a href="/posts/annual-self-classification-report-2019/" class="pagination-previous">Prev: Annual …</a>
         
         
-        <a href="/posts/be-relax-when-you-use-midrule-in-longtable-latex/" class="pagination-next">Next: LaTeXのlongtable環 …</a>
+        <a href="" class="pagination-next" disabled>No Next Page</a>
         
       </nav>
     </div>
@@ -243,23 +262,23 @@ Sincerely yours,
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "@id": "https://urushiyama.github.io/posts/annual-self-classification-report-2019/",
-    "headline": "Annual Self-Classification Reportを提出した（2019年度）",
+    "@id": "https://urushiyama.github.io/posts/be-relax-when-you-use-midrule-in-longtable-latex/",
+    "headline": "LaTeXのlongtable環境内でmidruleを使うときにはrelaxしよう",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://urushiyama.github.io/posts/annual-self-classification-report-2019/"
+      "@id": "https://urushiyama.github.io/posts/be-relax-when-you-use-midrule-in-longtable-latex/"
     },
     
     "genre": "posts",
     
-    "keywords": "アプリ開発, 備忘録, Annual Self-Classification Report",
+    "keywords": "LaTeX, 備忘録, longtable, booktabs",
     
-    "url": "https://urushiyama.github.io/posts/annual-self-classification-report-2019/",
+    "url": "https://urushiyama.github.io/posts/be-relax-when-you-use-midrule-in-longtable-latex/",
     
-    "datePublished": "2020-01-23T10:14:00+09:00",
+    "datePublished": "2020-01-24T13:50:00+09:00",
     
     
-    "dateModified": "2020-01-23T10:14:00+09:00",
+    "dateModified": "2020-01-24T13:50:00+09:00",
     
     
     "license": "© 2018-2020 urushiyama | Powered by Hugo with HUCORE theme.",
@@ -280,7 +299,7 @@ Sincerely yours,
       }
     },
     
-    "description": "httpsをアプリで使っていると提出が求められるAnnual Self-Classification Reportを実際に提出したので，そのログを残しておく．"
+    "description": "結論から先に述べると，longtable環境内でmidruleを使うときには\\midrule\\relaxとすべき．"
   },
   {
     "@context": "http://schema.org",
@@ -304,8 +323,8 @@ Sincerely yours,
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https://urushiyama.github.io/posts/annual-self-classification-report-2019/",
-          "name": "Annual Self-Classification Reportを提出した（2019年度）"
+          "@id": "https://urushiyama.github.io/posts/be-relax-when-you-use-midrule-in-longtable-latex/",
+          "name": "LaTeXのlongtable環境内でmidruleを使うときにはrelaxしよう"
         }
       }
     ]

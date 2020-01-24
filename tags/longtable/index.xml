@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>備忘録 on urushiyamaのさまつごと</title>
-    <link>https://urushiyama.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</link>
-    <description>Recent content in 備忘録 on urushiyamaのさまつごと</description>
+    <title>longtable on urushiyamaのさまつごと</title>
+    <link>https://urushiyama.github.io/tags/longtable/</link>
+    <description>Recent content in longtable on urushiyamaのさまつごと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2020 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
     <lastBuildDate>Fri, 24 Jan 2020 13:50:00 +0900</lastBuildDate>
     
-	<atom:link href="https://urushiyama.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://urushiyama.github.io/tags/longtable/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       
       <guid>https://urushiyama.github.io/posts/be-relax-when-you-use-midrule-in-longtable-latex/</guid>
       <description>&lt;p&gt;結論から先に述べると，longtable環境内でmidruleを使うときには&lt;code&gt;\midrule\relax&lt;/code&gt;とすべき．&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Annual Self-Classification Reportを提出した（2019年度）</title>
-      <link>https://urushiyama.github.io/posts/annual-self-classification-report-2019/</link>
-      <pubDate>Thu, 23 Jan 2020 10:14:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/posts/annual-self-classification-report-2019/</guid>
-      <description>&lt;p&gt;httpsをアプリで使っていると提出が求められるAnnual Self-Classification Reportを実際に提出したので，そのログを残しておく．&lt;/p&gt;</description>
     </item>
     
   </channel>
