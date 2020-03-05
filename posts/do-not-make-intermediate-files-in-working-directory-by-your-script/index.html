@@ -1,0 +1,396 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja" class="has-navbar-fixed-top">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='スクリプト, shell script, ファイル同期, 一時ファイル' name="keywords">
+<meta content="Yuta Urushiyama" name="author">
+<meta content='プログラムの知識が多少は身についてくると，必要なときにチョチョイとスクリプトを書くことができるようになる． そのため，個人所有のPC上でも繰り返しの作業を自動化するためにスクリプトを書く場合が生じる． しかし，元来にしてスクリプトの世界はその入口の広さに見合わないほど奥深いものである． そしてそこには，個人所有のPC特有の注意点すら存在するのである．
+本稿では，筆者が実際に体験した「お手軽に書いた自前スクリプト」を個人所有のPC上で動かす恐ろしさを後人のために記す．
+...' name="description">
+
+<meta name="twitter:card" content="summary">
+
+<meta property="og:site_name" content="urushiyamaのさまつごと">
+<meta property="og:title" content='スクリプトを書くときには中間ファイルを作業ディレクトリに作ってはいけない - urushiyamaのさまつごと'>
+<meta property="og:url" content="/posts/do-not-make-intermediate-files-in-working-directory-by-your-script/">
+<meta property="og:description" content='プログラムの知識が多少は身についてくると，必要なときにチョチョイとスクリプトを書くことができるようになる． そのため，個人所有のPC上でも繰り返しの作業を自動化するためにスクリプトを書く場合が生じる． しかし，元来にしてスクリプトの世界はその入口の広さに見合わないほど奥深いものである． そしてそこには，個人所有のPC特有の注意点すら存在するのである．
+本稿では，筆者が実際に体験した「お手軽に書いた自前スクリプト」を個人所有のPC上で動かす恐ろしさを後人のために記す．
+...'>
+<meta property="og:type" content='article'>
+
+
+<title>スクリプトを書くときには中間ファイルを作業ディレクトリに作ってはいけない - urushiyamaのさまつごと</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow.min.css">
+
+
+<meta name="hugo:section" content="posts"/>
+<meta name="hugo:type" content="posts"/>
+</head>
+
+<body>
+<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      
+      <a class="navbar-item" href="https://urushiyama.github.io/"><span class="title is-4">urushiyamaのさまつごと</span></a>
+      
+      
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://twitter.com/YUrushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+      
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/publications">
+          Publications
+        </a>
+        
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/projects">
+          Projects
+        </a>
+        
+        
+        <a class="navbar-item has-background-light" href="https://urushiyama.github.io/posts">
+          Posts
+        </a>
+        
+      
+      </div>
+      <div class="navbar-end">
+        
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+        <a class="navbar-item is-hidden-mobile" href="https://twitter.com/YUrushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-twitter"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+  <nav class="breadcrumb is-small" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="https://urushiyama.github.io/">urushiyamaのさまつごと</a></li>
+      
+      <li><a href="https://urushiyama.github.io/posts">Posts</a></li>
+      
+      <li class="is-active">
+        <a href="#" aria-current="page">
+          
+          スクリプトを書くときには中間ファイルを作業ディレクトリに作ってはいけない
+          
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  <div class="container">
+    <h1 class="title">スクリプトを書くときには中間ファイルを作業ディレクトリに作ってはいけない</h1>
+    <h2 class="subtitle is-6">
+      
+        March 5, 2020 by Yuta Urushiyama
+      
+    </h2>
+    
+      <div class="tags">
+    
+        <a class="tag is-rounded" href="/tags/%E5%82%99%E5%BF%98%E9%8C%B2">備忘録</a>
+
+    
+        <a class="tag is-rounded" href="/tags/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88">スクリプト</a>
+
+    
+</div>
+
+    
+    
+
+    <div class="content">
+      <p>プログラムの知識が多少は身についてくると，必要なときにチョチョイとスクリプトを書くことができるようになる．
+そのため，個人所有のPC上でも繰り返しの作業を自動化するためにスクリプトを書く場合が生じる．
+しかし，元来にしてスクリプトの世界はその入口の広さに見合わないほど奥深いものである．
+そしてそこには，個人所有のPC特有の注意点すら存在するのである．</p>
+<p>本稿では，筆者が実際に体験した「お手軽に書いた自前スクリプト」を個人所有のPC上で動かす恐ろしさを後人のために記す．</p>
+<section class="message is-info">
+  <div class="message-header">目次</div>
+<div class="message-body toc">
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#できごと">できごと</a></li>
+    <li><a href="#原因">原因</a></li>
+    <li><a href="#解決策">解決策</a></li>
+  </ul>
+</nav>
+</div>
+</section>
+<h2 id="できごと">できごと</h2>
+<p>2020年2月某日．</p>
+<p>筆者はTA業務の円滑化のために，多数のファイルをTeXを中間ファイルとしてPDFへと変換する作業を行っていた．<br>
+また，夜中寝ている間に変換作業が終わるように，シェルスクリプトを書いて変換を自動化していた．</p>
+<p>研究室へ向かい，変換したPDFファイル一式を他のTAと共有しようとしたときに問題が発覚した．<br>
+．．．PDFファイルのすべてが，USBメモリなどの別の場所にコピーできなくなっていたのである．</p>
+<p>もちろん，ファイルのパーミッションはすべて確認したが，正常に読み書きできる状態であったし，USBメモリの容量不足なんてこともなかった．</p>
+<p>「ドウシテ？」「ナンデ？」<br>
+狼狽する声が自分の周囲にしか存在しない虚空へと吸い込まれていった．</p>
+<p>幸いにしてPDFファイルはすべてiCloud Drive上にアップロードされていたため，そこからデータを受け渡すことができたものの，原因解明と復旧のためにその日の時間は虚無と化したのであった．</p>
+<h2 id="原因">原因</h2>
+<p>データのサルベージに役立ったiCloud Driveは命の恩人のようにみえる．
+しかし，その実はコピーできない問題を引き起こした張本人であった．</p>
+<p>自分が書いたシェルスクリプトは，変換のための中間ファイルを大量に作成し，変換後にそれらをすべて消去していた．
+その際に，iCloud Drive上に中間ファイル一式を保存していたため，今回の悲劇が起こったのである．</p>
+<p>iCloud Driveは手元のマシン側でファイルの生成，変更および削除を監視して，それら変更点をトランザクションとして保存し，順次サーバとの同期を取っている．
+そんな中で，もしも瞬時に大量のファイルが生成され削除されることが何度も実行されるとどうなるであろうか．
+iCloud Driveは大量のトランザクションを抱えることになり，それらの同期処理を確実に実行しようとする．
+しかし，ネットワークの帯域やiCloud Driveサーバの処理能力により，大量のトランザクション実行には時間がかかる．
+一方で，手元のマシン側に保存できるトランザクションにも限りがあるため，手元のマシン側ではトランザクション発生を抑える必要が生じる．
+結果として，ファイルのコピーや移動など新たにトランザクションが生じる動作が制限されたと考えられる．</p>
+<h2 id="解決策">解決策</h2>
+<p>今回の問題はクラウドと同期されたディレクトリ内部に一時ファイルを生成したことが原因である．
+したがって，一時ファイルを生成する先を同期されないディレクトリ内部に生成すれば回避できる．</p>
+<p>一時ファイルを生成する先として適切なディレクトリがUNIX/Linux系システムには存在する．
+それが，<code>/var/tmp/</code>ディレクトリである（似たディレクトリに<code>/tmp/</code>があるが，一部のシステムではスワップ領域として使うらしいので避けたほうがよい）．
+この中に中間ファイルを生成するようにスクリプトを書き換えれば良い．</p>
+<p>ただし，複数のジョブで同時にスクリプトを動かすことを考慮して中間ファイルが衝突しないように工夫する必要が生じる．
+その場合には<code>mktemp</code>コマンドを用いると良い．</p>
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fdo-not-make-intermediate-files-in-working-directory-by-your-script%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=%2fposts%2fdo-not-make-intermediate-files-in-working-directory-by-your-script%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fposts%2fdo-not-make-intermediate-files-in-working-directory-by-your-script%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/home?status=%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88%e3%82%92%e6%9b%b8%e3%81%8f%e3%81%a8%e3%81%8d%e3%81%ab%e3%81%af%e4%b8%ad%e9%96%93%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e4%bd%9c%e6%a5%ad%e3%83%87%e3%82%a3%e3%83%ac%e3%82%af%e3%83%88%e3%83%aa%e3%81%ab%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%af%e3%81%84%e3%81%91%e3%81%aa%e3%81%84 - %2fposts%2fdo-not-make-intermediate-files-in-working-directory-by-your-script%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=%2fposts%2fdo-not-make-intermediate-files-in-working-directory-by-your-script%2f&title=%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88%e3%82%92%e6%9b%b8%e3%81%8f%e3%81%a8%e3%81%8d%e3%81%ab%e3%81%af%e4%b8%ad%e9%96%93%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e4%bd%9c%e6%a5%ad%e3%83%87%e3%82%a3%e3%83%ac%e3%82%af%e3%83%88%e3%83%aa%e3%81%ab%e4%bd%9c%e3%81%a3%e3%81%a6%e3%81%af%e3%81%84%e3%81%91%e3%81%aa%e3%81%84" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="content">
+      <nav class="pagination is-centered" role="navigation">
+        
+        <a href="/posts/be-relax-when-you-use-midrule-in-longtable-latex/" class="pagination-previous">Prev: LaTeXのlongtable環 …</a>
+        
+        
+        <a href="" class="pagination-next" disabled>No Next Page</a>
+        
+      </nav>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>© 2018-2020 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/license/">LICENSE</a>
+    </p>
+  </div>
+</section>
+
+  
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://urushiyama.github.io/posts/do-not-make-intermediate-files-in-working-directory-by-your-script/",
+    "headline": "スクリプトを書くときには中間ファイルを作業ディレクトリに作ってはいけない",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://urushiyama.github.io/posts/do-not-make-intermediate-files-in-working-directory-by-your-script/"
+    },
+    
+    "genre": "posts",
+    
+    "keywords": "備忘録, スクリプト",
+    
+    "url": "https://urushiyama.github.io/posts/do-not-make-intermediate-files-in-working-directory-by-your-script/",
+    
+    "datePublished": "2020-03-05T10:00:00+09:00",
+    
+    
+    "dateModified": "2020-03-05T10:00:00+09:00",
+    
+    
+    "license": "© 2018-2020 urushiyama | Powered by Hugo with HUCORE theme.",
+    
+    
+    "author": {
+      "@type": "Person",
+      "@id": "https://urushiyama.github.io/#author"
+    },
+    
+    
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://urushiyama.github.io/#author",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://urushiyama.github.io/img/photo.png"
+      }
+    },
+    
+    "description": "プログラムの知識が多少は身についてくると，必要なときにチョチョイとスクリプトを書くことができるようになる． そのため，個人所有のPC上でも繰り返しの作業を自動化するためにスクリプトを書く場合が生じる． しかし，元来にしてスクリプトの世界はその入口の広さに見合わないほど奥深いものである． そしてそこには，個人所有のPC特有の注意点すら存在するのである．\n本稿では，筆者が実際に体験した「お手軽に書いた自前スクリプト」を個人所有のPC上で動かす恐ろしさを後人のために記す．"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://urushiyama.github.io/",
+          "name": "TOP"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://urushiyama.github.io/posts",
+          "name": "Posts"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://urushiyama.github.io/posts/do-not-make-intermediate-files-in-working-directory-by-your-script/",
+          "name": "スクリプトを書くときには中間ファイルを作業ディレクトリに作ってはいけない"
+        }
+      }
+    ]
+  }
+]
+</script>
+  
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/swift.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>

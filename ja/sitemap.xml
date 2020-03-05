@@ -3,6 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://urushiyama.github.io/posts/</loc>
+    <lastmod>2020-03-05T10:00:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/</loc>
+    <lastmod>2020-03-05T10:00:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/</loc>
+    <lastmod>2020-03-05T10:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/posts/do-not-make-intermediate-files-in-working-directory-by-your-script/</loc>
+    <lastmod>2020-03-05T10:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</loc>
+    <lastmod>2020-03-05T10:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/tags/booktabs/</loc>
     <lastmod>2020-01-24T13:50:00+09:00</lastmod>
   </url>
@@ -19,41 +64,6 @@
   
   <url>
     <loc>https://urushiyama.github.io/tags/longtable/</loc>
-    <lastmod>2020-01-24T13:50:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/posts/</loc>
-    <lastmod>2020-01-24T13:50:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/posts/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/tags/</loc>
-    <lastmod>2020-01-24T13:50:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</loc>
     <lastmod>2020-01-24T13:50:00+09:00</lastmod>
   </url>
   

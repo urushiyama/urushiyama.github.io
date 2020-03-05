@@ -193,19 +193,19 @@
 <p>おそらく一般的にはこちらの方法が用いられていると思う．この方法ではページ遷移の際に，ユーザのスワイプによるページ遷移と同様のアニメーションが発生する．そのため，ページ遷移の発生をユーザに意識させる場合に有効であろう．</p>
 <h3 id="1-遷移先ページのコントローラ自身をnotificationのオブザーバに登録する">1. 遷移先ページのコントローラ自身をNotificationのオブザーバに登録する</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DestinationPageController</span>: WKInterfaceController {
-  <span style="color:#75715e">/*</span><span style="color:#75715e"> </span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e"> </span><span style="color:#75715e">*/</span>
+  <span style="color:#75715e">/* ~~~ */</span>
   <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">awake</span>(withContext context: Any?) {
     <span style="color:#66d9ef">super</span>.awake(withContext: context)
     
-    <span style="color:#75715e">/*</span><span style="color:#75715e"> </span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e"> </span><span style="color:#75715e">*/</span>
+    <span style="color:#75715e">/* ~~~ */</span>
 
-    NotificationCenter.<span style="color:#66d9ef">default</span>.addObserver(<span style="color:#66d9ef">self</span>, selector: <span style="color:#66d9ef">#selector</span>(<span style="color:#66d9ef">self</span>.receiveMovePageNotification(<span style="color:#66d9ef">_</span>:)), name: Notification.Name(rawValue: <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">moveToDestinationPage</span><span style="color:#e6db74">&#34;</span>) , object: <span style="color:#66d9ef">nil</span>)
+    NotificationCenter.<span style="color:#66d9ef">default</span>.addObserver(<span style="color:#66d9ef">self</span>, selector: <span style="color:#66d9ef">#selector</span>(<span style="color:#66d9ef">self</span>.receiveMovePageNotification(<span style="color:#66d9ef">_</span>:)), name: Notification.Name(rawValue: <span style="color:#e6db74">&#34;moveToDestinationPage&#34;</span>) , object: <span style="color:#66d9ef">nil</span>)
   }
 }
 </code></pre></div><h3 id="2-遷移先ページのコントローラにbecomecurrentpageを発火するためのメソッドを追加する">2. 遷移先ページのコントローラにbecomeCurrentPageを発火するためのメソッドを追加する</h3>
 <p>本当はselectorに直接becomeCurrentPageをselectorとして登録したいのだが，selectorに登録するメソッドはただ1つの引数（NSNotification）を持たなければならないため，<code>self.becomeCurrentPage</code>を呼び出すメソッドを追加する．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DestinationPageController</span>: WKInterfaceController {
-  <span style="color:#75715e">/*</span><span style="color:#75715e"> </span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e"> </span><span style="color:#75715e">*/</span>
+  <span style="color:#75715e">/* ~~~ */</span>
   <span style="color:#66d9ef">@objc</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">receiveMovePageNotification</span>(<span style="color:#66d9ef">_</span> notification: Notification?) {
     <span style="color:#66d9ef">self</span>.becomeCurrentPage()
   }
@@ -213,9 +213,9 @@
 </code></pre></div><h3 id="3-遷移元ページの遷移を発生させたい箇所でnotificationをpostする">3. 遷移元ページの遷移を発生させたい箇所でNotificationをpostする</h3>
 <p>このときpostするNotification.Nameは，手順1で用いた値にする必要がある．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OriginPageController</span>: WKInterfaceController {
-  <span style="color:#75715e">/*</span><span style="color:#75715e"> </span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e"> </span><span style="color:#75715e">*/</span>
+  <span style="color:#75715e">/* ~~~ */</span>
   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">someActionOccurred</span>() {
-    NotificationCenter.<span style="color:#66d9ef">default</span>.post(name: Notification.Name(rawValue: <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">moveToDestinationPage</span><span style="color:#e6db74">&#34;</span>), object: <span style="color:#66d9ef">nil</span>)
+    NotificationCenter.<span style="color:#66d9ef">default</span>.post(name: Notification.Name(rawValue: <span style="color:#e6db74">&#34;moveToDestinationPage&#34;</span>), object: <span style="color:#66d9ef">nil</span>)
   }
 }
 </code></pre></div><h3 id="複数経路の遷移を実装する際の注意点">複数経路の遷移を実装する際の注意点</h3>
@@ -227,9 +227,9 @@
 <h3 id="2-遷移元ページの遷移を発生させたい箇所でページのリロードを行う">2. 遷移元ページの遷移を発生させたい箇所でページのリロードを行う</h3>
 <p>withNamesに各ページのコントローラにつけた名前を0ページ目から順に並べた配列を渡し，pageIndexに遷移先のページ番号を渡す．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OriginPageController</span>: WKInterfaceController {
-  <span style="color:#75715e">/*</span><span style="color:#75715e"> </span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e">~</span><span style="color:#75715e"> </span><span style="color:#75715e">*/</span>
+  <span style="color:#75715e">/* ~~~ */</span>
   <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">someActionOccurred</span>() {
-    WKInterfaceController.reloadRootPageControllers(withNames: [<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">OriginPage</span><span style="color:#e6db74">&#34;</span>,<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">DestinationPage</span><span style="color:#e6db74">&#34;</span>], contexts: <span style="color:#66d9ef">nil</span>, orientation: .horizontal, pageIndex: <span style="color:#ae81ff">1</span>)
+    WKInterfaceController.reloadRootPageControllers(withNames: [<span style="color:#e6db74">&#34;OriginPage&#34;</span>,<span style="color:#e6db74">&#34;DestinationPage&#34;</span>], contexts: <span style="color:#66d9ef">nil</span>, orientation: .horizontal, pageIndex: <span style="color:#ae81ff">1</span>)
   }
 }
 </code></pre></div><h3 id="最後に">最後に</h3>

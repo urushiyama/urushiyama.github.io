@@ -191,7 +191,7 @@
 (a) &amp; (b) <span style="color:#66d9ef">\tabularnewline</span>
 <span style="color:#66d9ef">\midrule</span>
 <span style="color:#75715e">% :
-</span><span style="color:#75715e"></span><span style="color:#75715e">% :
+</span><span style="color:#75715e">% :
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">\end</span>
 </code></pre></div><h2 id="原因と対策">原因と対策</h2>
 <p><a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">参考文献</a>のStack Overflowによると，<code>booktabs</code>パッケージが丸括弧をオプションの指定に用いているため，表の中身に丸括弧が含まれると上記エラーを吐く,
@@ -205,11 +205,11 @@ CTANにて<code>booktabs</code>パッケージのドキュメントを確認し�
 </span><span style="color:#ae81ff"></span>    | sed -e <span style="color:#e6db74">&#39;s/\\midrule/\\midrule\relax/g&#39;</span>
 </code></pre></div><p>具体的には，<code>\toprule</code>および<code>\midrule</code>のあとに続けて<code>\relax</code>をつけることにより，<code>booktabs</code>パッケージの丸括弧を定義する環境から続く表の中身を切り離している．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\begin</span>{longtable}[]{@{}ll@{}}
-<span style="color:#66d9ef">\toprule</span><span style="color:#66d9ef">\relax</span>
+<span style="color:#66d9ef">\toprule\relax</span>
 (a) &amp; (b) <span style="color:#66d9ef">\tabularnewline</span>
-<span style="color:#66d9ef">\midrule</span><span style="color:#66d9ef">\relax</span>
+<span style="color:#66d9ef">\midrule\relax</span>
 <span style="color:#75715e">% :
-</span><span style="color:#75715e"></span><span style="color:#75715e">% :
+</span><span style="color:#75715e">% :
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">\end</span>
 </code></pre></div><h2 id="あとがき">あとがき</h2>
 <p><code>nbconvert</code>コマンドはPandocを介して変換しているので，Pandocでも同様の問題が発生する可能性がある．</p>
@@ -235,7 +235,7 @@ CTANにて<code>booktabs</code>パッケージのドキュメントを確認し�
         <a href="/posts/annual-self-classification-report-2019/" class="pagination-previous">Prev: Annual …</a>
         
         
-        <a href="" class="pagination-next" disabled>No Next Page</a>
+        <a href="/posts/do-not-make-intermediate-files-in-working-directory-by-your-script/" class="pagination-next">Next: スクリプトを書くときには中間ファ …</a>
         
       </nav>
     </div>

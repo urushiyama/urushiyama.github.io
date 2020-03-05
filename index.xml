@@ -13,6 +13,19 @@
     
     
     <item>
+      <title>スクリプトを書くときには中間ファイルを作業ディレクトリに作ってはいけない</title>
+      <link>https://urushiyama.github.io/posts/do-not-make-intermediate-files-in-working-directory-by-your-script/</link>
+      <pubDate>Thu, 05 Mar 2020 10:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/posts/do-not-make-intermediate-files-in-working-directory-by-your-script/</guid>
+      <description>&lt;p&gt;プログラムの知識が多少は身についてくると，必要なときにチョチョイとスクリプトを書くことができるようになる．
+そのため，個人所有のPC上でも繰り返しの作業を自動化するためにスクリプトを書く場合が生じる．
+しかし，元来にしてスクリプトの世界はその入口の広さに見合わないほど奥深いものである．
+そしてそこには，個人所有のPC特有の注意点すら存在するのである．&lt;/p&gt;
+&lt;p&gt;本稿では，筆者が実際に体験した「お手軽に書いた自前スクリプト」を個人所有のPC上で動かす恐ろしさを後人のために記す．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>LaTeXのlongtable環境内でmidruleを使うときにはrelaxしよう</title>
       <link>https://urushiyama.github.io/posts/be-relax-when-you-use-midrule-in-longtable-latex/</link>
       <pubDate>Fri, 24 Jan 2020 13:50:00 +0900</pubDate>
@@ -246,7 +259,7 @@ iOS用に購入したMFiコントローラを使い道が少ない為に放置�
       <pubDate>Mon, 30 Apr 2018 02:37:25 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/posts/my-first-post/</guid>
-      <description>&lt;p&gt;研究室への配属が決まり，ポートフォリオ兼ブログがあると便利かな，と思うようになった．無料でホストでき，Githubのプロジェクトページが同一ドメインになるGithub Pagesでホストすることが好ましいと考え，静的サイト構築フレームワークを吟味した．&amp;ldquo;The world&#39;s fastest&amp;quot;という言葉に惹かれ，&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;で静的サイトを構築することにした．&lt;/p&gt;</description>
+      <description>&lt;p&gt;研究室への配属が決まり，ポートフォリオ兼ブログがあると便利かな，と思うようになった．無料でホストでき，Githubのプロジェクトページが同一ドメインになるGithub Pagesでホストすることが好ましいと考え，静的サイト構築フレームワークを吟味した．&amp;ldquo;The world&amp;rsquo;s fastest&amp;quot;という言葉に惹かれ，&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;で静的サイトを構築することにした．&lt;/p&gt;</description>
     </item>
     
   </channel>
