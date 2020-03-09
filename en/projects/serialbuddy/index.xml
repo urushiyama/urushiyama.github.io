@@ -6,7 +6,7 @@
     <description>Recent content in SerialBuddy on urushiyama&#39;s trivia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>&amp;copy; 2018-2019 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <copyright>&amp;copy; 2018-2020 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
     <lastBuildDate>Sat, 27 Apr 2019 19:44:32 +0900</lastBuildDate>
     
 	<atom:link href="https://urushiyama.github.io/en/projects/serialbuddy/index.xml" rel="self" type="application/rss+xml" />
@@ -23,7 +23,7 @@ NEW FEATURE：
  Enable to change serial communication library for more connectivity (available via Preferences window) Enable to limit/clear console  v1.1.0 Self-Configuration is often more ridiculous than omnipotent.
 NEW FEATURE:
  Automatically Detect the Baud Rate  FIXED:
- Displayed text &amp;amp; graph&#39;s filling color on the Analyzer An Issue that the Session Manager did not unlock controls after the peripheral was removed  v1.</description>
+ Displayed text &amp;amp; graph&amp;rsquo;s filling color on the Analyzer An Issue that the Session Manager did not unlock controls after the peripheral was removed  v1.</description>
     </item>
     
     <item>
@@ -56,11 +56,11 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
       <guid>https://urushiyama.github.io/en/projects/serialbuddy/support/</guid>
       <description> Please add the application name in your comment.  Anonymous questions, comments and requests about the app are welcome here:
 https://marshmallow-qa.com/yurushiyama?utm_medium=url_text&amp;amp;utm_source=promotion
-Alternatively, we accept Twitter&#39;s direct message (DM):
+Alternatively, we accept Twitter&amp;rsquo;s direct message (DM):
 https://twitter.com/YUrushiyama
 You can text me from the address below, but it may take a longer time to get the reply1：
 aswif10flis1ntkb [at] gmail.com
-  Please replace [at] to @.&amp;#8617;
+  Please replace [at] to @. &amp;#x21a9;&amp;#xfe0e;
    </description>
     </item>
     

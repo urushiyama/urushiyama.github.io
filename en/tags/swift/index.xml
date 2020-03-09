@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swift on urushiyama&#39;s trivia</title>
+    <link>https://urushiyama.github.io/en/tags/swift/</link>
+    <description>Recent content in Swift on urushiyama&#39;s trivia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2018-2020 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    <lastBuildDate>Thu, 16 Jan 2020 05:10:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://urushiyama.github.io/en/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PreviewDevice</title>
+      <link>https://urushiyama.github.io/en/projects/preview-device/</link>
+      <pubDate>Thu, 16 Jan 2020 05:10:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/en/projects/preview-device/</guid>
+      <description>&lt;p&gt;YUPreviewDevice.framework adds pre-defined preview devices for SwiftUI.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

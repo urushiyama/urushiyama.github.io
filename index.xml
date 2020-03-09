@@ -44,6 +44,15 @@
     </item>
     
     <item>
+      <title>PreviewDevice</title>
+      <link>https://urushiyama.github.io/projects/preview-device/</link>
+      <pubDate>Thu, 16 Jan 2020 05:10:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/projects/preview-device/</guid>
+      <description>&lt;p&gt;YUPreviewDevice.frameworkは，SwiftUIのプレビューに，定義済みデバイスを追加します．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>スマートフォンにおける押下圧によるタップの拡張のための予備調査（HCI185）</title>
       <link>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci185co/</link>
       <pubDate>Wed, 11 Dec 2019 15:20:00 +0900</pubDate>

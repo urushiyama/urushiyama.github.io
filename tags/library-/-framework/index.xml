@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Library / Framework on urushiyamaのさまつごと</title>
+    <link>https://urushiyama.github.io/tags/library-/-framework/</link>
+    <description>Recent content in Library / Framework on urushiyamaのさまつごと</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2018-2020 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
+    
+	<atom:link href="https://urushiyama.github.io/tags/library-/-framework/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PreviewDevice</title>
+      <link>https://urushiyama.github.io/projects/preview-device/</link>
+      <pubDate>Thu, 16 Jan 2020 05:10:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/projects/preview-device/</guid>
+      <description>&lt;p&gt;YUPreviewDevice.frameworkは，SwiftUIのプレビューに，定義済みデバイスを追加します．&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

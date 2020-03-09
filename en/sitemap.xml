@@ -3,6 +3,66 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://urushiyama.github.io/en/projects/preview-device/</loc>
+    <lastmod>2020-01-16T05:10:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/projects/preview-device/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/projects/preview-device/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/projects/</loc>
+    <lastmod>2020-01-16T05:10:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/projects/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/tags/swift/</loc>
+    <lastmod>2020-01-16T05:10:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/tags/swift/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/tags/swift/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/tags/</loc>
+    <lastmod>2020-01-16T05:10:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/tags/"
+                />
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/en/categories/archival/</loc>
     <lastmod>2019-08-24T22:45:00+09:00</lastmod>
     <xhtml:link
@@ -130,36 +190,6 @@
   <url>
     <loc>https://urushiyama.github.io/en/tags/productivity/</loc>
     <lastmod>2019-05-19T04:53:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/projects/</loc>
-    <lastmod>2019-05-19T04:53:06+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/projects/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/en/tags/</loc>
-    <lastmod>2019-05-19T04:53:06+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/tags/"
-                />
   </url>
   
   <url>
@@ -319,6 +349,20 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://urushiyama.github.io/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/en/tags/library-/-framework/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/tags/library-/-framework/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/tags/library-/-framework/"
                 />
   </url>
   

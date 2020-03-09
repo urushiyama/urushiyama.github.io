@@ -10,20 +10,20 @@
 
 <!DOCTYPE html>
 <html lang="ja" class="has-navbar-fixed-top">
-<head>
+<head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
 <meta content='自作キーボード, PCB, プリント基板, Kailh Low Profile (Choc) 対応, JIS配列' name="keywords">
 <meta content="Yuta Urushiyama" name="author">
-<meta content='目次 MJ65のレイアウトおよびキーマップ MJ65は異なるフットプリントを用いることにより6つのレイアウトをサポートしています． 理想的なレイア...' name="description">
+<meta content='目次 MJ65のレイアウトおよびキーマップ 各レイアウトのはんだ付け スペースキー エンターキー周辺 右下のキー周辺 各レイアウトの詳細 default split_space us_like 1app 1app_split 1app_us Extra Keys...' name="description">
 
 <meta name="twitter:card" content="summary">
 
 <meta property="og:site_name" content="urushiyamaのさまつごと">
 <meta property="og:title" content='MJ65 Layout - urushiyamaのさまつごと'>
 <meta property="og:url" content="/projects/mj65/layout/">
-<meta property="og:description" content='目次 MJ65のレイアウトおよびキーマップ MJ65は異なるフットプリントを用いることにより6つのレイアウトをサポートしています． 理想的なレイア...'>
+<meta property="og:description" content='目次 MJ65のレイアウトおよびキーマップ 各レイアウトのはんだ付け スペースキー エンターキー周辺 右下のキー周辺 各レイアウトの詳細 default split_space us_like 1app 1app_split 1app_us Extra Keys...'>
 <meta property="og:type" content='article'>
 
 
@@ -145,10 +145,32 @@
       <section class="message is-info">
   <div class="message-header">目次</div>
 <div class="message-body toc">
-  
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#mj65のレイアウトおよびキーマップ">MJ65のレイアウトおよびキーマップ</a></li>
+    <li><a href="#各レイアウトのはんだ付け">各レイアウトのはんだ付け</a>
+      <ul>
+        <li><a href="#スペースキー">スペースキー</a></li>
+        <li><a href="#エンターキー周辺">エンターキー周辺</a></li>
+        <li><a href="#右下のキー周辺">右下のキー周辺</a></li>
+      </ul>
+    </li>
+    <li><a href="#各レイアウトの詳細">各レイアウトの詳細</a>
+      <ul>
+        <li><a href="#default">default</a></li>
+        <li><a href="#split_space">split_space</a></li>
+        <li><a href="#us_like">us_like</a></li>
+        <li><a href="#1app">1app</a></li>
+        <li><a href="#1app_split">1app_split</a></li>
+        <li><a href="#1app_us">1app_us</a></li>
+      </ul>
+    </li>
+    <li><a href="#extra-keys">Extra Keys</a></li>
+  </ul>
+</nav>
 </div>
 </section>
-<h2 id="mj65">MJ65のレイアウトおよびキーマップ</h2>
+<h2 id="mj65のレイアウトおよびキーマップ">MJ65のレイアウトおよびキーマップ</h2>
 <p>MJ65は異なるフットプリントを用いることにより6つのレイアウトをサポートしています．
 <em>理想的な</em>レイアウトはモチロン65個のキーを配置するJISレイアウトですが，入手性の低い3.5uのキーキャップを用意する必要があります．
 そのため，1.75uのキーキャップ2つを用いる分割スペース型JISレイアウトをサポートしています．</p>
@@ -192,8 +214,8 @@ MJ65は右下のキー数を1つ増やしたレイアウトをサポートして
 </tr>
 </tbody>
 </table>
-<h2 id="heading">各レイアウトのはんだ付け</h2>
-<h3 id="heading1">スペースキー</h3>
+<h2 id="各レイアウトのはんだ付け">各レイアウトのはんだ付け</h2>
+<h3 id="スペースキー">スペースキー</h3>
 <ul>
 <li>
 <p><a href="#split_space">split_space</a> と <a href="#1app_split">1app_split</a></p>
@@ -218,7 +240,7 @@ MJ65は右下のキー数を1つ増やしたレイアウトをサポートして
 </ul>
 <div class="card"><img src="../img/layout/us_space_footprint.png" alt="us_space_footprints">
 </div>
-<h3 id="heading2">エンターキー周辺</h3>
+<h3 id="エンターキー周辺">エンターキー周辺</h3>
 <ul>
 <li>
 <p><a href="#default">default</a>，<a href="#split_space">split_space</a>，<a href="#1app">1app</a>，および <a href="#1app_split">1app_split</a></p>
@@ -235,7 +257,7 @@ MJ65は右下のキー数を1つ増やしたレイアウトをサポートして
 </ul>
 <div class="card"><img src="../img/layout/us_enter_footprints.png" alt="us_like_enter_footprints">
 </div>
-<h3 id="heading3">右下のキー周辺</h3>
+<h3 id="右下のキー周辺">右下のキー周辺</h3>
 <ul>
 <li>
 <p><a href="#default">default</a>，<a href="#split_space">split_space</a>，および <a href="#us_like">us_like</a></p>
@@ -252,7 +274,7 @@ MJ65は右下のキー数を1つ増やしたレイアウトをサポートして
 </ul>
 <div class="card"><img src="../img/layout/1app_footprints.png" alt="1app_footprints">
 </div>
-<h2 id="heading4">各レイアウトの詳細</h2>
+<h2 id="各レイアウトの詳細">各レイアウトの詳細</h2>
 <p>各レイアウトとも，そのままキーをタイプした場合にはBase Layer，Shiftと同時押し時にはShift Layerのキーマップに基づいた入力が生じます．
 Fnキーを押下している間に別のキーをタイプした場合にはFunction Layerのキーマップに基づいた入力が生じます．</p>
 <table>
@@ -433,7 +455,7 @@ Fnキーを押下している間に別のキーをタイプした場合にはFun
 |-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;---&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;---&#39;.-----|
 |     |   |    |    |             |    |    |   |     |     |
 `-----&#39;---&#39;----&#39;----&#39;-------------&#39;----&#39;----&#39;---&#39;-----&#39;-----&#39;
-</code></pre></div><h3 id="splitspace">split_space</h3>
+</code></pre></div><h3 id="split_space">split_space</h3>
 <p><img src="../img/layout/split_space.png" alt="split_space_layout"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">
 - Base Layer
@@ -477,7 +499,7 @@ Fnキーを押下している間に別のキーをタイプした場合にはFun
 |-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;-.-&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;---&#39;.-----|
 |     |   |    |    |      |      |    |    |   |     |     |
 `-----&#39;---&#39;----&#39;----&#39;------&#39;------&#39;----&#39;----&#39;---&#39;-----&#39;-----&#39;
-</code></pre></div><h3 id="uslike">us_like</h3>
+</code></pre></div><h3 id="us_like">us_like</h3>
 <p><img src="../img/layout/us_like.png" alt="us_like_layout"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">
 - Base Layer
@@ -565,7 +587,7 @@ Fnキーを押下している間に別のキーをタイプした場合にはFun
 |-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;---&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;--.&#39;--.---|
 |     |   |    |    |             |    |    |   |   |   |   |
 `-----&#39;---&#39;----&#39;----&#39;-------------&#39;----&#39;----&#39;---&#39;---&#39;---&#39;---&#39;
-</code></pre></div><h3 id="1appsplit">1app_split</h3>
+</code></pre></div><h3 id="1app_split">1app_split</h3>
 <p><img src="../img/layout/1app_split.png" alt="1app_split_layout"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">
 - Base Layer
@@ -609,7 +631,7 @@ Fnキーを押下している間に別のキーをタイプした場合にはFun
 |-----.--&#39;.--&#39;-.-&#39;--.&#39;---&#39;-.-&#39;---&#39;.--&#39;-.-&#39;--.&#39;--.&#39;--.&#39;--.---|
 |     |   |    |    |      |      |    |    |   |   |   |   |
 `-----&#39;---&#39;----&#39;----&#39;------&#39;------&#39;----&#39;----&#39;---&#39;---&#39;---&#39;---&#39;
-</code></pre></div><h3 id="1appus">1app_us</h3>
+</code></pre></div><h3 id="1app_us">1app_us</h3>
 <p><img src="../img/layout/1app_us.png" alt="1app_us_layout"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">
 - Base Layer
@@ -684,7 +706,7 @@ Fnキーを押下している間に別のキーをタイプした場合にはFun
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>© 2018-2019 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>© 2018-2020 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
     <p>
       <a href="/privacy-policy/">Privacy Policy</a>
       &nbsp;|&nbsp;
@@ -718,7 +740,7 @@ Fnキーを押下している間に別のキーをタイプした場合にはFun
     "dateModified": "2019-04-29T09:02:10+09:00",
     
     
-    "license": "© 2018-2019 urushiyama | Powered by Hugo with HUCORE theme.",
+    "license": "© 2018-2020 urushiyama | Powered by Hugo with HUCORE theme.",
     
     
     "author": {
@@ -736,7 +758,7 @@ Fnキーを押下している間に別のキーをタイプした場合にはFun
       }
     },
     
-    "description": "目次 MJ65のレイアウトおよびキーマップ MJ65は異なるフットプリントを用いることにより6つのレイアウトをサポートしています． 理想的なレイア"
+    "description": "目次 MJ65のレイアウトおよびキーマップ 各レイアウトのはんだ付け スペースキー エンターキー周辺 右下のキー周辺 各レイアウトの詳細 default split_space us_like 1app 1app_split 1app_us Extra Keys"
   },
   {
     "@context": "http://schema.org",
