@@ -13,6 +13,21 @@
     
     
     <item>
+      <title>Macでもオンライン会議でバ美肉したい！</title>
+      <link>https://urushiyama.github.io/posts/do-babiniku-in-online-meeting-with-mac/</link>
+      <pubDate>Thu, 05 Mar 2020 10:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/posts/do-babiniku-in-online-meeting-with-mac/</guid>
+      <description>&lt;p&gt;新型コロナウイルス感染症（COVID-19）の影響で原則リモートワークになったため，研究室のメンバと話す機会が取りづらくなった．
+オンライン会議システムで常時開放の雑談部屋をつくってみたものの，なにか雑談部屋へ参加するきっかけがほしいところ．
+そんな折，研究室のドクターがFaceRigでオンライン雑談部屋に出現した．
+そこで，自分も先人のあとに続きバ美肉に挑戦してみた．
+本記事にて受肉に用いた技術およびバ美肉ミーティングの注意事項を述べる．&lt;/p&gt;
+&lt;p&gt;※本記事はあくまで技術検証であり，実際の使用を勧めたり保証したりするものではありません．&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;img/babiniku-meeting.png&#34; alt=&#34;バ美肉ミーティングのイメージ&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>スクリプトを書くときには中間ファイルを作業ディレクトリに作ってはいけない</title>
       <link>https://urushiyama.github.io/posts/do-not-make-intermediate-files-in-working-directory-by-your-script/</link>
       <pubDate>Thu, 05 Mar 2020 10:00:00 +0900</pubDate>
