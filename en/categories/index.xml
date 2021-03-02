@@ -7,33 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2020 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Sat, 24 Aug 2019 22:45:00 +0900</lastBuildDate>
-    
-	<atom:link href="https://urushiyama.github.io/en/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>archival</title>
-      <link>https://urushiyama.github.io/en/categories/archival/</link>
-      <pubDate>Sat, 24 Aug 2019 22:45:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/en/categories/archival/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sat, 25 Apr 2020 10:45:00 -1000</lastBuildDate><atom:link href="https://urushiyama.github.io/en/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>international</title>
       <link>https://urushiyama.github.io/en/categories/international/</link>
-      <pubDate>Sat, 24 Aug 2019 22:45:00 +0900</pubDate>
+      <pubDate>Sat, 25 Apr 2020 10:45:00 -1000</pubDate>
       
       <guid>https://urushiyama.github.io/en/categories/international/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>non-archival</title>
+      <link>https://urushiyama.github.io/en/categories/non-archival/</link>
+      <pubDate>Sat, 25 Apr 2020 10:45:00 -1000</pubDate>
+      
+      <guid>https://urushiyama.github.io/en/categories/non-archival/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>peer-reviewed</title>
       <link>https://urushiyama.github.io/en/categories/peer-reviewed/</link>
-      <pubDate>Sat, 24 Aug 2019 22:45:00 +0900</pubDate>
+      <pubDate>Sat, 25 Apr 2020 10:45:00 -1000</pubDate>
       
       <guid>https://urushiyama.github.io/en/categories/peer-reviewed/</guid>
       <description></description>
@@ -42,18 +38,18 @@
     <item>
       <title>poster</title>
       <link>https://urushiyama.github.io/en/categories/poster/</link>
-      <pubDate>Sat, 24 Aug 2019 22:45:00 +0900</pubDate>
+      <pubDate>Sat, 25 Apr 2020 10:45:00 -1000</pubDate>
       
       <guid>https://urushiyama.github.io/en/categories/poster/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>non-archival</title>
-      <link>https://urushiyama.github.io/en/categories/non-archival/</link>
-      <pubDate>Fri, 29 Mar 2019 09:30:00 +0900</pubDate>
+      <title>archival</title>
+      <link>https://urushiyama.github.io/en/categories/archival/</link>
+      <pubDate>Sat, 24 Aug 2019 22:45:00 +0900</pubDate>
       
-      <guid>https://urushiyama.github.io/en/categories/non-archival/</guid>
+      <guid>https://urushiyama.github.io/en/categories/archival/</guid>
       <description></description>
     </item>
     

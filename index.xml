@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2020 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Mon, 30 Apr 2018 02:48:19 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 30 Apr 2018 02:48:19 +0900</lastBuildDate><atom:link href="https://urushiyama.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>コマンドの実行と制御を一筆書きにて行うためのベゼル端を起点とするタッチパッド操作</title>
+      <link>https://urushiyama.github.io/publications/thesis/master/</link>
+      <pubDate>Mon, 15 Feb 2021 16:00:00 +0000</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/thesis/master/</guid>
+      <description>ABSTRACT タッチパッド上にてコマンドを実行できれば，ユーザはポインタによる操作を行った後に，続けてタッチパッド上から手指を移動させることなく様々な追</description>
+    </item>
     
-	<atom:link href="https://urushiyama.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Preliminary Investigation of Tapping Force on Pressure-Sensitive Touchscreen for Expanding Input Vocabulary on Smartphone</title>
+      <link>https://urushiyama.github.io/publications/peer-reviewed-international-poster/asianchi2020co/</link>
+      <pubDate>Sat, 25 Apr 2020 10:45:00 -1000</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/peer-reviewed-international-poster/asianchi2020co/</guid>
+      <description>主著のWebページへ ABSTRACT (TBP) (UNARCHIVAL)</description>
+    </item>
     
     <item>
       <title>Macでもオンライン会議でバ美肉したい！</title>
@@ -166,6 +180,15 @@
       
       <guid>https://urushiyama.github.io/projects/mj65/</guid>
       <description>&lt;p&gt;MJ65は某🍎のJISキーボードに対するリスペクトとして設計した自作キーボードです．&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>指による一筆書きの軌跡を用いたモバイル端末向けアイズフリーかな入力</title>
+      <link>https://urushiyama.github.io/publications/thesis/bachelor/</link>
+      <pubDate>Thu, 24 Jan 2019 16:00:00 +0000</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/thesis/bachelor/</guid>
+      <description>ABSTRACT アイズフリー文字入力は，周囲に視覚的注意が必要とされる状況において，モバイル端末のスクリーンを視認せずにメモ取りなどの文字入力を可能とする</description>
     </item>
     
     <item>

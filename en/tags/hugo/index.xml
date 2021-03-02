@@ -7,18 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2020 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Mon, 30 Apr 2018 07:09:32 +0900</lastBuildDate>
-    
-	<atom:link href="https://urushiyama.github.io/en/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 30 Apr 2018 07:09:32 +0900</lastBuildDate><atom:link href="https://urushiyama.github.io/en/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post with Hugo</title>
       <link>https://urushiyama.github.io/en/posts/my-first-post/</link>
       <pubDate>Mon, 30 Apr 2018 07:09:32 +0900</pubDate>
       
       <guid>https://urushiyama.github.io/en/posts/my-first-post/</guid>
-      <description>I&amp;rsquo;ve thought having a website might be useful to write profile data, portfolio, and blog pages since I became a member of the lab. Github pages is a preferred host which is free &amp;amp; have the same domain as projects&amp;rsquo; page will have. I checked some static site generator and decided to use Hugo because its sales talk says it is &amp;ldquo;The world&amp;rsquo;s fastest framework&amp;rdquo;.</description>
+      <description>I&amp;rsquo;ve thought having a website might be useful to write profile data, portfolio, and blog pages since I became a member of the lab. Github pages is a preferred host which is free &amp;amp; have the same domain as projects&#39; page will have. I checked some static site generator and decided to use Hugo because its sales talk says it is &amp;ldquo;The world&amp;rsquo;s fastest framework&amp;rdquo;.</description>
     </item>
     
   </channel>

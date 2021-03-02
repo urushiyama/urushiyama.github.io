@@ -3,6 +3,121 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://urushiyama.github.io/categories/</loc>
+    <lastmod>2021-02-15T16:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/publications/</loc>
+    <lastmod>2021-02-15T16:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/publications/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/publications/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/categories/thesis/</loc>
+    <lastmod>2021-02-15T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/publications/thesis/master/</loc>
+    <lastmod>2021-02-15T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/categories/international/</loc>
+    <lastmod>2020-04-25T10:45:00-10:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/categories/international/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/categories/international/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/categories/non-archival/</loc>
+    <lastmod>2020-04-25T10:45:00-10:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/categories/non-archival/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/categories/non-archival/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/categories/peer-reviewed/</loc>
+    <lastmod>2020-04-25T10:45:00-10:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/categories/peer-reviewed/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/categories/peer-reviewed/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/categories/poster/</loc>
+    <lastmod>2020-04-25T10:45:00-10:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/categories/poster/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/categories/poster/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/publications/peer-reviewed-international-poster/asianchi2020co/</loc>
+    <lastmod>2020-04-25T10:45:00-10:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/publications/peer-reviewed-international-poster/asianchi2020co/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/publications/peer-reviewed-international-poster/asianchi2020co/"
+                />
+  </url>
+  
+  <url>
     <loc>https://urushiyama.github.io/posts/do-babiniku-in-online-meeting-with-mac/</loc>
     <lastmod>2020-03-05T10:00:00+09:00</lastmod>
   </url>
@@ -158,21 +273,6 @@
   </url>
   
   <url>
-    <loc>https://urushiyama.github.io/categories/</loc>
-    <lastmod>2019-12-11T15:20:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/categories/"
-                />
-  </url>
-  
-  <url>
     <loc>https://urushiyama.github.io/categories/co-author/</loc>
     <lastmod>2019-12-11T15:20:00+09:00</lastmod>
   </url>
@@ -198,21 +298,6 @@
   </url>
   
   <url>
-    <loc>https://urushiyama.github.io/publications/</loc>
-    <lastmod>2019-12-11T15:20:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/publications/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/publications/"
-                />
-  </url>
-  
-  <url>
     <loc>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci185co/</loc>
     <lastmod>2019-12-11T15:20:00+09:00</lastmod>
   </url>
@@ -220,21 +305,6 @@
   <url>
     <loc>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci185/</loc>
     <lastmod>2019-12-10T16:25:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/categories/poster/</loc>
-    <lastmod>2019-08-26T00:00:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/categories/poster/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/categories/poster/"
-                />
   </url>
   
   <url>
@@ -255,51 +325,6 @@
   <url>
     <loc>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-poster/wiss2019proceedings/</loc>
     <lastmod>2019-08-26T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/categories/international/</loc>
-    <lastmod>2019-08-24T22:45:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/categories/international/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/categories/international/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/categories/non-archival/</loc>
-    <lastmod>2019-08-24T22:45:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/categories/non-archival/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/categories/non-archival/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://urushiyama.github.io/categories/peer-reviewed/</loc>
-    <lastmod>2019-08-24T22:45:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/categories/peer-reviewed/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/categories/peer-reviewed/"
-                />
   </url>
   
   <url>
@@ -420,6 +445,11 @@
   <url>
     <loc>https://urushiyama.github.io/tags/%E8%87%AA%E4%BD%9C%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</loc>
     <lastmod>2019-03-11T02:02:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://urushiyama.github.io/publications/thesis/bachelor/</loc>
+    <lastmod>2019-01-24T16:00:00+00:00</lastmod>
   </url>
   
   <url>
