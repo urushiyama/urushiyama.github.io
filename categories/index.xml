@@ -7,7 +7,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2021 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Mon, 15 Feb 2021 16:00:00 +0000</lastBuildDate><atom:link href="https://urushiyama.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Mar 2021 12:00:00 +0900</lastBuildDate><atom:link href="https://urushiyama.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>archival</title>
+      <link>https://urushiyama.github.io/categories/archival/</link>
+      <pubDate>Sat, 20 Mar 2021 12:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/categories/archival/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>co-author</title>
+      <link>https://urushiyama.github.io/categories/co-author/</link>
+      <pubDate>Sat, 20 Mar 2021 12:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/categories/co-author/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>domestic</title>
+      <link>https://urushiyama.github.io/categories/domestic/</link>
+      <pubDate>Sat, 20 Mar 2021 12:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/categories/domestic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>non-peer-reviewed</title>
+      <link>https://urushiyama.github.io/categories/non-peer-reviewed/</link>
+      <pubDate>Sat, 20 Mar 2021 12:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/categories/non-peer-reviewed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oral</title>
+      <link>https://urushiyama.github.io/categories/oral/</link>
+      <pubDate>Sat, 20 Mar 2021 12:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/categories/oral/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>thesis</title>
       <link>https://urushiyama.github.io/categories/thesis/</link>
@@ -50,51 +95,6 @@
       <pubDate>Sat, 25 Apr 2020 10:45:00 -1000</pubDate>
       
       <guid>https://urushiyama.github.io/categories/poster/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>archival</title>
-      <link>https://urushiyama.github.io/categories/archival/</link>
-      <pubDate>Wed, 11 Dec 2019 15:20:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/categories/archival/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>co-author</title>
-      <link>https://urushiyama.github.io/categories/co-author/</link>
-      <pubDate>Wed, 11 Dec 2019 15:20:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/categories/co-author/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>domestic</title>
-      <link>https://urushiyama.github.io/categories/domestic/</link>
-      <pubDate>Wed, 11 Dec 2019 15:20:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/categories/domestic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>non-peer-reviewed</title>
-      <link>https://urushiyama.github.io/categories/non-peer-reviewed/</link>
-      <pubDate>Wed, 11 Dec 2019 15:20:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/categories/non-peer-reviewed/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>oral</title>
-      <link>https://urushiyama.github.io/categories/oral/</link>
-      <pubDate>Wed, 11 Dec 2019 15:20:00 +0900</pubDate>
-      
-      <guid>https://urushiyama.github.io/categories/oral/</guid>
       <description></description>
     </item>
     

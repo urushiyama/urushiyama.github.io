@@ -1,0 +1,304 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja" class="has-navbar-fixed-top">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta content='情報処理学会全国大会, 共著' name="keywords">
+<meta content="Yuta Urushiyama" name="author">
+<meta content='主著のWebページへ
+概要 公共空間に設置されている機器（例：自動販売機，券売機）に用いられるタッチスクリーンに表示される仮想的なボタンは接触式である． 一方，手指をかざす（以降，滞留ジェスチャ）ことでボタンが選択できれば，機器に手を触れず操作できるため，衛生面において有用である． ただし，実利用時には複数の近接するターゲットの中から1つを選択するため，近接するターゲットへの誤選択を減らす必要がある． そこで我々は，ディスプレイ上に複数個表示されるボタンに対して1つ1つを素早く正確に選択可能な滞留ジェスチャのパラメータ，ボタンの形状およびボタン間の幅について調査した．
+...' name="description">
+
+<meta name="twitter:card" content="summary">
+
+<meta property="og:site_name" content="urushiyamaのさまつごと">
+<meta property="og:title" content='ディスプレイ上に表示されるボタンに対する非接触滞留ジェスチャによる選択性能の調査（情報処理学会 第83回全国大会） - urushiyamaのさまつごと'>
+<meta property="og:url" content="/publications/non-peer-reviewed-domestic-oral/ipsj83co/">
+<meta property="og:description" content='主著のWebページへ
+概要 公共空間に設置されている機器（例：自動販売機，券売機）に用いられるタッチスクリーンに表示される仮想的なボタンは接触式である． 一方，手指をかざす（以降，滞留ジェスチャ）ことでボタンが選択できれば，機器に手を触れず操作できるため，衛生面において有用である． ただし，実利用時には複数の近接するターゲットの中から1つを選択するため，近接するターゲットへの誤選択を減らす必要がある． そこで我々は，ディスプレイ上に複数個表示されるボタンに対して1つ1つを素早く正確に選択可能な滞留ジェスチャのパラメータ，ボタンの形状およびボタン間の幅について調査した．
+...'>
+<meta property="og:type" content='article'>
+
+
+<title>ディスプレイ上に表示されるボタンに対する非接触滞留ジェスチャによる選択性能の調査（情報処理学会 第83回全国大会） - urushiyamaのさまつごと</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://urushiyama.github.io/css/style.css">
+<link rel="shortcut icon" href="https://urushiyama.github.io/avatar.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow.min.css">
+
+
+<meta name="hugo:section" content="publications"/>
+<meta name="hugo:type" content="publications"/>
+</head>
+
+<body>
+<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      
+      <a class="navbar-item" href="https://urushiyama.github.io/"><span class="title is-4">urushiyamaのさまつごと</span></a>
+      
+      
+      
+      <a class="navbar-item is-hidden-desktop" href="https://github.com/urushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      
+      <a class="navbar-item is-hidden-desktop" href="https://twitter.com/YUrushiyama" target="_blank">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      
+      <a role="button" class="navbar-burger" data-target="navMenuContents" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navMenuContents" class="navbar-menu">
+      <div class="navbar-start">
+      
+        
+        <a class="navbar-item has-background-light" href="https://urushiyama.github.io/publications">
+          Publications
+        </a>
+        
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/projects">
+          Projects
+        </a>
+        
+        
+        <a class="navbar-item" href="https://urushiyama.github.io/posts">
+          Posts
+        </a>
+        
+      
+      </div>
+      <div class="navbar-end">
+        
+        
+        <a class="navbar-item is-hidden-mobile" href="https://github.com/urushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+        
+        <a class="navbar-item is-hidden-mobile" href="https://twitter.com/YUrushiyama" target="_blank">
+          <span class="icon">
+            <i class="fa fa-twitter"></i>
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">三縄香織，<u>漆山裕太</u>，日高拓真，志築文太郎．ディスプレイ上に表示されるボタンに対する非接触滞留ジェスチャによる選択性能の調査．情報処理学会 第83回全国大会，情報処理学会，2021年3月，2 pages．</h1>
+    
+
+    <div class="content">
+      <p><a href="https://www.iplab.cs.tsukuba.ac.jp/~minawa/">主著のWebページへ</a></p>
+<h2 id="概要">概要</h2>
+<p>公共空間に設置されている機器（例：自動販売機，券売機）に用いられるタッチスクリーンに表示される仮想的なボタンは接触式である．
+一方，手指をかざす（以降，滞留ジェスチャ）ことでボタンが選択できれば，機器に手を触れず操作できるため，衛生面において有用である．
+ただし，実利用時には複数の近接するターゲットの中から1つを選択するため，近接するターゲットへの誤選択を減らす必要がある．
+そこで我々は，ディスプレイ上に複数個表示されるボタンに対して1つ1つを素早く正確に選択可能な滞留ジェスチャのパラメータ，ボタンの形状およびボタン間の幅について調査した．</p>
+<h2 id="注">注</h2>
+<p>本論文の著作権は日本情報処理学会に帰属します．</p>
+<p>本研究内容に関するご意見ご質問は minawa[at]iplab.cs.tsukuba.ac.jp 宛にお願いします．</p>
+    </div>
+    
+    <a class="button is-white" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fipsj83co%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://plus.google.com/share?url=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fipsj83co%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fipsj83co%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+<a class="button is-white" href="https://twitter.com/intent/tweet?text=%e3%83%87%e3%82%a3%e3%82%b9%e3%83%97%e3%83%ac%e3%82%a4%e4%b8%8a%e3%81%ab%e8%a1%a8%e7%a4%ba%e3%81%95%e3%82%8c%e3%82%8b%e3%83%9c%e3%82%bf%e3%83%b3%e3%81%ab%e5%af%be%e3%81%99%e3%82%8b%e9%9d%9e%e6%8e%a5%e8%a7%a6%e6%bb%9e%e7%95%99%e3%82%b8%e3%82%a7%e3%82%b9%e3%83%81%e3%83%a3%e3%81%ab%e3%82%88%e3%82%8b%e9%81%b8%e6%8a%9e%e6%80%a7%e8%83%bd%e3%81%ae%e8%aa%bf%e6%9f%bb%ef%bc%88%e6%83%85%e5%a0%b1%e5%87%a6%e7%90%86%e5%ad%a6%e4%bc%9a%20%e7%ac%ac83%e5%9b%9e%e5%85%a8%e5%9b%bd%e5%a4%a7%e4%bc%9a%ef%bc%89&amp;url=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fipsj83co%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+<a class="button is-white" href="http://www.reddit.com/submit?url=https%3a%2f%2furushiyama.github.io%2fpublications%2fnon-peer-reviewed-domestic-oral%2fipsj83co%2f&title=%e3%83%87%e3%82%a3%e3%82%b9%e3%83%97%e3%83%ac%e3%82%a4%e4%b8%8a%e3%81%ab%e8%a1%a8%e7%a4%ba%e3%81%95%e3%82%8c%e3%82%8b%e3%83%9c%e3%82%bf%e3%83%b3%e3%81%ab%e5%af%be%e3%81%99%e3%82%8b%e9%9d%9e%e6%8e%a5%e8%a7%a6%e6%bb%9e%e7%95%99%e3%82%b8%e3%82%a7%e3%82%b9%e3%83%81%e3%83%a3%e3%81%ab%e3%82%88%e3%82%8b%e9%81%b8%e6%8a%9e%e6%80%a7%e8%83%bd%e3%81%ae%e8%aa%bf%e6%9f%bb%ef%bc%88%e6%83%85%e5%a0%b1%e5%87%a6%e7%90%86%e5%ad%a6%e4%bc%9a%20%e7%ac%ac83%e5%9b%9e%e5%85%a8%e5%9b%bd%e5%a4%a7%e4%bc%9a%ef%bc%89" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+
+</div>
+
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>© 2018-2021 urushiyama | Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://themes.gohugo.io/hucore/">HUCORE</a> theme.</p>
+    <p>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="/license/">LICENSE</a>
+    </p>
+  </div>
+</section>
+
+  
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "ScholarlyArticle",
+    "@id": "https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/ipsj83co/",
+    "headline": "ディスプレイ上に表示されるボタンに対する非接触滞留ジェスチャによる選択性能の調査（情報処理学会 第83回全国大会）",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/ipsj83co/"
+    },
+    
+    "genre": "publications",
+    
+    "keywords": "情報処理学会全国大会",
+    
+    "url": "https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/ipsj83co/",
+    
+    "datePublished": "2021-03-20T12:00:00+09:00",
+    
+    
+    "dateModified": "2021-03-20T12:00:00+09:00",
+    
+    
+    "license": "© 2018-2021 urushiyama | Powered by Hugo with HUCORE theme.",
+    
+    "author": [{"@type":"Person","name":"三縄香織"},{"@type":"Person","name":"漆山裕太"},{"@type":"Person","name":"日高拓真"},{"@type":"Person","name":"志築文太郎"}],
+    
+    
+    "publisher": {
+      "@type": "Organization",
+      
+      "@id": "http://www.ipsj.or.jp/",
+      
+      
+      "name": "情報処理学会"
+    },
+    
+    "description": "主著のWebページへ\n概要 公共空間に設置されている機器（例：自動販売機，券売機）に用いられるタッチスクリーンに表示される仮想的なボタンは接触式である． 一方，手指をかざす（以降，滞留ジェスチャ）ことでボタンが選択できれば，機器に手を触れず操作できるため，衛生面において有用である． ただし，実利用時には複数の近接するターゲットの中から1つを選択するため，近接するターゲットへの誤選択を減らす必要がある． そこで我々は，ディスプレイ上に複数個表示されるボタンに対して1つ1つを素早く正確に選択可能な滞留ジェスチャのパラメータ，ボタンの形状およびボタン間の幅について調査した．"
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://urushiyama.github.io/",
+          "name": "TOP"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://urushiyama.github.io/publications",
+          "name": "Publications"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/ipsj83co/",
+          "name": "ディスプレイ上に表示されるボタンに対する非接触滞留ジェスチャによる選択性能の調査（情報処理学会 第83回全国大会）"
+        }
+      }
+    ]
+  }
+]
+</script>
+  
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/arduino.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cpp.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/erb.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/swift.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/tex.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/yaml.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.3.0/highlightjs-line-numbers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  
+  if ($navbarBurgers.length > 0) {
+
+    
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-118350112-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>

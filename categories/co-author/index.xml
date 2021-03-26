@@ -7,7 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2018-2021 urushiyama | Powered by [Hugo](https://gohugo.io) with [HUCORE](https://themes.gohugo.io/hucore/) theme.</copyright>
-    <lastBuildDate>Wed, 11 Dec 2019 15:20:00 +0900</lastBuildDate><atom:link href="https://urushiyama.github.io/categories/co-author/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Mar 2021 12:00:00 +0900</lastBuildDate><atom:link href="https://urushiyama.github.io/categories/co-author/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ディスプレイ上に表示されるボタンに対する非接触滞留ジェスチャによる選択性能の調査（情報処理学会 第83回全国大会）</title>
+      <link>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/ipsj83co/</link>
+      <pubDate>Sat, 20 Mar 2021 12:00:00 +0900</pubDate>
+      
+      <guid>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/ipsj83co/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.iplab.cs.tsukuba.ac.jp/~minawa/&#34;&gt;主著のWebページへ&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;公共空間に設置されている機器（例：自動販売機，券売機）に用いられるタッチスクリーンに表示される仮想的なボタンは接触式である．
+一方，手指をかざす（以降，滞留ジェスチャ）ことでボタンが選択できれば，機器に手を触れず操作できるため，衛生面において有用である．
+ただし，実利用時には複数の近接するターゲットの中から1つを選択するため，近接するターゲットへの誤選択を減らす必要がある．
+そこで我々は，ディスプレイ上に複数個表示されるボタンに対して1つ1つを素早く正確に選択可能な滞留ジェスチャのパラメータ，ボタンの形状およびボタン間の幅について調査した．&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>スマートフォンにおける押下圧によるタップの拡張のための予備調査（HCI185）</title>
       <link>https://urushiyama.github.io/publications/non-peer-reviewed-domestic-oral/hci185co/</link>
