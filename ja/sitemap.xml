@@ -2,6 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://urushiyama.github.io/posts/</loc>
+    <lastmod>2021-03-26T18:54:43+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://urushiyama.github.io/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://urushiyama.github.io/posts/"
+                />
+  </url><url>
+    <loc>https://urushiyama.github.io/posts/update-display-by-extended-warranty/</loc>
+    <lastmod>2021-03-26T18:54:43+09:00</lastmod>
+  </url><url>
     <loc>https://urushiyama.github.io/categories/archival/</loc>
     <lastmod>2021-03-20T12:00:00+09:00</lastmod>
     <xhtml:link
@@ -145,19 +161,6 @@
   </url><url>
     <loc>https://urushiyama.github.io/posts/do-babiniku-in-online-meeting-with-mac/</loc>
     <lastmod>2020-03-05T10:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://urushiyama.github.io/posts/</loc>
-    <lastmod>2020-03-05T10:00:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://urushiyama.github.io/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://urushiyama.github.io/posts/"
-                />
   </url><url>
     <loc>https://urushiyama.github.io/tags/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/</loc>
     <lastmod>2020-03-05T10:00:00+09:00</lastmod>
