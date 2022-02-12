@@ -201,7 +201,7 @@
 &ldquo;iPhone Xʀ&rdquo;，&ldquo;iPad Pro (12.9-inch) (2nd generation)&quot;，&ldquo;Apple Watch Series 4 - 40mm&quot;など，どうやったら正確なデバイス名を覚えられるのでしょうか．</p>
 <p>YUPreviewDevice.frameworkは，SwiftUIのプレビューに，定義済みデバイスを追加します．
 このフレームワークを用いることにより，以下のように特定デバイスのプレビューを見ることができるようになります．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">YourSwiftUIView_Previews</span>: PreviewProvider {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">YourSwiftUIView_Previews</span>: PreviewProvider {
   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">var</span> previews: some View {
     YourSwiftUIView()
       .previewDevice(PreviewDevice.iPhone_11_Pro_Max)
@@ -209,7 +209,7 @@
   }
 }
 </code></pre></div><p>あるいは，異なる画面の縦横比を持つiOSデバイスすべてのプレビューをかんたんに見ることもできます．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">YourSwiftUIView_Previews</span>: PreviewProvider {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">YourSwiftUIView_Previews</span>: PreviewProvider {
   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">var</span> previews: some View {
     ForEach(PreviewDevice.Product.latest_iOS_devices_with_defferent_ratio) { device <span style="color:#66d9ef">in</span>
       YourSwiftUIView()

@@ -201,7 +201,7 @@ To show preview on a specific device, you need to exactly type a specific name s
 How can we remember the exact name?</p>
 <p>YUPreviewDevice.framework adds pre-defined preview devices for SwiftUI.
 Using this framework, you can easily preview your app on a specific device:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">YourSwiftUIView_Previews</span>: PreviewProvider {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">YourSwiftUIView_Previews</span>: PreviewProvider {
   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">var</span> previews: some View {
     YourSwiftUIView()
       .previewDevice(PreviewDevice.iPhone_11_Pro_Max)
@@ -209,7 +209,7 @@ Using this framework, you can easily preview your app on a specific device:</p>
   }
 }
 </code></pre></div><p>You can also easily preview your app on multiple iOS devices with different ratio:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">YourSwiftUIView_Previews</span>: PreviewProvider {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">YourSwiftUIView_Previews</span>: PreviewProvider {
   <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">var</span> previews: some View {
     ForEach(PreviewDevice.Product.latest_iOS_devices_with_defferent_ratio) { device <span style="color:#66d9ef">in</span>
       YourSwiftUIView()

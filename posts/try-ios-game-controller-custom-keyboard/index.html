@@ -181,7 +181,7 @@ iOSでゲームコントローラにより操作可能なカスタムキーボ�
 <p>第一にハマった点は，デバッガを繋いだ状態で作成したカスタムキーボードを起動したときのみ，
 viewDidLoad関数内あるいはその前にSIGQUITが発生してカスタムキーボードが選択できなくなる
 ことが，条件不明で時折発生する点である．</p>
-<pre><code>dyld`_dyld_debugger_notification:
+<pre tabindex="0"><code>dyld`_dyld_debugger_notification:
 -&gt;  0x1008354ac &lt;+0&gt;: ret
 </code></pre><p>上記2行目で&quot;signal SIGQUIT&quot;が発生している．</p>
 <p>自分の書いた箇所で発生しているならまだしも，Single View Appを作成後に

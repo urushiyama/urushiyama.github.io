@@ -186,7 +186,7 @@
 <h2 id="きっかけ">きっかけ</h2>
 <p>TA業務のためにJupyter NotebookファイルのPDF変換スクリプトを<code>nbconvert</code>コマンドを利用する形で書いているのだが，中間出力のLaTeXファイルのタイプセットがエラーになる事例があった．
 &ldquo;Undefined control sequence&quot;エラーが発生しており，エラー箇所は下記の3行目であった．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\begin</span>{longtable}[]{@{}ll@{}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\begin</span>{longtable}[]{@{}ll@{}}
 <span style="color:#66d9ef">\toprule</span>
 (a) &amp; (b) <span style="color:#66d9ef">\tabularnewline</span>
 <span style="color:#66d9ef">\midrule</span>
@@ -200,11 +200,11 @@ CTANにて<code>booktabs</code>パッケージのドキュメントを確認し�
 <code>\toprule</code>や<code>\midrule</code>にはオプション指定のために丸括弧を用いていないが，何かしら実装に問題があるのだろう．</p>
 <p>「表の中には丸括弧を使わない」とすれば全く問題ないものの，Jupyter Notebookファイルを作成するのはTAがやることではなく，教員がテンプレートを作成して受講生が記入するので，記述方法を矯正することは困難である．
 そこで，<a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">参考文献</a>のStack Overflowにならい，<code>nbconvert</code>コマンドが出力するLaTeXファイルを<code>sed</code>のパイプを通して修正することにした．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">nbconvert ... <span style="color:#ae81ff">\
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">nbconvert ... <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    | sed -e <span style="color:#e6db74">&#39;s/\\toprule/\\toprule\relax/g&#39;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    | sed -e <span style="color:#e6db74">&#39;s/\\midrule/\\midrule\relax/g&#39;</span>
 </code></pre></div><p>具体的には，<code>\toprule</code>および<code>\midrule</code>のあとに続けて<code>\relax</code>をつけることにより，<code>booktabs</code>パッケージの丸括弧を定義する環境から続く表の中身を切り離している．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\begin</span>{longtable}[]{@{}ll@{}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\begin</span>{longtable}[]{@{}ll@{}}
 <span style="color:#66d9ef">\toprule\relax</span>
 (a) &amp; (b) <span style="color:#66d9ef">\tabularnewline</span>
 <span style="color:#66d9ef">\midrule\relax</span>
